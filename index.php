@@ -38,7 +38,10 @@ $data = array(
 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; en) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/4.1.2 Safari/533.18.5' => array('platform' => 'Macintosh', 'browser' => 'Safari', 'version' => '533.18.5'),
 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/312.9 (KHTML, like Gecko) Safari/312.6'                             => array('platform' => 'Macintosh', 'browser' => 'Safari', 'version' => '312.6'),
 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16'   => array('platform' => 'Macintosh', 'browser' => 'Safari', 'version' => '533.16'),
-
+'Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10.5; it; rv:1.9.0.19) Gecko/2010111021 Camino/2.0.6 (MultiLang) (like Firefox/3.0.19)' => array('platform' => 'Macintosh', 'browser' => 'Camino', 'version' => '2.0.6'),
+'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en; rv:1.9.0.18) Gecko/2010021619 Camino/2.0.2 (like Firefox/3.0.18)'   => array('platform' => 'Macintosh', 'browser' => 'Camino', 'version' => '2.0.2'),
+'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; it; rv:1.8.1.21) Gecko/20090327 Camino/1.6.7 (MultiLang) (like Firefox/2.0.0.21pre)' => array('platform' => 'Macintosh', 'browser' => 'Camino', 'version' => '1.6.7'),
+'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.11) Gecko/20071128 Camino/1.5.4' => array('platform' => 'Macintosh', 'browser' => 'Camino', 'version' => '1.5.4'),
 
 /// MOBLE BROWSERS
 
