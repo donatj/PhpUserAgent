@@ -55,7 +55,11 @@ $data = array(
 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; LG; GW910)'                   => array('platform' => 'Windows Phone OS', 'browser' => 'IEMobile', 'version' => '7.0'),
 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0) LG;LG-E900h)'                 => array('platform' => 'Windows Phone OS', 'browser' => 'IEMobile', 'version' => '7.0'),
 
+/// EBOOK READERS
 
+'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)' => array('platform' => 'Kindle', 'browser' => 'Kindle', 'version' => '1'),
+'Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)' => array('platform' => 'Kindle', 'browser' => 'Kindle', 'version' => '3.0'),
+'Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/538.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)' => array('platform' => 'Kindle', 'browser' => 'Kindle', 'version' => '3.0'),
 
 );
 

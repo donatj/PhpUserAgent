@@ -17,12 +17,14 @@ function UserAgentParser( $u_agent ) {
 		$result = "";
 	}
 
-	# (?<browser>Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera)(?:[/ ])(?<version>[0-9.]+)
-	preg_match_all('%(?P<browser>Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera)(?:[/ ])(?P<version>[0-9.]+)%im', $u_agent, $result, PREG_PATTERN_ORDER);
+	# (?<browser>Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera)(?:[/ ])(?<version>[0-9.]+)
+	preg_match_all('%(?P<browser>Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera)(?:[/ ])(?P<version>[0-9.]+)%im', $u_agent, $result, PREG_PATTERN_ORDER);
 
 	if( $result['browser'][0] == 'AppleWebKit' ) {
 		if( ( $data['platform'] == 'Android' && !($key = 0) ) || $key = array_search( 'Chrome', $result['browser'] ) ) {
 			$data['browser'] = 'Chrome';
+		}elseif( $key = array_search( 'Kindle', $result['browser'] ) ) {
+			$data['browser'] = 'Kindle';
 		}elseif( $key = array_search( 'Safari', $result['browser'] ) ) {
 			$data['browser'] = 'Safari';
 		}else{
@@ -46,6 +48,9 @@ function UserAgentParser( $u_agent ) {
 		$data['version'] = $result['version'][0];
 	}
 
+	if( $data['browser'] == 'Kindle' ) {
+		$data['platform'] = 'Kindle';
+	}
 
 	return $data;
 
