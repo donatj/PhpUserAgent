@@ -3,6 +3,8 @@
 /**
 * Parses a user agent string into its important parts
 * 
+* @author Jesse G. Donat <donatj@gmail.com>
+* @link https://github.com/donatj/PhpUserAgent
 * @param string $u_agent
 * @return array an array with browser, version and platform keys
 */
@@ -37,28 +39,21 @@ function UserAgentParser( $u_agent ) {
 	}elseif( $result['browser'][0] == 'AppleWebKit' ) {
 		if( ( $data['platform'] == 'Android' && !($key = 0) ) || $key = array_search( 'Chrome', $result['browser'] ) ) {
 			$data['browser'] = 'Chrome';
-			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) {
-				$key = $vkey;
-			}
+			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
 		}elseif( $key = array_search( 'Kindle', $result['browser'] ) ) {
 			$data['browser'] = 'Kindle';
 		}elseif( $key = array_search( 'Safari', $result['browser'] ) ) {
 			$data['browser'] = 'Safari';
-			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) {
-				$key = $vkey;
-			}
+			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
 		}else{
 			$key = 0;
-			$data['browser'] = 'webkit';
 		}
 		
 		$data['version'] = $result['version'][$key];
 	}elseif( ($key = array_search( 'Opera', $result['browser'] )) !== false ) {
 		$data['browser'] = $result['browser'][$key];
 		$data['version'] = $result['version'][$key];
-		if( ($key = array_search( 'Version', $result['browser'] )) !== false ) {
-			$data['version'] = $result['version'][$key];
-		}
+		if( ($key = array_search( 'Version', $result['browser'] )) !== false ) { $data['version'] = $result['version'][$key]; }
 	}elseif( $result['browser'][0] == 'MSIE' ){
 		if( $key = array_search( 'IEMobile', $result['browser'] ) ) {
 			$data['browser'] = 'IEMobile';
@@ -68,8 +63,8 @@ function UserAgentParser( $u_agent ) {
 		}
 		$data['version'] = $result['version'][$key];
 	}elseif( $key = array_search( 'Kindle', $result['browser'] ) ) {
-			$data['browser'] = 'Kindle';
-			$data['platform'] = 'Kindle';
+		$data['browser'] = 'Kindle';
+		$data['platform'] = 'Kindle';
 	}else{
 		$data['browser'] = $result['browser'][0];
 		$data['version'] = $result['version'][0];
