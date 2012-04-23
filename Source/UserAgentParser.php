@@ -73,4 +73,4 @@ function UserAgentParser( $u_agent = null ) {
 
 	return $data;
 
-} 
+}
