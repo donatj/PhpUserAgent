@@ -4,6 +4,11 @@ require('Source/UserAgentParser.php');
 
 $data = array(
 
+	//Old School Yo
+
+'Lynx/2.8.6rel.4 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.7l Lynxlet/0.7.0' => array('platform' => '', 'browser' => 'Lynx', 'version' => '2.8.6'),
+
+
 'Mozilla/4.0 (Windows; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
 'Mozilla/4.0 (MSIE 6.0; Windows NT 5.1)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
 'Mozilla/4.0 (MSIE 6.0; Windows NT 5.0)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
@@ -67,14 +72,22 @@ $data = array(
 
 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.0.13.81_10003810) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true' => array('platform' => 'Kindle', 'browser' => 'Silk', 'version' => '1.0.13.81'),
 
-//Old School Yo
-
-'Lynx/2.8.6rel.4 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.7l Lynxlet/0.7.0' => array('platform' => '', 'browser' => 'Lynx', 'version' => '2.8.6'),
-
-
 );
 
 echo '<h1>Test Suite</h1>';
+
+echo '<h2>YOU</h2>';
+echo '<div>';
+
+$x =  UserAgentParser($_SERVER['HTTP_USER_AGENT']);
+echo '<div class="aspect version">' .  $x['version'] .  '</div>';
+echo '<div class="aspect browser">' .  $x['browser'] .  '</div>';
+if( $x['platform'] ) {
+	echo '<div class="aspect platform">' . $x['platform'] . '</div>';
+}
+echo '<small>' . $_SERVER['HTTP_USER_AGENT'] . '</small><br /><div style="clear: both"></div>';
+
+echo '</div>';
 
 $prev = array('platform' => false, 'browser' => false, 'version' => false);
 
@@ -110,7 +123,6 @@ foreach( $data as $agent => $expected ) {
 	}
 	
 	echo '<small>' . $agent . '</small><br />';
-	
 	echo '<div style="clear: both"></div>';
 	
 	echo '</div>';
