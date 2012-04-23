@@ -8,7 +8,7 @@
 * @param string $u_agent
 * @return array an array with browser, version and platform keys
 */
-function UserAgentParser( $u_agent = null ) { 
+function parse_user_agent( $u_agent = null ) { 
 	if(is_null($u_agent)) $u_agent = $_SERVER['HTTP_USER_AGENT'];
 
 	$data = array();

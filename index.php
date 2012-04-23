@@ -79,7 +79,7 @@ echo '<h1>Test Suite</h1>';
 echo '<h2>YOU</h2>';
 echo '<div>';
 
-$x =  UserAgentParser();
+$x =  parse_user_agent();
 echo '<div class="aspect version">' .  $x['version'] .  '</div>';
 echo '<div class="aspect browser">' .  $x['browser'] .  '</div>';
 if( $x['platform'] ) {
@@ -93,7 +93,7 @@ $prev = array('platform' => false, 'browser' => false, 'version' => false);
 
 foreach( $data as $agent => $expected ) {
 
-	$x = UserAgentParser($agent);
+	$x = parse_user_agent($agent);
 	
 	if( $prev['platform'] != $x['platform'] ) {
 		echo '<h2>'	. $expected['platform'] . '</h2>';
