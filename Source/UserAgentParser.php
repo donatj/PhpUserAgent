@@ -6,7 +6,7 @@
 * @param string $u_agent
 * @return array an array with browser, version and platform keys
 */
-function UserAgentParser( &$u_agent ) { 
+function UserAgentParser( $u_agent ) { 
 
 	$data = array();
 
