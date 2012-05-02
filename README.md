@@ -21,6 +21,7 @@ Currently Detected Platforms
  - Windows Phone OS
  - Kindle
  - Kindle Fire
+ - BalckBerry
 
 Currently Detected Browsers
 ----------------------------
