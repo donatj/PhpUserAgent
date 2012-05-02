@@ -34,3 +34,4 @@ Currently Detected Browsers
 - Silk
 - Lynx
 - Wget
+- Curl
