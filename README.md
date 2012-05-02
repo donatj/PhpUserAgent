@@ -33,3 +33,4 @@ Currently Detected Browsers
 - Opera
 - Silk
 - Lynx
+- Wget

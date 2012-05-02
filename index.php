@@ -7,7 +7,7 @@ $data = array(
 	//Old School Yo
 
 'Lynx/2.8.6rel.4 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.7l Lynxlet/0.7.0' => array('platform' => '', 'browser' => 'Lynx', 'version' => '2.8.6'),
-
+'Wget/1.12 (linux-gnu)' => array('platform' => 'linux-gnu','browser' => 'Wget', 'version' => '1.12'),
 
 'Mozilla/4.0 (Windows; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
 'Mozilla/4.0 (MSIE 6.0; Windows NT 5.1)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
