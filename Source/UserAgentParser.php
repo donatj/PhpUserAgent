@@ -41,6 +41,9 @@ function parse_user_agent( $u_agent = null ) {
 		if( ( $data['platform'] == 'Android' && !($key = 0) ) || $key = array_search( 'Chrome', $result['browser'] ) ) {
 			$data['browser'] = 'Chrome';
 			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
+		}elseif( $data['platform'] == 'BlackBerry' ) {
+			$data['browser'] = 'BlackBerry Browser';
+			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
 		}elseif( $key = array_search( 'Kindle', $result['browser'] ) ) {
 			$data['browser'] = 'Kindle';
 		}elseif( $key = array_search( 'Safari', $result['browser'] ) ) {

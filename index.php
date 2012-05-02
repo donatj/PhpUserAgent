@@ -64,7 +64,8 @@ $data = array(
 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0) Asus;Galaxy6'					=> array('platform' => 'Windows Phone OS', 'browser' => 'IEMobile', 'version' => '7.0'),
 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; LG; GW910)'					=> array('platform' => 'Windows Phone OS', 'browser' => 'IEMobile', 'version' => '7.0'),
 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0) LG;LG-E900h)'					=> array('platform' => 'Windows Phone OS', 'browser' => 'IEMobile', 'version' => '7.0'),
-'Mozilla/5.0 (BlackBerry; U; BlackBerry 9780; en) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.723 Mobile Safari/534.8+'	=> array('platform' => 'BlackBerry', 	   'browser' => 'Safari', 'version' => '6.0.0.723'),		
+
+'Mozilla/5.0 (BlackBerry; U; BlackBerry 9780; en) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.723 Mobile Safari/534.8+'	=> array('platform' => 'BlackBerry', 'browser' => 'BlackBerry Browser', 'version' => '6.0.0.723'),		
 /// EBOOK READERS
 
 'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)' => array('platform' => 'Kindle', 'browser' => 'Kindle', 'version' => '1'),
