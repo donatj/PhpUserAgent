@@ -29,10 +29,9 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	# (?<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget)(?:[/ ])(?<version>[0-9.]+)
-	preg_match_all('%(?P<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget)(?:[/ ])(?P<version>[0-9.]+)%im', $u_agent, $result, PREG_PATTERN_ORDER);
+	preg_match_all('%(?P<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl)(?:[/ ])(?P<version>[0-9.]+)%im', $u_agent, $result, PREG_PATTERN_ORDER);
 
-
-	//print_r( $result );
+	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
 
 	if( ($key = array_search( 'Kindle', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
 		$data['browser']  = $result['browser'][$key];
