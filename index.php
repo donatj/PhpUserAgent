@@ -9,6 +9,8 @@ $data = array(
 'Lynx/2.8.6rel.4 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.7l Lynxlet/0.7.0' => array('platform' => '', 'browser' => 'Lynx', 'version' => '2.8.6'),
 'curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8r zlib/1.2.3' => array('platform' => '', 'browser' => 'curl', 'version' => '7.19.7'),
 'Wget/1.12 (linux-gnu)' => array('platform' => 'Linux','browser' => 'Wget', 'version' => '1.12'),
+'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0' => array('platform' => 'Linux','browser' => 'Firefox', 'version' => '12.0'),
+'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/12.04 Chromium/18.0.1025.151 Chrome/18.0.1025.151 Safari/535.19' => array('platform' => 'Linux','browser' => 'Chrome', 'version' => '18.0.1025.151'),
 
 'Mozilla/4.0 (Windows; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
 'Mozilla/4.0 (MSIE 6.0; Windows NT 5.1)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
