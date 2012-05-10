@@ -26,7 +26,7 @@ function parse_user_agent( $u_agent = null ) {
 			if( ($key = array_search( 'Android', $result['platform'] )) !== false ) {
 				$data['platform']  = $result['platform'][$key];
 			}
-		}else{
+		}elseif(isset($result['platform'][0])){
 			$data['platform'] = $result['platform'][0];
 		}
 
