@@ -11,7 +11,11 @@
 function parse_user_agent( $u_agent = null ) { 
 	if(is_null($u_agent)) $u_agent = $_SERVER['HTTP_USER_AGENT'];
 
-	$data = array();
+	$data = array(
+		'platform' => null,
+		'browser'  => null,
+		'version'  => null,
+	);
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $regs) ) {
 
