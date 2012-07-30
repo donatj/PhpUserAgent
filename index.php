@@ -11,6 +11,8 @@ $data = array(
 'Wget/1.12 (linux-gnu)' => array('platform' => 'Linux','browser' => 'Wget', 'version' => '1.12'),
 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0' => array('platform' => 'Linux','browser' => 'Firefox', 'version' => '12.0'),
 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/12.04 Chromium/18.0.1025.151 Chrome/18.0.1025.151 Safari/535.19' => array('platform' => 'Linux','browser' => 'Chrome', 'version' => '18.0.1025.151'),
+'Mozilla/5.0 (X11; U; Linux i386; en-US; rv:1.7.5) Gecko/20041109 Firefox/1.0' => array('platform' => 'Linux','browser' => 'Firefox', 'version' => '1.0'),
+'Mozilla/5.0 (X11; Linux i686) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11' => array('platform' => 'Linux','browser' => 'Chrome', 'version' => '20.0.1132.57'),
 
 'Mozilla/4.0 (Windows; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
 'Mozilla/4.0 (MSIE 6.0; Windows NT 5.1)' => array('platform' => 'Windows', 'browser' => 'MSIE', 'version' => '6.0'),
