@@ -4,7 +4,7 @@ require('Source/UserAgentParser.php');
 
 $data = array(
 
-	//Old School Yo
+//Old School Yo
 
 'Lynx/2.8.6rel.4 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.7l Lynxlet/0.7.0' => array('platform' => '', 'browser' => 'Lynx', 'version' => '2.8.6'),
 'curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8r zlib/1.2.3' => array('platform' => '', 'browser' => 'curl', 'version' => '7.19.7'),
@@ -57,6 +57,7 @@ $data = array(
 /// MOBLE BROWSERS
 
 'Mozilla/5.0 (Linux; U; Android 2.2; en-us; SGH-T959 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'                 => array('platform' => 'Android', 'browser' => 'Chrome', 'version' => '4.0'),
+'Mozilla/5.0 (Linux; U; Android Itfunz2.1_Eclipse_Terminator_II_Final; zh-cn; Milestone Build/SHOLS_U2_02.36.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17' => array('platform' => 'Android', 'browser' => 'Chrome', 'version' => '4.0'),
 
 'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10'          => array('platform' => 'iPad', 'browser' => 'Safari', 'version' => '4.0.4'),
 'Mozilla/5.0 (iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10'    => array('platform' => 'iPad', 'browser' => 'Safari', 'version' => '4.0.4'),
