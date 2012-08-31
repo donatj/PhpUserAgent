@@ -132,6 +132,7 @@ foreach( $data as $agent => $expected ) {
 	echo '<div style="clear: both"></div>';
 	
 	echo '</div>';
+	echo "\n\n";
 
 	$prev = $expected;
 	
