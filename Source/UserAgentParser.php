@@ -25,7 +25,7 @@ function parse_user_agent( $u_agent = null ) {
 		(?:\ [^;]*)?
 		(?:;|$)
 		*/
-		preg_match_all('/(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry)
+		preg_match_all('/(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ Wii)
 			(?:\ [^;]*)?
 			(?:;|$)/imx', $regs[1], $result, PREG_PATTERN_ORDER);
 
@@ -39,11 +39,10 @@ function parse_user_agent( $u_agent = null ) {
 		}elseif(isset($result['platform'][0])){
 			$data['platform'] = $result['platform'][0];
 		}
-
 	}
 
-	# (?<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget)(?:[/ ])(?<version>[0-9.]+)
-	preg_match_all('%(?P<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl)(?:[/ ])(?P<version>[0-9.]+)%im', $u_agent, $result, PREG_PATTERN_ORDER);
+	# (?<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|PLAYSTATION \d+)(?:[/ ])(?<version>[0-9.]+)
+	preg_match_all('%(?P<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION \d+)(?:;?)(?:[/ ])(?P<version>[0-9.]+)%im', $u_agent, $result, PREG_PATTERN_ORDER);
 
 	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
 
@@ -81,8 +80,12 @@ function parse_user_agent( $u_agent = null ) {
 		}
 		$data['version'] = $result['version'][$key];
 	}elseif( $key = array_search( 'Kindle', $result['browser'] ) ) {
-		$data['browser'] = 'Kindle';
+		$data['browser']  = 'Kindle';
 		$data['platform'] = 'Kindle';
+	}elseif( $key = array_search( 'PLAYSTATION 3', $result['browser'] ) !== false ) {
+		$data['platform'] = 'PLAYSTATION 3';
+		$data['browser']  = 'NetFront';
+		$data['version']  = $result['version'][0];
 	}else{
 		$data['browser'] = $result['browser'][0];
 		$data['version'] = $result['version'][0];

@@ -71,6 +71,7 @@ $data = array(
 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0) LG;LG-E900h)'					=> array('platform' => 'Windows Phone OS', 'browser' => 'IEMobile', 'version' => '7.0'),
 
 'Mozilla/5.0 (BlackBerry; U; BlackBerry 9780; en) AppleWebKit/534.8+ (KHTML, like Gecko) Version/6.0.0.723 Mobile Safari/534.8+'	=> array('platform' => 'BlackBerry', 'browser' => 'BlackBerry Browser', 'version' => '6.0.0.723'),		
+
 /// EBOOK READERS
 
 'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)' => array('platform' => 'Kindle', 'browser' => 'Kindle', 'version' => '1'),
@@ -78,6 +79,14 @@ $data = array(
 'Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/538.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)' => array('platform' => 'Kindle', 'browser' => 'Kindle', 'version' => '3.0'),
 
 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.0.13.81_10003810) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true' => array('platform' => 'Kindle', 'browser' => 'Silk', 'version' => '1.0.13.81'),
+
+/// Video Game Consoles
+
+'Mozilla/5.0 (PLAYSTATION 3; 1.00)'                                         => array('platform' => 'PLAYSTATION 3', 'browser' => 'NetFront', 'version' => '1.00'),
+'Mozilla/5.0 (PLAYSTATION 3 4.20) AppleWebKit/531.22.8 (KHTML, like Gecko)' => array('platform' => 'PLAYSTATION 3', 'browser' => 'NetFront', 'version' => '4.20'),
+
+'Opera/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel/1.0; en)' => array('platform' => 'Nintendo Wii', 'browser' => 'Opera', 'version' => '9.00'),
+'Opera/9.30 (Nintendo Wii; U; ; 2071; Wii Shop Channel/1.0; en)'    => array('platform' => 'Nintendo Wii', 'browser' => 'Opera', 'version' => '9.30'),
 
 );
 
