@@ -23,11 +23,11 @@ function parse_user_agent( $u_agent = null ) {
 		/*
 		(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry)
 		(?:\ [^;]*)?
-		(;|$)
+		(?:;|$)
 		*/
-		preg_match_all('%(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry)
+		preg_match_all('/(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry)
 			(?:\ [^;]*)?
-			(;|$)%imx', $regs[1], $result, PREG_PATTERN_ORDER);
+			(?:;|$)/imx', $regs[1], $result, PREG_PATTERN_ORDER);
 
 		$result['platform'] = array_unique($result['platform']);
 		if( count($result['platform']) > 1 ) {
