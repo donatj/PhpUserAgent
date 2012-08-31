@@ -22,6 +22,9 @@ Currently Detected Platforms
  - Kindle
  - Kindle Fire
  - BalckBerry
+- Console
+ - Nintendo Wii
+ - PlayStation 3
 
 Currently Detected Browsers
 ----------------------------
