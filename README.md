@@ -30,7 +30,7 @@ Currently Detected Browsers
 ----------------------------
 
 - Camino
-- Kindle
+- Kindle / Silk
 - Firefox
 - Safari
 - Internet Explorer
