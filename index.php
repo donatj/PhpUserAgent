@@ -280,10 +280,12 @@ function aspects($aspect) {
 div.row {
 	background: #a0b96a;
 	border-bottom: 1px solid #eee;
+	font-size: 10px;
 }
 
 div.row.fail {
 	background: #b96a6a;
+	font-size: 12px;
 }
 
 div.row br {
@@ -292,7 +294,7 @@ div.row br {
 
 div.row small {
 	display: block;
-	font-size: 12px;
+	font-size: .9em;
 	padding: 8px 0 0 8px;
 }
 
