@@ -80,9 +80,6 @@ function parse_user_agent( $u_agent = null ) {
 			$key = 0;
 		}
 		$data['version'] = $result['version'][$key];
-	}elseif( $key = array_search( 'Kindle', $result['browser'] ) ) {
-		$data['browser']  = 'Kindle';
-		$data['platform'] = 'Kindle';
 	}elseif( $key = array_search( 'PLAYSTATION 3', $result['browser'] ) !== false ) {
 		$data['platform'] = 'PLAYSTATION 3';
 		$data['browser']  = 'NetFront';
