@@ -58,8 +58,6 @@ function parse_user_agent( $u_agent = null ) {
 		}elseif( $data['platform'] == 'BlackBerry' ) {
 			$data['browser'] = 'BlackBerry Browser';
 			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
-		}elseif( $key = array_search( 'Kindle', $result['browser'] ) ) {
-			$data['browser'] = 'Kindle';
 		}elseif( $key = array_search( 'Safari', $result['browser'] ) ) {
 			$data['browser'] = 'Safari';
 			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
