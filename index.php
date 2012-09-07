@@ -218,71 +218,92 @@ $data = array(
 
 echo '<h1>Test Suite</h1>';
 
-echo '<h2>YOU</h2>';
-echo '<div>';
+$result = array('fail' => array(), 'pass' => array());
 
-$x =  parse_user_agent();
-echo '<div class="aspect version">' .  $x['version'] .  '</div>';
-echo '<div class="aspect browser">' .  $x['browser'] .  '</div>';
-if( $x['platform'] ) {
-	echo '<div class="aspect platform">' . $x['platform'] . '</div>';
-}
-echo '<small>' . $_SERVER['HTTP_USER_AGENT'] . '</small><br /><div style="clear: both"></div>';
-
-echo '</div>';
-
-$prev = array('platform' => false, 'browser' => false, 'version' => false);
-
-foreach( $data as $agent => $expected ) {
+foreach( $data as $agent => &$row ) {
 
 	$x = parse_user_agent($agent);
+	$row = array('expected' => $row, 'received' => $x, 'agent' => $agent);
 	
-	if( $prev['platform'] != $x['platform'] ) {
-		echo '<h2>'	. $expected['platform'] . '</h2>';
-		$prev['browser'] = false;
-		$prev['version'] = false;
-	}
-	
-	if( $prev['browser'] != $x['browser'] ) {
-		echo '<h3>'	. $expected['browser'] . '</h3>';
-		$prev['version'] = false;
-	}
-	
-	if( $prev['version'] != $x['version'] ) {
-		echo '<h4>'	. $expected['version'] . '</h4>';
-	}
-	
-	if( $x['platform'] == $expected['platform'] && $x['browser'] == $expected['browser'] && $x['version'] == $expected['version'] ) {
-		echo '<div style="background:#a0b96a; margin: 1px 0;">';
+	if($row['expected'] != $row['received']) {
+		$result['fail'][] = $row;
 	}else{
-		echo '<div style="background:#b96a6a; margin: 1px 0;">';
+		$result['pass'][] = $row;
 	}
-	
-	echo '<div class="aspect version">' .  $x['version'] .  '</div>';
-	echo '<div class="aspect browser">' .  $x['browser'] .  '</div>';
-	if( $x['platform'] ) {
-		echo '<div class="aspect platform">' . $x['platform'] . '</div>';
-	}
-	
-	echo '<small>' . $agent . '</small><br />';
-	echo '<div style="clear: both"></div>';
-	
-	echo '</div>';
-	echo "\n\n";
+}
 
-	$prev = $expected;
+foreach( $result['fail'] as $row ) {
+
+	echo '<div class="row fail">';
+	echo '<div class="aspects incorrect">';
+	aspects( $row['received'] );
+	echo '</div>';
+
+	echo '<div class="aspects">';
+	aspects( $row['expected'] );
+	echo '</div>';
+
+	echo '<small>'. $row['agent'] .'</small><br />';
+
+	echo '</div>';
+
+}
+
+foreach( $result['pass'] as $row ) {
 	
+	echo '<div class="row">';
+
+	echo '<div class="aspects">';
+	aspects( $row['received'] );
+	echo '</div>';
+
+	echo '<small>'. $row['agent'] .'</small><br />';
+
+	echo '</div>';
+
+}
+
+function aspects($aspect) {
+	echo '<div class="version">' .  $aspect['version'] .  '</div>';
+	echo '<div class="browser">' .  $aspect['browser'] .  '</div>';
+	if( $aspect['platform'] ) {
+		echo '<div class="platform">' . $aspect['platform'] . '</div>';
+	}
 }
 
 ?>
 <style type="text/css">
 
-div.aspect {
+div.row {
+	background: #a0b96a;
+	border-bottom: 1px solid #eee;
+}
+
+div.row.fail {
+	background: #b96a6a;
+}
+
+div.row br {
+	clear: both;
+}
+
+div.row small {
+	display: block;
+	font-size: 12px;
+	padding: 8px 0 0 8px;
+}
+
+div.aspects {
+	float: right;
+	clear: right;
+}
+
+div.aspects div {
 	float: right;
 	color: white;
 	padding: 4px;
 	text-align: center;
-	min-width: 100px;;
+	min-width: 100px;
 	margin: 1px;
 	border-radius: 3px;
 }
@@ -299,29 +320,20 @@ div.browser{
 	background: #ed4f23;	
 }
 
-body {
-	margin: 0; padding: 0;	
+div.aspects.incorrect div {
+	background: red;
 }
+
+body {
+	margin: 0; 
+	padding: 0;	
+	font-size: 11px;
+	font-family: Helvetica, Arial;
+}
+
 h1 {
 	text-align: center;	
 }
-h2, h3, h4 {
-	padding: 0;
-	margin: 0;	
-	display: block;
-}
 
-h2 {
-	background: #bbb;
-	text-align: center;
-}
-
-h3 {
-	background: #aaa;	
-}
-
-h4 {
-	background: #999;	
-}
 
 </style>
