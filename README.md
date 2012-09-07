@@ -25,10 +25,12 @@ Currently Detected Platforms
 - Console
  - Nintendo Wii
  - PlayStation 3
+ - Xbox 360 IE Beta
 
 Currently Detected Browsers
 ----------------------------
 
+- BlackBerry Browser
 - Camino
 - Kindle / Silk
 - Firefox
