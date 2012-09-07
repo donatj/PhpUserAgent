@@ -200,7 +200,13 @@ $data = array(
 
 'Opera/9.30 (Nintendo Wii; U; ; 2071; Wii Shop Channel/1.0; en)'                            
 	=> array('platform' => 'Nintendo Wii', 'browser' => 'Opera', 'version' => '9.30'),
-	
+
+'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'                     
+	=> array('platform' => 'Xbox', 'browser' => 'MSIE', 'version' => '9.0'),
+
+'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; Xbox)' 
+	=> array('platform' => 'Xbox', 'browser' => 'IEMobile', 'version' => '9.0'), //Xbox Masquerading as Windows Phone
+
 
 );
 

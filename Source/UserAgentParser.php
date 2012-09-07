@@ -21,18 +21,19 @@ function parse_user_agent( $u_agent = null ) {
 	if( preg_match('/\((.*?)\)/im', $u_agent, $regs) ) {
 
 		/*
-		(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry)
+		(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Xbox)
 		(?:\ [^;]*)?
 		(?:;|$)
 		*/
-		preg_match_all('/(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ Wii)
+		preg_match_all('/(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ Wii|Xbox)
 			(?:\ [^;]*)?
 			(?:;|$)/imx', $regs[1], $result, PREG_PATTERN_ORDER);
 
+		$priority = array('Android', 'Xbox');
 		$result['platform'] = array_unique($result['platform']);
 		if( count($result['platform']) > 1 ) {
-			if( ($key = array_search( 'Android', $result['platform'] )) !== false ) {
-				$data['platform'] = $result['platform'][$key];
+			if( $keys = array_intersect($priority, $result['platform']) ) {
+				$data['platform'] = reset($keys);
 			}else{
 				$data['platform'] = $result['platform'][0];
 			}
