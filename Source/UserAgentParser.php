@@ -42,13 +42,27 @@ function parse_user_agent( $u_agent = null ) {
 		}
 	}
 
-	# (?<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION \d+)(?:;?)(?:[/ ])(?<version>[0-9.]+)
-	preg_match_all('%(?P<browser>Camino|Kindle|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION \d+)(?:;?)(?:[/ ])(?P<version>[0-9.]+)%im', $u_agent, $result, PREG_PATTERN_ORDER);
+	/*
+	(?<browser>Camino|Kindle|Kindle\ Fire\ Build|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION\ \d+)
+	(?:;?)
+	(?:(?:[/\ ])(?<version>[0-9.]+)|/(?:[A-Z]*))
+	*/
+	preg_match_all('%(?P<browser>Camino|Kindle|Kindle\ Fire\ Build|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION\ \d+)
+		(?:;?)
+		(?:(?:[/ ])(?P<version>[0-9.]+)|/(?:[A-Z]*))%x', 
+	$u_agent, $result, PREG_PATTERN_ORDER);
 
 	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
 
 	$key = 0;
-	if( ($key = array_search( 'Kindle', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
+
+	if( ($key = array_search( 'Kindle Fire Build', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
+		$data['browser']  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
+		$data['platform'] = 'Kindle Fire';
+		if( !($data['version']  = $result['version'][$key]) ) {
+			$data['version'] = $result['version'][array_search( 'Version', $result['browser'] )];
+		}
+	}elseif( ($key = array_search( 'Kindle', $result['browser'] )) !== false ) {
 		$data['browser']  = $result['browser'][$key];
 		$data['platform'] = 'Kindle';
 		$data['version']  = $result['version'][$key];

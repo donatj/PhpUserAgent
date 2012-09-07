@@ -181,15 +181,18 @@ $data = array(
 'Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/538.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)' 
 	=> array('platform' => 'Kindle', 'browser' => 'Kindle', 'version' => '3.0'),
 
+'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
+	=> array('platform' => 'Kindle Fire', 'browser' => 'Kindle', 'version' => '4.0'),
+
 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Silk/1.1.0-84) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 Silk-Accelerated=false'
-	=> array('platform' => 'Kindle', 'browser' => 'Silk', 'version' => '1.1.0'),
+	=> array('platform' => 'Kindle Fire', 'browser' => 'Silk', 'version' => '1.1.0'),
 
 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true'
-	=> array('platform' => 'Kindle', 'browser' => 'Silk', 'version' => '1.1.0'),
+	=> array('platform' => 'Kindle Fire', 'browser' => 'Silk', 'version' => '1.1.0'),
 
 
 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.0.13.81_10003810) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true' 
-	=> array('platform' => 'Kindle', 'browser' => 'Silk', 'version' => '1.0.13.81'),
+	=> array('platform' => 'Kindle Fire', 'browser' => 'Silk', 'version' => '1.0.13.81'),
 
 
 /// Video Game Consoles
