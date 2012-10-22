@@ -219,6 +219,12 @@ $data = array(
 'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; Xbox)' 
 	=> array('platform' => 'Xbox', 'browser' => 'IEMobile', 'version' => '9.0'), //Xbox Masquerading as Windows Phone
 
+// Chrome Book
+
+'Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11'
+	=> array('platform' => 'Chrome OS', 'browser' => 'Chrome', 'version' => '20.0.1132.57'),
+'Mozilla/5.0 (X11; U; CrOS i686 0.9.128; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.339'
+	=> array('platform' => 'Chrome OS', 'browser' => 'Chrome', 'version' => '8.0.552.339'),
 
 );
 

@@ -21,11 +21,11 @@ function parse_user_agent( $u_agent = null ) {
 	if( preg_match('/\((.*?)\)/im', $u_agent, $regs) ) {
 
 		/*
-		(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Xbox)
+		(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Xbox)
 		(?:\ [^;]*)?
 		(?:;|$)
 		*/
-		preg_match_all('/(?P<platform>Android|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ Wii|Xbox)
+		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ Wii|Xbox)
 			(?:\ [^;]*)?
 			(?:;|$)/imx', $regs[1], $result, PREG_PATTERN_ORDER);
 
@@ -42,6 +42,9 @@ function parse_user_agent( $u_agent = null ) {
 		}
 	}
 
+	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
+	if( $data['platform'] == 'CrOS' ) { $data['platform'] = 'Chrome OS'; }
+
 	/*
 	(?<browser>Camino|Kindle|Kindle\ Fire\ Build|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION\ \d+)
 	(?:;?)
@@ -52,9 +55,10 @@ function parse_user_agent( $u_agent = null ) {
 		(?:(?:[/ ])(?P<version>[0-9.]+)|/(?:[A-Z]*))%x', 
 	$u_agent, $result, PREG_PATTERN_ORDER);
 
-	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
-
 	$key = 0;
+
+	$data['browser'] = $result['browser'][0];
+	$data['version'] = $result['version'][0];
 
 	if( ($key = array_search( 'Kindle Fire Build', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
 		$data['browser']  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
@@ -94,10 +98,6 @@ function parse_user_agent( $u_agent = null ) {
 	}elseif( $key = array_search( 'PLAYSTATION 3', $result['browser'] ) !== false ) {
 		$data['platform'] = 'PLAYSTATION 3';
 		$data['browser']  = 'NetFront';
-		$data['version']  = $result['version'][0];
-	}else{
-		$data['browser'] = $result['browser'][0];
-		$data['version'] = $result['version'][0];
 	}
 
 	return $data;
