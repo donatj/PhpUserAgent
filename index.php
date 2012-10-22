@@ -194,6 +194,9 @@ $data = array(
 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.0.13.81_10003810) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true' 
 	=> array('platform' => 'Kindle Fire', 'browser' => 'Silk', 'version' => '1.0.13.81'),
 
+'Mozilla/5.0 (Linux; U; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/2.2 Safari/535.19 Silk-Accelerated=true'
+	=> array('platform' => 'Kindle Fire', 'browser' => 'Silk', 'version' => '2.2'),
+
 
 /// Video Game Consoles
 
