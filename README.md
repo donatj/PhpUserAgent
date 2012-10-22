@@ -14,6 +14,7 @@ Currently Detected Platforms
  - Windows
  - Linux
  - Macintosh
+ - Chrome OS
 - Mobile
  - Android
  - iPhone
@@ -25,7 +26,7 @@ Currently Detected Platforms
 - Console
  - Nintendo Wii
  - PlayStation 3
- - Xbox 360 IE Beta
+ - Xbox 360
 
 Currently Detected Browsers
 ----------------------------
