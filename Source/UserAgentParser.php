@@ -10,8 +10,7 @@
 * @return array an array with browser, version and platform keys
 */
 function parse_user_agent( $u_agent = null ) { 
-    // in the case of a command line unit test run, $_SERVER['HTTP_USER_AGENT'] will not exist
-    if(is_null($u_agent)) $u_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+	if(is_null($u_agent) && isset($_SERVER['HTTP_USER_AGENT'])) $u_agent = $_SERVER['HTTP_USER_AGENT'];
 
 	$data = array(
 		'platform' => null,
@@ -19,11 +18,8 @@ function parse_user_agent( $u_agent = null ) {
 		'version'  => null,
 	);
 	
-    if(empty($u_agent)){
-        // called via a non-UI method (unit test, Zend_Http_Client, etc)
-        return $data;
-    }
-    
+	if(!$u_agent) return $data;
+	
 	if( preg_match('/\((.*?)\)/im', $u_agent, $regs) ) {
 
 		/*
