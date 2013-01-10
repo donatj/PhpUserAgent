@@ -213,6 +213,9 @@ $data = array(
 'Opera/9.30 (Nintendo Wii; U; ; 2071; Wii Shop Channel/1.0; en)'                            
 	=> array('platform' => 'Nintendo Wii', 'browser' => 'Opera', 'version' => '9.30'),
 
+'Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.8.21 NintendoBrowser/1.0.0.7494.US'
+	=> array('platform' => 'Nintendo WiiU', 'browser' => 'NintendoBrowser', 'version' => '1.0.0.7494.US'),
+
 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'                     
 	=> array('platform' => 'Xbox', 'browser' => 'MSIE', 'version' => '9.0'),
 

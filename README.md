@@ -25,6 +25,7 @@ Currently Detected Platforms
  - BalckBerry
 - Console
  - Nintendo Wii
+ - Nintendo WiiU
  - PlayStation 3
  - Xbox 360
 

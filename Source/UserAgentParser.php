@@ -22,12 +22,7 @@ function parse_user_agent( $u_agent = null ) {
 	
 	if( preg_match('/\((.*?)\)/im', $u_agent, $regs) ) {
 
-		/*
-		(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Xbox)
-		(?:\ [^;]*)?
-		(?:;|$)
-		*/
-		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ Wii|Xbox)
+		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ WiiU?|Xbox)
 			(?:\ [^;]*)?
 			(?:;|$)/imx', $regs[1], $result, PREG_PATTERN_ORDER);
 
@@ -47,14 +42,9 @@ function parse_user_agent( $u_agent = null ) {
 	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
 	if( $data['platform'] == 'CrOS' ) { $data['platform'] = 'Chrome OS'; }
 
-	/*
-	(?<browser>Camino|Kindle|Kindle\ Fire\ Build|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION\ \d+)
-	(?:;?)
-	(?:(?:[/\ ])(?<version>[0-9.]+)|/(?:[A-Z]*))
-	*/
-	preg_match_all('%(?P<browser>Camino|Kindle|Kindle\ Fire\ Build|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|PLAYSTATION\ \d+)
-		(?:;?)
-		(?:(?:[/ ])(?P<version>[0-9.]+)|/(?:[A-Z]*))%x', 
+	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|NintendoBrowser|PLAYSTATION\ \d+)
+			(?:;?)
+			(?:(?:[/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%x', 
 	$u_agent, $result, PREG_PATTERN_ORDER);
 
 	$key = 0;
@@ -65,9 +55,12 @@ function parse_user_agent( $u_agent = null ) {
 	if( ($key = array_search( 'Kindle Fire Build', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
 		$data['browser']  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
 		$data['platform'] = 'Kindle Fire';
-		if( !($data['version']  = $result['version'][$key]) ) {
+		if( !($data['version'] = $result['version'][$key]) || !is_numeric($data['version'][0]) ) {
 			$data['version'] = $result['version'][array_search( 'Version', $result['browser'] )];
 		}
+	}elseif( ($key = array_search( 'NintendoBrowser', $result['browser'] )) !== false ) {
+		$data['browser']  = 'NintendoBrowser';
+		$data['version']  = $result['version'][$key];
 	}elseif( ($key = array_search( 'Kindle', $result['browser'] )) !== false ) {
 		$data['browser']  = $result['browser'][$key];
 		$data['platform'] = 'Kindle';
