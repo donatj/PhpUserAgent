@@ -24,6 +24,7 @@ Currently Detected Platforms
  - Kindle Fire
  - BalckBerry
 - Console
+ - Nintendo 3DS
  - Nintendo Wii
  - Nintendo WiiU
  - PlayStation 3

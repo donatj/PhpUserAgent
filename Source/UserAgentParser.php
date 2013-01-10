@@ -22,7 +22,7 @@ function parse_user_agent( $u_agent = null ) {
 	
 	if( preg_match('/\((.*?)\)/im', $u_agent, $regs) ) {
 
-		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows\ Phone\ OS|Windows|Silk|linux-gnu|BlackBerry|Nintendo\ WiiU?|Xbox)
+		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone\ OS)?|Silk|linux-gnu|BlackBerry|Nintendo\ (WiiU?|3DS)|Xbox)
 			(?:\ [^;]*)?
 			(?:;|$)/imx', $regs[1], $result, PREG_PATTERN_ORDER);
 
@@ -58,7 +58,7 @@ function parse_user_agent( $u_agent = null ) {
 		if( !($data['version'] = $result['version'][$key]) || !is_numeric($data['version'][0]) ) {
 			$data['version'] = $result['version'][array_search( 'Version', $result['browser'] )];
 		}
-	}elseif( ($key = array_search( 'NintendoBrowser', $result['browser'] )) !== false ) {
+	}elseif( ($key = array_search( 'NintendoBrowser', $result['browser'] )) !== false || $data['platform'] == 'Nintendo 3DS' ) {
 		$data['browser']  = 'NintendoBrowser';
 		$data['version']  = $result['version'][$key];
 	}elseif( ($key = array_search( 'Kindle', $result['browser'] )) !== false ) {

@@ -216,6 +216,9 @@ $data = array(
 'Mozilla/5.0 (Nintendo WiiU) AppleWebKit/534.52 (KHTML, like Gecko) NX/2.1.0.8.21 NintendoBrowser/1.0.0.7494.US'
 	=> array('platform' => 'Nintendo WiiU', 'browser' => 'NintendoBrowser', 'version' => '1.0.0.7494.US'),
 
+'Mozilla/5.0 (Nintendo 3DS; U; ; en) Version/1.7498.US'
+	=> array('platform' => 'Nintendo 3DS', 'browser' => 'NintendoBrowser', 'version' => '1.7498.US'),
+
 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'                     
 	=> array('platform' => 'Xbox', 'browser' => 'MSIE', 'version' => '9.0'),
 
