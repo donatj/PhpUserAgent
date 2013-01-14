@@ -22,7 +22,7 @@ Currently Detected Platforms
  - Windows Phone OS
  - Kindle
  - Kindle Fire
- - BalckBerry
+ - BlackBerry
 - Console
  - Nintendo 3DS
  - Nintendo Wii
