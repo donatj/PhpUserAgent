@@ -20,11 +20,11 @@ function parse_user_agent( $u_agent = null ) {
 	
 	if(!$u_agent) return $data;
 	
-	if( preg_match('/\((.*?)\)/im', $u_agent, $regs) ) {
+	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
 		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone\ OS)?|Silk|linux-gnu|BlackBerry|Nintendo\ (WiiU?|3DS)|Xbox)
 			(?:\ [^;]*)?
-			(?:;|$)/imx', $regs[1], $result, PREG_PATTERN_ORDER);
+			(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
 		$priority = array('Android', 'Xbox');
 		$result['platform'] = array_unique($result['platform']);
