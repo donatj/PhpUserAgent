@@ -1,14 +1,14 @@
 <?php
 
 /**
-* Parses a user agent string into its important parts
-* 
-* @author Jesse G. Donat <donatj@gmail.com>
-* @link https://github.com/donatj/PhpUserAgent
-* @link http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
-* @param string $u_agent
-* @return array an array with browser, version and platform keys
-*/
+ * Parses a user agent string into its important parts
+ * 
+ * @author Jesse G. Donat <donatj@gmail.com>
+ * @link https://github.com/donatj/PhpUserAgent
+ * @link http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
+ * @param string $u_agent
+ * @return array an array with browser, version and platform keys
+ */
 function parse_user_agent( $u_agent = null ) { 
 	if(is_null($u_agent) && isset($_SERVER['HTTP_USER_AGENT'])) $u_agent = $_SERVER['HTTP_USER_AGENT'];
 
