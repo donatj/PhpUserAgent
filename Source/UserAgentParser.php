@@ -95,6 +95,39 @@ function parse_user_agent( $u_agent = null ) {
 		$data['browser']  = 'NetFront';
 	}
 
+	if(preg_match('/(?:Mac OS X (?P<version>[0-9_.]+))|(?:Windows (?:NT|Phone OS)* *(?P<version2>[0-9_.]+))|(?:Android (?P<version3>[^;)]+))|(?:Linux (?P<version4>[^;)]+))|(?:(?:iPhone|CPU) OS (?P<version5>[0-9_.]+))/i', $parent_matches[1], $regs)) {
+
+		$data['platform_version'] = trim($regs['version'] . $regs['version1'] . $regs['version2'] . $regs['version3'] . $regs['version4'] . $regs['version5']);
+
+		if($data['platform'] == 'Windows') {
+			switch((float)$data['platform_version']) {
+				case 5:
+					$data['platform_version'] = '2000';
+					break;
+				case 5.1:
+					$data['platform_version'] = 'XP';
+					break;
+				case 5.2:
+					$data['platform_version'] = 'XP64';
+					break;
+				case 6:
+					$data['platform_version'] = 'Vista';
+					break;
+				case 6.1:
+					$data['platform_version'] = '7';
+					break;
+				case 6.2:
+					$data['platform_version'] = '8';
+					break;
+			}
+		}
+		
+		$data['platform_version'] = str_replace('_', '.', $data['platform_version']);
+
+	} else {
+		$result = "";
+	}
+
 	return $data;
 
 }

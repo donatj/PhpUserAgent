@@ -286,6 +286,7 @@ function aspects($aspect) {
 	echo '<div class="browser">' .  $aspect['browser'] .  '</div>';
 	if( $aspect['platform'] ) {
 		echo '<div class="platform">' . $aspect['platform'] . '</div>';
+		echo '<div class="platform_version">' . $aspect['platform_version'] . '</div>';
 	}
 }
 
@@ -329,6 +330,10 @@ div.aspects div {
 }
 
 div.platform {
+	background: #3693c1;	
+}
+
+div.platform_version {
 	background: #3693c1;	
 }
 
