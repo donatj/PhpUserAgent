@@ -1,14 +1,12 @@
-PHP User Agent Parser
-=====================
+# PHP User Agent Parser
 
 A Super Simple User Agent Parser
 
-More information available [here](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
+More information available at [Donat Studios](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
 
 Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
 
-Currently Detected Platforms
-----------------------------
+## Currently Detected Platforms
 
 - Desktop
  - Windows
@@ -30,8 +28,7 @@ Currently Detected Platforms
  - PlayStation 3
  - Xbox 360
 
-Currently Detected Browsers
-----------------------------
+## Currently Detected Browsers
 
 - BlackBerry Browser
 - Camino
@@ -46,3 +43,7 @@ Currently Detected Browsers
 - Lynx
 - Wget
 - Curl
+
+## Build Status
+
+[![Build Status](https://travis-ci.org/donatj/PhpUserAgent.png?branch=master)](https://travis-ci.org/donatj/PhpUserAgent)
