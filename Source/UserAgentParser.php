@@ -42,9 +42,9 @@ function parse_user_agent( $u_agent = null ) {
 	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
 	if( $data['platform'] == 'CrOS' ) { $data['platform'] = 'Chrome OS'; }
 
-	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|NintendoBrowser|PLAYSTATION\ \d+)
+	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 			(?:;?)
-			(?:(?:[/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%x', 
+			(?:(?:[/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix', 
 	$u_agent, $result, PREG_PATTERN_ORDER);
 
 	$key = 0;
@@ -52,7 +52,10 @@ function parse_user_agent( $u_agent = null ) {
 	$data['browser'] = $result['browser'][0];
 	$data['version'] = $result['version'][0];
 
-	if( ($key = array_search( 'Kindle Fire Build', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
+	if( $key = array_search( 'Playstation Vita', $result['browser'] ) !== false ) {
+		$data['platform'] = 'Playstation Vita';
+		$data['browser'] = 'Browser';
+	}elseif( ($key = array_search( 'Kindle Fire Build', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
 		$data['browser']  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
 		$data['platform'] = 'Kindle Fire';
 		if( !($data['version'] = $result['version'][$key]) || !is_numeric($data['version'][0]) ) {
