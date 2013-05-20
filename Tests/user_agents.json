@@ -280,12 +280,12 @@
       "version":"2.2"
    },
    "Mozilla\/5.0 (PLAYSTATION 3; 1.00)":{
-      "platform":"PLAYSTATION 3",
+      "platform":"PlayStation 3",
       "browser":"NetFront",
       "version":"1.00"
    },
    "Mozilla\/5.0 (PLAYSTATION 3 4.20) AppleWebKit\/531.22.8 (KHTML, like Gecko)":{
-      "platform":"PLAYSTATION 3",
+      "platform":"PlayStation 3",
       "browser":"NetFront",
       "version":"4.20"
    },
@@ -330,7 +330,7 @@
       "version":"8.0.552.339"
    },
    "Mozilla\/5.0 (Playstation Vita 1.50) AppleWebKit\/531.22.8 (KHTML, like Gecko)﻿ Silk\/3.2﻿":{
-      "platform":"Playstation Vita",
+      "platform":"PlayStation Vita",
       "browser":"Browser",
       "version":"1.50"
    }

@@ -53,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 	$data['version'] = $result['version'][0];
 
 	if( $key = array_search( 'Playstation Vita', $result['browser'] ) !== false ) {
-		$data['platform'] = 'Playstation Vita';
+		$data['platform'] = 'PlayStation Vita';
 		$data['browser'] = 'Browser';
 	}elseif( ($key = array_search( 'Kindle Fire Build', $result['browser'] )) !== false || ($key = array_search( 'Silk', $result['browser'] )) !== false ) {
 		$data['browser']  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
@@ -94,7 +94,7 @@ function parse_user_agent( $u_agent = null ) {
 		}
 		$data['version'] = $result['version'][$key];
 	}elseif( $key = array_search( 'PLAYSTATION 3', $result['browser'] ) !== false ) {
-		$data['platform'] = 'PLAYSTATION 3';
+		$data['platform'] = 'PlayStation 3';
 		$data['browser']  = 'NetFront';
 	}
 

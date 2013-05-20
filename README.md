@@ -26,6 +26,7 @@ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.p
  - Nintendo Wii
  - Nintendo WiiU
  - PlayStation 3
+ - PlayStation Vita
  - Xbox 360
 
 ## Currently Detected Browsers
