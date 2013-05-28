@@ -124,6 +124,11 @@
       "browser":"Opera",
       "version":"11.61"
    },
+   "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/28.0.1500.20 Safari\/537.36  OPR\/15.0.1147.18 (Edition Next)": {
+      "platform":"Macintosh",
+      "browser":"Opera",
+      "version":"15.0.1147.18"
+   },
    "Mozilla\/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.13) Gecko\/20101213 Opera\/9.80 (Windows NT 6.1; U; zh-tw) Presto\/2.7.62 Version\/11.01":{
       "platform":"Windows",
       "browser":"Opera",

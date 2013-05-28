@@ -42,7 +42,7 @@ function parse_user_agent( $u_agent = null ) {
 	if( $data['platform'] == 'linux-gnu' ) { $data['platform'] = 'Linux'; }
 	if( $data['platform'] == 'CrOS' ) { $data['platform'] = 'Chrome OS'; }
 
-	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|Silk|Lynx|Version|Wget|curl|NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|OPR|Silk|Lynx|Version|Wget|curl|NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 			(?:;?)
 			(?:(?:[/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix', 
 	$u_agent, $result, PREG_PATTERN_ORDER);
@@ -68,6 +68,10 @@ function parse_user_agent( $u_agent = null ) {
 		$data['browser']  = $result['browser'][$key];
 		$data['platform'] = 'Kindle';
 		$data['version']  = $result['version'][$key];
+	}elseif( ($key = array_search( 'OPR', $result['browser'] )) !== false || ($key = array_search( 'Opera', $result['browser'] )) !== false ) {
+		$data['browser'] = 'Opera';
+		$data['version'] = $result['version'][$key];
+		if( ($key = array_search( 'Version', $result['browser'] )) !== false ) { $data['version'] = $result['version'][$key]; }
 	}elseif( $result['browser'][0] == 'AppleWebKit' ) {
 		if( ( $data['platform'] == 'Android' && !($key = 0) ) || $key = array_search( 'Chrome', $result['browser'] ) ) {
 			$data['browser'] = 'Chrome';
@@ -81,10 +85,6 @@ function parse_user_agent( $u_agent = null ) {
 		}
 		
 		$data['version'] = $result['version'][$key];
-	}elseif( ($key = array_search( 'Opera', $result['browser'] )) !== false ) {
-		$data['browser'] = $result['browser'][$key];
-		$data['version'] = $result['version'][$key];
-		if( ($key = array_search( 'Version', $result['browser'] )) !== false ) { $data['version'] = $result['version'][$key]; }
 	}elseif( $result['browser'][0] == 'MSIE' ){
 		if( $key = array_search( 'IEMobile', $result['browser'] ) ) {
 			$data['browser'] = 'IEMobile';
