@@ -9,25 +9,26 @@ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.p
 ## Currently Detected Platforms
 
 - Desktop
- - Windows
- - Linux
- - Macintosh
- - Chrome OS
+	- Windows
+	- Linux
+	- Macintosh
+	- Chrome OS
 - Mobile
- - Android
- - iPhone
- - iPad
- - Windows Phone OS
- - Kindle
- - Kindle Fire
- - BlackBerry
+	- Android
+	- iPhone
+	- iPad
+	- Windows Phone OS
+	- Kindle
+	- Kindle Fire
+	- BlackBerry
+	- Playbook
 - Console
- - Nintendo 3DS
- - Nintendo Wii
- - Nintendo WiiU
- - PlayStation 3
- - PlayStation Vita
- - Xbox 360
+	- Nintendo 3DS
+	- Nintendo Wii
+	- Nintendo WiiU
+	- PlayStation 3
+	- PlayStation Vita
+	- Xbox 360
 
 ## Currently Detected Browsers
 

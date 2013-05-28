@@ -239,6 +239,11 @@
       "browser":"BlackBerry Browser",
       "version":"6.0.0.723"
    },
+   "Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.0.1; en-US) AppleWebKit\/535.8+ (KHTML, like Gecko) Version\/7.2.0.1 Safari\/535.8+":{
+      "platform":"PlayBook",
+      "browser":"BlackBerry Browser",
+      "version":"7.2.0.1"
+   },
    "Mozilla\/4.0 (compatible; Linux 2.6.10) NetFront\/3.3 Kindle\/1.0 (screen 600x800)":{
       "platform":"Kindle",
       "browser":"Kindle",

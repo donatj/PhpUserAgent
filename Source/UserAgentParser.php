@@ -22,7 +22,7 @@ function parse_user_agent( $u_agent = null ) {
 	
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
-		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone\ OS)?|Silk|linux-gnu|BlackBerry|Nintendo\ (WiiU?|3DS)|Xbox)
+		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone\ OS)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox)
 			(?:\ [^;]*)?
 			(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
@@ -72,7 +72,7 @@ function parse_user_agent( $u_agent = null ) {
 		if( ( $data['platform'] == 'Android' && !($key = 0) ) || $key = array_search( 'Chrome', $result['browser'] ) ) {
 			$data['browser'] = 'Chrome';
 			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
-		}elseif( $data['platform'] == 'BlackBerry' ) {
+		}elseif( $data['platform'] == 'BlackBerry' || $data['platform'] == 'PlayBook' ) {
 			$data['browser'] = 'BlackBerry Browser';
 			if( ($vkey = array_search( 'Version', $result['browser'] )) !== false ) { $key = $vkey; }
 		}elseif( $key = array_search( 'Safari', $result['browser'] ) ) {
