@@ -49,6 +49,11 @@ function parse_user_agent( $u_agent = null ) {
 
 	$key = 0;
 
+	// If nothing matched, return null (to avoid undefined index errors)
+	if (!isset($result['browser'][0]) || !isset($result['version'][0])) {
+		return null;
+	}
+
 	$data['browser'] = $result['browser'][0];
 	$data['version'] = $result['version'][0];
 
