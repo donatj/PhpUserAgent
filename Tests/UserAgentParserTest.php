@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ALL);
 $local_path = dirname(__FILE__);
 require($local_path . "/../Source/UserAgentParser.php");
 
@@ -22,8 +22,14 @@ class UserAgentParser_test extends PHPUnit_Framework_TestCase {
 			'browser'  => null,
 			'version'  => null,
 		);
+
 		$result = parse_user_agent('');
-		
+		$this->assertEquals($result, $expected);
+
+		$result = parse_user_agent('asdjkakljasdkljasdlkj');
+		$this->assertEquals($result, $expected);
+
+		$result = parse_user_agent('Mozilla (asdjkakljasdkljasdlkj) BlahBlah');
 		$this->assertEquals($result, $expected);
 	}
 
