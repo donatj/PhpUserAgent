@@ -12,11 +12,13 @@
 function parse_user_agent( $u_agent = null ) { 
 	if(is_null($u_agent) && isset($_SERVER['HTTP_USER_AGENT'])) $u_agent = $_SERVER['HTTP_USER_AGENT'];
 
-	$data = array(
+	$empty = array(
 		'platform' => null,
 		'browser'  => null,
 		'version'  => null,
 	);
+
+	$data = $empty;
 	
 	if(!$u_agent) return $data;
 	
@@ -51,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if (!isset($result['browser'][0]) || !isset($result['version'][0])) {
-		return null;
+		return $empty;
 	}
 
 	$data['browser'] = $result['browser'][0];
