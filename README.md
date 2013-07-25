@@ -6,6 +6,33 @@ More information available at [Donat Studios](http://donatstudios.com/PHP-Parser
 
 Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
 
+## Requirements
+
+  - PHP 5.3.0+
+
+## Installing
+
+SimpleCalendar is available through Packagist via Composer.
+
+```json
+"require": {
+	"donatj/phpuseragentparser": "*"
+}
+```
+
+## Sample Usage
+
+```php
+$ua_info = parse_user_agent();
+/*
+array(
+	'platform' => '[Detected Platform]',
+	'browser'  => '[Detected Browser]',
+	'version'  => '[Detected Browser Version]',
+);
+*/
+```
+
 ## Currently Detected Platforms
 
 - Desktop
