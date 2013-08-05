@@ -1,5 +1,8 @@
 # PHP User Agent Parser
 
+[![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/v/stable.png)](https://packagist.org/packages/donatj/phpuseragentparser)
+[![Build Status](https://travis-ci.org/donatj/PhpUserAgent.png?branch=master)](https://travis-ci.org/donatj/PhpUserAgent)
+
 A Super Simple User Agent Parser
 
 More information available at [Donat Studios](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
@@ -73,6 +76,3 @@ array(
 - Wget
 - Curl
 
-## Build Status
-
-[![Build Status](https://travis-ci.org/donatj/PhpUserAgent.png?branch=master)](https://travis-ci.org/donatj/PhpUserAgent)
