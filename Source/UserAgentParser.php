@@ -108,9 +108,9 @@ function parse_user_agent( $u_agent = null ) {
 		$version = $result['version'][$key];
 	} elseif( $browser == 'MSIE' ) {
 		if( $find('IEMobile', $key) ) {
-			$browser = 'IEMobile';
+			$browser = 'Internet Explorer Mobile';
 		} else {
-			$browser = 'MSIE';
+			$browser = 'Internet Explorer';
 			$key     = 0;
 		}
 		$version = $result['version'][$key];
