@@ -284,6 +284,11 @@
       "browser":"Silk",
       "version":"1.0.13.81"
    },
+   "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build\/IML74K) AppleWebKit\/535.19 (KHTML, like Gecko) Silk\/2.1 Mobile Safari\/535.19 Silk-Accelerated=true":{
+      "platform":"Kindle Fire",
+      "browser":"Silk",
+      "version":"2.1"
+   },
    "Mozilla\/5.0 (Linux; U; en-us; KFTT Build\/IML74K) AppleWebKit\/535.19 (KHTML, like Gecko) Silk\/2.2 Safari\/535.19 Silk-Accelerated=true":{
       "platform":"Kindle Fire",
       "browser":"Silk",
