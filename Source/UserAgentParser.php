@@ -6,7 +6,7 @@
  * @author Jesse G. Donat <donatj@gmail.com>
  * @link https://github.com/donatj/PhpUserAgent
  * @link http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
- * @param string $u_agent
+ * @param string|null $u_agent
  * @return array an array with browser, version and platform keys
  */
 function parse_user_agent( $u_agent = null ) {
@@ -41,8 +41,7 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( $platform == 'linux-gnu' ) {
 		$platform = 'Linux';
-	}
-	if( $platform == 'CrOS' ) {
+	} elseif( $platform == 'CrOS' ) {
 		$platform = 'Chrome OS';
 	}
 
@@ -51,8 +50,7 @@ function parse_user_agent( $u_agent = null ) {
 			(?:(?:[/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
 		$u_agent, $result, PREG_PATTERN_ORDER);
 
-	$key = 0;
-
+	
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
 		return $empty;
@@ -61,52 +59,55 @@ function parse_user_agent( $u_agent = null ) {
 	$browser = $result['browser'][0];
 	$version = $result['version'][0];
 
-	if( ($key = array_search('Playstation Vita', $result['browser'])) !== false ) {
+	$find = function ( $search, &$key ) use ( $result ) {
+		$xkey = array_search($search, $result['browser']);
+		if( $xkey !== false ) {
+			$key = $xkey;
+
+			return true;
+		}
+
+		return false;
+	};
+
+	$key = 0;
+	if( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
-	} elseif( ($key = array_search('Kindle Fire Build', $result['browser'])) !== false || ($key = array_search('Silk', $result['browser'])) !== false ) {
+	} elseif( $find('Kindle Fire Build', $key) || $find('Silk', $key) ) {
 		$browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
 			$version = $result['version'][array_search('Version', $result['browser'])];
 		}
-	} elseif( ($key = array_search('NintendoBrowser', $result['browser'])) !== false || $platform == 'Nintendo 3DS' ) {
+	} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
-	} elseif( ($key = array_search('Kindle', $result['browser'])) !== false ) {
+	} elseif( $find('Kindle', $key) ) {
 		$browser  = $result['browser'][$key];
 		$platform = 'Kindle';
 		$version  = $result['version'][$key];
-	} elseif( ($key = array_search('OPR', $result['browser'])) !== false ) {
+	} elseif( $find('OPR', $key) ) {
 		$browser = 'Opera Next';
 		$version = $result['version'][$key];
-	} elseif( ($key = array_search('Opera', $result['browser'])) !== false ) {
+	} elseif( $find('Opera', $key) ) {
 		$browser = 'Opera';
+		$find('Version', $key);
 		$version = $result['version'][$key];
-		if( ($key = array_search('Version', $result['browser'])) !== false ) {
-			$version = $result['version'][$key];
-		}
 	} elseif( $browser == 'AppleWebKit' ) {
-		if( ($platform == 'Android' && !($key = 0)) || $key = array_search('Chrome', $result['browser']) ) {
+		if( ($platform == 'Android' && !($key = 0)) || $find('Chrome', $key) ) {
 			$browser = 'Chrome';
-			if( ($vkey = array_search('Version', $result['browser'])) !== false ) {
-				$key = $vkey;
-			}
 		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
-			if( ($vkey = array_search('Version', $result['browser'])) !== false ) {
-				$key = $vkey;
-			}
-		} elseif( $key = array_search('Safari', $result['browser']) ) {
+		} elseif( $find('Safari', $key) ) {
 			$browser = 'Safari';
-			if( ($vkey = array_search('Version', $result['browser'])) !== false ) {
-				$key = $vkey;
-			}
 		}
+
+		$find('Version', $key);
 
 		$version = $result['version'][$key];
 	} elseif( $browser == 'MSIE' ) {
-		if( $key = array_search('IEMobile', $result['browser']) ) {
+		if( $find('IEMobile', $key) ) {
 			$browser = 'IEMobile';
 		} else {
 			$browser = 'MSIE';
