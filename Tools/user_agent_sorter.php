@@ -16,15 +16,28 @@ uasort($uas, function( $a, $b ){
 	if( !$ad && $bd ) return 1;
 	if( $ad && !$bd ) return -1;
 
-	$result = strnatcasecmp( $a['browser'], $b['browser'] );
-	if( $result == 0 ) {
-
-		$result = strnatcasecmp( $a['platform'], $b['platform'] );
-
+	if( $ad ) {
+		$result = strnatcasecmp( $a['browser'], $b['browser'] );
 		if( $result == 0 ) {
-			return compare_version( $a['version'], $b['version'] );
-		}
 
+			$result = strnatcasecmp( $a['platform'], $b['platform'] );
+
+			if( $result == 0 ) {
+				return compare_version( $a['version'], $b['version'] );
+			}
+
+		}
+	}else{
+		$result = strnatcasecmp( $a['platform'], $b['platform'] );
+		if( $result == 0 ) {
+
+			$result = strnatcasecmp( $a['browser'], $b['browser'] );
+
+			if( $result == 0 ) {
+				return compare_version( $a['version'], $b['version'] );
+			}
+
+		}
 	}
 
 	return $result;

@@ -134,17 +134,7 @@
 		"browser": "Firefox",
 		"version": "25.0"
 	},
-	"Mozilla\/4.0 (Compatible; Windows NT 5.1; MSIE 6.0) (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)": {
-		"platform": "Windows",
-		"browser": "MSIE",
-		"version": "6.0"
-	},
-	"Mozilla\/4.0 (MSIE 6.0; Windows NT 5.1)": {
-		"platform": "Windows",
-		"browser": "MSIE",
-		"version": "6.0"
-	},
-	"Mozilla\/4.0 (compatible;MSIE 6.0;Windows 98;Q312461)": {
+	"Mozilla\/4.0 (compatible; U; MSIE 6.0; Windows NT 5.1)": {
 		"platform": "Windows",
 		"browser": "MSIE",
 		"version": "6.0"
@@ -154,12 +144,22 @@
 		"browser": "MSIE",
 		"version": "6.0"
 	},
-	"Mozilla\/4.0 (compatible; U; MSIE 6.0; Windows NT 5.1)": {
+	"Mozilla\/4.0 (Windows; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)": {
 		"platform": "Windows",
 		"browser": "MSIE",
 		"version": "6.0"
 	},
-	"Mozilla\/4.0 (Windows; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)": {
+	"Mozilla\/4.0 (MSIE 6.0; Windows NT 5.1)": {
+		"platform": "Windows",
+		"browser": "MSIE",
+		"version": "6.0"
+	},
+	"Mozilla\/4.0 (Compatible; Windows NT 5.1; MSIE 6.0) (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)": {
+		"platform": "Windows",
+		"browser": "MSIE",
+		"version": "6.0"
+	},
+	"Mozilla\/4.0 (compatible;MSIE 6.0;Windows 98;Q312461)": {
 		"platform": "Windows",
 		"browser": "MSIE",
 		"version": "6.0"
@@ -169,12 +169,12 @@
 		"browser": "MSIE",
 		"version": "7.0"
 	},
-	"Mozilla\/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident\/4.0; Mozilla\/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) ; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; InfoPath.3; Tablet PC 2.0)": {
+	"Mozilla\/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident\/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; Tablet PC 2.0)": {
 		"platform": "Windows",
 		"browser": "MSIE",
 		"version": "8.0"
 	},
-	"Mozilla\/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident\/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; Tablet PC 2.0)": {
+	"Mozilla\/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident\/4.0; Mozilla\/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1) ; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; InfoPath.3; Tablet PC 2.0)": {
 		"platform": "Windows",
 		"browser": "MSIE",
 		"version": "8.0"
@@ -189,22 +189,22 @@
 		"browser": "Opera",
 		"version": "11.61"
 	},
-	"Mozilla\/5.0 (Windows NT 6.1; U; nl; rv:1.9.1.6) Gecko\/20091201 Firefox\/3.5.6 Opera 11.01": {
-		"platform": "Windows",
-		"browser": "Opera",
-		"version": "11.01"
-	},
-	"Mozilla\/4.0 (compatible; MSIE 8.0; Windows NT 6.1; de) Opera 11.01": {
-		"platform": "Windows",
-		"browser": "Opera",
-		"version": "11.01"
-	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.13) Gecko\/20101213 Opera\/9.80 (Windows NT 6.1; U; zh-tw) Presto\/2.7.62 Version\/11.01": {
 		"platform": "Windows",
 		"browser": "Opera",
 		"version": "11.01"
 	},
 	"Opera\/9.80 (Windows NT 5.1; U; cs) Presto\/2.7.62 Version\/11.01": {
+		"platform": "Windows",
+		"browser": "Opera",
+		"version": "11.01"
+	},
+	"Mozilla\/5.0 (Windows NT 6.1; U; nl; rv:1.9.1.6) Gecko\/20091201 Firefox\/3.5.6 Opera 11.01": {
+		"platform": "Windows",
+		"browser": "Opera",
+		"version": "11.01"
+	},
+	"Mozilla\/4.0 (compatible; MSIE 8.0; Windows NT 6.1; de) Opera 11.01": {
 		"platform": "Windows",
 		"browser": "Opera",
 		"version": "11.01"
@@ -249,20 +249,15 @@
 		"browser": "Wget",
 		"version": "1.12"
 	},
-	"Mozilla\/5.0 (BlackBerry; U; BlackBerry 9780; en) AppleWebKit\/534.8+ (KHTML, like Gecko) Version\/6.0.0.723 Mobile Safari\/534.8+": {
-		"platform": "BlackBerry",
-		"browser": "BlackBerry Browser",
-		"version": "6.0.0.723"
+	"curl\/7.19.7 (universal-apple-darwin10.0) libcurl\/7.19.7 OpenSSL\/0.9.8r zlib\/1.2.3": {
+		"platform": "",
+		"browser": "curl",
+		"version": "7.19.7"
 	},
-	"Mozilla\/5.0 (PlayBook; U; RIM Tablet OS 2.0.1; en-US) AppleWebKit\/535.8+ (KHTML, like Gecko) Version\/7.2.0.1 Safari\/535.8+": {
-		"platform": "PlayBook",
-		"browser": "BlackBerry Browser",
-		"version": "7.2.0.1"
-	},
-	"Mozilla\/5.0 (Playstation Vita 1.50) AppleWebKit\/531.22.8 (KHTML, like Gecko)\ufeff Silk\/3.2\ufeff": {
-		"platform": "PlayStation Vita",
-		"browser": "Browser",
-		"version": "1.50"
+	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
+		"platform": "",
+		"browser": "Lynx",
+		"version": "2.8.6rel.4"
 	},
 	"Mozilla\/5.0 (Linux; U; Android 2.2; en-us; SGH-T959 Build\/FROYO) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
 		"platform": "Android",
@@ -274,90 +269,10 @@
 		"browser": "Chrome",
 		"version": "4.0"
 	},
-	"curl\/7.19.7 (universal-apple-darwin10.0) libcurl\/7.19.7 OpenSSL\/0.9.8r zlib\/1.2.3": {
-		"platform": "",
-		"browser": "curl",
-		"version": "7.19.7"
-	},
-	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident\/3.1; IEMobile\/7.0) LG;LG-E900h)": {
-		"platform": "Windows Phone OS",
-		"browser": "IEMobile",
-		"version": "7.0"
-	},
-	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident\/3.1; IEMobile\/7.0) Asus;Galaxy6": {
-		"platform": "Windows Phone OS",
-		"browser": "IEMobile",
-		"version": "7.0"
-	},
-	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident\/3.1; IEMobile\/7.0; LG; GW910)": {
-		"platform": "Windows Phone OS",
-		"browser": "IEMobile",
-		"version": "7.0"
-	},
-	"Mozilla\/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/9.0; Xbox)": {
-		"platform": "Xbox",
-		"browser": "IEMobile",
-		"version": "9.0"
-	},
-	"Mozilla\/4.0 (compatible; Linux 2.6.10) NetFront\/3.3 Kindle\/1.0 (screen 600x800)": {
-		"platform": "Kindle",
-		"browser": "Kindle",
-		"version": "1"
-	},
-	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/538.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
-		"platform": "Kindle",
-		"browser": "Kindle",
-		"version": "3.0"
-	},
-	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/528.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
-		"platform": "Kindle",
-		"browser": "Kindle",
-		"version": "3.0"
-	},
-	"Mozilla\/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build\/GINGERBREAD) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
-		"platform": "Kindle Fire",
-		"browser": "Kindle",
-		"version": "4.0"
-	},
-	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
-		"platform": "",
-		"browser": "Lynx",
-		"version": "2.8.6rel.4"
-	},
-	"Mozilla\/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident\/5.0; Xbox)": {
-		"platform": "Xbox",
-		"browser": "MSIE",
-		"version": "9.0"
-	},
-	"Mozilla\/5.0 (PLAYSTATION 3; 1.00)": {
-		"platform": "PlayStation 3",
-		"browser": "NetFront",
-		"version": "1.00"
-	},
-	"Mozilla\/5.0 (PLAYSTATION 3 4.20) AppleWebKit\/531.22.8 (KHTML, like Gecko)": {
-		"platform": "PlayStation 3",
-		"browser": "NetFront",
-		"version": "4.20"
-	},
-	"Mozilla\/5.0 (Nintendo 3DS; U; ; en) Version\/1.7498.US": {
-		"platform": "Nintendo 3DS",
-		"browser": "NintendoBrowser",
-		"version": "1.7498.US"
-	},
-	"Mozilla\/5.0 (Nintendo WiiU) AppleWebKit\/534.52 (KHTML, like Gecko) NX\/2.1.0.8.21 NintendoBrowser\/1.0.0.7494.US": {
-		"platform": "Nintendo WiiU",
-		"browser": "NintendoBrowser",
-		"version": "1.0.0.7494.US"
-	},
-	"Opera\/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel\/1.0; en)": {
-		"platform": "Nintendo Wii",
-		"browser": "Opera",
-		"version": "9.00"
-	},
-	"Opera\/9.30 (Nintendo Wii; U; ; 2071; Wii Shop Channel\/1.0; en)": {
-		"platform": "Nintendo Wii",
-		"browser": "Opera",
-		"version": "9.30"
+	"Mozilla\/5.0 (BlackBerry; U; BlackBerry 9780; en) AppleWebKit\/534.8+ (KHTML, like Gecko) Version\/6.0.0.723 Mobile Safari\/534.8+": {
+		"platform": "BlackBerry",
+		"browser": "BlackBerry Browser",
+		"version": "6.0.0.723"
 	},
 	"Mozilla\/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit\/531.21.10 (KHTML, like Gecko) Version\/4.0.4 Mobile\/7B334b Safari\/531.21.10": {
 		"platform": "iPad",
@@ -378,6 +293,26 @@
 		"platform": "iPhone",
 		"browser": "Safari",
 		"version": "5.0.2"
+	},
+	"Mozilla\/4.0 (compatible; Linux 2.6.10) NetFront\/3.3 Kindle\/1.0 (screen 600x800)": {
+		"platform": "Kindle",
+		"browser": "Kindle",
+		"version": "1"
+	},
+	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/538.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
+		"platform": "Kindle",
+		"browser": "Kindle",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/528.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
+		"platform": "Kindle",
+		"browser": "Kindle",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build\/GINGERBREAD) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
+		"platform": "Kindle Fire",
+		"browser": "Kindle",
+		"version": "4.0"
 	},
 	"Mozilla\/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk\/1.0.13.81_10003810) AppleWebKit\/533.16 (KHTML, like Gecko) Version\/5.0 Safari\/533.16 Silk-Accelerated=true": {
 		"platform": "Kindle Fire",
@@ -403,5 +338,90 @@
 		"platform": "Kindle Fire",
 		"browser": "Silk",
 		"version": "2.2"
+	},
+	"Mozilla\/5.0 (Nintendo 3DS; U; ; en) Version\/1.7498.US": {
+		"platform": "Nintendo 3DS",
+		"browser": "NintendoBrowser",
+		"version": "1.7498.US"
+	},
+	"Opera\/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel\/1.0; en)": {
+		"platform": "Nintendo Wii",
+		"browser": "Opera",
+		"version": "9.00"
+	},
+	"Opera\/9.30 (Nintendo Wii; U; ; 2071; Wii Shop Channel\/1.0; en)": {
+		"platform": "Nintendo Wii",
+		"browser": "Opera",
+		"version": "9.30"
+	},
+	"Mozilla\/5.0 (Nintendo WiiU) AppleWebKit\/534.52 (KHTML, like Gecko) NX\/2.1.0.8.21 NintendoBrowser\/1.0.0.7494.US": {
+		"platform": "Nintendo WiiU",
+		"browser": "NintendoBrowser",
+		"version": "1.0.0.7494.US"
+	},
+	"Mozilla\/5.0 (PlayBook; U; RIM Tablet OS 2.0.1; en-US) AppleWebKit\/535.8+ (KHTML, like Gecko) Version\/7.2.0.1 Safari\/535.8+": {
+		"platform": "PlayBook",
+		"browser": "BlackBerry Browser",
+		"version": "7.2.0.1"
+	},
+	"Mozilla/4.0 (PS3 (PlayStation 3); 1.00)" : {
+		"platform": "PlayStation 3",
+		"browser": "NetFront",
+		"version": "1.00"
+	},
+	"Mozilla\/5.0 (PLAYSTATION 3; 1.00)": {
+		"platform": "PlayStation 3",
+		"browser": "NetFront",
+		"version": "1.00"
+	},
+	"Mozilla\/5.0 (PLAYSTATION 3; 3.55)": {
+		"platform": "PlayStation 3",
+		"browser": "NetFront",
+		"version": "3.55"
+	},
+	"Mozilla\/5.0 (PLAYSTATION 3 4.20) AppleWebKit\/531.22.8 (KHTML, like Gecko)": {
+		"platform": "PlayStation 3",
+		"browser": "NetFront",
+		"version": "4.20"
+	},
+	"Mozilla\/5.0 (Playstation Vita 1.50) AppleWebKit\/531.22.8 (KHTML, like Gecko)\ufeff Silk\/3.2\ufeff": {
+		"platform": "PlayStation Vita",
+		"browser": "Browser",
+		"version": "1.50"
+	},
+	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident\/3.1; IEMobile\/7.0; LG; GW910)": {
+		"platform": "Windows Phone OS",
+		"browser": "IEMobile",
+		"version": "7.0"
+	},
+	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident\/3.1; IEMobile\/7.0) LG;LG-E900h)": {
+		"platform": "Windows Phone OS",
+		"browser": "IEMobile",
+		"version": "7.0"
+	},
+	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident\/3.1; IEMobile\/7.0) Asus;Galaxy6": {
+		"platform": "Windows Phone OS",
+		"browser": "IEMobile",
+		"version": "7.0"
+	},
+	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.5; Trident\/3.1; IEMobile\/7.0; Xbox)": {
+		"platform": "Xbox",
+		"browser": "IEMobile",
+		"version": "7.0"
+	},
+	"Mozilla\/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/9.0; Xbox)": {
+		"platform": "Xbox",
+		"browser": "IEMobile",
+		"version": "9.0"
+	},
+	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident\/3.1; Xbox)": {
+		"platform": "Xbox",
+		"browser": "MSIE",
+		"version": "7.0"
+	},
+	"Mozilla\/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident\/5.0; Xbox)": {
+		"platform": "Xbox",
+		"browser": "MSIE",
+		"version": "9.0"
 	}
 }

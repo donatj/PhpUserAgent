@@ -12,15 +12,13 @@
 function parse_user_agent( $u_agent = null ) {
 	if( is_null($u_agent) && isset($_SERVER['HTTP_USER_AGENT']) ) $u_agent = $_SERVER['HTTP_USER_AGENT'];
 
-	$empty = array(
-		'platform' => null,
-		'browser'  => null,
-		'version'  => null,
-	);
+	$platform = null;
+	$browser  = null;
+	$version  = null;
 
-	$data = $empty;
+	$empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
 
-	if( !$u_agent ) return $data;
+	if( !$u_agent ) return $empty;
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
@@ -32,24 +30,24 @@ function parse_user_agent( $u_agent = null ) {
 		$result['platform'] = array_unique($result['platform']);
 		if( count($result['platform']) > 1 ) {
 			if( $keys = array_intersect($priority, $result['platform']) ) {
-				$data['platform'] = reset($keys);
+				$platform = reset($keys);
 			} else {
-				$data['platform'] = $result['platform'][0];
+				$platform = $result['platform'][0];
 			}
 		} elseif( isset($result['platform'][0]) ) {
-			$data['platform'] = $result['platform'][0];
+			$platform = $result['platform'][0];
 		}
 	}
 
-	if( $data['platform'] == 'linux-gnu' ) {
-		$data['platform'] = 'Linux';
+	if( $platform == 'linux-gnu' ) {
+		$platform = 'Linux';
 	}
-	if( $data['platform'] == 'CrOS' ) {
-		$data['platform'] = 'Chrome OS';
+	if( $platform == 'CrOS' ) {
+		$platform = 'Chrome OS';
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Safari|MSIE|AppleWebKit|Chrome|IEMobile|Opera|OPR|Silk|Lynx|Version|Wget|curl|NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
-			(?:;?)
+			(?:\)?;?)
 			(?:(?:[/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
 		$u_agent, $result, PREG_PATTERN_ORDER);
 
@@ -60,66 +58,66 @@ function parse_user_agent( $u_agent = null ) {
 		return $empty;
 	}
 
-	$data['browser'] = $result['browser'][0];
-	$data['version'] = $result['version'][0];
+	$browser = $result['browser'][0];
+	$version = $result['version'][0];
 
-	if( $key = array_search('Playstation Vita', $result['browser']) !== false ) {
-		$data['platform'] = 'PlayStation Vita';
-		$data['browser']  = 'Browser';
+	if( ($key = array_search('Playstation Vita', $result['browser'])) !== false ) {
+		$platform = 'PlayStation Vita';
+		$browser  = 'Browser';
 	} elseif( ($key = array_search('Kindle Fire Build', $result['browser'])) !== false || ($key = array_search('Silk', $result['browser'])) !== false ) {
-		$data['browser']  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
-		$data['platform'] = 'Kindle Fire';
-		if( !($data['version'] = $result['version'][$key]) || !is_numeric($data['version'][0]) ) {
-			$data['version'] = $result['version'][array_search('Version', $result['browser'])];
+		$browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
+		$platform = 'Kindle Fire';
+		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
+			$version = $result['version'][array_search('Version', $result['browser'])];
 		}
-	} elseif( ($key = array_search('NintendoBrowser', $result['browser'])) !== false || $data['platform'] == 'Nintendo 3DS' ) {
-		$data['browser'] = 'NintendoBrowser';
-		$data['version'] = $result['version'][$key];
+	} elseif( ($key = array_search('NintendoBrowser', $result['browser'])) !== false || $platform == 'Nintendo 3DS' ) {
+		$browser = 'NintendoBrowser';
+		$version = $result['version'][$key];
 	} elseif( ($key = array_search('Kindle', $result['browser'])) !== false ) {
-		$data['browser']  = $result['browser'][$key];
-		$data['platform'] = 'Kindle';
-		$data['version']  = $result['version'][$key];
+		$browser  = $result['browser'][$key];
+		$platform = 'Kindle';
+		$version  = $result['version'][$key];
 	} elseif( ($key = array_search('OPR', $result['browser'])) !== false ) {
-		$data['browser'] = 'Opera Next';
-		$data['version'] = $result['version'][$key];
+		$browser = 'Opera Next';
+		$version = $result['version'][$key];
 	} elseif( ($key = array_search('Opera', $result['browser'])) !== false ) {
-		$data['browser'] = 'Opera';
-		$data['version'] = $result['version'][$key];
+		$browser = 'Opera';
+		$version = $result['version'][$key];
 		if( ($key = array_search('Version', $result['browser'])) !== false ) {
-			$data['version'] = $result['version'][$key];
+			$version = $result['version'][$key];
 		}
-	} elseif( $data['browser'] == 'AppleWebKit' ) {
-		if( ($data['platform'] == 'Android' && !($key = 0)) || $key = array_search('Chrome', $result['browser']) ) {
-			$data['browser'] = 'Chrome';
+	} elseif( $browser == 'AppleWebKit' ) {
+		if( ($platform == 'Android' && !($key = 0)) || $key = array_search('Chrome', $result['browser']) ) {
+			$browser = 'Chrome';
 			if( ($vkey = array_search('Version', $result['browser'])) !== false ) {
 				$key = $vkey;
 			}
-		} elseif( $data['platform'] == 'BlackBerry' || $data['platform'] == 'PlayBook' ) {
-			$data['browser'] = 'BlackBerry Browser';
+		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
+			$browser = 'BlackBerry Browser';
 			if( ($vkey = array_search('Version', $result['browser'])) !== false ) {
 				$key = $vkey;
 			}
 		} elseif( $key = array_search('Safari', $result['browser']) ) {
-			$data['browser'] = 'Safari';
+			$browser = 'Safari';
 			if( ($vkey = array_search('Version', $result['browser'])) !== false ) {
 				$key = $vkey;
 			}
 		}
 
-		$data['version'] = $result['version'][$key];
-	} elseif( $data['browser'] == 'MSIE' ) {
+		$version = $result['version'][$key];
+	} elseif( $browser == 'MSIE' ) {
 		if( $key = array_search('IEMobile', $result['browser']) ) {
-			$data['browser'] = 'IEMobile';
+			$browser = 'IEMobile';
 		} else {
-			$data['browser'] = 'MSIE';
-			$key             = 0;
+			$browser = 'MSIE';
+			$key     = 0;
 		}
-		$data['version'] = $result['version'][$key];
-	} elseif( $key = array_search('PLAYSTATION 3', $result['browser']) !== false ) {
-		$data['platform'] = 'PlayStation 3';
-		$data['browser']  = 'NetFront';
+		$version = $result['version'][$key];
+	} elseif( $key = array_search('playstation 3', array_map('strtolower', $result['browser'])) !== false ) {
+		$platform = 'PlayStation 3';
+		$browser  = 'NetFront';
 	}
 
-	return $data;
+	return array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
 
 }

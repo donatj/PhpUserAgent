@@ -4,4 +4,8 @@
 			<directory>Tests</directory>
 		</testsuite>
     </testsuites>
+
+    <logging>
+        <log type="coverage-clover" target="coverage.xml"/>
+    </logging>
 </phpunit>
