@@ -82,16 +82,13 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( ($key = array_search('OPR', $result['browser'])) !== false ) {
 		$data['browser'] = 'Opera Next';
 		$data['version'] = $result['version'][$key];
-		if( ($key = array_search('Version', $result['browser'])) !== false ) {
-			$data['version'] = $result['version'][$key];
-		}
 	} elseif( ($key = array_search('Opera', $result['browser'])) !== false ) {
 		$data['browser'] = 'Opera';
 		$data['version'] = $result['version'][$key];
 		if( ($key = array_search('Version', $result['browser'])) !== false ) {
 			$data['version'] = $result['version'][$key];
 		}
-	} elseif( $result['browser'][0] == 'AppleWebKit' ) {
+	} elseif( $data['browser'] == 'AppleWebKit' ) {
 		if( ($data['platform'] == 'Android' && !($key = 0)) || $key = array_search('Chrome', $result['browser']) ) {
 			$data['browser'] = 'Chrome';
 			if( ($vkey = array_search('Version', $result['browser'])) !== false ) {
@@ -110,7 +107,7 @@ function parse_user_agent( $u_agent = null ) {
 		}
 
 		$data['version'] = $result['version'][$key];
-	} elseif( $result['browser'][0] == 'MSIE' ) {
+	} elseif( $data['browser'] == 'MSIE' ) {
 		if( $key = array_search('IEMobile', $result['browser']) ) {
 			$data['browser'] = 'IEMobile';
 		} else {
