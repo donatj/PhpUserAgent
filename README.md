@@ -65,7 +65,7 @@ array(
 - BlackBerry Browser
 - Camino
 - Kindle / Silk
-- Firefox
+- Firefox (Iceweasel)
 - Safari
 - Internet Explorer
 - IEMobile
