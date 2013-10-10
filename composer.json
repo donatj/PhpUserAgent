@@ -1,8 +1,8 @@
 {
 	"name": "donatj/phpuseragentparser",
 	"type": "library",
-	"description": "Simple user agent string parser",
-	"keywords": ["user agent", "parser"],
+	"description": "Simple, streamlined PHP user-agent parser",
+	"keywords": ["user agent", "useragent", "parser"],
 	"homepage": "http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT",
 	"license": "MIT",
 	"require": {
