@@ -6,9 +6,13 @@ $jsonfile = __DIR__ . '/../Tests/user_agents.json';
 
 $uas = json_decode(file_get_contents($jsonfile), true);
 
-uasort($uas, function( $a, $b ){
+foreach( $uas as $key => &$val ) {
+	$val['key'] = $key;
+}
 
-	$desktop = array('Windows', 'Linux', 'Macintosh', 'Chrome OS');
+uasort($uas, function ( $a, $b ) {
+
+	$desktop = array( 'Windows', 'Linux', 'Macintosh', 'Chrome OS' );
 
 	$ad = in_array($a['platform'], $desktop);
 	$bd = in_array($b['platform'], $desktop);
@@ -17,37 +21,46 @@ uasort($uas, function( $a, $b ){
 	if( $ad && !$bd ) return -1;
 
 	if( $ad ) {
-		$result = strnatcasecmp( $a['browser'], $b['browser'] );
+		$result = strnatcasecmp($a['browser'], $b['browser']);
 		if( $result == 0 ) {
 
-			$result = strnatcasecmp( $a['platform'], $b['platform'] );
+			$result = strnatcasecmp($a['platform'], $b['platform']);
 
 			if( $result == 0 ) {
-				return compare_version( $a['version'], $b['version'] );
+				$result = compare_version($a['version'], $b['version']);
 			}
 
 		}
-	}else{
-		$result = strnatcasecmp( $a['platform'], $b['platform'] );
+	} else {
+		$result = strnatcasecmp($a['platform'], $b['platform']);
 		if( $result == 0 ) {
 
-			$result = strnatcasecmp( $a['browser'], $b['browser'] );
+			$result = strnatcasecmp($a['browser'], $b['browser']);
 
 			if( $result == 0 ) {
-				return compare_version( $a['version'], $b['version'] );
+				$result = compare_version($a['version'], $b['version']);
 			}
 
 		}
 	}
 
+	if( $result == 0 ) {
+		$result = strnatcasecmp($a['key'], $b['key']);
+	}
+
 	return $result;
 });
 
+foreach( $uas as &$val ) {
+	unset($val['key']);
+}
+
 $jsonPretty = new Camspiers\JsonPretty\JsonPretty;
+echo $jsonPretty->prettify($uas);
 file_put_contents($jsonfile, $jsonPretty->prettify($uas));
 
 
-function compare_version($a, $b) {
+function compare_version( $a, $b ) {
 	$cmp_a = explode('.', $a);
 	$cmp_b = explode('.', $b);
 
@@ -55,16 +68,16 @@ function compare_version($a, $b) {
 
 	$value = 0;
 
-	for ($i = 0; $i < $max; $i++) {
-		$aa = strtolower(isset($cmp_a[$i])?$cmp_a[$i]:'0');
-		$bb = strtolower(isset($cmp_b[$i])?$cmp_b[$i]:'0');
+	for( $i = 0; $i < $max; $i++ ) {
+		$aa = strtolower(isset($cmp_a[$i]) ? $cmp_a[$i] : '0');
+		$bb = strtolower(isset($cmp_b[$i]) ? $cmp_b[$i] : '0');
 
-		if (is_numeric($aa) && is_numeric($bb)) {
-			if ($aa != $bb) {
+		if( is_numeric($aa) && is_numeric($bb) ) {
+			if( $aa != $bb ) {
 				$value = ($aa > $bb ? 1 : -1);
 				break;
 			}
-		} else if ($cmp = strcmp($aa, $bb)) {
+		} else if( $cmp = strcmp($aa, $bb) ) {
 			$value = $cmp / abs($cmp);
 			break;
 		}
