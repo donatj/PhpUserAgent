@@ -79,7 +79,7 @@ array(
 - IEMobile
 - Chrome
 - Opera
-- Silk
+- Midori
 - Lynx
 - Wget
 - Curl
