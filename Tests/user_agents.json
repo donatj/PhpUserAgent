@@ -139,6 +139,31 @@
 		"browser": "Firefox",
 		"version": "25.0"
 	},
+	"Mozilla\/5.0 (X11; U; Linux i686; de-DE; rv:1.8.1.9) Gecko\/20071103 Midori\/0.0.10": {
+		"platform": "Linux",
+		"browser": "Midori",
+		"version": "0.0.10"
+	},
+	"Mozilla\/5.0 (X11; U; Linux i686; de) AppleWebKit\/523+ (KHTML like Gecko) midori\/0.1": {
+		"platform": "Linux",
+		"browser": "Midori",
+		"version": "0.1"
+	},
+	"Midori\/0.3 (X11; Linux; U; en-us) WebKit\/531.2+": {
+		"platform": "Linux",
+		"browser": "Midori",
+		"version": "0.3"
+	},
+	"Mozilla\/5.0 (X11; Linux; rv:2.0.1) Gecko\/20100101 Firefox\/4.0.1 Midori\/0.4": {
+		"platform": "Linux",
+		"browser": "Midori",
+		"version": "0.4"
+	},
+	"Midori\/0.3 (Windows; Windows; U; en-en) WebKit\/532+ ": {
+		"platform": "Windows",
+		"browser": "Midori",
+		"version": "0.3"
+	},
 	"Mozilla\/4.0 (compatible;MSIE 6.0;Windows 98;Q312461)": {
 		"platform": "Windows",
 		"browser": "MSIE",
