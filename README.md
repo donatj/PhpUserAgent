@@ -67,6 +67,7 @@ array(
 	- Nintendo Wii
 	- Nintendo WiiU
 	- PlayStation 3
+	- PlayStation 4
 	- PlayStation Vita
 	- Xbox 360
 
