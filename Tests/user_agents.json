@@ -419,6 +419,11 @@
 		"browser": "NetFront",
 		"version": "4.20"
 	},
+	"Mozilla\/5.0 (PlayStation 4 1.50) AppleWebKit\/536.26 (KHTML, like Gecko)": {
+		"platform": "PlayStation 4",
+		"browser": "NetFront",
+		"version": "1.50"
+	},
 	"Mozilla\/5.0 (Playstation Vita 1.50) AppleWebKit\/531.22.8 (KHTML, like Gecko)\ufeff Silk\/3.2\ufeff": {
 		"platform": "PlayStation Vita",
 		"browser": "Browser",

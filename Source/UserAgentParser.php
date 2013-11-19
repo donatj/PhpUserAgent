@@ -119,8 +119,10 @@ function parse_user_agent( $u_agent = null ) {
 			$key     = 0;
 		}
 		$version = $result['version'][$key];
-	} elseif( $key = array_search('playstation 3', array_map('strtolower', $result['browser'])) === 0 ) {
-		$platform = 'PlayStation 3';
+	} elseif( $key = preg_grep("/playstation \d/i", array_map('strtolower', $result['browser']))) {
+		$key = reset($key);
+
+		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $key);
 		$browser  = 'NetFront';
 	}
 
