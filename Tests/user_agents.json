@@ -299,6 +299,11 @@
 		"browser": "Android Browser",
 		"version": "4.0"
 	},
+	"Mozilla\/5.0 (Linux; U; Android 3.2.1; hu-hu; Transformer TF101 Build\/HTK75) AppleWebKit\/534.13 (KHTML, like Gecko) Version\/4.0 Safari\/534.13": {
+		"platform": "Android",
+		"browser": "Android Browser",
+		"version": "4.0"
+	},
 	"Mozilla\/5.0 (Linux; U; Android Itfunz2.1_Eclipse_Terminator_II_Final; zh-cn; Milestone Build\/SHOLS_U2_02.36.0) AppleWebKit\/530.17 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/530.17": {
 		"platform": "Android",
 		"browser": "Android Browser",
