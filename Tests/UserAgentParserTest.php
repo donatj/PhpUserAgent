@@ -11,7 +11,7 @@ class UserAgentParser_test extends PHPUnit_Framework_TestCase {
 
 		foreach($uas as $ua => $expected_result) {
 			$result = parse_user_agent($ua);
-			$this->assertEquals($result, $expected_result, $ua . " failed!" );
+			$this->assertEquals($expected_result, $result, $ua . " failed!" );
 		}
 
 	}
