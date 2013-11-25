@@ -73,6 +73,7 @@ array(
 
 ## Currently Detected Browsers
 
+- Android Browser
 - BlackBerry Browser
 - Camino
 - Kindle / Silk
