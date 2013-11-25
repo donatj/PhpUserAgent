@@ -96,12 +96,15 @@ function parse_user_agent( $u_agent = null ) {
 		$browser = 'Opera';
 		$find('Version', $key);
 		$version = $result['version'][$key];
+	}elseif ( $find('Chrome', $key) ) {
+		$browser = 'Chrome';
+		$version = $result['version'][$key];
 	} elseif( $find('Midori', $key) ) {
 		$browser = 'Midori';
 		$version = $result['version'][$key]; 
 	} elseif( $browser == 'AppleWebKit' ) {
-		if( ($platform == 'Android' && !($key = 0)) || $find('Chrome', $key) ) {
-			$browser = 'Chrome';
+		if( ($platform == 'Android' && !($key = 0)) ) {
+			$browser = 'Android Browser';
 		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
 		} elseif( $find('Safari', $key) ) {
