@@ -15,6 +15,7 @@ function parse_user_agent( $u_agent = null ) {
 	$platform = null;
 	$browser  = null;
 	$version  = null;
+	$platform_version = null;
 
 	$empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
 
@@ -131,10 +132,10 @@ function parse_user_agent( $u_agent = null ) {
 
 	if(preg_match('/(?:Mac OS X (?P<version>[0-9_.]+))|(?:Windows (?:NT|Phone OS)* *(?P<version2>[0-9_.]+))|(?:Android (?P<version3>[^;)]+))|(?:Linux (?P<version4>[^;)]+))|(?:(?:iPhone|CPU) OS (?P<version5>[0-9_.]+))/i', $parent_matches[1], $regs)) {
 
-		$data['platform_version'] = trim($regs['version'] . $regs['version1'] . $regs['version2'] . $regs['version3'] . $regs['version4'] . $regs['version5']);
+		$platform_version = trim($regs['version'] . $regs['version1'] . $regs['version2'] . $regs['version3'] . $regs['version4'] . $regs['version5']);
 
 		if($data['platform'] == 'Windows') {
-			switch((float)$data['platform_version']) {
+			switch((float)$platform_version) {
 				case 5:
 					$platform_version = '2000';
 					break;
@@ -156,12 +157,12 @@ function parse_user_agent( $u_agent = null ) {
 			}
 		}
 		
-		$platform_version = str_replace('_', '.', $data['platform_version']);
+		$platform_version = str_replace('_', '.', $platform_version);
 
 	} else {
 		$result = "";
 	}
 
-	return array( 'platform' => $platform, 'browser' => $browser, 'version' => $version, 'platform_version' => platform_version );
+	return array( 'platform' => $platform, 'browser' => $browser, 'version' => $version, 'platform_version' => $platform_version );
 
 }
