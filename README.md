@@ -107,7 +107,3 @@ array(
 
 
 More information is available at [Donat Studios](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/donatj/phpuseragent/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
