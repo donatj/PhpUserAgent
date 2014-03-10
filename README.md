@@ -1,7 +1,6 @@
 # PHP User Agent Parser
 
-[![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/v/stable.png)](https://packagist.org/packages/donatj/phpuseragentparser)
-[![Total Downloads](https://poser.pugx.org/donatj/phpuseragentparser/downloads.png)](https://packagist.org/packages/donatj/phpuseragentparser)
+[![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/v/stable.png)](https://packagist.org/packages/donatj/phpuseragentparser) [![Total Downloads](https://poser.pugx.org/donatj/phpuseragentparser/downloads.png)](https://packagist.org/packages/donatj/phpuseragentparser) [![Latest Unstable Version](https://poser.pugx.org/donatj/phpuseragentparser/v/unstable.png)](https://packagist.org/packages/donatj/phpuseragentparser) [![License](https://poser.pugx.org/donatj/phpuseragentparser/license.png)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![Build Status](https://travis-ci.org/donatj/PhpUserAgent.png?branch=master)](https://travis-ci.org/donatj/PhpUserAgent)
 
 ## What It Is
