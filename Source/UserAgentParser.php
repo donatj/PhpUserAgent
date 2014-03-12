@@ -60,7 +60,7 @@ function parse_user_agent( $u_agent = null ) {
 	$version = $result['version'][0];
 
 	$find = function ( $search, &$key ) use ( $result ) {
-		$xkey = array_search(strtolower($search),array_map('strtolower',$result['browser']));
+		$xkey = array_search(strtolower($search), array_map('strtolower', $result['browser']));
 		if( $xkey !== false ) {
 			$key = $xkey;
 
@@ -73,7 +73,7 @@ function parse_user_agent( $u_agent = null ) {
 	$key = 0;
 	if( $browser == 'Iceweasel' ) {
 		$browser = 'Firefox';
-	}elseif( $find('Playstation Vita', $key) ) {
+	} elseif( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
 	} elseif( $find('Kindle Fire Build', $key) || $find('Silk', $key) ) {
@@ -96,12 +96,12 @@ function parse_user_agent( $u_agent = null ) {
 		$browser = 'Opera';
 		$find('Version', $key);
 		$version = $result['version'][$key];
-	}elseif ( $find('Chrome', $key) ) {
-		$browser = 'Chrome';
-		$version = $result['version'][$key];
 	} elseif( $find('Midori', $key) ) {
 		$browser = 'Midori';
-		$version = $result['version'][$key]; 
+		$version = $result['version'][$key];
+	} elseif( $find('Chrome', $key) ) {
+		$browser = 'Chrome';
+		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
 		if( ($platform == 'Android' && !($key = 0)) ) {
 			$browser = 'Android Browser';
@@ -122,7 +122,7 @@ function parse_user_agent( $u_agent = null ) {
 			$key     = 0;
 		}
 		$version = $result['version'][$key];
-	} elseif( $key = preg_grep("/playstation \d/i", array_map('strtolower', $result['browser']))) {
+	} elseif( $key = preg_grep("/playstation \d/i", array_map('strtolower', $result['browser'])) ) {
 		$key = reset($key);
 
 		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $key);

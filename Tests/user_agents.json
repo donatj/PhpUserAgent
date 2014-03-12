@@ -154,10 +154,20 @@
 		"browser": "Midori",
 		"version": "0.3"
 	},
+	"Mozilla\/5.0 (X11; Linux) AppleWebKit\/537.6 (KHTML, like Gecko) Chrome\/18.0.1025.133 Safari\/537.6 Midori\/0.4": {
+		"platform": "Linux",
+		"browser": "Midori",
+		"version": "0.4"
+	},
 	"Mozilla\/5.0 (X11; Linux; rv:2.0.1) Gecko\/20100101 Firefox\/4.0.1 Midori\/0.4": {
 		"platform": "Linux",
 		"browser": "Midori",
 		"version": "0.4"
+	},
+	"Mozilla\/5.0 (X11; Linux) AppleWebKit\/535.22 (KHTML, like Gecko) Chrome\/18.0.1025.133 Safari\/535.22 Midori\/0.5": {
+		"platform": "Linux",
+		"browser": "Midori",
+		"version": "0.5"
 	},
 	"Midori\/0.3 (Windows; Windows; U; en-en) WebKit\/532+ ": {
 		"platform": "Windows",
