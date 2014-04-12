@@ -22,7 +22,7 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
-		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone\ OS)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox)
+		preg_match_all('/(?P<platform>BB\d+|Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone\ OS)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox)
 			(?:\ [^;]*)?
 			(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
@@ -105,6 +105,9 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $browser == 'AppleWebKit' ) {
 		if( ($platform == 'Android' && !($key = 0)) ) {
 			$browser = 'Android Browser';
+		} elseif( strpos($platform, 'BB') === 0 ) {
+			$browser  = 'BlackBerry Browser';
+			$platform = 'BlackBerry';
 		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
 		} elseif( $find('Safari', $key) ) {
@@ -122,7 +125,7 @@ function parse_user_agent( $u_agent = null ) {
 			$key     = 0;
 		}
 		$version = $result['version'][$key];
-	} elseif( $key = preg_grep("/playstation \d/i", array_map('strtolower', $result['browser'])) ) {
+	} elseif( $key = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
 		$key = reset($key);
 
 		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $key);
