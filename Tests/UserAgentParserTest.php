@@ -33,4 +33,13 @@ class UserAgentParser_test extends PHPUnit_Framework_TestCase {
 		$this->assertEquals($result, $expected);
 	}
 
+	
+	/**
+	 * @expectedException \InvalidArgumentException
+	 */
+	function test_no_user_agent_exception() {
+		unset($_SERVER['HTTP_USER_AGENT']);
+		parse_user_agent();
+	}
+
 }
