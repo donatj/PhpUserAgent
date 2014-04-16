@@ -513,5 +513,10 @@
 		"platform": "Xbox One",
 		"browser": "MSIE",
 		"version": "10.0"
+	},
+	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/10.0; Xbox; Xbox One)": {
+		"platform": "Xbox One",
+		"browser": "IEMobile",
+		"version": "10.0"
 	}
 }
