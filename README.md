@@ -85,6 +85,7 @@ array(
 	- PlayStation 4
 	- PlayStation Vita
 	- Xbox 360
+	- Xbox One
 
 ## Currently Detected Browsers
 
