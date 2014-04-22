@@ -144,29 +144,8 @@ function parse_user_agent( $u_agent = null ) {
 		$platform_version = @trim($regs['version'] . $regs['version1'] . $regs['version2'] . $regs['version3'] . $regs['version4'] . $regs['version5']);
 
 		if($platform == 'Windows') {
-			switch((float)$platform_version) {
-				case 5:
-					$platform_version = '2000';
-					break;
-				case 5.1:
-					$platform_version = 'XP';
-					break;
-				case 5.2:
-					$platform_version = 'XP64';
-					break;
-				case 6:
-					$platform_version = 'Vista';
-					break;
-				case 6.1:
-					$platform_version = '7';
-					break;
-				case 6.2:
-					$platform_version = '8';
-					break;
-				case 6.3:
-					$platform_version = '8.1';
-					break;
-			}
+			$ver = array( '5.0' => '2000', '5.1' => 'XP', '5.2' => 'XP64', '6.0' => 'Vista', '6.1' => '7', '6.2' => '8', '6.3' => '8.1' );
+			$platform_version = isset( $ver[$platform_version] ) ? $ver[$platform_version] : $platform_version;
 		}
 		
 		$platform_version = str_replace('_', '.', $platform_version);
