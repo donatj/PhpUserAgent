@@ -6,11 +6,17 @@
  * @author Jesse G. Donat <donatj@gmail.com>
  * @link https://github.com/donatj/PhpUserAgent
  * @link http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
- * @param string|null $u_agent
+ * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
  * @return array an array with browser, version and platform keys
  */
 function parse_user_agent( $u_agent = null ) {
-	if( is_null($u_agent) && isset($_SERVER['HTTP_USER_AGENT']) ) $u_agent = $_SERVER['HTTP_USER_AGENT'];
+	if( is_null($u_agent) ) {
+		if(isset($_SERVER['HTTP_USER_AGENT'])) {
+			$u_agent = $_SERVER['HTTP_USER_AGENT'];
+		}else{
+			throw new \InvalidArgumentException('parse_user_agent requires a user agent');
+		}
+	}
 
 	$platform = null;
 	$browser  = null;
@@ -23,11 +29,11 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
-		preg_match_all('/(?P<platform>Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone\ OS)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox)
-			(?:\ [^;]*)?
-			(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
+		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox(\ One)?)
+				(?:\ [^;]*)?
+				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
-		$priority           = array( 'Android', 'Xbox' );
+		$priority           = array( 'Android', 'Xbox One', 'Xbox' );
 		$result['platform'] = array_unique($result['platform']);
 		if( count($result['platform']) > 1 ) {
 			if( $keys = array_intersect($priority, $result['platform']) ) {
@@ -61,7 +67,7 @@ function parse_user_agent( $u_agent = null ) {
 	$version = $result['version'][0];
 
 	$find = function ( $search, &$key ) use ( $result ) {
-		$xkey = array_search(strtolower($search),array_map('strtolower',$result['browser']));
+		$xkey = array_search(strtolower($search), array_map('strtolower', $result['browser']));
 		if( $xkey !== false ) {
 			$key = $xkey;
 
@@ -74,7 +80,7 @@ function parse_user_agent( $u_agent = null ) {
 	$key = 0;
 	if( $browser == 'Iceweasel' ) {
 		$browser = 'Firefox';
-	}elseif( $find('Playstation Vita', $key) ) {
+	} elseif( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
 	} elseif( $find('Kindle Fire Build', $key) || $find('Silk', $key) ) {
@@ -97,15 +103,18 @@ function parse_user_agent( $u_agent = null ) {
 		$browser = 'Opera';
 		$find('Version', $key);
 		$version = $result['version'][$key];
-	}elseif ( $find('Chrome', $key) ) {
-		$browser = 'Chrome';
-		$version = $result['version'][$key];
 	} elseif( $find('Midori', $key) ) {
 		$browser = 'Midori';
-		$version = $result['version'][$key]; 
+		$version = $result['version'][$key];
+	} elseif( $find('Chrome', $key) ) {
+		$browser = 'Chrome';
+		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
 		if( ($platform == 'Android' && !($key = 0)) ) {
 			$browser = 'Android Browser';
+		} elseif( strpos($platform, 'BB') === 0 ) {
+			$browser  = 'BlackBerry Browser';
+			$platform = 'BlackBerry';
 		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
 		} elseif( $find('Safari', $key) ) {
@@ -123,7 +132,7 @@ function parse_user_agent( $u_agent = null ) {
 			$key     = 0;
 		}
 		$version = $result['version'][$key];
-	} elseif( $key = preg_grep("/playstation \d/i", array_map('strtolower', $result['browser']))) {
+	} elseif( $key = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
 		$key = reset($key);
 
 		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $key);
