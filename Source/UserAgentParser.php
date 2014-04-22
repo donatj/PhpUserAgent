@@ -139,11 +139,11 @@ function parse_user_agent( $u_agent = null ) {
 		$browser  = 'NetFront';
 	}
 
-	if(preg_match('/(?:Mac OS X (?P<version>[0-9_.]+))|(?:Windows (?:NT|Phone OS)* *(?P<version2>[0-9_.]+))|(?:Android (?P<version3>[^;)]+))|(?:Linux (?P<version4>[^;)]+))|(?:(?:iPhone|CPU) OS (?P<version5>[0-9_.]+))/i', $parent_matches[1], $regs)) {
+	if(!empty($parent_matches[1]) && preg_match('/(?:Mac OS X (?P<version>[0-9_.]+))|(?:Windows (?:NT|Phone)*(?: OS)* *(?P<version2>[0-9_.]+))|(?:Android (?P<version3>[^;)]+))|(?:Linux (?P<version4>[^;)]+))|(?:(?:iPhone|CPU) OS (?P<version5>[0-9_.]+))/i', $parent_matches[1], $regs)) {
 
-		$platform_version = trim($regs['version'] . $regs['version1'] . $regs['version2'] . $regs['version3'] . $regs['version4'] . $regs['version5']);
+		$platform_version = @trim($regs['version'] . $regs['version1'] . $regs['version2'] . $regs['version3'] . $regs['version4'] . $regs['version5']);
 
-		if($data['platform'] == 'Windows') {
+		if($platform == 'Windows') {
 			switch((float)$platform_version) {
 				case 5:
 					$platform_version = '2000';
@@ -162,6 +162,9 @@ function parse_user_agent( $u_agent = null ) {
 					break;
 				case 6.2:
 					$platform_version = '8';
+					break;
+				case 6.3:
+					$platform_version = '8.1';
 					break;
 			}
 		}
