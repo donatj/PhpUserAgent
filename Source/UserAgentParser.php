@@ -106,6 +106,14 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('Midori', $key) ) {
 		$browser = 'Midori';
 		$version = $result['version'][$key];
+	} elseif( $browser == 'MSIE' || strpos($browser, 'Trident') !== false ) {
+		if( $find('IEMobile', $key) ) {
+			$browser = 'IEMobile';
+		} else {
+			$browser = 'MSIE';
+			$key     = 0;
+		}
+		$version = $result['version'][$key];
 	} elseif( $find('Chrome', $key) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
@@ -123,14 +131,6 @@ function parse_user_agent( $u_agent = null ) {
 
 		$find('Version', $key);
 
-		$version = $result['version'][$key];
-	} elseif( $browser == 'MSIE' || strpos($browser, 'Trident') !== false ) {
-		if( $find('IEMobile', $key) ) {
-			$browser = 'IEMobile';
-		} else {
-			$browser = 'MSIE';
-			$key     = 0;
-		}
 		$version = $result['version'][$key];
 	} elseif( $key = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
 		$key = reset($key);
