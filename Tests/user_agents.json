@@ -314,6 +314,11 @@
 		"browser": "Googlebot",
 		"version": "1.3"
 	},
+	"Mozilla\/5.0 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": null,
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
 	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
 		"platform": null,
 		"browser": "Lynx",
