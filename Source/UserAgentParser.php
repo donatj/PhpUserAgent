@@ -27,10 +27,6 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( !$u_agent ) return $empty;
 
-	if( preg_match('%^(?P<browser>[A-Z0-9]+)/(?P<version>[0-9A-Z.]+)$%i', $u_agent, $result) ) {
-		return array( 'platform' => null, 'browser' => $result['browser'], 'version' => $result['version'] );
-	}
-
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
 		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox(\ One)?)
@@ -56,13 +52,21 @@ function parse_user_agent( $u_agent = null ) {
 		$platform = 'Chrome OS';
 	}
 
-	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Iceweasel|Safari|MSIE|Trident/.*rv|AppleWebKit|Chrome|IEMobile|Googlebot|Opera|OPR|Silk|Lynx|Midori|Version|Wget|curl|NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Iceweasel|Safari|MSIE|Trident/.*rv|AppleWebKit|Chrome|
+			IEMobile|Opera|OPR|Silk|Midori|
+			Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+			NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 			(?:\)?;?)
 			(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
 		$u_agent, $result, PREG_PATTERN_ORDER);
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
+		if( !$platform && preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?([;| ]\ ?.*)?$%ix', $u_agent, $result)
+		) {
+			return array( 'platform' => null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] : null );
+		}
+
 		return $empty;
 	}
 
