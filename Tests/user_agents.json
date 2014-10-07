@@ -275,6 +275,12 @@
 		"version": "11.0",
 		"platform_version": "8.1"
 	},
+	"Mozilla\/5.0 (Windows NT 6.3; Win64, x64; Trident\/7.0; Touch; rv:11.0) like Gecko": {
+		"platform": "Windows",
+		"browser": "MSIE",
+		"version": "11.0",
+		"platform_version": "8.1"
+	},
 	"Opera\/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; Edition MacAppStore; en) Presto\/2.10.229 Version\/11.61": {
 		"platform": "Macintosh",
 		"browser": "Opera",
@@ -351,18 +357,6 @@
 		"platform": "Linux",
 		"browser": "Wget",
 		"version": "1.12",
-		"platform_version": null
-	},
-	"curl\/7.19.7 (universal-apple-darwin10.0) libcurl\/7.19.7 OpenSSL\/0.9.8r zlib\/1.2.3": {
-		"platform": "",
-		"browser": "curl",
-		"version": "7.19.7",
-		"platform_version": null
-	},
-	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
-		"platform": "",
-		"browser": "Lynx",
-		"version": "2.8.6rel.4",
 		"platform_version": null
 	},
 	"Mozilla\/5.0 (Linux; U; Android 2.2; en-us; SGH-T959 Build\/FROYO) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
@@ -587,6 +581,18 @@
 		"version": "11.0",
 		"platform_version": "8.1"
 	},
+	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0; Touch; rv:11; IEMobile\/11.0) like Android 4.1.2; compatible) like iPhone OS 7_0_3 MacWebKit\/537.36 (KHTML, like Gecko) Chrome\/32.0.1700.99 Mobile Safari \/537.36": {
+		"platform": "Windows Phone",
+		"browser": "IEMobile",
+		"version": "11.0",
+		"platform_version": "8.1"
+	},
+	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0; Touch; rv:11; IEMobile\/11.0; NOKIA; Lumia 928) like Gecko": {
+		"platform": "Windows Phone",
+		"browser": "IEMobile",
+		"version": "11.0",
+		"platform_version": "8.1"
+	},
 	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.5; Trident\/3.1; IEMobile\/7.0; Xbox)": {
 		"platform": "Xbox",
 		"browser": "IEMobile",
@@ -611,16 +617,100 @@
 		"version": "9.0",
 		"platform_version": "6.1"
 	},
+	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/10.0; Xbox; Xbox One)": {
+		"platform": "Xbox One",
+		"browser": "IEMobile",
+		"version": "10.0",
+		"platform_version": "7.5"
+	},
 	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident\/6.0; Xbox; Xbox One)": {
 		"platform": "Xbox One",
 		"browser": "MSIE",
 		"version": "10.0",
 		"platform_version": "6.2"
 	},
-	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/10.0; Xbox; Xbox One)": {
-		"platform": "Xbox One",
-		"browser": "IEMobile",
-		"version": "10.0",
-		"platform_version": "7.5"
+	"AdsBot-Google (+http:\/\/www.google.com\/adsbot.html)": {
+		"platform": null,
+		"browser": "AdsBot-Google",
+		"version": null,
+		"platform_version": null
+	},
+	"Mozilla\/5.0 (compatible; Baiduspider\/2.0; +http:\/\/www.baidu.com\/search\/spider.html)": {
+		"platform": null,
+		"browser": "Baiduspider",
+		"version": "2.0",
+		"platform_version": null
+	},
+	"Mozilla\/5.0 (compatible; bingbot\/2.0; +http:\/\/www.bing.com\/bingbot.htm)": {
+		"platform": null,
+		"browser": "bingbot",
+		"version": "2.0",
+		"platform_version": null
+	},
+	"curl\/7.19.7 (universal-apple-darwin10.0) libcurl\/7.19.7 OpenSSL\/0.9.8r zlib\/1.2.3": {
+		"platform": null,
+		"browser": "curl",
+		"version": "7.19.7",
+		"platform_version": null
+	},
+	"facebookexternalhit\/1.1 (+http:\/\/www.facebook.com\/externalhit_uatext.php)": {
+		"platform": null,
+		"browser": "facebookexternalhit",
+		"version": "1.1",
+		"platform_version": null
+	},
+	"FeedValidator\/1.3": {
+		"platform": null,
+		"browser": "FeedValidator",
+		"version": "1.3",
+		"platform_version": null
+	},
+	"Googlebot\/1.3": {
+		"platform": null,
+		"browser": "Googlebot",
+		"version": "1.3",
+		"platform_version": null
+	},
+	"Mozilla\/5.0 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": null,
+		"browser": "Googlebot",
+		"version": "2.1",
+		"platform_version": null
+	},
+	"Googlebot-Image\/1.0": {
+		"platform": null,
+		"browser": "Googlebot-Image",
+		"version": "1.0",
+		"platform_version": null
+	},
+	"Googlebot-Video\/1.0": {
+		"platform": null,
+		"browser": "Googlebot-Video",
+		"version": "1.0",
+		"platform_version": null
+	},
+	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
+		"platform": null,
+		"browser": "Lynx",
+		"version": "2.8.6rel.4",
+		"platform_version": null
+	},
+	"msnbot-media\/1.1 (+http:\/\/search.msn.com\/msnbot.htm)": {
+		"platform": null,
+		"browser": "msnbot-media",
+		"version": "1.1",
+		"platform_version": null
+	},
+	"WordPress\/3.7.1; http:\/\/wordpress.com": {
+		"platform": null,
+		"browser": "WordPress",
+		"version": "3.7.1",
+		"platform_version": null
+	},
+	"Mozilla\/5.0 (compatible; YandexBot\/3.0; +http:\/\/yandex.com\/bots)": {
+		"platform": null,
+		"browser": "YandexBot",
+		"version": "3.0",
+		"platform_version": null
 	}
 }
