@@ -27,6 +27,10 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( !$u_agent ) return $empty;
 
+	if( preg_match('%^(?P<browser>[A-Z0-9]+)/(?P<version>[0-9A-Z.]+)$%i', $u_agent, $result) ) {
+		return array( 'platform' => null, 'browser' => $result['browser'], 'version' => $result['version'] );
+	}
+
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
 		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox(\ One)?)
@@ -56,7 +60,6 @@ function parse_user_agent( $u_agent = null ) {
 			(?:\)?;?)
 			(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
 		$u_agent, $result, PREG_PATTERN_ORDER);
-
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
@@ -139,6 +142,6 @@ function parse_user_agent( $u_agent = null ) {
 		$browser  = 'NetFront';
 	}
 
-	return array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
+	return array( 'platform' => $platform ?: null, 'browser' => $browser ?: null, 'version' => $version ?: null );
 
 }
