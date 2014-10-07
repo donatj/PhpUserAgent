@@ -58,23 +58,23 @@ function parse_user_agent( $u_agent = null ) {
 		$u_agent, $result, PREG_PATTERN_ORDER);
 
 	// If nothing has been found, handle cases like: "WordPress/3.7.1; http://wordpress.com" or "Googlebot/2.1 http://www.google.com/bot.html" or "FeedValidator/1.3"
-        if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
-			if( preg_match( "/.*\/.*[; ]?.*/", $u_agent ) ) { 
-				$split = explode( "/", $u_agent );
-				$result['browser'][0] = $split[0];
-				
-				unset( $split[0] );
-				
-				$split = preg_split( "/[; ]/", implode( "/", $split ), 2 );
-				$result['version'][0] = $split[0];
-				
-				// If we didn't actually split on anything, leave the platform blank.
-				if( array_key_exists( 1, $split ) ) {
-					$platform = trim( $split[1] );
-				}
+	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
+		if( preg_match("/.*\/.*[; ]?.*/", $u_agent) ) {
+			$split                = explode("/", $u_agent);
+			$result['browser'][0] = $split[0];
+
+			unset($split[0]);
+
+			$split                = preg_split("/[; ]/", implode("/", $split), 2);
+			$result['version'][0] = $split[0];
+
+			// If we didn't actually split on anything, leave the platform blank.
+			if( array_key_exists(1, $split) ) {
+				$platform = trim($split[1]);
 			}
 		}
-			
+	}
+
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
 		return $empty;
