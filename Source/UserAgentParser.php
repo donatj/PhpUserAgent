@@ -29,7 +29,7 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
-		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|Nintendo\ (WiiU?|3DS)|Xbox(\ One)?)
+		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|iPhone|iPad|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|(New\ )?Nintendo\ (WiiU?|3DS)|Xbox(\ One)?)
 				(?:\ [^;]*)?
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 

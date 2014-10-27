@@ -80,6 +80,7 @@ array(
 	- Playbook
 - Console
 	- Nintendo 3DS
+	- New Nintendo 3DS
 	- Nintendo Wii
 	- Nintendo WiiU
 	- PlayStation 3

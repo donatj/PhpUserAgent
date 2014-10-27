@@ -399,6 +399,11 @@
 		"browser": "Silk",
 		"version": "2.2"
 	},
+	"Mozilla\/5.0 (New Nintendo 3DS like iPhone) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.0.5.8 Mobile NintendoBrowser\/1.0.9934.JP": {
+		"platform": "New Nintendo 3DS",
+		"browser": "NintendoBrowser",
+		"version": "1.0.9934.JP"
+	},
 	"Mozilla\/5.0 (Nintendo 3DS; U; ; en) Version\/1.7498.US": {
 		"platform": "Nintendo 3DS",
 		"browser": "NintendoBrowser",
