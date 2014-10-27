@@ -409,6 +409,11 @@
 		"browser": "NintendoBrowser",
 		"version": "1.7498.US"
 	},
+	"Mozilla\/5.0 (Nintendo 3DS; U; ; en) Version\/1.7552.EU": {
+		"platform": "Nintendo 3DS",
+		"browser": "NintendoBrowser",
+		"version": "1.7552.EU"
+	},
 	"Opera\/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel\/1.0; en)": {
 		"platform": "Nintendo Wii",
 		"browser": "Opera",
