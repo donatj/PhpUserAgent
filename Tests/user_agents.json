@@ -234,6 +234,11 @@
 		"browser": "MSIE",
 		"version": "11.0"
 	},
+	"Mozilla\/5.0 (Windows NT 6.3; WOW64; Trident\/7.0; Touch; rv:11.0) like Gecko": {
+		"platform": "Windows",
+		"browser": "MSIE",
+		"version": "11.0"
+	},
 	"Opera\/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; Edition MacAppStore; en) Presto\/2.10.229 Version\/11.61": {
 		"platform": "Macintosh",
 		"browser": "Opera",
@@ -499,7 +504,17 @@
 		"browser": "IEMobile",
 		"version": "10.0"
 	},
+	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident\/6.0; IEMobile\/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko": {
+		"platform": "Windows Phone",
+		"browser": "IEMobile",
+		"version": "10.0"
+	},
 	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0;Touch; rv:11.0; IEMobile\/11.0; Microsoft; Virtual) like Gecko": {
+		"platform": "Windows Phone",
+		"browser": "IEMobile",
+		"version": "11.0"
+	},
+	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0; Touch; rv:11; IEMobile\/11.0) like Android 4.1.2; compatible) like iPhone OS 7_0_3 Mac OS X WebKit\/537.36 (KHTML, like Gecko) Chrome\/32.0.1700.99 Mobile Safari\/537.36": {
 		"platform": "Windows Phone",
 		"browser": "IEMobile",
 		"version": "11.0"
