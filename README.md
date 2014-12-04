@@ -100,6 +100,7 @@ array(
 - Internet Explorer
 - IEMobile
 - Chrome
+- Chrome iOS
 - Opera
 - Midori
 - Lynx
