@@ -53,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Iceweasel|Safari|MSIE|Trident/.*rv|AppleWebKit|Chrome|
-			IEMobile|Opera|OPR|Silk|Midori|
+			CriOS|IEMobile|Opera|OPR|Silk|Midori|
 			Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 			NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 			(?:\)?;?)
@@ -122,8 +122,11 @@ function parse_user_agent( $u_agent = null ) {
 		}
 		$version = $result['version'][$key];
 	} elseif( $find('Chrome', $key) ) {
-		$browser = 'Chrome';
-		$version = $result['version'][$key];
+        $browser = 'Chrome';
+        $version = $result['version'][$key];
+    } elseif( $find('CriOS', $key) ) {
+        $browser = 'Chrome';
+        $version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
 		if( ($platform == 'Android' && !($key = 0)) ) {
 			$browser = 'Android Browser';
