@@ -53,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|Chrome|
-			IEMobile|Opera|OPR|Silk|Midori|
+			IEMobile|Opera|OPR|Silk|Midori|Edge|
 			Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 			NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 			(?:\)?;?)
@@ -70,7 +70,7 @@ function parse_user_agent( $u_agent = null ) {
 		return $empty;
 	}
 
-	if (preg_match('/rv:(?P<version>[0-9A-Z.]+)/si', $u_agent, $rv_result)) {
+	if( preg_match('/rv:(?P<version>[0-9A-Z.]+)/si', $u_agent, $rv_result) ) {
 		$rv_result = $rv_result['version'];
 	}
 
@@ -88,7 +88,8 @@ function parse_user_agent( $u_agent = null ) {
 		return false;
 	};
 
-	$key = 0;
+	$key  = 0;
+	$ekey = 0;
 	if( $browser == 'Iceweasel' ) {
 		$browser = 'Firefox';
 	} elseif( $find('Playstation Vita', $key) ) {
@@ -117,13 +118,14 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('Midori', $key) ) {
 		$browser = 'Midori';
 		$version = $result['version'][$key];
-	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) ) {
+	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) || $find('Edge', $ekey) ) {
+		$browser = 'MSIE';
 		if( $find('IEMobile', $key) ) {
 			$browser = 'IEMobile';
 			$version = $result['version'][$key];
+		} elseif( $ekey ) {
+			$version = $result['version'][$ekey];
 		} else {
-			$browser = 'MSIE';
-			$key     = 0;
 			$version = $rv_result ?: $result['version'][$key];
 		}
 	} elseif( $find('Chrome', $key) ) {
