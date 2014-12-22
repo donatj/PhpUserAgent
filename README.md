@@ -19,7 +19,7 @@ It can also correctly identify exotic versions of IE others fail on.
 
 It offers 100% unit test coverage, is installable via Composer, and is very easy to use.
 
-## What It Doesn't Do
+## What It Does Not Do
 
 ### OS Versions
 
