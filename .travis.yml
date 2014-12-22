@@ -6,6 +6,8 @@ php:
   - 5.5
   - 5.6
   - hhvm
-before_script:
-- composer install --no-dev
-script: phpunit Tests
+install: composer install --no-dev
+script: phpunit --coverage-clover=coverage.clover
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
