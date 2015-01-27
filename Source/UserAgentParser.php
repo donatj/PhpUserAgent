@@ -53,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|Chrome|
-			IEMobile|Opera|OPR|Silk|Midori|Edge|
+			Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|
 			Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 			NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 			(?:\)?;?)
@@ -128,6 +128,9 @@ function parse_user_agent( $u_agent = null ) {
 		} else {
 			$version = $rv_result ?: $result['version'][$key];
 		}
+	} elseif( $find('Vivaldi', $key) ) {
+		$browser = 'Vivaldi';
+		$version = $result['version'][$key];
 	} elseif( $find('Chrome', $key) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
