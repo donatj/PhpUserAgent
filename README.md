@@ -78,6 +78,7 @@ array(
 	- Kindle Fire
 	- BlackBerry
 	- Playbook
+	- Tizen
 - Console
 	- Nintendo 3DS
 	- New Nintendo 3DS
@@ -103,6 +104,7 @@ array(
 - Opera
 - Midori
 - Vivaldi
+- TizenBrowser
 - Lynx
 - Wget
 - Curl
