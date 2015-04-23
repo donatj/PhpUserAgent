@@ -549,6 +549,11 @@
 		"browser": "IEMobile",
 		"version": "10.0"
 	},
+	"Mozilla\/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident\/7.0; Touch; rv:11.0; IEMobile\/11.0; NOKIA; Lumia 920; Vodafone ES) like iPhone OS 7_0_3 Mac OS X AppleWebkit\/537 (KHTML, like Gecko) Mobile Safari\/537": {
+		"platform": "Windows Phone",
+		"browser": "IEMobile",
+		"version": "11.0"
+	},
 	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0;Touch; rv:11.0; IEMobile\/11.0; Microsoft; Virtual) like Gecko": {
 		"platform": "Windows Phone",
 		"browser": "IEMobile",
