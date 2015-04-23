@@ -7,7 +7,7 @@ Issues can be reported via the [Github Issues](https://github.com/donatj/PhpUser
 - **Detail is key**: If a browser is being misidentified, one or more sample user agent strings are key to getting it resolved.
 - **Missing Browser**: Is it modern? What is it being misidentified as? There are a lot of dead browsers out there that there is no reason to support.
 
-Please do not file any requests for OS identification. 
+Please do not file any requests for OS version identification. It is not a desired feature.
 
 ## Pull Requests
 
