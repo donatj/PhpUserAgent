@@ -459,6 +459,11 @@
 		"browser": "NintendoBrowser",
 		"version": "1.7552.EU"
 	},
+	"Bunjalloo\/0.7.6(Nintendo DS;U;en)": {
+		"platform": "Nintendo DS",
+		"browser": "Bunjalloo",
+		"version": "0.7.6"
+	},
 	"Opera\/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel\/1.0; en)": {
 		"platform": "Nintendo Wii",
 		"browser": "Opera",
