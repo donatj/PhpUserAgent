@@ -41,4 +41,9 @@ class UserAgentParser_test extends \PHPUnit_Framework_TestCase {
 		parse_user_agent();
 	}
 
+	function test_global_user_agent(){
+		$_SERVER['HTTP_USER_AGENT'] = 'Test/1.0';
+		$this->assertEquals(array('platform'=>null, 'browser' => 'Test', 'version' => '1.0'), parse_user_agent());
+	}
+
 }
