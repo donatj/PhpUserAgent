@@ -108,7 +108,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( false !== ( $key = array_search('midori', $lower_browser) ) ) {
 		$browser = 'Midori';
 		$version = $result['version'][$key];
-	} elseif( $browser == 'MSIE' || ($rv_result && false !== ( $key = array_search('kindle fire build', $lower_browser) ) ) || false !== ( $ekey = array_search('edge', $lower_browser) ) ) {
+	} elseif( $browser == 'MSIE' || ($rv_result && false !== ( $key = array_search('trident', $lower_browser) ) ) || false !== ( $ekey = array_search('edge', $lower_browser) ) ) {
 		$browser = 'MSIE';
 		if( false !== ( $key = array_search('iemobile', $lower_browser) ) ) {
 			$browser = 'IEMobile';
