@@ -103,6 +103,8 @@ function parse_user_agent( $u_agent = null ) {
 		$version = $result['version'][$key];
 	} elseif( false !== ( $key = array_search('opera', $lower_browser) ) ) {
 		$browser = 'Opera';
+	
+		if( false !== ( $ekey = array_search('version', $lower_browser) ) ) { $key = $ekey; }
 		$version = $result['version'][$key];
 	} elseif( false !== ( $key = array_search('midori', $lower_browser) ) ) {
 		$browser = 'Midori';
