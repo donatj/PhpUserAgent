@@ -122,7 +122,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( false !== ( $key = array_search('vivaldi', $lower_browser) ) ) {
 		$browser = 'Vivaldi';
 		$version = $result['version'][$key];
-	} elseif( false !== ( $key = array_search('chrome', $lower_browser) ) || false !== ( $key = array_search('chios', $lower_browser) ) ) {
+	} elseif( false !== ( $key = array_search('chrome', $lower_browser) ) || false !== ( $key = array_search('crios', $lower_browser) ) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
