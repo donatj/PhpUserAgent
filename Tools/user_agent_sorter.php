@@ -12,6 +12,9 @@ foreach( $uas as $key => &$val ) {
 
 uasort($uas, function ( $a, $b ) {
 
+	if($a['platform'] === null && $b['platform'] !== null) return 1;
+	if($b['platform'] === null && $a['platform'] !== null) return -1;
+
 	$desktop = array( 'Windows', 'Linux', 'Macintosh', 'Chrome OS' );
 
 	$ad = in_array($a['platform'], $desktop);
