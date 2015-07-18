@@ -76,41 +76,50 @@ function parse_user_agent( $u_agent = null ) {
 	$browser = $result['browser'][0];
 	$version = $result['version'][0];
 
-	$lower_browser = array_map('strtolower', $result['browser']);
-	
+	$find = function ( $search, &$key ) use ( $result ) {
+		$xkey = array_search(strtolower($search), array_map('strtolower', $result['browser']));
+		if( $xkey !== false ) {
+			$key = $xkey;
+
+			return true;
+		}
+
+		return false;
+	};
+
 	$key  = 0;
 	$ekey = 0;
 	if( $browser == 'Iceweasel' ) {
 		$browser = 'Firefox';
-	} elseif( false !== ( $key = array_search('playstation vita', $lower_browser) ) ) {
+	} elseif( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
-	} elseif( false !== ( $key = array_search('kindle fire build', $lower_browser) ) ) {
+	} elseif( $find('Kindle Fire Build', $key) || $find('Silk', $key) ) {
 		$browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
 			$version = $result['version'][array_search('Version', $result['browser'])];
 		}
-	} elseif( false !== ( $key = array_search('nintendobrowser', $lower_browser) ) || $platform == 'Nintendo 3DS' ) {
+	} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
-	} elseif( false !== ( $key = array_search('kindle', $lower_browser) ) ) {
+	} elseif( $find('Kindle', $key) ) {
 		$browser  = $result['browser'][$key];
 		$platform = 'Kindle';
 		$version  = $result['version'][$key];
-	} elseif( false !== ( $key = array_search('opr', $lower_browser) ) ) {
+	} elseif( $find('OPR', $key) ) {
 		$browser = 'Opera Next';
 		$version = $result['version'][$key];
-	} elseif( false !== ( $key = array_search('opera', $lower_browser) ) ) {
+	} elseif( $find('Opera', $key) ) {
 		$browser = 'Opera';
-		$key = array_search('version', $lower_browser);
+		$find('Version', $key);
 		$version = $result['version'][$key];
-	} elseif( false !== ( $key = array_search('midori', $lower_browser) ) ) {
+	} elseif( $find('Midori', $key) ) {
 		$browser = 'Midori';
 		$version = $result['version'][$key];
-	} elseif( $browser == 'MSIE' || ($rv_result && false !== ( $key = array_search('kindle fire build', $lower_browser) ) ) || false !== ( $ekey = array_search('edge', $lower_browser) ) ) {
+	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) || $find('Edge', $ekey) ) {
 		$browser = 'MSIE';
-		if( false !== ( $key = array_search('iemobile', $lower_browser) ) ) {
+		if( $find('IEMobile', $key) ) {
 			$browser = 'IEMobile';
 			$version = $result['version'][$key];
 		} elseif( $ekey ) {
@@ -118,10 +127,10 @@ function parse_user_agent( $u_agent = null ) {
 		} else {
 			$version = $rv_result ?: $result['version'][$key];
 		}
-	} elseif( false !== ( $key = array_search('vivaldi', $lower_browser) ) ) {
+	} elseif( $find('Vivaldi', $key) ) {
 		$browser = 'Vivaldi';
 		$version = $result['version'][$key];
-	} elseif( false !== ( $key = array_search('chrome', $lower_browser) ) || false !== ( $key = array_search('chios', $lower_browser) ) ) {
+	} elseif( $find('Chrome', $key) || $find('CriOS', $key) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
@@ -132,13 +141,13 @@ function parse_user_agent( $u_agent = null ) {
 			$platform = 'BlackBerry';
 		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
-		} elseif( false !== ( $key = array_search('safari', $lower_browser) ) ) {
+		} elseif( $find('Safari', $key) ) {
 			$browser = 'Safari';
-		} elseif( false !== ( $key = array_search('tizenbrowser', $lower_browser) ) ) {
+		} elseif( $find('TizenBrowser', $key) ) {
 			$browser = 'TizenBrowser';
 		}
 
-		$key = array_search('version', $lower_browser);
+		$find('Version', $key);
 
 		$version = $result['version'][$key];
 	} elseif( $key = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
