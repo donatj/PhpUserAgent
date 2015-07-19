@@ -122,11 +122,12 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( false !== ( $key = array_search('vivaldi', $lower_browser) ) ) {
 		$browser = 'Vivaldi';
 		$version = $result['version'][$key];
-	} elseif( false !== ( $key = array_search('chrome', $lower_browser) ) || false !== ( $key = array_search('crios', $lower_browser) ) ) {
+	} elseif( false !== ( $key = array_search('chrome', $lower_browser) ) || false !== ( $ekey = array_search('crios', $lower_browser) ) ) {
 		$browser = 'Chrome';
+		if( $ekey !== false ) { $key = $ekey; }
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
-		if( ($platform == 'Android' && !($key = 0)) ) {
+		if( ($platform == 'Android' && !($key == 0)) ) {
 			$browser = 'Android Browser';
 		} elseif( strpos($platform, 'BB') === 0 ) {
 			$browser  = 'BlackBerry Browser';
