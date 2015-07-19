@@ -139,7 +139,7 @@ function parse_user_agent( $u_agent = null ) {
 			$browser = 'TizenBrowser';
 		}
 
-		$key = array_search('version', $lower_browser);
+		if( false !== ( $ekey = array_search('version', $lower_browser) ) ) { $key = $ekey; }
 
 		$version = $result['version'][$key];
 	} elseif( $key = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
