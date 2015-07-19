@@ -85,7 +85,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( false !== ( $key = array_search('playstation vita', $lower_browser) ) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
-	} elseif( false !== ( $key = array_search('kindle fire build', $lower_browser) ) ) {
+	} elseif( false !== ( $key = array_search('kindle fire build', $lower_browser) ) || false !== ( $key = array_search('silk', $lower_browser ) ) ) {
 		$browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
