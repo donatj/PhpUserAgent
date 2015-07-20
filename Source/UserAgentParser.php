@@ -76,50 +76,42 @@ function parse_user_agent( $u_agent = null ) {
 	$browser = $result['browser'][0];
 	$version = $result['version'][0];
 
-	$find = function ( $search, &$key ) use ( $result ) {
-		$xkey = array_search(strtolower($search), array_map('strtolower', $result['browser']));
-		if( $xkey !== false ) {
-			$key = $xkey;
-
-			return true;
-		}
-
-		return false;
-	};
-
+	$lower_browser = array_map('strtolower', $result['browser']);
+	
 	$key  = 0;
 	$ekey = 0;
 	if( $browser == 'Iceweasel' ) {
 		$browser = 'Firefox';
-	} elseif( $find('Playstation Vita', $key) ) {
+	} elseif( false !== ( $key = array_search('playstation vita', $lower_browser) ) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
-	} elseif( $find('Kindle Fire Build', $key) || $find('Silk', $key) ) {
+	} elseif( false !== ( $key = array_search('kindle fire build', $lower_browser) ) || false !== ( $key = array_search('silk', $lower_browser ) ) ) {
 		$browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
 			$version = $result['version'][array_search('Version', $result['browser'])];
 		}
-	} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
+	} elseif( false !== ( $key = array_search('nintendobrowser', $lower_browser) ) || $platform == 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
-	} elseif( $find('Kindle', $key) ) {
+	} elseif( false !== ( $key = array_search('kindle', $lower_browser) ) ) {
 		$browser  = $result['browser'][$key];
 		$platform = 'Kindle';
 		$version  = $result['version'][$key];
-	} elseif( $find('OPR', $key) ) {
+	} elseif( false !== ( $key = array_search('opr', $lower_browser) ) ) {
 		$browser = 'Opera Next';
 		$version = $result['version'][$key];
-	} elseif( $find('Opera', $key) ) {
+	} elseif( false !== ( $key = array_search('opera', $lower_browser) ) ) {
 		$browser = 'Opera';
-		$find('Version', $key);
+	
+		if( false !== ( $ekey = array_search('version', $lower_browser) ) ) { $key = $ekey; }
 		$version = $result['version'][$key];
-	} elseif( $find('Midori', $key) ) {
+	} elseif( false !== ( $key = array_search('midori', $lower_browser) ) ) {
 		$browser = 'Midori';
 		$version = $result['version'][$key];
-	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) || $find('Edge', $ekey) ) {
+	} elseif( $browser == 'MSIE' || ($rv_result && false !== ( $key = array_search('trident', $lower_browser) ) ) || false !== ( $ekey = array_search('edge', $lower_browser) ) ) {
 		$browser = 'MSIE';
-		if( $find('IEMobile', $key) ) {
+		if( false !== ( $key = array_search('iemobile', $lower_browser) ) ) {
 			$browser = 'IEMobile';
 			$version = $result['version'][$key];
 		} elseif( $ekey ) {
@@ -127,27 +119,29 @@ function parse_user_agent( $u_agent = null ) {
 		} else {
 			$version = $rv_result ?: $result['version'][$key];
 		}
-	} elseif( $find('Vivaldi', $key) ) {
+	} elseif( false !== ( $key = array_search('vivaldi', $lower_browser) ) ) {
 		$browser = 'Vivaldi';
 		$version = $result['version'][$key];
-	} elseif( $find('Chrome', $key) || $find('CriOS', $key) ) {
+	} elseif( false !== ( $key = array_search('chrome', $lower_browser) ) || false !== ( $ekey = array_search('crios', $lower_browser) ) ) {
 		$browser = 'Chrome';
+		if( $ekey !== false ) { $key = $ekey; }
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
-		if( ($platform == 'Android' && !($key = 0)) ) {
+		if( $platform == 'Android' ) {
+			$key = 0;
 			$browser = 'Android Browser';
 		} elseif( strpos($platform, 'BB') === 0 ) {
 			$browser  = 'BlackBerry Browser';
 			$platform = 'BlackBerry';
 		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
-		} elseif( $find('Safari', $key) ) {
+		} elseif( false !== ( $key = array_search('safari', $lower_browser) ) ) {
 			$browser = 'Safari';
-		} elseif( $find('TizenBrowser', $key) ) {
+		} elseif( false !== ( $key = array_search('tizenbrowser', $lower_browser) ) ) {
 			$browser = 'TizenBrowser';
 		}
 
-		$find('Version', $key);
+		if( false !== ( $ekey = array_search('version', $lower_browser) ) ) { $key = $ekey; }
 
 		$version = $result['version'][$key];
 	} elseif( $key = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
