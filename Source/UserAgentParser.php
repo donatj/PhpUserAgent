@@ -127,6 +127,10 @@ function parse_user_agent( $u_agent = null ) {
 		} else {
 			$version = $rv_result ?: $result['version'][$key];
 		}
+
+		if( version_compare($version, '12', '>=') ) {
+			$browser = 'Edge';
+		}
 	} elseif( $find('Vivaldi', $key) ) {
 		$browser = 'Vivaldi';
 		$version = $result['version'][$key];
