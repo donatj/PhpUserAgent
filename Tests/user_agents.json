@@ -529,10 +529,15 @@
 		"browser": "NetFront",
 		"version": "1.50"
 	},
-	"Mozilla\/5.0 (Playstation Vita 1.50) AppleWebKit\/531.22.8 (KHTML, like Gecko)\ufeff Silk\/3.2\ufeff": {
+	"Mozilla\/5.0 (Playstation Vita 1.50) AppleWebKit\/531.22.8 (KHTML, like Gecko) Silk\/3.2": {
 		"platform": "PlayStation Vita",
 		"browser": "Browser",
 		"version": "1.50"
+	},
+	"Mozilla\/5.0 (PlayStation Vita 1.69) AppleWebKit\/531.22.8 (KHTML, like Gecko) Silk\/3.2": {
+		"platform": "PlayStation Vita",
+		"browser": "Browser",
+		"version": "1.69"
 	},
 	"Mozilla\/5.0 (Linux; U; Tizen 2.0; en-us) AppleWebKit\/537.1 (KHTML, like Gecko) Mobile TizenBrowser\/2": {
 		"platform": "Tizen",
