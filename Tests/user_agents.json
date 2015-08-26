@@ -449,6 +449,21 @@
 		"browser": "Silk",
 		"version": "2.2"
 	},
+	"Mozilla\/5.0 (Linux; U; Android 4.2.2; en-us; KFTHWI Build\/JDQ39) AppleWebKit\/537.36 (KHTML, like Gecko) Silk\/3.22 like Chrome\/34.0.1847.137 Mobile Safari\/537.36": {
+		"platform": "Kindle Fire",
+		"browser": "Silk",
+		"version": "3.22"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 4.2.2; en-us; KFTHWI Build\/JDQ39) AppleWebKit\/537.36 (KHTML, like Gecko) Silk\/3.22 like Chrome\/34.0.1847.137 Safari\/537.36": {
+		"platform": "Kindle Fire",
+		"browser": "Silk",
+		"version": "3.22"
+	},
+	"Mozilla\/5.0 (X11; Linux x86_64; U; en-us) AppleWebKit\/537.36 (KHTML, like Gecko) Silk\/3.22 like Chrome\/34.0.1847.137 Safari\/537.36": {
+		"platform": "Kindle Fire",
+		"browser": "Silk",
+		"version": "3.22"
+	},
 	"Mozilla\/5.0 (New Nintendo 3DS like iPhone) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.0.5.8 Mobile NintendoBrowser\/1.0.9934.JP": {
 		"platform": "New Nintendo 3DS",
 		"browser": "NintendoBrowser",
