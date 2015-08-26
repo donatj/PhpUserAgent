@@ -76,8 +76,10 @@ function parse_user_agent( $u_agent = null ) {
 	$browser = $result['browser'][0];
 	$version = $result['version'][0];
 
-	$find = function ( $search, &$key ) use ( $result ) {
-		$xkey = array_search(strtolower($search), array_map('strtolower', $result['browser']));
+	$lowerBrowser = array_map('strtolower', $result['browser']);
+
+	$find = function ( $search, &$key ) use ( $lowerBrowser ) {
+		$xkey = array_search(strtolower($search), $lowerBrowser);
 		if( $xkey !== false ) {
 			$key = $xkey;
 
