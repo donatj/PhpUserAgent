@@ -404,6 +404,21 @@
 		"browser": "Safari",
 		"version": "5.0.2"
 	},
+	"Mozilla\/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit\/420.1 (KHTML, like Gecko) Version\/3.0 Mobile\/3A101a Safari\/419.3": {
+		"platform": "iPod",
+		"browser": "Safari",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (iPod; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit\/534.46 (KHTML, like Gecko) Version\/5.1 Mobile\/9A405 Safari\/7534.48.3": {
+		"platform": "iPod",
+		"browser": "Safari",
+		"version": "5.1"
+	},
+	"Mozilla\/5.0 (iPod touch; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit\/537.51.1 (KHTML, like Gecko) Version\/7.0 Mobile\/11B511 Safari\/9537.53": {
+		"platform": "iPod",
+		"browser": "Safari",
+		"version": "7.0"
+	},
 	"Mozilla\/4.0 (compatible; Linux 2.6.10) NetFront\/3.3 Kindle\/1.0 (screen 600x800)": {
 		"platform": "Kindle",
 		"browser": "Kindle",
