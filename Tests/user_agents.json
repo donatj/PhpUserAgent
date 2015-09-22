@@ -404,6 +404,11 @@
 		"browser": "Safari",
 		"version": "5.0.2"
 	},
+	"Mozilla\/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit\/420.1 (KHTML, like Gecko) Version\/3.0 Mobile\/3A101a Safari\/419.3": {
+		"platform": "iPod",
+		"browser": "Safari",
+		"version": "3.0"
+	},
 	"Mozilla\/4.0 (compatible; Linux 2.6.10) NetFront\/3.3 Kindle\/1.0 (screen 600x800)": {
 		"platform": "Kindle",
 		"browser": "Kindle",
