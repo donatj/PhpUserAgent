@@ -72,7 +72,7 @@ array(
 - Mobile
 	- Android
 	- iPhone
-	- iPad
+	- iPad / iPod Touch
 	- Windows Phone OS
 	- Kindle
 	- Kindle Fire
