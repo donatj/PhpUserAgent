@@ -53,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|TizenBrowser|Chrome|
-				Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|
+				Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|UCBrowser|
 				Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 				Valve\ Steam\ Tenfoot|
 				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
@@ -136,6 +136,9 @@ function parse_user_agent( $u_agent = null ) {
 		}
 	} elseif( $find('Vivaldi', $key) ) {
 		$browser = 'Vivaldi';
+		$version = $result['version'][$key];
+	} elseif( $find('UCBrowser', $key) ) {
+		$browser = 'UC Browser';
 		$version = $result['version'][$key];
 	} elseif( $find('Valve Steam Tenfoot', $key) ) {
 		$browser = 'Valve Steam Tenfoot';
