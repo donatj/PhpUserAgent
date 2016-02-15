@@ -55,7 +55,7 @@ function parse_user_agent( $u_agent = null ) {
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|TizenBrowser|Chrome|
 			Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|
 			Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
-			NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+			NintendoBrowser|PLAYSTATION\ (\d|Vita|Portable)+)
 			(?:\)?;?)
 			(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
 		$u_agent, $result, PREG_PATTERN_ORDER);
@@ -160,6 +160,9 @@ function parse_user_agent( $u_agent = null ) {
 		$key = reset($key);
 
 		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $key);
+		$browser  = 'NetFront';
+	} elseif( $find('PlayStation Portable', $key)) {
+		$platform = 'PlayStation Portable';
 		$browser  = 'NetFront';
 	}
 
