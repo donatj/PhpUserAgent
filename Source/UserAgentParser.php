@@ -22,6 +22,7 @@ function parse_user_agent( $u_agent = null ) {
 	$platform = null;
 	$browser  = null;
 	$version  = null;
+
 	$platform_version = null;
 
 	$empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version, 'platform_version' => $platform_version );
@@ -64,7 +65,7 @@ function parse_user_agent( $u_agent = null ) {
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
 		if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
-			return array( 'platform' => null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null, 'platform_version' => null );
+			return array( 'platform' => $platform ?: null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null, 'platform_version' => null );
 		}
 
 		return $empty;
@@ -164,17 +165,19 @@ function parse_user_agent( $u_agent = null ) {
 		$browser  = 'NetFront';
 	}
 
-	if(!empty($parent_matches[1]) && preg_match('/(?:Mac OS X (?P<version>[0-9_.]+))|(?:Windows (?:NT|Phone)*(?: OS)* *(?P<version2>[0-9_.]+))|(?:Android (?P<version3>[^;)]+))|(?:Linux (?P<version4>[^;)]+))|(?:(?:iPhone|CPU) OS (?P<version5>[0-9_.]+))/i', $parent_matches[1], $regs)) {
+	if( $platform == 'Kindle' && $find('Kindle', $key) ) {
+		$platform_version = $result['version'][$key];
+	} elseif( !empty($parent_matches[1]) && preg_match('/(?:Mac OS X (?P<version>[0-9_.]+))|(?:Windows (?:NT|Phone)*(?: OS)* *(?P<version2>[0-9_.]+))|(?:Android (?P<version3>[^;)]+))|(?:Linux (?P<version4>[^;)]+))|(?:(?:iPhone|CPU) OS (?P<version5>[0-9_.]+))/i', $parent_matches[1], $regs) ) {
 
 		$platform_version = @trim($regs['version'] . $regs['version1'] . $regs['version2'] . $regs['version3'] . $regs['version4'] . $regs['version5']);
 
-		if($platform == 'Windows') {
-			$ver = array( '5.0' => '2000', '5.1' => 'XP', '5.2' => 'XP64', '6.0' => 'Vista', '6.1' => '7', '6.2' => '8', '6.3' => '8.1' );
-			$platform_version = isset( $ver[$platform_version] ) ? $ver[$platform_version] : $platform_version;
-		}
-		
-		$platform_version = str_replace('_', '.', $platform_version);
+		if( $platform == 'Windows' ) {
+			$ver = array( '5.0' => '2000', '5.1' => 'XP', '5.2' => 'XP64', '6.0' => 'Vista', '6.1' => '7', '6.2' => '8', '6.3' => '8.1', '6.4' => '10.0' );
 
+			$platform_version = isset($ver[$platform_version]) ? $ver[$platform_version] : $platform_version;
+		}
+
+		$platform_version = str_replace('_', '.', $platform_version);
 	} else {
 		$result = "";
 	}

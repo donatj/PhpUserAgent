@@ -110,12 +110,14 @@
 	"Mozilla\/5.0 (Windows NT 6.4; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/36.0.1985.143 Safari\/537.36 Edge\/12.0": {
 		"platform": "Windows",
 		"browser": "Edge",
-		"version": "12.0"
+		"version": "12.0",
+		"platform_version": "10.0"
 	},
 	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/42.0.2311.135 Safari\/537.36 Edge\/12.10240": {
 		"platform": "Windows",
 		"browser": "Edge",
-		"version": "12.10240"
+		"version": "12.10240",
+		"platform_version": "10.0"
 	},
 	"Mozilla\/5.0 (X11; U; Linux i386; en-US; rv:1.7.5) Gecko\/20041109 Firefox\/1.0": {
 		"platform": "Linux",
@@ -294,7 +296,8 @@
 	"Mozilla\/5.0 (Windows NT 6.3; WOW64; Trident\/7.0; Touch; rv:11.0) like Gecko": {
 		"platform": "Windows",
 		"browser": "MSIE",
-		"version": "11.0"
+		"version": "11.0",
+		"platform_version": "8.1"
 	},
 	"Opera\/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; Edition MacAppStore; en) Presto\/2.10.229 Version\/11.61": {
 		"platform": "Macintosh",
@@ -365,12 +368,14 @@
 	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit\/537.71 (KHTML, like Gecko) Version\/7.0 Safari\/537.71": {
 		"platform": "Macintosh",
 		"browser": "Safari",
-		"version": "7.0"
+		"version": "7.0",
+		"platform_version": "10.9"
 	},
 	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_10) AppleWebKit\/600.1.25 (KHTML, like Gecko) Version\/8.0 Safari\/600.1.25": {
 		"platform": "Macintosh",
 		"browser": "Safari",
-		"version": "8.0"
+		"version": "8.0",
+		"platform_version": "10.10"
 	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 6.1; tr-TR) AppleWebKit\/533.20.25 (KHTML, like Gecko) Version\/5.0.4 Safari\/533.20.27": {
 		"platform": "Windows",
@@ -381,12 +386,14 @@
 	"Mozilla\/5.0 (Macintosh; U; Intel Mac OS X 10.6; en; rv:1.9.0.18) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/40.0.2214.89 Vivaldi\/1.0.83.38 Safari\/537.36": {
 		"platform": "Macintosh",
 		"browser": "Vivaldi",
-		"version": "1.0.83.38"
+		"version": "1.0.83.38",
+		"platform_version": "10.6"
 	},
 	"Mozilla\/5.0 (Windows NT 6.3; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/40.0.2214.89 Vivaldi\/1.0.83.38 Safari\/537.36": {
 		"platform": "Windows",
 		"browser": "Vivaldi",
-		"version": "1.0.83.38"
+		"version": "1.0.83.38",
+		"platform_version": "8.1"
 	},
 	"Wget\/1.12 (linux-gnu)": {
 		"platform": "Linux",
@@ -433,12 +440,14 @@
 	"Mozilla\/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit\/534.46 (KHTML, like Gecko) CriOS\/29.0.1547.11 Mobile\/9B206 Safari\/7534.48.3": {
 		"platform": "iPad",
 		"browser": "Chrome",
-		"version": "29.0.1547.11"
+		"version": "29.0.1547.11",
+		"platform_version": "5.1.1"
 	},
 	"Mozilla\/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit\/537.51.1 (KHTML, like Gecko) CriOS\/30.0.1599.12 Mobile\/11A465 Safari\/8536.25": {
 		"platform": "iPad",
 		"browser": "Chrome",
-		"version": "30.0.1599.12"
+		"version": "30.0.1599.12",
+		"platform_version": "7.0"
 	},
 	"Mozilla\/5.0 (iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit\/531.21.10 (KHTML, like Gecko) Version\/4.0.4 Mobile\/7B314 Safari\/531.21.10": {
 		"platform": "iPad",
@@ -455,12 +464,14 @@
 	"Mozilla\/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit\/534.46.0 (KHTML, like Gecko) CriOS\/19.0.1084.60 Mobile\/9B206 Safari\/7534.48.3": {
 		"platform": "iPhone",
 		"browser": "Chrome",
-		"version": "19.0.1084.60"
+		"version": "19.0.1084.60",
+		"platform_version": "5.1.1"
 	},
 	"Mozilla\/5.0 (iPhone; CPU iPhone OS 7_0_2 like Mac OS X) AppleWebKit\/537.51.1 (KHTML, like Gecko) CriOS\/30.0.1599.12 Mobile\/11A501 Safari\/8536.25": {
 		"platform": "iPhone",
 		"browser": "Chrome",
-		"version": "30.0.1599.12"
+		"version": "30.0.1599.12",
+		"platform_version": "7.0.2"
 	},
 	"Mozilla\/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit\/420+ (KHTML, like Gecko) Version\/3.0 Mobile\/1C25 Safari\/419.3": {
 		"platform": "iPhone",
@@ -477,35 +488,38 @@
 	"Mozilla\/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit\/420.1 (KHTML, like Gecko) Version\/3.0 Mobile\/3A101a Safari\/419.3": {
 		"platform": "iPod",
 		"browser": "Safari",
-		"version": "3.0"
+		"version": "3.0",
+		"platform_version": null
 	},
 	"Mozilla\/5.0 (iPod; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit\/534.46 (KHTML, like Gecko) Version\/5.1 Mobile\/9A405 Safari\/7534.48.3": {
 		"platform": "iPod",
 		"browser": "Safari",
-		"version": "5.1"
+		"version": "5.1",
+		"platform_version": "5.0.1"
 	},
 	"Mozilla\/5.0 (iPod touch; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit\/537.51.1 (KHTML, like Gecko) Version\/7.0 Mobile\/11B511 Safari\/9537.53": {
 		"platform": "iPod",
 		"browser": "Safari",
-		"version": "7.0"
+		"version": "7.0",
+		"platform_version": "7.0.3"
 	},
 	"Mozilla\/4.0 (compatible; Linux 2.6.10) NetFront\/3.3 Kindle\/1.0 (screen 600x800)": {
 		"platform": "Kindle",
 		"browser": "Kindle",
 		"version": "1.0",
-		"platform_version": "2.6.10"
+		"platform_version": "1.0"
 	},
 	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/528.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
 		"platform": "Kindle",
 		"browser": "Kindle",
 		"version": "3.0",
-		"platform_version": null
+		"platform_version": "3.0"
 	},
 	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/538.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
 		"platform": "Kindle",
 		"browser": "Kindle",
 		"version": "3.0",
-		"platform_version": null
+		"platform_version": "3.0"
 	},
 	"Mozilla\/5.0 (Linux; U; Android 2.3.4; en-us; Kindle Fire Build\/GINGERBREAD) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
 		"platform": "Kindle Fire",
@@ -546,22 +560,26 @@
 	"Mozilla\/5.0 (Linux; U; Android 4.2.2; en-us; KFTHWI Build\/JDQ39) AppleWebKit\/537.36 (KHTML, like Gecko) Silk\/3.22 like Chrome\/34.0.1847.137 Mobile Safari\/537.36": {
 		"platform": "Kindle Fire",
 		"browser": "Silk",
-		"version": "3.22"
+		"version": "3.22",
+		"platform_version": "4.2.2"
 	},
 	"Mozilla\/5.0 (Linux; U; Android 4.2.2; en-us; KFTHWI Build\/JDQ39) AppleWebKit\/537.36 (KHTML, like Gecko) Silk\/3.22 like Chrome\/34.0.1847.137 Safari\/537.36": {
 		"platform": "Kindle Fire",
 		"browser": "Silk",
-		"version": "3.22"
+		"version": "3.22",
+		"platform_version": "4.2.2"
 	},
 	"Mozilla\/5.0 (X11; Linux x86_64; U; en-us) AppleWebKit\/537.36 (KHTML, like Gecko) Silk\/3.22 like Chrome\/34.0.1847.137 Safari\/537.36": {
 		"platform": "Kindle Fire",
 		"browser": "Silk",
-		"version": "3.22"
+		"version": "3.22",
+		"platform_version": "x86.64"
 	},
 	"Mozilla\/5.0 (New Nintendo 3DS like iPhone) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.0.5.8 Mobile NintendoBrowser\/1.0.9934.JP": {
 		"platform": "New Nintendo 3DS",
 		"browser": "NintendoBrowser",
-		"version": "1.0.9934.JP"
+		"version": "1.0.9934.JP",
+		"platform_version": null
 	},
 	"Mozilla\/5.0 (Nintendo 3DS; U; ; en) Version\/1.7498.US": {
 		"platform": "Nintendo 3DS",
@@ -572,12 +590,14 @@
 	"Mozilla\/5.0 (Nintendo 3DS; U; ; en) Version\/1.7552.EU": {
 		"platform": "Nintendo 3DS",
 		"browser": "NintendoBrowser",
-		"version": "1.7552.EU"
+		"version": "1.7552.EU",
+		"platform_version": null
 	},
 	"Bunjalloo\/0.7.6(Nintendo DS;U;en)": {
 		"platform": "Nintendo DS",
 		"browser": "Bunjalloo",
-		"version": "0.7.6"
+		"version": "0.7.6",
+		"platform_version": null
 	},
 	"Opera\/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel\/1.0; en)": {
 		"platform": "Nintendo Wii",
@@ -642,17 +662,20 @@
 	"Mozilla\/5.0 (PlayStation Vita 1.69) AppleWebKit\/531.22.8 (KHTML, like Gecko) Silk\/3.2": {
 		"platform": "PlayStation Vita",
 		"browser": "Browser",
-		"version": "1.69"
+		"version": "1.69",
+		"platform_version": null
 	},
 	"Mozilla\/5.0 (Linux; U; Tizen 2.0; en-us) AppleWebKit\/537.1 (KHTML, like Gecko) Mobile TizenBrowser\/2": {
 		"platform": "Tizen",
 		"browser": "TizenBrowser",
-		"version": "2"
+		"version": "2",
+		"platform_version": null
 	},
 	"Mozilla\/5.0 (Windows Phone 10.0;  Android 4.2.1; Nokia; Lumia 520) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/42.0.2311.135 Mobile Safari\/537.36 Edge\/12.10130": {
 		"platform": "Windows Phone",
 		"browser": "Edge",
-		"version": "12.10130"
+		"version": "12.10130",
+		"platform_version": "10.0"
 	},
 	"Mozilla\/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident\/3.1; IEMobile\/7.0) Asus;Galaxy6": {
 		"platform": "Windows Phone",
@@ -693,17 +716,20 @@
 	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident\/6.0; IEMobile\/10.0; ARM; Touch; rv:11; NOKIA; Lumia 920) like Gecko": {
 		"platform": "Windows Phone",
 		"browser": "IEMobile",
-		"version": "10.0"
+		"version": "10.0",
+		"platform_version": "8.0"
 	},
 	"Mozilla\/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident\/7.0; Touch; rv:11.0; IEMobile\/11.0; NOKIA; Lumia 520) like iPhone OS 7_0_3 Mac OS X AppleWebKit\/537 (KHTML, like Gecko) Mobile Safari\/537": {
 		"platform": "Windows Phone",
 		"browser": "IEMobile",
-		"version": "11.0"
+		"version": "11.0",
+		"platform_version": "8.1"
 	},
 	"Mozilla\/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident\/7.0; Touch; rv:11.0; IEMobile\/11.0; NOKIA; Lumia 920; Vodafone ES) like iPhone OS 7_0_3 Mac OS X AppleWebkit\/537 (KHTML, like Gecko) Mobile Safari\/537": {
 		"platform": "Windows Phone",
 		"browser": "IEMobile",
-		"version": "11.0"
+		"version": "11.0",
+		"platform_version": "8.1"
 	},
 	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0;Touch; rv:11.0; IEMobile\/11.0; Microsoft; Virtual) like Gecko": {
 		"platform": "Windows Phone",
@@ -714,7 +740,8 @@
 	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0; Touch; rv:11; IEMobile\/11.0) like Android 4.1.2; compatible) like iPhone OS 7_0_3 Mac OS X WebKit\/537.36 (KHTML, like Gecko) Chrome\/32.0.1700.99 Mobile Safari\/537.36": {
 		"platform": "Windows Phone",
 		"browser": "IEMobile",
-		"version": "11.0"
+		"version": "11.0",
+		"platform_version": "8.1"
 	},
 	"Mozilla\/5.0 (Windows Phone 8.1; ARM; Trident\/7.0; Touch; rv:11; IEMobile\/11.0) like Android 4.1.2; compatible) like iPhone OS 7_0_3 MacWebKit\/537.36 (KHTML, like Gecko) Chrome\/32.0.1700.99 Mobile Safari \/537.36": {
 		"platform": "Windows Phone",
@@ -737,7 +764,8 @@
 	"Mozilla\/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident\/5.0; Xbox), or Mozilla\/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/9.0; Xbox)": {
 		"platform": "Xbox",
 		"browser": "IEMobile",
-		"version": "9.0"
+		"version": "9.0",
+		"platform_version": "6.1"
 	},
 	"Mozilla\/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/9.0; Xbox)": {
 		"platform": "Xbox",
