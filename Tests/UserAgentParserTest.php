@@ -8,11 +8,10 @@ class UserAgentParser_test extends \PHPUnit_Framework_TestCase {
 		global $local_path;
 		$uas = json_decode(file_get_contents($local_path . '/user_agents.json'), true);
 
-		foreach($uas as $ua => $expected_result) {
+		foreach( $uas as $ua => $expected_result ) {
 			$result = parse_user_agent($ua);
-			$this->assertSame($expected_result, $result, $ua . " failed!" );
+			$this->assertSame($expected_result, $result, $ua . " failed!");
 		}
-
 	}
 
 	function test_pase_user_agent_empty() {
@@ -33,7 +32,7 @@ class UserAgentParser_test extends \PHPUnit_Framework_TestCase {
 		$this->assertSame($result, $expected);
 	}
 
-	
+
 	/**
 	 * @expectedException \InvalidArgumentException
 	 */
@@ -42,9 +41,9 @@ class UserAgentParser_test extends \PHPUnit_Framework_TestCase {
 		parse_user_agent();
 	}
 
-	function test_global_user_agent(){
+	function test_global_user_agent() {
 		$_SERVER['HTTP_USER_AGENT'] = 'Test/1.0';
-		$this->assertSame(array('platform'=>null, 'browser' => 'Test', 'version' => '1.0'), parse_user_agent());
+		$this->assertSame(array( 'platform' => null, 'browser' => 'Test', 'version' => '1.0', 'platform_version' => null ), parse_user_agent());
 	}
 
 }
