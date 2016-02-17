@@ -1,9 +1,8 @@
 <?php
 error_reporting(E_ALL);
 $local_path = dirname(__FILE__);
-require($local_path . "/../Source/UserAgentParser.php");
 
-class UserAgentParser_test extends PHPUnit_Framework_TestCase {
+class UserAgentParser_test extends \PHPUnit_Framework_TestCase {
 
 	function test_parse_user_agent() {
 		global $local_path;
@@ -41,6 +40,11 @@ class UserAgentParser_test extends PHPUnit_Framework_TestCase {
 	function test_no_user_agent_exception() {
 		unset($_SERVER['HTTP_USER_AGENT']);
 		parse_user_agent();
+	}
+
+	function test_global_user_agent(){
+		$_SERVER['HTTP_USER_AGENT'] = 'Test/1.0';
+		$this->assertEquals(array('platform'=>null, 'browser' => 'Test', 'version' => '1.0'), parse_user_agent());
 	}
 
 }

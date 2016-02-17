@@ -14,12 +14,12 @@ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.p
 ## Why Use This
 
 You have your choice in user-agent parsers. This one detects **all modern browsers** in a very light, quick, understandable fashion. 
-It is less than 150 lines of code, and consists of just two regular expressions!
+It is less than 200 lines of code, and consists of just three regular expressions!
 It can also correctly identify exotic versions of IE others fail on.
 
 It offers 100% unit test coverage, is installable via Composer, and is very easy to use.
 
-## What It Doesn't Do
+## What It Does Not Do
 
 ### OS Versions
 
@@ -72,14 +72,16 @@ array(
 - Mobile
 	- Android
 	- iPhone
-	- iPad
+	- iPad / iPod Touch
 	- Windows Phone OS
 	- Kindle
 	- Kindle Fire
 	- BlackBerry
 	- Playbook
+	- Tizen
 - Console
 	- Nintendo 3DS
+	- New Nintendo 3DS
 	- Nintendo Wii
 	- Nintendo WiiU
 	- PlayStation 3
@@ -101,6 +103,8 @@ array(
 - Chrome
 - Opera
 - Midori
+- Vivaldi
+- TizenBrowser
 - Lynx
 - Wget
 - Curl
