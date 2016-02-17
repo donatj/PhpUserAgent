@@ -24,7 +24,7 @@ function parse_user_agent( $u_agent = null ) {
 	$version  = null;
 	$platform_version = null;
 
-	$empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
+	$empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version, 'platform_version' => $platform_version );
 
 	if( !$u_agent ) return $empty;
 

@@ -18,9 +18,10 @@ class UserAgentParser_test extends PHPUnit_Framework_TestCase {
 
 	function test_pase_user_agent_empty() {
 		$expected = array(
-			'platform' => null,
-			'browser'  => null,
-			'version'  => null,
+			'platform'         => null,
+			'browser'          => null,
+			'version'          => null,
+			'platform_version' => null,
 		);
 
 		$result = parse_user_agent('');
