@@ -29,11 +29,11 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
-		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|(New\ )?Nintendo\ (WiiU?|3?DS)|Xbox(\ One)?)
+		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS)|Xbox(\ One)?)
 				(?:\ [^;]*)?
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
-		$priority           = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android' );
+		$priority           = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'CrOS', 'Linux', 'X11' );
 		$result['platform'] = array_unique($result['platform']);
 		if( count($result['platform']) > 1 ) {
 			if( $keys = array_intersect($priority, $result['platform']) ) {
@@ -46,18 +46,19 @@ function parse_user_agent( $u_agent = null ) {
 		}
 	}
 
-	if( $platform == 'linux-gnu' ) {
+	if( $platform == 'linux-gnu' || $platform == 'X11' ) {
 		$platform = 'Linux';
 	} elseif( $platform == 'CrOS' ) {
 		$platform = 'Chrome OS';
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|TizenBrowser|Chrome|
-			Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|
-			Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
-			NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
-			(?:\)?;?)
-			(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
+				Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|
+				Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+				Valve\ Steam\ Tenfoot|
+				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+				(?:\)?;?)
+				(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
 		$u_agent, $result, PREG_PATTERN_ORDER);
 
 	// If nothing matched, return null (to avoid undefined index errors)
@@ -135,6 +136,9 @@ function parse_user_agent( $u_agent = null ) {
 		}
 	} elseif( $find('Vivaldi', $key) ) {
 		$browser = 'Vivaldi';
+		$version = $result['version'][$key];
+	} elseif( $find('Valve Steam Tenfoot', $key) ) {
+		$browser = 'Valve Steam Tenfoot';
 		$version = $result['version'][$key];
 	} elseif( $find('Chrome', $key) || $find('CriOS', $key) ) {
 		$browser = 'Chrome';
