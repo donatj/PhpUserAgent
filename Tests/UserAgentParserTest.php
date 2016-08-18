@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 $local_path = dirname(__FILE__);
 
+include("../Source/UserAgentParser.php");
+
 class UserAgentParser_test extends \PHPUnit_Framework_TestCase {
 
 	function test_parse_user_agent() {

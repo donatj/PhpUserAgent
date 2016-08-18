@@ -704,6 +704,11 @@
 		"browser": "MSIE",
 		"version": "10.0"
 	},
+	"Mozilla/5.0 Vienna/3.1.5": {
+		"platform": "Macintosh",
+		"browser": "Vienna",
+		"version": "3.1.5"
+	},
 	"AdsBot-Google (+http:\/\/www.google.com\/adsbot.html)": {
 		"platform": null,
 		"browser": "AdsBot-Google",
