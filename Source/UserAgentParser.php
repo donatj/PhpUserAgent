@@ -28,7 +28,6 @@ function parse_user_agent( $u_agent = null ) {
 	if( !$u_agent ) return $empty;
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
-
 		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS)|Xbox(\ One)?)
 				(?:\ [^;]*)?
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
@@ -82,10 +81,11 @@ function parse_user_agent( $u_agent = null ) {
 	$find = function ( $search, &$key, &$value = null ) use ( $lowerBrowser ) {
 		$search = (array)$search;
 
-		foreach( $search as $value ) {
-			$xkey = array_search(strtolower($value), $lowerBrowser);
+		foreach( $search as $val ) {
+			$xkey = array_search(strtolower($val), $lowerBrowser);
 			if( $xkey !== false ) {
-				$key = $xkey;
+				$value = $val;
+				$key   = $xkey;
 
 				return true;
 			}
@@ -94,9 +94,8 @@ function parse_user_agent( $u_agent = null ) {
 		return false;
 	};
 
-	$key  = 0;
-	$ekey = 0;
-	$val  = '';
+	$key = 0;
+	$val = '';
 	if( $browser == 'Iceweasel' ) {
 		$browser = 'Firefox';
 	} elseif( $find('Playstation Vita', $key) ) {
@@ -111,61 +110,44 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
-	} elseif( $find([ 'Kindle' ], $key, $val) ) {
-		$browser  = $result['browser'][$key];
-		$platform = $val;
-		$version  = $result['version'][$key];
+	} elseif( $find('Kindle', $key, $platform) ) {
+		$browser = $result['browser'][$key];
+		$version = $result['version'][$key];
 	} elseif( $find('OPR', $key) ) {
 		$browser = 'Opera Next';
 		$version = $result['version'][$key];
-	} elseif( $find('Opera', $key) ) {
-		$browser = 'Opera';
+	} elseif( $find('Opera', $key, $browser) ) {
 		$find('Version', $key);
 		$version = $result['version'][$key];
-	} elseif( $find([ 'Midori', 'Vivaldi', 'Valve Steam Tenfoot' ], $key, $val) ) {
-		$browser = $val;
+	} elseif( $find([ 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'Valve Steam Tenfoot', 'Chrome' ], $key, $browser) ) {
 		$version = $result['version'][$key];
-	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) || $find('Edge', $ekey) ) {
+	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) ) {
 		$browser = 'MSIE';
-		if( $find('IEMobile', $key) ) {
-			$browser = 'IEMobile';
-			$version = $result['version'][$key];
-		} elseif( $ekey ) {
-			$version = $result['version'][$ekey];
-		} else {
-			$version = $rv_result ?: $result['version'][$key];
-		}
-
-		if( version_compare($version, '12', '>=') ) {
-			$browser = 'Edge';
-		}
+		$version = $rv_result ?: $result['version'][$key];
 	} elseif( $find('UCBrowser', $key) ) {
 		$browser = 'UC Browser';
 		$version = $result['version'][$key];
-	} elseif( $find('Chrome', $key) || $find('CriOS', $key) ) {
+	} elseif( $find('CriOS', $key) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
-		if( ($platform == 'Android' && !($key = 0)) ) {
+		if( $platform == 'Android' && !($key = 0) ) {
 			$browser = 'Android Browser';
 		} elseif( strpos($platform, 'BB') === 0 ) {
 			$browser  = 'BlackBerry Browser';
 			$platform = 'BlackBerry';
 		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
-		} elseif( $find('Safari', $key) ) {
-			$browser = 'Safari';
-		} elseif( $find('TizenBrowser', $key) ) {
-			$browser = 'TizenBrowser';
+		} else {
+			$find('Safari', $key, $browser) || $find('TizenBrowser', $key, $browser);
 		}
 
 		$find('Version', $key);
-
 		$version = $result['version'][$key];
-	} elseif( $key = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
-		$key = reset($key);
+	} elseif( $pKey = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
+		$pKey = reset($pKey);
 
-		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $key);
+		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $pKey);
 		$browser  = 'NetFront';
 	}
 
