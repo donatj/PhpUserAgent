@@ -33,7 +33,7 @@ function parse_user_agent( $u_agent = null ) {
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
 		$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'CrOS', 'X11' );
-		
+
 		$result['platform'] = array_unique($result['platform']);
 		if( count($result['platform']) > 1 ) {
 			if( $keys = array_intersect($priority, $result['platform']) ) {
@@ -102,7 +102,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
-	} elseif( $find([ 'Kindle Fire', 'Silk' ], $key, $val) ) {
+	} elseif( $find(array( 'Kindle Fire', 'Silk' ), $key, $val) ) {
 		$browser  = $val == 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
@@ -120,7 +120,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('Opera', $key, $browser) ) {
 		$find('Version', $key);
 		$version = $result['version'][$key];
-	} elseif( $find([ 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'Valve Steam Tenfoot', 'Chrome' ], $key, $browser) ) {
+	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'Valve Steam Tenfoot', 'Chrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
 	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) ) {
 		$browser = 'MSIE';
