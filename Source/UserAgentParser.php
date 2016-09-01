@@ -79,12 +79,16 @@ function parse_user_agent( $u_agent = null ) {
 
 	$lowerBrowser = array_map('strtolower', $result['browser']);
 
-	$find = function ( $search, &$key ) use ( $lowerBrowser ) {
-		$xkey = array_search(strtolower($search), $lowerBrowser);
-		if( $xkey !== false ) {
-			$key = $xkey;
+	$find = function ( $search, &$key, &$value = null ) use ( $lowerBrowser ) {
+		$search = (array)$search;
 
-			return true;
+		foreach( $search as $value ) {
+			$xkey = array_search(strtolower($value), $lowerBrowser);
+			if( $xkey !== false ) {
+				$key = $xkey;
+
+				return true;
+			}
 		}
 
 		return false;
@@ -92,13 +96,14 @@ function parse_user_agent( $u_agent = null ) {
 
 	$key  = 0;
 	$ekey = 0;
+	$val  = '';
 	if( $browser == 'Iceweasel' ) {
 		$browser = 'Firefox';
 	} elseif( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
-	} elseif( $find('Kindle Fire', $key) || $find('Silk', $key) ) {
-		$browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
+	} elseif( $find([ 'Kindle Fire', 'Silk' ], $key, $val) ) {
+		$browser  = $val == 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
 			$version = $result['version'][array_search('Version', $result['browser'])];
@@ -106,9 +111,9 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
-	} elseif( $find('Kindle', $key) ) {
+	} elseif( $find([ 'Kindle' ], $key, $val) ) {
 		$browser  = $result['browser'][$key];
-		$platform = 'Kindle';
+		$platform = $val;
 		$version  = $result['version'][$key];
 	} elseif( $find('OPR', $key) ) {
 		$browser = 'Opera Next';
@@ -117,8 +122,8 @@ function parse_user_agent( $u_agent = null ) {
 		$browser = 'Opera';
 		$find('Version', $key);
 		$version = $result['version'][$key];
-	} elseif( $find('Midori', $key) ) {
-		$browser = 'Midori';
+	} elseif( $find([ 'Midori', 'Vivaldi', 'Valve Steam Tenfoot' ], $key, $val) ) {
+		$browser = $val;
 		$version = $result['version'][$key];
 	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) || $find('Edge', $ekey) ) {
 		$browser = 'MSIE';
@@ -134,14 +139,8 @@ function parse_user_agent( $u_agent = null ) {
 		if( version_compare($version, '12', '>=') ) {
 			$browser = 'Edge';
 		}
-	} elseif( $find('Vivaldi', $key) ) {
-		$browser = 'Vivaldi';
-		$version = $result['version'][$key];
 	} elseif( $find('UCBrowser', $key) ) {
 		$browser = 'UC Browser';
-		$version = $result['version'][$key];
-	} elseif( $find('Valve Steam Tenfoot', $key) ) {
-		$browser = 'Valve Steam Tenfoot';
 		$version = $result['version'][$key];
 	} elseif( $find('Chrome', $key) || $find('CriOS', $key) ) {
 		$browser = 'Chrome';
