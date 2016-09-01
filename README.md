@@ -105,6 +105,7 @@ array(
 - Midori
 - Vivaldi
 - TizenBrowser
+- UC Browser
 - Lynx
 - Wget
 - Curl
