@@ -55,6 +55,7 @@ function parse_user_agent( $u_agent = null ) {
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|TizenBrowser|Chrome|
 				Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|UCBrowser|
 				Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+				YaBrowser|FxiOS|Vienna|
 				Valve\ Steam\ Tenfoot|
 				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 				(?:\)?;?)
@@ -120,6 +121,9 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('Opera', $key, $browser) ) {
 		$find('Version', $key);
 		$version = $result['version'][$key];
+	} elseif( $find('YaBrowser', $key) ) {
+		$browser = 'Yandex.Browser';
+		$version = $result['version'][$key];
 	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'Valve Steam Tenfoot', 'Chrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
 	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) ) {
@@ -131,6 +135,11 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('CriOS', $key) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
+	} elseif( $find('FxiOS', $key) ) {
+		$browser = 'Firefox';
+		$version = $result['version'][$key];
+	} elseif( $browser == 'Vienna' ) {
+		$platform = 'Macintosh'; // This RSS reader exist only for MacOS
 	} elseif( $browser == 'AppleWebKit' ) {
 		if( $platform == 'Android' && !($key = 0) ) {
 			$browser = 'Android Browser';

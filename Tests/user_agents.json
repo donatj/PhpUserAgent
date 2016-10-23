@@ -369,6 +369,11 @@
 		"browser": "UC Browser",
 		"version": "10.7.5.658"
 	},
+	"Mozilla\/5.0 (Linux; Android 5.1.1; SM-G925F Build\/LMY47X) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/42.0.2311.152 YaBrowser\/15.6.2311.6088.00 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Yandex.Browser",
+		"version": "15.6.2311.6088.00"
+	},
 	"Mozilla\/5.0 (Linux; Android 4.2.2; de-at; SAMSUNG GT-I9195\/I9195XXUAMF6 Build\/JDQ39) AppleWebKit\/535.19 (KHTML, like Gecko) Version\/1.0 Chrome\/18.0.1025.308 Mobile Safari\/535.19": {
 		"platform": "Android",
 		"browser": "Chrome",
@@ -413,6 +418,21 @@
 		"platform": "iPhone",
 		"browser": "Chrome",
 		"version": "30.0.1599.12"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit\/600.1.4 (KHTML, like Gecko) CriOS\/46.0.2490.73 Mobile\/13B143 Safari\/600.1.4": {
+		"platform": "iPhone",
+		"browser": "Chrome",
+		"version": "46.0.2490.73"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit\/601.1.46 (KHTML, like Gecko) FxiOS\/1.1 Mobile\/13B143 Safari\/601.1.46": {
+		"platform": "iPhone",
+		"browser": "Firefox",
+		"version": "1.1"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit\/600.1.4 (KHTML, like Gecko) YaBrowser\/15.10.2454.3762.10 Mobile\/13B143 Safari\/600.1.4": {
+		"platform": "iPhone",
+		"browser": "Yandex.Browser",
+		"version": "15.10.2454.3762.10"
 	},
 	"Mozilla\/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit\/420+ (KHTML, like Gecko) Version\/3.0 Mobile\/1C25 Safari\/419.3": {
 		"platform": "iPhone",
@@ -683,6 +703,11 @@
 		"platform": "Xbox One",
 		"browser": "MSIE",
 		"version": "10.0"
+	},
+	"Mozilla/5.0 Vienna/3.1.5": {
+		"platform": "Macintosh",
+		"browser": "Vienna",
+		"version": "3.1.5"
 	},
 	"AdsBot-Google (+http:\/\/www.google.com\/adsbot.html)": {
 		"platform": null,
