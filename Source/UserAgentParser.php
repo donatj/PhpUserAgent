@@ -122,9 +122,9 @@ function parse_user_agent( $u_agent = null ) {
 		$version = $result['version'][$key];
 	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'Valve Steam Tenfoot', 'Chrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
-	} elseif( $browser == 'MSIE' || ($rv_result && $find('Trident', $key)) ) {
+	} elseif( $rv_result && $find('Trident', $key) ) {
 		$browser = 'MSIE';
-		$version = $rv_result ?: $result['version'][$key];
+		$version = $rv_result;
 	} elseif( $find('UCBrowser', $key) ) {
 		$browser = 'UC Browser';
 		$version = $result['version'][$key];
