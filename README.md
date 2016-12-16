@@ -96,7 +96,7 @@ array(
 - BlackBerry Browser
 - Camino
 - Kindle / Silk
-- Firefox / Iceweasel
+- Firefox / IceWeasel / IceCat
 - Safari
 - Internet Explorer
 - IEMobile
