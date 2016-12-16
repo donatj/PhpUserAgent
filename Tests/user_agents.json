@@ -109,6 +109,16 @@
 		"browser": "Firefox",
 		"version": "2.0"
 	},
+	"Mozilla\/5.0 (X11; U; Linux sparc64; es-PY; rv:5.0) Gecko\/20100101 IceCat\/5.0 (like Firefox\/5.0; Debian-6.0.1)": {
+		"platform": "Linux",
+		"browser": "Firefox",
+		"version": "5.0"
+	},
+	"Mozilla\/5.0 (X11; Linux i686; rv:7.0.1) Gecko\/20111106 IceCat\/7.0.1": {
+		"platform": "Linux",
+		"browser": "Firefox",
+		"version": "7.0.1"
+	},
 	"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:12.0) Gecko\/20100101 Firefox\/12.0": {
 		"platform": "Linux",
 		"browser": "Firefox",
@@ -118,6 +128,11 @@
 		"platform": "Linux",
 		"browser": "Firefox",
 		"version": "14.0.1"
+	},
+	"Mozilla\/5.0 (X11; Linux x86_64; rv:17.0) Gecko\/20121201 icecat\/17.0.1": {
+		"platform": "Linux",
+		"browser": "Firefox",
+		"version": "17.0.1"
 	},
 	"Mozilla\/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.3) Gecko\/20100401 Firefox\/3.6.3": {
 		"platform": "Macintosh",
