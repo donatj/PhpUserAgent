@@ -384,6 +384,21 @@
 		"browser": "Chrome",
 		"version": "18.0.1025.308"
 	},
+	"Mozilla\/5.0 (X11; U; Linux x86_64; en-gb) AppleWebKit\/534.35 (KHTML, like Gecko) Chrome\/11.0.696.65 Safari\/534.35 Puffin\/2.9174AP": {
+		"platform": "Android",
+		"browser": "Puffin",
+		"version": "2.9174"
+	},
+	"Mozilla\/5.0 (X11; U; Linux x86_64; en-us) AppleWebKit\/534.35 (KHTML, like Gecko) Chrome\/11.0.696.65 Safari\/534.35 Puffin\/2.9174AT": {
+		"platform": "Android",
+		"browser": "Puffin",
+		"version": "2.9174"
+	},
+	"Mozilla\/5.0 (Linux; Android 7.1.1; Nexus 5X Build\/N4F26O; en-us) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/42.0.2311.135 Mobile Safari\/537.36 Puffin\/6.0.7.15747AP": {
+		"platform": "Android",
+		"browser": "Puffin",
+		"version": "6.0.7.15747"
+	},
 	"Mozilla\/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build\/LRX22G) AppleWebKit\/537.36 (KHTML, like Gecko) SamsungBrowser\/4.0 Chrome\/44.0.2403.133 Mobile Safari\/537.36": {
 		"platform": "Android",
 		"browser": "SamsungBrowser",
@@ -419,6 +434,11 @@
 		"browser": "Chrome",
 		"version": "30.0.1599.12"
 	},
+	"Mozilla\/5.0 (X11; U; Linux x86_64; en-AU) AppleWebKit\/534.35 (KHTML, like Gecko) Chrome\/11.0.696.65 Safari\/534.35 Puffin\/3.9174IT": {
+		"platform": "iPad",
+		"browser": "Puffin",
+		"version": "3.9174"
+	},
 	"Mozilla\/5.0 (iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit\/531.21.10 (KHTML, like Gecko) Version\/4.0.4 Mobile\/7B314 Safari\/531.21.10": {
 		"platform": "iPad",
 		"browser": "Safari",
@@ -438,6 +458,11 @@
 		"platform": "iPhone",
 		"browser": "Chrome",
 		"version": "30.0.1599.12"
+	},
+	"Mozilla\/5.0 (iPod; U; CPU iPhone OS 6_1 like Mac OS X; en-HK) AppleWebKit\/534.35 (KHTML, like Gecko) Chrome\/11.0.696.65 Safari\/534.35 Puffin\/3.9174IP Mobile": {
+		"platform": "iPhone",
+		"browser": "Puffin",
+		"version": "3.9174"
 	},
 	"Mozilla\/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit\/420+ (KHTML, like Gecko) Version\/3.0 Mobile\/1C25 Safari\/419.3": {
 		"platform": "iPhone",
