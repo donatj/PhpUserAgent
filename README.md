@@ -110,6 +110,7 @@ array(
 - Lynx
 - Wget
 - Curl
+- Puffin
 
 
 
