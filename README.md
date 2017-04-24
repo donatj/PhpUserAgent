@@ -23,6 +23,8 @@ It offers 100% unit test coverage, is installable via Composer, and is very easy
 
 ## What It Does Not Do
 
+This is not meant as a browser "knowledge engine" but rather a simple parser. Anything not adequitely provided directly by the user agent string itself will simply not be provided by this.
+
 ### OS Versions
 
 User-agent strings **are not** a reliable source of OS Version!
