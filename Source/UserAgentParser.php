@@ -22,10 +22,21 @@ function parse_user_agent( $u_agent = null ) {
 	$platform = null;
 	$browser  = null;
 	$version  = null;
+	$system_details  = null;
 
-	$empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version );
+	$empty = array( 'platform' => $platform, 'browser' => $browser, 'version' => $version, 'system' => $system_details );
 
 	if( !$u_agent ) return $empty;
+
+	// Extract system name and details.
+	preg_match_all('/\((.*?)\)/', $u_agent, $u_system_data);
+	if( isset($u_system_data[1]) && isset($u_system_data[1][0]) ){
+		$u_system_data = explode(';', $u_system_data[1][0]);
+		$system_details = array(
+			'name'=>(isset($u_system_data[0]) ? $u_system_data[0] : $u_system_data[0]),
+			'details'=>(isset($u_system_data[1]) ? $u_system_data[1] : $u_system_data[1]),
+		);
+	}
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS)|Xbox(\ One)?)
@@ -64,7 +75,7 @@ function parse_user_agent( $u_agent = null ) {
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
 		if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
-			return array( 'platform' => $platform ?: null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null );
+			return array( 'platform' => $platform ?: null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null, 'system' => $system_details );
 		}
 
 		return $empty;
@@ -165,5 +176,5 @@ function parse_user_agent( $u_agent = null ) {
 		$browser  = 'NetFront';
 	}
 
-	return array( 'platform' => $platform ?: null, 'browser' => $browser ?: null, 'version' => $version ?: null );
+	return array( 'platform' => $platform ?: null, 'browser' => $browser ?: null, 'version' => $version ?: null, 'system' => $system_details );
 }
