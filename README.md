@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/PhpUserAgentParser/Lobby](https://badges.gitter.im/PhpUserAgentParser/Lobby.svg)](https://gitter.im/PhpUserAgentParser/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/v/stable.png)](https://packagist.org/packages/donatj/phpuseragentparser) [![Total Downloads](https://poser.pugx.org/donatj/phpuseragentparser/downloads.png)](https://packagist.org/packages/donatj/phpuseragentparser) [![Latest Unstable Version](https://poser.pugx.org/donatj/phpuseragentparser/v/unstable.png)](https://packagist.org/packages/donatj/phpuseragentparser) [![License](https://poser.pugx.org/donatj/phpuseragentparser/license.png)](https://packagist.org/packages/donatj/phpuseragentparser)
-[![Build Status](https://travis-ci.org/donatj/PhpUserAgent.png?branch=master)](https://travis-ci.org/donatj/PhpUserAgent)
+[![Build Status](https://travis-ci.org/samaphp/PhpUserAgent.png?branch=master)](https://travis-ci.org/samaphp/PhpUserAgent)
 [![HHVM Status](http://hhvm.h4cc.de/badge/donatj/phpuseragentparser.png?style=flat)](http://hhvm.h4cc.de/package/donatj/phpuseragentparser) 
 
 ## What It Is
