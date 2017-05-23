@@ -165,5 +165,9 @@ function parse_user_agent( $u_agent = null ) {
 		$browser  = 'NetFront';
 	}
 
-	return array( 'platform' => $platform ?: null, 'browser' => $browser ?: null, 'version' => $version ?: null );
+	//sometimes we don't need full version
+	preg_match('/^[0-9]*\.[0-9]*/',$version,$version_short);
+	$version_short = $version_short[0];
+
+	return array( 'platform' => $platform ?: null, 'browser' => $browser ?: null, 'version' => $version ?: null, 'version_short' => $version_short ?: null );
 }
