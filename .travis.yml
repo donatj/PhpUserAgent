@@ -1,12 +1,6 @@
 language: php
 sudo: false
-
-matrix:
-  include:
-    - php: 5.2
-      dist: precise
-    - php: 5.3
-      dist: precise
+dist: precise
 
 php:
   - 5.4
