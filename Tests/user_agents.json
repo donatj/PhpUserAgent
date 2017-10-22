@@ -808,5 +808,35 @@
 		"platform": null,
 		"browser": "YandexBot",
 		"version": "3.0"
+	},
+	"Mozilla\/5.0 (X11; FreeBSD amd64; rv:43.0) Gecko\/20100101 Firefox\/43.0": {
+		"platform": "FreeBSD",
+		"browser": "Firefox",
+		"version": "43.0"
+	},
+	"Mozilla\/5.0 (X11; FreeBSD amd64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/38.0.2125.104 Safari\/537.36": {
+		"platform": "FreeBSD",
+		"browser": "Chrome",
+		"version": "38.0.2125.104"
+	},
+	"Mozilla\/5.0 (X11; OpenBSD amd64; rv:43.0) Gecko\/20100101 Firefox\/43.0 SeaMonkey\/2.40": {
+		"platform": "OpenBSD",
+		"browser": "Firefox",
+		"version": "43.0"
+	},
+	"Mozilla\/5.0 (X11; OpenBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.81 Safari\/537.36": {
+		"platform": "OpenBSD",
+		"browser": "Chrome",
+		"version": "43.0.2357.81"
+	},
+	"Mozilla\/5.0 (X11; NetBSD amd64; rv:42.0) Gecko\/20100101 Firefox\/42.0": {
+		"platform": "NetBSD",
+		"browser": "Firefox",
+		"version": "42.0"
+	},
+	"Mozilla\/5.0 (X11; NetBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.124 Safari\/537.36": {
+		"platform": "NetBSD",
+		"browser": "Chrome",
+		"version": "43.0.2357.124"
 	}
 }
