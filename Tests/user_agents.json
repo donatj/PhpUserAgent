@@ -594,6 +594,11 @@
 		"browser": "Bunjalloo",
 		"version": "0.7.6"
 	},
+	"Mozilla\/5.0 (Nintendo Switch; ShareApplet) AppleWebKit\/601.6 (KHTML, like Gecko) NF\/4.0.0.5.9 NintendoBrowser\/5.1.0.13341": {
+		"platform": "Nintendo Switch",
+		"browser": "NintendoBrowser",
+		"version": "5.1.0.13341"
+	},
 	"Opera\/9.00 (Nintendo Wii; U; ; 1038-58; Wii Shop Channel\/1.0; en)": {
 		"platform": "Nintendo Wii",
 		"browser": "Opera",
