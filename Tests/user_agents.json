@@ -424,6 +424,16 @@
 		"browser": "BlackBerry Browser",
 		"version": "10.0.9.2372"
 	},
+	"Mozilla\/5.0 (X11; FreeBSD amd64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/38.0.2125.104 Safari\/537.36": {
+		"platform": "FreeBSD",
+		"browser": "Chrome",
+		"version": "38.0.2125.104"
+	},
+	"Mozilla\/5.0 (X11; FreeBSD amd64; rv:43.0) Gecko\/20100101 Firefox\/43.0": {
+		"platform": "FreeBSD",
+		"browser": "Firefox",
+		"version": "43.0"
+	},
 	"Mozilla\/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit\/534.46 (KHTML, like Gecko) CriOS\/29.0.1547.11 Mobile\/9B206 Safari\/7534.48.3": {
 		"platform": "iPad",
 		"browser": "Chrome",
@@ -549,6 +559,16 @@
 		"browser": "Silk",
 		"version": "3.22"
 	},
+	"Mozilla\/5.0 (X11; NetBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.124 Safari\/537.36": {
+		"platform": "NetBSD",
+		"browser": "Chrome",
+		"version": "43.0.2357.124"
+	},
+	"Mozilla\/5.0 (X11; NetBSD amd64; rv:42.0) Gecko\/20100101 Firefox\/42.0": {
+		"platform": "NetBSD",
+		"browser": "Firefox",
+		"version": "42.0"
+	},
 	"Mozilla\/5.0 (New Nintendo 3DS like iPhone) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.0.5.8 Mobile NintendoBrowser\/1.0.9934.JP": {
 		"platform": "New Nintendo 3DS",
 		"browser": "NintendoBrowser",
@@ -583,6 +603,16 @@
 		"platform": "Nintendo WiiU",
 		"browser": "NintendoBrowser",
 		"version": "1.0.0.7494.US"
+	},
+	"Mozilla\/5.0 (X11; OpenBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.81 Safari\/537.36": {
+		"platform": "OpenBSD",
+		"browser": "Chrome",
+		"version": "43.0.2357.81"
+	},
+	"Mozilla\/5.0 (X11; OpenBSD amd64; rv:43.0) Gecko\/20100101 Firefox\/43.0 SeaMonkey\/2.40": {
+		"platform": "OpenBSD",
+		"browser": "Firefox",
+		"version": "43.0"
 	},
 	"Mozilla\/5.0 (PlayBook; U; RIM Tablet OS 2.0.1; en-US) AppleWebKit\/535.8+ (KHTML, like Gecko) Version\/7.2.0.1 Safari\/535.8+": {
 		"platform": "PlayBook",
