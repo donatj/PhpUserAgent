@@ -149,6 +149,11 @@
 		"browser": "Firefox",
 		"version": "25.0"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.13; rv:57.0) Gecko\/20100101 Firefox\/57.0": {
+		"platform": "Macintosh",
+		"browser": "Firefox",
+		"version": "57.0"
+	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.1.5) Gecko\/20091102 Firefox\/3.5.5 (.NET CLR 3.5.21022)": {
 		"platform": "Windows",
 		"browser": "Firefox",
