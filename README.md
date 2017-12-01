@@ -37,6 +37,10 @@ I'm much more interested in keeping this thing *tiny* and accurate than adding n
 
 All that said, there is the start of a [branch to do it](https://github.com/donatj/PhpUserAgent/tree/os_version_detection) I created for a client if you want to poke it, I update it from time to time, but frankly if you need to *reliably detect OS Version*, using user-agent isn't the way to do it. I'd go with JavaScript.
 
+### Undetectable Browsers
+
+- **Brave** - Brave is simply not differentiable from Chrome. This was a design descision on their part.
+
 ## Requirements
 
   - PHP 5.3.0+
