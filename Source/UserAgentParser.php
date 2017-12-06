@@ -108,7 +108,7 @@ function parse_user_agent( $u_agent = null ) {
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
 			$version = $result['version'][array_search('Version', $result['browser'], true)];
 		}
-	} elseif( $find('NintendoBrowser', $key) || $platform === 'Nintendo 3DS' ) {
+	} elseif( $platform === 'Nintendo 3DS' || $find('NintendoBrowser', $key)) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
 	} elseif( $find('Kindle', $key, $platform) ) {
