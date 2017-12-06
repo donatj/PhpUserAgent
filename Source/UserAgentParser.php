@@ -83,7 +83,7 @@ function parse_user_agent( $u_agent = null ) {
 		$search = (array)$search;
 
 		foreach( $search as $val ) {
-			$xkey = array_search(strtolower($val), $lowerBrowser);
+			$xkey = array_search(strtolower($val), $lowerBrowser, true);
 			if( $xkey !== false ) {
 				$value = $val;
 				$key   = $xkey;
@@ -106,7 +106,7 @@ function parse_user_agent( $u_agent = null ) {
 		$browser  = $val === 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
-			$version = $result['version'][array_search('Version', $result['browser'])];
+			$version = $result['version'][array_search('Version', $result['browser'], true)];
 		}
 	} elseif( $find('NintendoBrowser', $key) || $platform === 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
