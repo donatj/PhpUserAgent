@@ -59,7 +59,7 @@ function parse_user_agent( $u_agent = null ) {
 				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 				(?:\)?;?)
 				(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
-		$u_agent, $result, PREG_PATTERN_ORDER);
+		$u_agent, $result);
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0], $result['version'][0])) {
