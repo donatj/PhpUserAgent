@@ -46,9 +46,9 @@ function parse_user_agent( $u_agent = null ) {
 		}
 	}
 
-	if( $platform == 'linux-gnu' || $platform == 'X11' ) {
+	if( $platform === 'linux-gnu' || $platform === 'X11' ) {
 		$platform = 'Linux';
-	} elseif( $platform == 'CrOS' ) {
+	} elseif( $platform === 'CrOS' ) {
 		$platform = 'Chrome OS';
 	}
 
@@ -97,18 +97,18 @@ function parse_user_agent( $u_agent = null ) {
 
 	$key = 0;
 	$val = '';
-	if( $browser == 'Iceweasel' || strtolower($browser) == 'icecat' ) {
+	if( $browser === 'Iceweasel' || strtolower($browser) === 'icecat' ) {
 		$browser = 'Firefox';
 	} elseif( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
 	} elseif( $find(array( 'Kindle Fire', 'Silk' ), $key, $val) ) {
-		$browser  = $val == 'Silk' ? 'Silk' : 'Kindle';
+		$browser  = $val === 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
 			$version = $result['version'][array_search('Version', $result['browser'])];
 		}
-	} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
+	} elseif( $find('NintendoBrowser', $key) || $platform === 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
 	} elseif( $find('Kindle', $key, $platform) ) {
@@ -144,13 +144,13 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('CriOS', $key) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
-	} elseif( $browser == 'AppleWebKit' ) {
-		if( $platform == 'Android' && !($key = 0) ) {
+	} elseif( $browser === 'AppleWebKit' ) {
+		if( $platform === 'Android' && !($key = 0) ) {
 			$browser = 'Android Browser';
 		} elseif( strpos($platform, 'BB') === 0 ) {
 			$browser  = 'BlackBerry Browser';
 			$platform = 'BlackBerry';
-		} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
+		} elseif( $platform === 'BlackBerry' || $platform === 'PlayBook' ) {
 			$browser = 'BlackBerry Browser';
 		} else {
 			$find('Safari', $key, $browser) || $find('TizenBrowser', $key, $browser);
