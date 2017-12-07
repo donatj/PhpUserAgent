@@ -30,7 +30,7 @@ function parse_user_agent( $u_agent = null ) {
 	if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
 		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
 				(?:\ [^;]*)?
-				(?:;|$)/imx', $parent_matches[1], $result);
+				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
 		$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11' );
 
@@ -59,7 +59,7 @@ function parse_user_agent( $u_agent = null ) {
 				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 				(?:\)?;?)
 				(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
-		$u_agent, $result);
+		$u_agent, $result, PREG_PATTERN_ORDER);
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0], $result['version'][0])) {
@@ -83,7 +83,7 @@ function parse_user_agent( $u_agent = null ) {
 		$search = (array)$search;
 
 		foreach( $search as $val ) {
-			$xkey = array_search(strtolower($val), $lowerBrowser, true);
+			$xkey = array_search(strtolower($val), $lowerBrowser);
 			if( $xkey !== false ) {
 				$value = $val;
 				$key   = $xkey;
@@ -106,9 +106,9 @@ function parse_user_agent( $u_agent = null ) {
 		$browser  = $val === 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
-			$version = $result['version'][array_search('Version', $result['browser'], true)];
+			$version = $result['version'][array_search('Version', $result['browser'])];
 		}
-	} elseif( $platform === 'Nintendo 3DS' || $find('NintendoBrowser', $key)) {
+	} elseif( $find('NintendoBrowser', $key) || $platform === 'Nintendo 3DS' ) {
 		$browser = 'NintendoBrowser';
 		$version = $result['version'][$key];
 	} elseif( $find('Kindle', $key, $platform) ) {
