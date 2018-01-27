@@ -1,5 +1,5 @@
 {
-	"name": "donatj/phpuseragentparser",
+	"name": "wallend/phpuseragentparser",
 	"type": "library",
 	"description": "Simple, streamlined PHP user-agent parser",
 	"keywords": ["user agent", "useragent", "parser", "browser", "browser detection"],
