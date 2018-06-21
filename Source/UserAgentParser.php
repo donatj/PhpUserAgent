@@ -53,7 +53,7 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
-				TizenBrowser|Chrome|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|UCBrowser|Puffin|SamsungBrowser|
+				TizenBrowser|(?:Headless)?Chrome|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|UCBrowser|Puffin|SamsungBrowser|
 				Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 				Valve\ Steam\ Tenfoot|
 				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
@@ -133,7 +133,7 @@ function parse_user_agent( $u_agent = null ) {
 				}
 			}
 		}
-	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome' ), $key, $browser) ) {
+	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
 	} elseif( $rv_result && $find('Trident', $key) ) {
 		$browser = 'MSIE';
@@ -145,7 +145,8 @@ function parse_user_agent( $u_agent = null ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
-		if( $platform == 'Android' && !($key = 0) ) {
+		if( $platform == 'Android' ) {
+			// $key = 0;
 			$browser = 'Android Browser';
 		} elseif( strpos($platform, 'BB') === 0 ) {
 			$browser  = 'BlackBerry Browser';

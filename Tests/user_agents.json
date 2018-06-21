@@ -169,6 +169,21 @@
 		"browser": "Firefox",
 		"version": "25.0"
 	},
+	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) HeadlessChrome\/64.0.3282.119 Safari\/537.36": {
+		"platform": "Linux",
+		"browser": "HeadlessChrome",
+		"version": "64.0.3282.119"
+	},
+	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) HeadlessChrome\/65.0.3312.0 Safari\/537.36": {
+		"platform": "Linux",
+		"browser": "HeadlessChrome",
+		"version": "65.0.3312.0"
+	},
+	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) HeadlessChrome\/69.0.3452.0 Safari\/537.36": {
+		"platform": "Linux",
+		"browser": "HeadlessChrome",
+		"version": "69.0.3452.0"
+	},
 	"Mozilla\/5.0 (X11; U; Linux i686; de-DE; rv:1.8.1.9) Gecko\/20071103 Midori\/0.0.10": {
 		"platform": "Linux",
 		"browser": "Midori",
