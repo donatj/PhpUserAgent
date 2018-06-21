@@ -59,8 +59,9 @@ foreach( $uas as &$val ) {
 }
 
 $jsonPretty = new Camspiers\JsonPretty\JsonPretty;
-echo $jsonPretty->prettify($uas);
-file_put_contents($jsonfile, $jsonPretty->prettify($uas));
+$json = $jsonPretty->prettify($uas) . "\n";
+echo $json;
+file_put_contents($jsonfile, $json);
 
 
 function compare_version( $a, $b ) {
