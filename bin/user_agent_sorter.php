@@ -12,8 +12,8 @@ foreach( $uas as $key => &$val ) {
 
 uasort($uas, function ( $a, $b ) {
 
-	if($a['platform'] === null && $b['platform'] !== null) return 1;
-	if($b['platform'] === null && $a['platform'] !== null) return -1;
+	if( $a['platform'] === null && $b['platform'] !== null ) return 1;
+	if( $b['platform'] === null && $a['platform'] !== null ) return -1;
 
 	$desktop = array( 'Windows', 'Linux', 'Macintosh', 'Chrome OS' );
 
@@ -32,7 +32,6 @@ uasort($uas, function ( $a, $b ) {
 			if( $result == 0 ) {
 				$result = compare_version($a['version'], $b['version']);
 			}
-
 		}
 	} else {
 		$result = strnatcasecmp($a['platform'], $b['platform']);
@@ -43,7 +42,6 @@ uasort($uas, function ( $a, $b ) {
 			if( $result == 0 ) {
 				$result = compare_version($a['version'], $b['version']);
 			}
-
 		}
 	}
 
@@ -59,9 +57,9 @@ foreach( $uas as &$val ) {
 }
 
 $jsonPretty = new Camspiers\JsonPretty\JsonPretty;
+
 $json = $jsonPretty->prettify($uas) . "\n";
 echo $json;
-file_put_contents($jsonfile, $json);
 
 
 function compare_version( $a, $b ) {
