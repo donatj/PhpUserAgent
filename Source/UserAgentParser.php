@@ -11,7 +11,7 @@
  * @return string[] an array with browser, version and platform keys
  */
 function parse_user_agent( $u_agent = null ) {
-	if( is_null($u_agent) ) {
+	if(null === $u_agent) {
 		if( isset($_SERVER['HTTP_USER_AGENT']) ) {
 			$u_agent = $_SERVER['HTTP_USER_AGENT'];
 		} else {
@@ -62,7 +62,7 @@ function parse_user_agent( $u_agent = null ) {
 		$u_agent, $result, PREG_PATTERN_ORDER);
 
 	// If nothing matched, return null (to avoid undefined index errors)
-	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
+	if( !isset($result['browser'][0], $result['version'][0])) {
 		if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
 			return array( 'platform' => $platform ?: null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null );
 		}
@@ -162,7 +162,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $pKey = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
 		$pKey = reset($pKey);
 
-		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $pKey);
+		$platform = 'PlayStation ' . preg_replace('/[\D]/i', '', $pKey);
 		$browser  = 'NetFront';
 	}
 
