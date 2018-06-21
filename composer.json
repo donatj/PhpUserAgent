@@ -22,6 +22,6 @@
 		}
 	],
 	"autoload": {
-		"files": [ "src/UserAgentParser.php" ]
+		"files": [ "src/UserAgentParser.php", "src/browser_constants.php" ]
 	}
 }
