@@ -107,7 +107,7 @@ array(
 - Safari
 - Internet Explorer
 - IEMobile
-- Chrome
+- Chrome / HeadlessChrome
 - Opera
 - Midori
 - Vivaldi
