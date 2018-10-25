@@ -1,8 +1,5 @@
 <?php
 
-use donatj\UserAgentParser\Browser;
-use donatj\UserAgentParser\Platform;
-
 const UAP_KEY_PLATFORM = 'platform';
 const UAP_KEY_BROWSER  = 'browser';
 const UAP_KEY_VERSION  = 'version';
@@ -65,14 +62,16 @@ function parse_user_agent( $u_agent = null ) {
 		$platform = 'Chrome OS';
 	}
 
-	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
-				TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|Edg|CriOS|UCBrowser|Puffin|OculusBrowser|SamsungBrowser|
-				Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
-				Valve\ Steam\ Tenfoot|
-				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
-				(?:\)?;?)
-				(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
-		$u_agent, $result);
+	preg_match_all(<<<'REGEX'
+%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
+TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|Edg|CriOS|UCBrowser|Puffin|OculusBrowser|SamsungBrowser|
+Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+Valve\ Steam\ Tenfoot|
+NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+(?:\)?;?)
+(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix
+REGEX
+		, $u_agent, $result);
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result[UAP_KEY_BROWSER][0]) || !isset($result[UAP_KEY_VERSION][0]) ) {
