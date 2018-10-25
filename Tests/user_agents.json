@@ -99,6 +99,11 @@
 		"browser": "Edge",
 		"version": "12.10240"
 	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/52.0.2743.116 Safari\/537.36 Edge\/15.15063": {
+		"platform": "Windows",
+		"browser": "Edge",
+		"version": "15.15063"
+	},
 	"Mozilla\/5.0 (X11; U; Linux i386; en-US; rv:1.7.5) Gecko\/20041109 Firefox\/1.0": {
 		"platform": "Linux",
 		"browser": "Firefox",
@@ -548,6 +553,11 @@
 		"platform": "Kindle Fire",
 		"browser": "Silk",
 		"version": "1.0.13.81"
+	},
+	"Mozilla\/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk\/1.0.146.3-Gen4_12000410) AppleWebKit\/533.16 (KHTML, like Gecko) Version\/5.0 Safari\/533.16 Silk-Accelerated=true": {
+		"platform": "Kindle Fire",
+		"browser": "Silk",
+		"version": "1.0.146.3"
 	},
 	"Mozilla\/5.0 (Linux; U; Android 2.3.4; en-us; Silk\/1.1.0-84) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1 Silk-Accelerated=false": {
 		"platform": "Kindle Fire",
