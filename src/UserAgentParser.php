@@ -1,5 +1,8 @@
 <?php
 
+use donatj\UserAgentParser\Browser;
+use donatj\UserAgentParser\Platform;
+
 const UAP_KEY_PLATFORM = 'platform';
 const UAP_KEY_BROWSER  = 'browser';
 const UAP_KEY_VERSION  = 'version';
