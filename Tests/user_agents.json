@@ -654,6 +654,16 @@
 		"browser": "NintendoBrowser",
 		"version": "1.0.0.7494.US"
 	},
+	"Mozilla\/5.0 (Nintendo WiiU) AppleWebKit\/534.52 (KHTML, like Gecko) NX\/2.1.0.10.9 NintendoBrowser\/1.5.0.8047.US": {
+		"platform": "Nintendo WiiU",
+		"browser": "NintendoBrowser",
+		"version": "1.5.0.8047.US"
+	},
+	"Mozilla\/5.0 (Nintendo WiiU) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.4.2.13 NintendoBrowser\/4.3.2.11274.EU": {
+		"platform": "Nintendo WiiU",
+		"browser": "NintendoBrowser",
+		"version": "4.3.2.11274.EU"
+	},
 	"Mozilla\/5.0 (X11; OpenBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.81 Safari\/537.36": {
 		"platform": "OpenBSD",
 		"browser": "Chrome",
