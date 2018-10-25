@@ -108,6 +108,7 @@ array(
 - Internet Explorer
 - IEMobile
 - Chrome / HeadlessChrome
+- Yandex Browser
 - Opera
 - Midori
 - Vivaldi
