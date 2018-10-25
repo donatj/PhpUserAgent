@@ -137,7 +137,7 @@ function parse_user_agent( $u_agent = null ) {
 		}
 	} elseif( $find('YaBrowser', $key, $browser) ) {
 		$browser = 'Yandex';
-		$version = $result[UAP_KEY_VERSION][$key];
+		$version = $result['version'][$key];
 	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
 	} elseif( $rv_result && $find('Trident', $key) ) {
