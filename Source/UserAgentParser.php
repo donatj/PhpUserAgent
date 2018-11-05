@@ -30,7 +30,7 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
-		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
+		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Mac(intosh|_PowerPC)|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
 				(?:\ [^;]*)?
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
@@ -52,6 +52,8 @@ function parse_user_agent( $u_agent = null ) {
 		$platform = 'Linux';
 	} elseif( $platform == 'CrOS' ) {
 		$platform = 'Chrome OS';
+	} elseif( $platform == 'Mac_PowerPC' ) {
+		$platform = 'Macintosh';
 	}
 
 	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
