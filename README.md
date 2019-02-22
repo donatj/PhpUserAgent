@@ -87,6 +87,7 @@ array(
 	- Playbook
 	- Tizen
 - Console
+	- Oculus
 	- Nintendo 3DS
 	- New Nintendo 3DS
 	- Nintendo Wii
@@ -113,6 +114,7 @@ array(
 - Midori
 - Vivaldi
 - TizenBrowser
+- OculusBrowser
 - SamsungBrowser
 - UC Browser
 - Lynx
