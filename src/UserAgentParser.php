@@ -29,10 +29,10 @@ function parse_user_agent( $u_agent = null ) {
 		return $empty;
 	}
 
-	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
+	if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
 		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
 				(?:\ [^;]*)?
-				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
+				(?:;|$)/imx', $parent_matches[1], $result);
 
 		$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11' );
 
@@ -61,7 +61,7 @@ function parse_user_agent( $u_agent = null ) {
 				NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 				(?:\)?;?)
 				(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix',
-		$u_agent, $result, PREG_PATTERN_ORDER);
+		$u_agent, $result);
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
@@ -72,7 +72,7 @@ function parse_user_agent( $u_agent = null ) {
 		return $empty;
 	}
 
-	if( preg_match('/rv:(?P<version>[0-9A-Z.]+)/si', $u_agent, $rv_result) ) {
+	if( preg_match('/rv:(?P<version>[0-9A-Z.]+)/i', $u_agent, $rv_result) ) {
 		$rv_result = $rv_result['version'];
 	}
 
@@ -167,7 +167,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $pKey = preg_grep('/playstation \d/i', array_map('strtolower', $result['browser'])) ) {
 		$pKey = reset($pKey);
 
-		$platform = 'PlayStation ' . preg_replace('/[^\d]/i', '', $pKey);
+		$platform = 'PlayStation ' . preg_replace('/\D/', '', $pKey);
 		$browser  = 'NetFront';
 	}
 
