@@ -294,11 +294,6 @@
 		"browser": "MSIE",
 		"version": "11.0"
 	},
-	"Mozilla\/5.0 (Linux; Android 7.1.2; Pacific Build\/N2G48H) AppleWebKit\/537.36 (KHTML, like Gecko) OculusBrowser\/5.5.10.137831012 SamsungBrowser\/4.0 Chrome\/66.0.3359.203 Mobile VR Safari\/537.36": {
-		"platform": "Android",
-		"browser": "OculusBrowser",
-		"version": "5.5.10.137831012"
-	},
 	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) OculusBrowser\/5.5.10.137831012 SamsungBrowser\/4.0 Chrome\/66.0.3359.203 Safari\/537.36": {
 		"platform": "Linux",
 		"browser": "OculusBrowser",
@@ -478,6 +473,11 @@
 		"platform": "Android",
 		"browser": "Chrome",
 		"version": "18.0.1025.308"
+	},
+	"Mozilla\/5.0 (Linux; Android 7.1.2; Pacific Build\/N2G48H) AppleWebKit\/537.36 (KHTML, like Gecko) OculusBrowser\/5.5.10.137831012 SamsungBrowser\/4.0 Chrome\/66.0.3359.203 Mobile VR Safari\/537.36": {
+		"platform": "Android",
+		"browser": "OculusBrowser",
+		"version": "5.5.10.137831012"
 	},
 	"Mozilla\/5.0 (X11; U; Linux x86_64; en-gb) AppleWebKit\/534.35 (KHTML, like Gecko) Chrome\/11.0.696.65 Safari\/534.35 Puffin\/2.9174AP": {
 		"platform": "Android",
