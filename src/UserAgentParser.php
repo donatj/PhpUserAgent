@@ -151,7 +151,6 @@ function parse_user_agent( $u_agent = null ) {
 		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
 		if( $platform == 'Android' ) {
-			// $key = 0;
 			$browser = 'Android Browser';
 		} elseif( strpos($platform, 'BB') === 0 ) {
 			$browser  = 'BlackBerry Browser';
