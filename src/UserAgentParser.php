@@ -167,7 +167,7 @@ function parse_user_agent( $u_agent = null ) {
 
 		$find('Version', $key);
 		$version = $result['version'][$key];
-	} elseif( $pKey = preg_grep('/playstation \d/', array_map('strtolower', $result['browser'])) ) {
+	} elseif( $pKey = preg_grep('/playstation \d/i', $result['browser']) ) {
 		$pKey = reset($pKey);
 
 		$platform = 'PlayStation ' . preg_replace('/\D/', '', $pKey);
