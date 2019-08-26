@@ -11,12 +11,12 @@
  * @return string[] an array with browser, version and platform keys
  */
 function parse_user_agent( $u_agent = null ) {
+	if( $u_agent === null && isset($_SERVER['HTTP_USER_AGENT']) ) {
+		$u_agent = $_SERVER['HTTP_USER_AGENT'];
+	}
+
 	if( $u_agent === null ) {
-		if( isset($_SERVER['HTTP_USER_AGENT']) ) {
-			$u_agent = $_SERVER['HTTP_USER_AGENT'];
-		} else {
-			throw new \InvalidArgumentException('parse_user_agent requires a user agent');
-		}
+		throw new \InvalidArgumentException('parse_user_agent requires a user agent');
 	}
 
 	$platform = null;
