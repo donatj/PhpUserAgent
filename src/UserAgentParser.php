@@ -1,11 +1,24 @@
 <?php
 
+/**
+ * @author Jesse G. Donat <donatj@gmail.com>
+ *
+ * @link https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
+ * @link https://github.com/donatj/PhpUserAgent
+ *
+ * @license MIT https://github.com/donatj/PhpUserAgent/blob/master/LICENSE.md
+ */
+
 namespace {
 
 	/**
 	 * Parses a user agent string into its important parts
 	 *
 	 * This method is defined for backwards comparability with the old global method.
+	 *
+	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
+	 * @return string[] an array with 'browser', 'version' and 'platform' keys
+	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
 	 *
 	 * @see \donatj\UserAgent\parse_user_agent
 	 */
@@ -30,13 +43,6 @@ namespace donatj\UserAgent {
 		 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
 		 * @return string[] an array with 'browser', 'version' and 'platform' keys
 		 * @throws \InvalidArgumentException on not having a proper user agent to parse.
-		 *
-		 * @author Jesse G. Donat <donatj@gmail.com>
-		 *
-		 * @link https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT
-		 * @link https://github.com/donatj/PhpUserAgent
-		 *
-		 * @license MIT
 		 */
 		public function __invoke( $u_agent = null ) {
 			if( $u_agent === null && isset($_SERVER['HTTP_USER_AGENT']) ) {
