@@ -9,7 +9,7 @@
 		"php": ">=5.3.0"
 	},
 	"require-dev": {
-		"camspiers/json-pretty": "0.1.*",
+		"camspiers/json-pretty": "~1.0",
 		"phpunit/phpunit": "~4.8",
 		"donatj/drop": "*"
 	},

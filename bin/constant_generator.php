@@ -13,7 +13,7 @@ $platforms = array();
 $browsers  = array();
 foreach( $uas as $key => $val ) {
 	$kex = strtoupper($val['browser']);
-	if( $kex != "" ) {
+	if( $kex !== '' ) {
 		$kex = preg_replace('/\W+/', '_', $kex);
 		if( !isset($browsers[$kex][$val['browser']]) ) {
 			$browsers[$kex][$val['browser']] = 0;
@@ -23,7 +23,7 @@ foreach( $uas as $key => $val ) {
 	}
 
 	$kex = strtoupper($val['platform']);
-	if( $kex != "" ) {
+	if( $kex !== '' ) {
 		$kex = preg_replace('/\W+/', '_', $kex);
 
 		if( !isset($platforms[$kex][$val['platform']]) ) {
