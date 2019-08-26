@@ -20,7 +20,7 @@ const UAP_KEY_VERSION  = 'version';
  */
 function parse_user_agent( $u_agent = null ) {
 	if( $u_agent === null && isset($_SERVER['HTTP_USER_AGENT']) ) {
-		$u_agent = $_SERVER['HTTP_USER_AGENT'];
+		$u_agent = (string)$_SERVER['HTTP_USER_AGENT'];
 	}
 
 	if( $u_agent === null ) {
@@ -38,9 +38,12 @@ function parse_user_agent( $u_agent = null ) {
 	}
 
 	if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
-		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
-				(?:\ [^;]*)?
-				(?:;|$)/imx', $parent_matches[1], $result);
+		preg_match_all(<<<'REGEX'
+/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
+(?:\ [^;]*)?
+(?:;|$)/imx
+REGEX
+			, $parent_matches[1], $result);
 
 		$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11' );
 
