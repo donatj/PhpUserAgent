@@ -52,7 +52,7 @@ foreach( $browsers as $browser ) {
 	}
 }
 
-echo "namespace donatj\UserAgentParser\Browser {\n\n";
+echo "namespace donatj\UserAgent\Browser {\n\n";
 $maxKey = max(array_map('strlen', array_keys($browsers)));
 foreach( $browsers as $const => $val ) {
 	printf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
@@ -66,7 +66,7 @@ foreach( $platforms as $platform ) {
 	}
 }
 
-echo "namespace donatj\UserAgentParser\Platform {\n\n";
+echo "namespace donatj\UserAgent\Platform {\n\n";
 $maxKey = max(array_map('strlen', array_keys($platforms)));
 foreach( $platforms as $const => $val ) {
 	printf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
