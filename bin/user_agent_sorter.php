@@ -9,6 +9,7 @@ $uas = json_decode(file_get_contents($jsonfile), true);
 foreach( $uas as $key => &$val ) {
 	$val['key'] = $key;
 }
+unset($val);
 
 uasort($uas, function ( $a, $b ) {
 
@@ -21,8 +22,8 @@ uasort($uas, function ( $a, $b ) {
 
 	$desktop = array( 'Windows', 'Linux', 'Macintosh', 'Chrome OS' );
 
-	$ad = in_array($a['platform'], $desktop);
-	$bd = in_array($b['platform'], $desktop);
+	$ad = in_array($a['platform'], $desktop, true);
+	$bd = in_array($b['platform'], $desktop, true);
 
 	if( !$ad && $bd ) {
 		return 1;
@@ -64,6 +65,7 @@ uasort($uas, function ( $a, $b ) {
 foreach( $uas as &$val ) {
 	unset($val['key']);
 }
+unset($val);
 
 $jsonPretty = new Camspiers\JsonPretty\JsonPretty;
 
