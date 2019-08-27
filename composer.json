@@ -2,7 +2,13 @@
 	"name": "donatj/phpuseragentparser",
 	"type": "library",
 	"description": "Lightning fast, minimalist PHP UserAgent string parser.",
-	"keywords": ["user agent", "useragent", "parser", "browser", "browser detection"],
+	"keywords": [
+		"user agent",
+		"useragent",
+		"parser",
+		"browser",
+		"browser detection"
+	],
 	"homepage": "http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT",
 	"license": "MIT",
 	"require": {
@@ -22,7 +28,9 @@
 		}
 	],
 	"autoload": {
-		"files": [ "src/UserAgentParser.php", "src/browser_constants.php" ],
+		"files": [
+			"src/UserAgentParser.php"
+		],
 		"psr-4": {
 			"donatj\\UserAgent\\": "src/UserAgent"
 		}
