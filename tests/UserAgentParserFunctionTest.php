@@ -1,6 +1,6 @@
 <?php
 
-class UserAgentParserTest extends \PHPUnit_Framework_TestCase {
+class UserAgentParserFunctionTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @dataProvider userAgentDataProvider

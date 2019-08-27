@@ -24,7 +24,7 @@
 	"autoload": {
 		"files": [ "src/UserAgentParser.php", "src/browser_constants.php" ],
 		"psr-4": {
-			"donatj\\UserAgent\\": "src/"
+			"donatj\\UserAgent\\": "src/UserAgent"
 		}
 	}
 }
