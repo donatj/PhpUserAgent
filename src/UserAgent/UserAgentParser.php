@@ -7,11 +7,11 @@ class UserAgentParser {
 	/**
 	 * Parses a user agent string into its important parts
 	 *
-	 * @see \donatj\UserAgent\parse_user_agent()
-	 *
 	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
 	 * @return UserAgent an object with 'browser', 'browserVersion' and 'platform' methods
 	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
+	 * @see \donatj\UserAgent\parse_user_agent()
+	 *
 	 */
 	public function parse( $u_agent = null ) {
 		$parsed = parse_user_agent($u_agent);
@@ -26,11 +26,11 @@ class UserAgentParser {
 	/**
 	 * Parses a user agent string into its important parts
 	 *
-	 * @see \donatj\UserAgent\parse_user_agent()
-	 *
 	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
 	 * @return UserAgent an object with 'browser', 'browserVersion' and 'platform' methods
 	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
+	 * @see \donatj\UserAgent\parse_user_agent()
+	 *
 	 */
 	public function __invoke( $u_agent = null ) {
 		return $this->parse($u_agent);

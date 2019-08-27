@@ -12,16 +12,25 @@ foreach( $uas as $key => &$val ) {
 
 uasort($uas, function ( $a, $b ) {
 
-	if( $a['platform'] === null && $b['platform'] !== null ) return 1;
-	if( $b['platform'] === null && $a['platform'] !== null ) return -1;
+	if( $a['platform'] === null && $b['platform'] !== null ) {
+		return 1;
+	}
+	if( $b['platform'] === null && $a['platform'] !== null ) {
+		return -1;
+	}
 
 	$desktop = array( 'Windows', 'Linux', 'Macintosh', 'Chrome OS' );
 
 	$ad = in_array($a['platform'], $desktop);
 	$bd = in_array($b['platform'], $desktop);
 
-	if( !$ad && $bd ) return 1;
-	if( $ad && !$bd ) return -1;
+	if( !$ad && $bd ) {
+		return 1;
+	}
+
+	if( $ad && !$bd ) {
+		return -1;
+	}
 
 	if( $ad ) {
 		$result = strnatcasecmp($a['browser'], $b['browser']);
@@ -74,12 +83,12 @@ function compare_version( $a, $b ) {
 		$aa = strtolower(isset($cmp_a[$i]) ? $cmp_a[$i] : '0');
 		$bb = strtolower(isset($cmp_b[$i]) ? $cmp_b[$i] : '0');
 
-		if( is_numeric($aa) && is_numeric($bb) ) {
-			if( $aa != $bb ) {
-				$value = ($aa > $bb ? 1 : -1);
-				break;
-			}
-		} else if( $cmp = strcmp($aa, $bb) ) {
+		if( is_numeric($aa) && is_numeric($bb) && $aa !== $bb ) {
+			$value = ($aa > $bb ? 1 : -1);
+			break;
+		}
+
+		if( $cmp = strcmp($aa, $bb) ) {
 			$value = $cmp / abs($cmp);
 			break;
 		}
