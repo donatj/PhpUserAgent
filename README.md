@@ -106,7 +106,7 @@ array(
 - Kindle / Silk
 - Firefox / IceWeasel / IceCat
 - Safari
-- Internet Explorer
+- Internet Explorer / Edge
 - IEMobile
 - Chrome / HeadlessChrome
 - Yandex Browser
