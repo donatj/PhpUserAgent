@@ -58,7 +58,9 @@ Install the latest version with:
 composer require 'donatj/phpuseragentparser'
 ```
 
-## Sample Usage
+## Classic Usage
+
+The classic procedural use is as simple as:
 
 ```php
 $ua_info = parse_user_agent();
@@ -69,6 +71,21 @@ array(
 	'version'  => '[Detected Browser Version]',
 );
 */
+```
+
+
+The new object oriented wrapper form:
+
+```php
+$parser = new UserAgentParser();
+
+$ua = $parser->parse();
+// or
+$ua = $parser();
+
+$ua->platform();
+$ua->browser();
+$ua->browserVersion();
 ```
 
 ## Currently Detected Platforms
