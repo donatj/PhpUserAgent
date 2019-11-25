@@ -58,7 +58,7 @@ Install the latest version with:
 composer require 'donatj/phpuseragentparser'
 ```
 
-## Classic Usage
+## Usage
 
 The classic procedural use is as simple as:
 

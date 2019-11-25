@@ -55,7 +55,7 @@ All that said, there is the start of a [branch to do it](https://github.com/dona
 				<text>PHP User Agent is available through Packagist via Composer.</text>
 				<composer-install/>
 			</section>
-			<section title="Classic Usage">
+			<section title="Usage">
 				<text><![CDATA[
 The classic procedural use is as simple as:
 
