@@ -11,13 +11,12 @@ php:
   - 7.1
   - 7.2
   - 7.3
+  - 7.4
   - nightly
-  - hhvm
 
 matrix:
   allow_failures:
     - php: nightly
-    - php: hhvm
 
 install: composer install
 script: vendor/bin/phpunit --coverage-clover=coverage.clover
