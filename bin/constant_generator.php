@@ -52,21 +52,23 @@ foreach( $browsers as $browser ) {
 	}
 }
 
+echo "namespace donatj\UserAgentParser\Browser {\n\n";
+$maxKey = max(array_map('strlen', array_keys($browsers)));
 foreach( $browsers as $const => $val ) {
-	echo "const UAP_BROWSER_{$const} = " . var_export(key($val), true) . ";\n";
+	printf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
 }
-
-echo "\n";
+echo "}\n\n";
 
 foreach( $platforms as $platform ) {
 	if( count($platform) !== 1 ) {
-		echo "bad browser count\n";
+		echo "bad platform count\n";
 		die(2);
 	}
 }
 
+echo "namespace donatj\UserAgentParser\Platform {\n\n";
+$maxKey = max(array_map('strlen', array_keys($platforms)));
 foreach( $platforms as $const => $val ) {
-	echo "const UAP_PLATFORM_{$const} = " . var_export(key($val), true) . ";\n";
+	printf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
 }
-
-echo "\n";
+echo "}\n\n";
