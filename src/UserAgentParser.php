@@ -121,7 +121,7 @@ function parse_user_agent( $u_agent = null ) {
 		$browser = $result['browser'][$key];
 		$version = $result['version'][$key];
 	} elseif( $find('OPR', $key) ) {
-		$browser = 'Opera Next';
+		$browser = 'Opera';
 		$version = $result['version'][$key];
 	} elseif( $find('Opera', $key, $browser) ) {
 		$find('Version', $key);
