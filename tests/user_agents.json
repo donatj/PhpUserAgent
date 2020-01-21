@@ -389,6 +389,11 @@
 		"browser": "Safari",
 		"version": "8.0"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/13.0.1 Safari\/605.1.15": {
+		"platform": "Macintosh",
+		"browser": "Safari",
+		"version": "13.0.1"
+	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 6.1; tr-TR) AppleWebKit\/533.20.25 (KHTML, like Gecko) Version\/5.0.4 Safari\/533.20.27": {
 		"platform": "Windows",
 		"browser": "Safari",
@@ -709,6 +714,11 @@
 		"browser": "NintendoBrowser",
 		"version": "1.0.9934.JP"
 	},
+	"Mozilla\/5.0 (New Nintendo 3DS like iPhone) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.0.5.22 Mobile NintendoBrowser\/1.10.10166.US": {
+		"platform": "New Nintendo 3DS",
+		"browser": "NintendoBrowser",
+		"version": "1.10.10166.US"
+	},
 	"Mozilla\/5.0 (Nintendo 3DS; U; ; en) Version\/1.7498.US": {
 		"platform": "Nintendo 3DS",
 		"browser": "NintendoBrowser",
@@ -723,6 +733,11 @@
 		"platform": "Nintendo DS",
 		"browser": "Bunjalloo",
 		"version": "0.7.6"
+	},
+	"Mozilla\/5.0 (Nintendo Switch; LoginApplet) AppleWebKit\/601.6 (KHTML, like Gecko) NF\/4.0.0.5.9 NintendoBrowser\/5.1.0.13341": {
+		"platform": "Nintendo Switch",
+		"browser": "NintendoBrowser",
+		"version": "5.1.0.13341"
 	},
 	"Mozilla\/5.0 (Nintendo Switch; ShareApplet) AppleWebKit\/601.6 (KHTML, like Gecko) NF\/4.0.0.5.9 NintendoBrowser\/5.1.0.13341": {
 		"platform": "Nintendo Switch",
@@ -753,6 +768,11 @@
 		"platform": "Nintendo WiiU",
 		"browser": "NintendoBrowser",
 		"version": "4.3.2.11274.EU"
+	},
+	"Mozilla\/5.0 (Nintendo WiiU) AppleWebKit\/536.30 (KHTML, like Gecko) NX\/3.0.4.2.13 NintendoBrowser\/4.3.2.11274.US": {
+		"platform": "Nintendo WiiU",
+		"browser": "NintendoBrowser",
+		"version": "4.3.2.11274.US"
 	},
 	"Mozilla\/5.0 (X11; OpenBSD i386) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/43.0.2357.81 Safari\/537.36": {
 		"platform": "OpenBSD",
