@@ -85,7 +85,7 @@ function parse_user_agent( $u_agent = null ) {
 
 	$lowerBrowser = array_map('strtolower', $result['browser']);
 
-	$find = function ( $search, &$key, &$value = null ) use ( $lowerBrowser ) {
+	$find = function ( $search, &$key = null, &$value = null ) use ( $lowerBrowser ) {
 		$search = (array)$search;
 
 		foreach( $search as $val ) {
@@ -142,15 +142,15 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('UCBrowser', $key) ) {
 		$browser = 'UC Browser';
 		$version = $result['version'][$key];
-	} elseif( $find('YaBrowser', $key, $browser) ) {
+	} elseif( $find('YaBrowser', $key) ) {
 		$browser = 'Yandex';
 		$version = $result['version'][$key];
-	} elseif( $find(array( 'Edge', 'Edg' ), $key, $browser) ) {
+	} elseif( $find(array( 'Edge', 'Edg' ), $key) ) {
 		$browser = 'Edge';
 		$version = $result['version'][$key];
 	} elseif( $find(array( 'IEMobile', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
-	} elseif( $rv_result && $find('Trident', $key) ) {
+	} elseif( $rv_result && $find('Trident') ) {
 		$browser = 'MSIE';
 		$version = $rv_result;
 	} elseif( $find('CriOS', $key) ) {
