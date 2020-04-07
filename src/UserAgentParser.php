@@ -101,11 +101,22 @@ function parse_user_agent( $u_agent = null ) {
 		return false;
 	};
 
+	$findT = function ( array $search, &$key = null, &$value = null ) use ( $find ) {
+		$value2 = null;
+		if( $find(array_keys($search), $key, $value2) ) {
+			$value = $search[$value2];
+
+			return true;
+		}
+
+		return false;
+	};
+
 	$key = 0;
 	$val = '';
-	if( $browser == 'Iceweasel' || strtolower($browser) == 'icecat' ) {
-		$browser = 'Firefox';
-	} elseif( $find('Playstation Vita', $key) ) {
+	if( $findT(array( 'OPR' => 'Opera', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge' ), $key, $browser) ) {
+		$version = $result['version'][$key];
+	}elseif( $find('Playstation Vita', $key, $platform) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
 	} elseif( $find(array( 'Kindle Fire', 'Silk' ), $key, $val) ) {
@@ -119,9 +130,6 @@ function parse_user_agent( $u_agent = null ) {
 		$version = $result['version'][$key];
 	} elseif( $find('Kindle', $key, $platform) ) {
 		$browser = $result['browser'][$key];
-		$version = $result['version'][$key];
-	} elseif( $find('OPR', $key) ) {
-		$browser = 'Opera';
 		$version = $result['version'][$key];
 	} elseif( $find('Opera', $key, $browser) ) {
 		$find('Version', $key);
@@ -139,23 +147,11 @@ function parse_user_agent( $u_agent = null ) {
 				}
 			}
 		}
-	} elseif( $find('UCBrowser', $key) ) {
-		$browser = 'UC Browser';
-		$version = $result['version'][$key];
-	} elseif( $find('YaBrowser', $key) ) {
-		$browser = 'Yandex';
-		$version = $result['version'][$key];
-	} elseif( $find(array( 'Edge', 'Edg' ), $key) ) {
-		$browser = 'Edge';
-		$version = $result['version'][$key];
-	} elseif( $find(array( 'IEMobile', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
+	} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
 		$version = $result['version'][$key];
 	} elseif( $rv_result && $find('Trident') ) {
 		$browser = 'MSIE';
 		$version = $rv_result;
-	} elseif( $find('CriOS', $key) ) {
-		$browser = 'Chrome';
-		$version = $result['version'][$key];
 	} elseif( $browser == 'AppleWebKit' ) {
 		if( $platform == 'Android' ) {
 			$browser = 'Android Browser';
