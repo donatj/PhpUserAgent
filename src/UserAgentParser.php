@@ -139,6 +139,9 @@ function parse_user_agent( $u_agent = null ) {
 				}
 			}
 		}
+	} elseif( $find('UCBrowser', $key) ) {
+		$browser = 'UC Browser';
+		$version = $result['version'][$key];
 	} elseif( $find('YaBrowser', $key, $browser) ) {
 		$browser = 'Yandex';
 		$version = $result['version'][$key];
@@ -150,9 +153,6 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $rv_result && $find('Trident', $key) ) {
 		$browser = 'MSIE';
 		$version = $rv_result;
-	} elseif( $find('UCBrowser', $key) ) {
-		$browser = 'UC Browser';
-		$version = $result['version'][$key];
 	} elseif( $find('CriOS', $key) ) {
 		$browser = 'Chrome';
 		$version = $result['version'][$key];
