@@ -97,7 +97,7 @@ $ua->browserVersion();
 
 ## Currently Detected Platforms
 
-Predefined helper constants from donatj\UserAgent\Platforms  
+Predefined helper constants from `donatj\UserAgent\Platforms`  
   
 | Constant | Platform |  
 |----------|----------|  
@@ -132,7 +132,7 @@ Predefined helper constants from donatj\UserAgent\Platforms
 
 ## Currently Detected Browsers
 
-Predefined helper constants from donatj\UserAgent\Browsers  
+Predefined helper constants from `donatj\UserAgent\Browsers`  
   
 | Constant | Browser |  
 |----------|----------|  

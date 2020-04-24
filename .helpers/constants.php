@@ -4,7 +4,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $class = new ReflectionClass($argv[1]);
 
-echo "Predefined helper constants from {$class->getName()}\n\n";
+echo "Predefined helper constants from `{$class->getName()}`\n\n";
 
 echo "| Constant | {$argv[2]} | \n|----------|----------| \n";
 

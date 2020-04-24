@@ -95,10 +95,10 @@ $ua->browserVersion();
 ]]></text>
 			</section>
 			<section title="Currently Detected Platforms">
-				<exec cmd="php .helpers/constants.php 'donatj\UserAgent\Platforms'"/>
+				<exec cmd="php .helpers/constants.php 'donatj\UserAgent\Platforms' 'Platform'"/>
 			</section>
 			<section title="Currently Detected Browsers">
-				<exec cmd="php .helpers/constants.php 'donatj\UserAgent\Browsers'"/>
+				<exec cmd="php .helpers/constants.php 'donatj\UserAgent\Browsers' 'Browser'"/>
 			</section>
 			<text><![CDATA[
 More information is available at [Donat Studios](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
