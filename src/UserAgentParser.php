@@ -18,9 +18,9 @@ namespace {
 
 namespace donatj\UserAgentParser {
 
-	const UAP_KEY_PLATFORM = 'platform';
-	const UAP_KEY_BROWSER  = 'browser';
-	const UAP_KEY_VERSION  = 'version';
+	const PLATFORM        = 'platform';
+	const BROWSER         = 'browser';
+	const BROWSER_VERSION = 'version';
 
 	class UserAgentParser {
 
@@ -51,7 +51,7 @@ namespace donatj\UserAgentParser {
 			$browser  = null;
 			$version  = null;
 
-			$empty = array( UAP_KEY_PLATFORM => $platform, UAP_KEY_BROWSER => $browser, UAP_KEY_VERSION => $version );
+			$empty = array( PLATFORM => $platform, BROWSER => $browser, BROWSER_VERSION => $version );
 
 			if( !$u_agent ) {
 				return $empty;
@@ -67,15 +67,15 @@ REGEX
 
 				$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11' );
 
-				$result[UAP_KEY_PLATFORM] = array_unique($result[UAP_KEY_PLATFORM]);
-				if( count($result[UAP_KEY_PLATFORM]) > 1 ) {
-					if( $keys = array_intersect($priority, $result[UAP_KEY_PLATFORM]) ) {
+				$result[PLATFORM] = array_unique($result[PLATFORM]);
+				if( count($result[PLATFORM]) > 1 ) {
+					if( $keys = array_intersect($priority, $result[PLATFORM]) ) {
 						$platform = reset($keys);
 					} else {
-						$platform = $result[UAP_KEY_PLATFORM][0];
+						$platform = $result[PLATFORM][0];
 					}
-				} elseif( isset($result[UAP_KEY_PLATFORM][0]) ) {
-					$platform = $result[UAP_KEY_PLATFORM][0];
+				} elseif( isset($result[PLATFORM][0]) ) {
+					$platform = $result[PLATFORM][0];
 				}
 			}
 
@@ -97,22 +97,22 @@ REGEX
 				, $u_agent, $result);
 
 			// If nothing matched, return null (to avoid undefined index errors)
-			if( !isset($result[UAP_KEY_BROWSER][0]) || !isset($result[UAP_KEY_VERSION][0]) ) {
+			if( !isset($result[BROWSER][0]) || !isset($result[BROWSER_VERSION][0]) ) {
 				if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
-					return array( UAP_KEY_PLATFORM => $platform ?: null, UAP_KEY_BROWSER => $result[UAP_KEY_BROWSER], UAP_KEY_VERSION => isset($result[UAP_KEY_VERSION]) ? $result[UAP_KEY_VERSION] ?: null : null );
+					return array( PLATFORM => $platform ?: null, BROWSER => $result[BROWSER], BROWSER_VERSION => isset($result[BROWSER_VERSION]) ? $result[BROWSER_VERSION] ?: null : null );
 				}
 
 				return $empty;
 			}
 
 			if( preg_match('/rv:(?P<version>[0-9A-Z.]+)/i', $u_agent, $rv_result) ) {
-				$rv_result = $rv_result[UAP_KEY_VERSION];
+				$rv_result = $rv_result[BROWSER_VERSION];
 			}
 
-			$browser = $result[UAP_KEY_BROWSER][0];
-			$version = $result[UAP_KEY_VERSION][0];
+			$browser = $result[BROWSER][0];
+			$version = $result[BROWSER_VERSION][0];
 
-			$lowerBrowser = array_map('strtolower', $result[UAP_KEY_BROWSER]);
+			$lowerBrowser = array_map('strtolower', $result[BROWSER]);
 
 			$find = function ( $search, &$key = null, &$value = null ) use ( $lowerBrowser ) {
 				$search = (array)$search;
@@ -144,27 +144,27 @@ REGEX
 			$key = 0;
 			$val = '';
 			if( $findT(array( 'OPR' => 'Opera', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge' ), $key, $browser) ) {
-				$version = $result[UAP_KEY_VERSION][$key];
+				$version = $result[BROWSER_VERSION][$key];
 			} elseif( $find('Playstation Vita', $key, $platform) ) {
 				$platform = 'PlayStation Vita';
 				$browser  = 'Browser';
 			} elseif( $find(array( 'Kindle Fire', 'Silk' ), $key, $val) ) {
 				$browser  = $val == 'Silk' ? 'Silk' : 'Kindle';
 				$platform = 'Kindle Fire';
-				if( !($version = $result[UAP_KEY_VERSION][$key]) || !is_numeric($version[0]) ) {
-					$version = $result[UAP_KEY_VERSION][array_search('Version', $result[UAP_KEY_BROWSER])];
+				if( !($version = $result[BROWSER_VERSION][$key]) || !is_numeric($version[0]) ) {
+					$version = $result[BROWSER_VERSION][array_search('Version', $result[BROWSER])];
 				}
 			} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
 				$browser = 'NintendoBrowser';
-				$version = $result[UAP_KEY_VERSION][$key];
+				$version = $result[BROWSER_VERSION][$key];
 			} elseif( $find('Kindle', $key, $platform) ) {
-				$browser = $result[UAP_KEY_BROWSER][$key];
-				$version = $result[UAP_KEY_VERSION][$key];
+				$browser = $result[BROWSER][$key];
+				$version = $result[BROWSER_VERSION][$key];
 			} elseif( $find('Opera', $key, $browser) ) {
 				$find('Version', $key);
-				$version = $result[UAP_KEY_VERSION][$key];
+				$version = $result[BROWSER_VERSION][$key];
 			} elseif( $find('Puffin', $key, $browser) ) {
-				$version = $result[UAP_KEY_VERSION][$key];
+				$version = $result[BROWSER_VERSION][$key];
 				if( strlen($version) > 3 ) {
 					$part = substr($version, -2);
 					if( ctype_upper($part) ) {
@@ -177,7 +177,7 @@ REGEX
 					}
 				}
 			} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
-				$version = $result[UAP_KEY_VERSION][$key];
+				$version = $result[BROWSER_VERSION][$key];
 			} elseif( $rv_result && $find('Trident') ) {
 				$browser = 'MSIE';
 				$version = $rv_result;
@@ -194,15 +194,15 @@ REGEX
 				}
 
 				$find('Version', $key);
-				$version = $result[UAP_KEY_VERSION][$key];
-			} elseif( $pKey = preg_grep('/playstation \d/i', $result[UAP_KEY_BROWSER]) ) {
+				$version = $result[BROWSER_VERSION][$key];
+			} elseif( $pKey = preg_grep('/playstation \d/i', $result[BROWSER]) ) {
 				$pKey = reset($pKey);
 
 				$platform = 'PlayStation ' . preg_replace('/\D/', '', $pKey);
 				$browser  = 'NetFront';
 			}
 
-			return array( UAP_KEY_PLATFORM => $platform ?: null, UAP_KEY_BROWSER => $browser ?: null, UAP_KEY_VERSION => $version ?: null );
+			return array( PLATFORM => $platform ?: null, BROWSER => $browser ?: null, BROWSER_VERSION => $version ?: null );
 		}
 	}
 }
