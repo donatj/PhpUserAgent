@@ -97,76 +97,84 @@ $ua->browserVersion();
 
 ## Currently Detected Platforms
 
-- Macintosh  
-- Chrome OS  
-- Linux  
-- Windows  
-- Android  
-- BlackBerry  
-- FreeBSD  
-- iPad  
-- iPhone  
-- iPod  
-- Kindle  
-- Kindle Fire  
-- NetBSD  
-- New Nintendo 3DS  
-- Nintendo 3DS  
-- Nintendo DS  
-- Nintendo Switch  
-- Nintendo Wii  
-- Nintendo WiiU  
-- OpenBSD  
-- PlayBook  
-- PlayStation 3  
-- PlayStation 4  
-- PlayStation Vita  
-- Tizen  
-- Windows Phone  
-- Xbox  
-- Xbox One
+Predefined helper constants from donatj\UserAgent\Platforms  
+  
+| Constant | Platform |  
+|----------|----------|  
+| `Platforms::MACINTOSH` |  Macintosh |  
+| `Platforms::CHROME_OS` |  Chrome OS |  
+| `Platforms::LINUX` |  Linux |  
+| `Platforms::WINDOWS` |  Windows |  
+| `Platforms::ANDROID` |  Android |  
+| `Platforms::BLACKBERRY` |  BlackBerry |  
+| `Platforms::FREEBSD` |  FreeBSD |  
+| `Platforms::IPAD` |  iPad |  
+| `Platforms::IPHONE` |  iPhone |  
+| `Platforms::IPOD` |  iPod |  
+| `Platforms::KINDLE` |  Kindle |  
+| `Platforms::KINDLE_FIRE` |  Kindle Fire |  
+| `Platforms::NETBSD` |  NetBSD |  
+| `Platforms::NEW_NINTENDO_3DS` |  New Nintendo 3DS |  
+| `Platforms::NINTENDO_3DS` |  Nintendo 3DS |  
+| `Platforms::NINTENDO_DS` |  Nintendo DS |  
+| `Platforms::NINTENDO_SWITCH` |  Nintendo Switch |  
+| `Platforms::NINTENDO_WII` |  Nintendo Wii |  
+| `Platforms::NINTENDO_WIIU` |  Nintendo WiiU |  
+| `Platforms::OPENBSD` |  OpenBSD |  
+| `Platforms::PLAYBOOK` |  PlayBook |  
+| `Platforms::PLAYSTATION_3` |  PlayStation 3 |  
+| `Platforms::PLAYSTATION_4` |  PlayStation 4 |  
+| `Platforms::PLAYSTATION_VITA` |  PlayStation Vita |  
+| `Platforms::TIZEN` |  Tizen |  
+| `Platforms::WINDOWS_PHONE` |  Windows Phone |  
+| `Platforms::XBOX` |  Xbox |  
+| `Platforms::XBOX_ONE` |  Xbox One |
 
 ## Currently Detected Browsers
 
-- AdsBot-Google  
-- Android Browser  
-- Baiduspider  
-- bingbot  
-- BlackBerry Browser  
-- Browser  
-- Bunjalloo  
-- Camino  
-- Chrome  
-- curl  
-- Edge  
-- facebookexternalhit  
-- FeedValidator  
-- Firefox  
-- Googlebot  
-- Googlebot-Image  
-- Googlebot-Video  
-- HeadlessChrome  
-- IEMobile  
-- Kindle  
-- Lynx  
-- Midori  
-- MSIE  
-- msnbot-media  
-- NetFront  
-- NintendoBrowser  
-- OculusBrowser  
-- Opera  
-- Puffin  
-- Safari  
-- SamsungBrowser  
-- Silk  
-- TizenBrowser  
-- UC Browser  
-- Valve Steam Tenfoot  
-- Vivaldi  
-- Wget  
-- WordPress  
-- Yandex  
-- YandexBot
+Predefined helper constants from donatj\UserAgent\Browsers  
+  
+| Constant | Browser |  
+|----------|----------|  
+| `Browsers::ADSBOT_GOOGLE` |  AdsBot-Google |  
+| `Browsers::ANDROID_BROWSER` |  Android Browser |  
+| `Browsers::BAIDUSPIDER` |  Baiduspider |  
+| `Browsers::BINGBOT` |  bingbot |  
+| `Browsers::BLACKBERRY_BROWSER` |  BlackBerry Browser |  
+| `Browsers::BROWSER` |  Browser |  
+| `Browsers::BUNJALLOO` |  Bunjalloo |  
+| `Browsers::CAMINO` |  Camino |  
+| `Browsers::CHROME` |  Chrome |  
+| `Browsers::CURL` |  curl |  
+| `Browsers::EDGE` |  Edge |  
+| `Browsers::FACEBOOKEXTERNALHIT` |  facebookexternalhit |  
+| `Browsers::FEEDVALIDATOR` |  FeedValidator |  
+| `Browsers::FIREFOX` |  Firefox |  
+| `Browsers::GOOGLEBOT` |  Googlebot |  
+| `Browsers::GOOGLEBOT_IMAGE` |  Googlebot-Image |  
+| `Browsers::GOOGLEBOT_VIDEO` |  Googlebot-Video |  
+| `Browsers::HEADLESSCHROME` |  HeadlessChrome |  
+| `Browsers::IEMOBILE` |  IEMobile |  
+| `Browsers::KINDLE` |  Kindle |  
+| `Browsers::LYNX` |  Lynx |  
+| `Browsers::MIDORI` |  Midori |  
+| `Browsers::MSIE` |  MSIE |  
+| `Browsers::MSNBOT_MEDIA` |  msnbot-media |  
+| `Browsers::NETFRONT` |  NetFront |  
+| `Browsers::NINTENDOBROWSER` |  NintendoBrowser |  
+| `Browsers::OCULUSBROWSER` |  OculusBrowser |  
+| `Browsers::OPERA` |  Opera |  
+| `Browsers::PUFFIN` |  Puffin |  
+| `Browsers::SAFARI` |  Safari |  
+| `Browsers::SAMSUNGBROWSER` |  SamsungBrowser |  
+| `Browsers::SILK` |  Silk |  
+| `Browsers::TIZENBROWSER` |  TizenBrowser |  
+| `Browsers::UC_BROWSER` |  UC Browser |  
+| `Browsers::VALVE_STEAM_TENFOOT` |  Valve Steam Tenfoot |  
+| `Browsers::VIVALDI` |  Vivaldi |  
+| `Browsers::WGET` |  Wget |  
+| `Browsers::WORDPRESS` |  WordPress |  
+| `Browsers::YANDEX` |  Yandex |  
+| `Browsers::YANDEXBOT` |  YandexBot |
 
 More information is available at [Donat Studios](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
