@@ -117,7 +117,7 @@ REGEX
 
 		$lowerBrowser = array_map('strtolower', $result[BROWSER]);
 
-			$find = function ( $search, &$key = null, &$value = null ) use ( $lowerBrowser ) {
+		$find = function ( $search, &$key = null, &$value = null ) use ( $lowerBrowser ) {
 			$search = (array)$search;
 
 			foreach( $search as $val ) {
@@ -133,22 +133,22 @@ REGEX
 			return false;
 		};
 
-			$findT = function ( array $search, &$key = null, &$value = null ) use ( $find ) {
-				$value2 = null;
-				if( $find(array_keys($search), $key, $value2) ) {
-					$value = $search[$value2];
+		$findT = function ( array $search, &$key = null, &$value = null ) use ( $find ) {
+			$value2 = null;
+			if( $find(array_keys($search), $key, $value2) ) {
+				$value = $search[$value2];
 
-					return true;
-				}
+				return true;
+			}
 
-				return false;
-			};
+			return false;
+		};
 
 		$key = 0;
 		$val = '';
-			if( $findT(array( 'OPR' => 'Opera', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge' ), $key, $browser) ) {
-				$version = $result[BROWSER_VERSION][$key];
-			} elseif( $find('Playstation Vita', $key, $platform) ) {
+		if( $findT(array( 'OPR' => 'Opera', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge' ), $key, $browser) ) {
+			$version = $result[BROWSER_VERSION][$key];
+		} elseif( $find('Playstation Vita', $key, $platform) ) {
 			$platform = 'PlayStation Vita';
 			$browser  = 'Browser';
 		} elseif( $find(array( 'Kindle Fire', 'Silk' ), $key, $val) ) {
@@ -179,9 +179,9 @@ REGEX
 					}
 				}
 			}
-			} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
+		} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
 			$version = $result[BROWSER_VERSION][$key];
-			} elseif( $rv_result && $find('Trident') ) {
+		} elseif( $rv_result && $find('Trident') ) {
 			$browser = 'MSIE';
 			$version = $rv_result;
 		} elseif( $browser == 'AppleWebKit' ) {
@@ -208,4 +208,3 @@ REGEX
 		return array( PLATFORM => $platform ?: null, BROWSER => $browser ?: null, BROWSER_VERSION => $version ?: null );
 	}
 }
-
