@@ -20,6 +20,7 @@ namespace {
 	 * @return string[] an array with 'browser', 'version' and 'platform' keys
 	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
 	 *
+	 * @deprecated This exists for backwards compatibility with 0.x and will likely be removed in 2.x
 	 * @see \donatj\UserAgent\parse_user_agent
 	 */
 	function parse_user_agent( $u_agent = null ) {
