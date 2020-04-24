@@ -5,7 +5,7 @@ namespace donatj\UserAgent;
 class UserAgentParser {
 
 	/**
-	 * Parses a user agent string into its important parts
+	 * Parses a user agent string into its important parts, provide an object
 	 *
 	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
 	 * @return UserAgent an object with 'browser', 'browserVersion' and 'platform' methods

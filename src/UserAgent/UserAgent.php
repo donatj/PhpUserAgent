@@ -2,7 +2,7 @@
 
 namespace donatj\UserAgent;
 
-class UserAgent {
+class UserAgent implements UserAgentInterface {
 
 	/**
 	 * @var string|null
@@ -32,6 +32,7 @@ class UserAgent {
 
 	/**
 	 * @return string|null
+	 * @see \donatj\UserAgent\Platforms for a list of tested platforms
 	 */
 	public function platform() {
 		return $this->platform;
@@ -39,12 +40,15 @@ class UserAgent {
 
 	/**
 	 * @return string|null
+	 * @see \donatj\UserAgent\Browsers for a list of tested browsers.
 	 */
 	public function browser() {
 		return $this->browser;
 	}
 
 	/**
+	 * The version string. Formatting depends on the browser.
+	 *
 	 * @return string|null
 	 */
 	public function browserVersion() {
