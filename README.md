@@ -149,7 +149,6 @@ $ua->browserVersion();
 - NintendoBrowser  
 - OculusBrowser  
 - Opera  
-- Opera Next  
 - Puffin  
 - Safari  
 - SamsungBrowser  
