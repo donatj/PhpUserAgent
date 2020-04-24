@@ -7,7 +7,8 @@
 			<badge-poser type="version"/>
 			<badge-poser type="downloads"/>
 			<badge-poser type="license"/>
-			<badge-travis name="donatj/Flags"/>
+			<badge-travis name="donatj/phpUserAgent"/>
+			<badge-github-action name="donatj/phpUserAgent" workflow="CI"/>
 			<section title="What It Is">
 				<text><![CDATA[
 A simple, streamlined PHP user-agent parser!
