@@ -1,6 +1,6 @@
 .PHONY: test
 test:
-	./vendor/bin/phpunit
+	./vendor/bin/phpunit --coverage-text
 
 .PHONY: generate
 generate:
