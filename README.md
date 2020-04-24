@@ -16,6 +16,12 @@ A simple, streamlined PHP user-agent parser!
 
 Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
 
+## Upgrading to `1.*`
+
+The new `1.*` release **does not break compatibility** with `0.*` and nothing need to change to upgrade. However, the global `parse_user_agent` is now deprecated; it has been replaced with the namespaced `\donatj\UserAgent\parse_user_agent` and functions exactly the same. You can easily replace any existing call to `parse_user_agent` with `\donatj\UserAgent\parse_user_agent`
+
+In addition, 1.x adds a convenience object wrapper you may use should you prefer. More information on this is in the Usage section below.
+
 ## Why Use This
 
 You have your choice in user-agent parsers. This one detects **all modern browsers** in a very light, quick, understandable fashion.
