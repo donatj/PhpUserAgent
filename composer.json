@@ -9,7 +9,7 @@
 		"browser",
 		"browser detection"
 	],
-	"homepage": "http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT",
+	"homepage": "https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT",
 	"license": "MIT",
 	"require": {
 		"php": ">=5.3.0"
