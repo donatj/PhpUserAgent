@@ -1,4 +1,14 @@
 {
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit\/600.2.5\n(KHTML, like Gecko) Version\/8.0.2 Safari\/600.2.5 (Applebot\/0.1)": {
+		"platform": "Macintosh",
+		"browser": "Applebot",
+		"version": "0.1"
+	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit\/605.1.15\n(KHTML, like Gecko) Version\/12.1.1 Safari\/605.1.15 (Applebot\/0.1)": {
+		"platform": "Macintosh",
+		"browser": "Applebot",
+		"version": "0.1"
+	},
 	"Mozilla\/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.11) Gecko\/20071128 Camino\/1.5.4": {
 		"platform": "Macintosh",
 		"browser": "Camino",
@@ -603,6 +613,16 @@
 		"platform": "iPad",
 		"browser": "UC Browser",
 		"version": "2.4.0.367"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit\/600.1.4\n(KHTML, like Gecko) Version\/8.0 Mobile\/12B410 Safari\/600.1.4 (Applebot\/0.1;\n+http:\/\/www.apple.com\/go\/applebot)": {
+		"platform": "iPhone",
+		"browser": "Applebot",
+		"version": "0.1"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit\/605.1.15Z\n(KHTML, like Gecko) Version\/13.1 Mobile\/15E148 Safari\/604.1 (Applebot\/0.1)": {
+		"platform": "iPhone",
+		"browser": "Applebot",
+		"version": "0.1"
 	},
 	"Mozilla\/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit\/534.46.0 (KHTML, like Gecko) CriOS\/19.0.1084.60 Mobile\/9B206 Safari\/7534.48.3": {
 		"platform": "iPhone",
