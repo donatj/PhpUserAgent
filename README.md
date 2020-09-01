@@ -138,6 +138,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 |----------|----------|  
 | `Browsers::ADSBOT_GOOGLE` |  AdsBot-Google |  
 | `Browsers::ANDROID_BROWSER` |  Android Browser |  
+| `Browsers::APPLEBOT` |  Applebot |  
 | `Browsers::BAIDUSPIDER` |  Baiduspider |  
 | `Browsers::BINGBOT` |  bingbot |  
 | `Browsers::BLACKBERRY_BROWSER` |  BlackBerry Browser |  

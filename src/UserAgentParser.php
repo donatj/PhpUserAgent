@@ -91,7 +91,7 @@ REGEX
 		preg_match_all(<<<'REGEX'
 %(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
 TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|Edg|CriOS|UCBrowser|Puffin|OculusBrowser|SamsungBrowser|
-Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+Baiduspider|Applebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 Valve\ Steam\ Tenfoot|
 NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 (?:\)?;?)
@@ -179,7 +179,7 @@ REGEX
 					}
 				}
 			}
-		} elseif( $find(array( 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
+		} elseif( $find(array( 'Applebot', 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
 			$version = $result[BROWSER_VERSION][$key];
 		} elseif( $rv_result && $find('Trident') ) {
 			$browser = 'MSIE';

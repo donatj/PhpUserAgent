@@ -8,6 +8,7 @@ interface Browsers {
 
 	const ADSBOT_GOOGLE       = 'AdsBot-Google';
 	const ANDROID_BROWSER     = 'Android Browser';
+	const APPLEBOT            = 'Applebot';
 	const BAIDUSPIDER         = 'Baiduspider';
 	const BINGBOT             = 'bingbot';
 	const BLACKBERRY_BROWSER  = 'BlackBerry Browser';
