@@ -34,10 +34,8 @@ class UserAgentParserFunctionTest extends \PHPUnit\Framework\TestCase {
 		$this->assertSame($result, $expected);
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
 	public function test_no_user_agent_exception() {
+		$this->setExpectedException('\InvalidArgumentException');
 		unset($_SERVER['HTTP_USER_AGENT']);
 		parse_user_agent();
 	}
