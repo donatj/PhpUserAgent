@@ -3,14 +3,14 @@
 	"type": "library",
 	"description": "Lightning fast, minimalist PHP UserAgent string parser.",
 	"keywords": ["user agent", "useragent", "parser", "browser", "browser detection"],
-	"homepage": "http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT",
+	"homepage": "https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT",
 	"license": "MIT",
 	"require": {
 		"php": ">=5.3.0"
 	},
 	"require-dev": {
 		"camspiers/json-pretty": "0.1.*",
-		"phpunit/phpunit": "~4.8",
+		"phpunit/phpunit": "~4.8|~9",
 		"donatj/drop": "*"
 	},
 	"authors": [
