@@ -1,6 +1,6 @@
 <?php
 
-class UserAgentParserFunctionTest extends \PHPUnit_Framework_TestCase {
+class UserAgentParserFunctionTest extends \PHPUnit\Framework\TestCase {
 
 	/**
 	 * @dataProvider userAgentDataProvider
@@ -35,11 +35,22 @@ class UserAgentParserFunctionTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @expectedException \InvalidArgumentException
+	 * I'm no longer using expectedException/setExpectedException because the
+	 * semantics around expecting exceptions have changed so many times I can't
+	 * reliably do it across as wide of a PHP version history as I wish to
+	 * support
+	 *
+	 * @see https://thephp.cc/news/2016/02/questioning-phpunit-best-practices
 	 */
 	public function test_no_user_agent_exception() {
 		unset($_SERVER['HTTP_USER_AGENT']);
-		parse_user_agent();
+		try {
+			parse_user_agent();
+		} catch(\InvalidArgumentException $ex) {
+			return;
+		}
+
+		$this->fail("Expected \InvalidArgumentException");
 	}
 
 	public function test_global_user_agent() {

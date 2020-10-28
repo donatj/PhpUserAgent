@@ -2,7 +2,7 @@
 
 use donatj\UserAgent\UserAgentParser;
 
-class UserAgentParserObjectTest extends \PHPUnit_Framework_TestCase {
+class UserAgentParserObjectTest extends \PHPUnit\Framework\TestCase {
 
 	public function userAgentDataProvider() {
 		$out = array();
