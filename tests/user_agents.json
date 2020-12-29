@@ -549,15 +549,35 @@
 		"browser": "SamsungBrowser",
 		"version": "4.0"
 	},
+	"UCWEB\/2.0 (MIDP-2.0; U; Adr 4.4.2; en-US; E75) U2\/1.0.0 UCBrowser\/9.0.2.389 U2\/1.0.0 Mobile": {
+		"platform": "Android",
+		"browser": "UC Browser",
+		"version": "9.0.2.389"
+	},
 	"Mozilla\/5.0 (Linux; U; Android 4.4.2; en-US; LG-D325 Build\/KOT49I.A1411471607) AppleWebKit\/534.30 (KHTML, like Gecko) Version\/4.0 UCBrowser\/10.2.0.535 U3\/0.8.0 Mobile Safari\/534.30": {
 		"platform": "Android",
 		"browser": "UC Browser",
 		"version": "10.2.0.535"
 	},
+	"UCWEB\/2.0 (MIDP-2.0; U; Adr 2.3.6; en-US; GT-S5830i) U2\/1.0.0 UCBrowser\/10.6.8.732 U2\/1.0.0 Mobile": {
+		"platform": "Android",
+		"browser": "UC Browser",
+		"version": "10.6.8.732"
+	},
 	"Mozilla\/5.0 (Linux; U; Android 5.1.1; en-US; SM-G925F Build\/LMY47X) AppleWebKit\/534.30 (KHTML, like Gecko) Version\/4.0 UCBrowser\/10.7.5.658 U3\/0.8.0 Mobile Safari\/534.30": {
 		"platform": "Android",
 		"browser": "UC Browser",
 		"version": "10.7.5.658"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build\/HUAWEIEML-AL00) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/57.0.2987.108 baidu.sogo.uc.UCBrowser\/11.9.4.974 UWS\/2.13.1.48 Mobile Safari\/537.36 AliApp(DingTalk\/4.5.11) com.alibaba.android.rimet\/10487439 Channel\/227200 language\/zh-CN": {
+		"platform": "Android",
+		"browser": "UC Browser",
+		"version": "11.9.4.974"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 10; en-US; RMX1851 Build\/QKQ1.190918.001) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/57.0.2987.108 UCBrowser\/13.0.5.1290 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "UC Browser",
+		"version": "13.0.5.1290"
 	},
 	"Mozilla\/5.0 (Linux; U; Android 6.0; en-US; ZTE BLADE V7 Build\/MRA58K) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/57.0.2987.108 UCBrowser\/13.0.8.1291 Mobile Safari\/537.36": {
 		"platform": "Android",
@@ -608,6 +628,46 @@
 		"platform": "iPad",
 		"browser": "Safari",
 		"version": "4.0.4"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit\/534.46 (KHTML, like Gecko) Version\/5.1 Mobile\/9B206 Safari\/7534.48.3": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "5.1"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit\/536.26 (KHTML, like Gecko) Version\/6.0 Mobile\/10A5355d Safari\/8536.25": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "6.0"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 7_1_2 like Mac OS X) AppleWebKit\/537.51.2 (KHTML, like Gecko) Version\/7.0 Mobile\/11D257 Safari\/9537.53": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "7.0"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 8_1_2 like Mac OS X) AppleWebKit\/600.1.4 (KHTML, like Gecko) Version\/8.0 Mobile\/12B440 Safari\/600.1.4": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "8.0"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 9_3_5 like Mac OS X) AppleWebKit\/601.1.46 (KHTML, like Gecko) Version\/9.0 Mobile\/13G36 Safari\/601.1": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "9.0"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 10_3_3 like Mac OS X) AppleWebKit\/603.3.8 (KHTML, like Gecko) Version\/10.0 Mobile\/14G60 Safari\/602.1": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "10.0"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 11_3 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/11.0 Mobile\/15E148 Safari\/604.1": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "11.0"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/12.1 Mobile\/15E148 Safari\/604.1": {
+		"platform": "iPad",
+		"browser": "Safari",
+		"version": "12.1"
 	},
 	"Mozilla\/5.0 (iPad; U; CPU OS 7 like Mac OS X; en-us; iPad3,3) AppleWebKit\/534.46 (KHTML, like Gecko) UCBrowser\/2.4.0.367 U3\/1 Safari\/7543.48.3": {
 		"platform": "iPad",
@@ -853,6 +913,11 @@
 		"platform": "PlayStation Vita",
 		"browser": "Browser",
 		"version": "1.69"
+	},
+	"UCWEB\/2.0 (Symbian; U; S60 V5; id; NokiaN8-00) U2\/1.0.0 UCBrowser\/9.2.0.336 U2\/1.0.0 Mobile": {
+		"platform": "Symbian",
+		"browser": "UC Browser",
+		"version": "9.2.0.336"
 	},
 	"Mozilla\/5.0 (Linux; Tizen 2.3; SAMSUNG SM-Z130H) AppleWebKit\/537.3 (KHTML, like Gecko) SamsungBrowser\/1.0 ": {
 		"platform": "Tizen",
