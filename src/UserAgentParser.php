@@ -62,7 +62,7 @@ namespace donatj\UserAgent {
 
 		if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
 			preg_match_all(<<<'REGEX'
-/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
+/(?P<platform>BB\d+;|Android|Adr|Symbian|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
 (?:\ [^;]*)?
 (?:;|$)/imx
 REGEX
@@ -86,6 +86,8 @@ REGEX
 			$platform = 'Linux';
 		} elseif( $platform == 'CrOS' ) {
 			$platform = 'Chrome OS';
+		} elseif( $platform == 'Adr' ) {
+			$platform = 'Android';
 		}
 
 		preg_match_all(<<<'REGEX'

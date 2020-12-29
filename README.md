@@ -129,6 +129,7 @@ Predefined helper constants from `donatj\UserAgent\Platforms`
 | `Platforms::PLAYSTATION_3` |  PlayStation 3 |  
 | `Platforms::PLAYSTATION_4` |  PlayStation 4 |  
 | `Platforms::PLAYSTATION_VITA` |  PlayStation Vita |  
+| `Platforms::SYMBIAN` |  Symbian |  
 | `Platforms::TIZEN` |  Tizen |  
 | `Platforms::WINDOWS_PHONE` |  Windows Phone |  
 | `Platforms::XBOX` |  Xbox |  
