@@ -54,10 +54,10 @@ namespace donatj\UserAgent {
 		$browser  = null;
 		$version  = null;
 
-		$empty = array( PLATFORM => $platform, BROWSER => $browser, BROWSER_VERSION => $version );
+		$return = array( PLATFORM => &$platform, BROWSER => &$browser, BROWSER_VERSION => &$version );
 
 		if( !$u_agent ) {
-			return $empty;
+			return $return;
 		}
 
 		if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
@@ -107,7 +107,7 @@ REGEX
 				return array( PLATFORM => $platform ?: null, BROWSER => $result[BROWSER], BROWSER_VERSION => empty($result[BROWSER_VERSION]) ? null : $result[BROWSER_VERSION] );
 			}
 
-			return $empty;
+			return $return;
 		}
 
 		if( preg_match('/rv:(?P<version>[0-9A-Z.]+)/i', $u_agent, $rv_result) ) {
@@ -207,6 +207,6 @@ REGEX
 			$browser  = 'NetFront';
 		}
 
-		return array( PLATFORM => $platform ?: null, BROWSER => $browser ?: null, BROWSER_VERSION => $version ?: null );
+		return $return;
 	}
 }
