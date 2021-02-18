@@ -62,13 +62,13 @@ namespace donatj\UserAgent {
 
 		if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
 			preg_match_all(<<<'REGEX'
-/(?P<platform>BB\d+;|Android|Adr|Symbian|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
+/(?P<platform>BB\d+;|Android|Adr|Symbian|Sailfish|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
 (?:\ [^;]*)?
 (?:;|$)/imx
 REGEX
 				, $parent_matches[1], $result);
 
-			$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11' );
+			$priority = array( 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11', 'Sailfish' );
 
 			$result[PLATFORM] = array_unique($result[PLATFORM]);
 			if( count($result[PLATFORM]) > 1 ) {
@@ -92,7 +92,7 @@ REGEX
 
 		preg_match_all(<<<'REGEX'
 %(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
-TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|Edg|CriOS|UCBrowser|Puffin|OculusBrowser|SamsungBrowser|
+TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|Edg|CriOS|UCBrowser|Puffin|OculusBrowser|SamsungBrowser|SailfishBrowser|
 Baiduspider|Applebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 Valve\ Steam\ Tenfoot|
 NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
@@ -181,7 +181,7 @@ REGEX
 					}
 				}
 			}
-		} elseif( $find(array( 'Applebot', 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome' ), $key, $browser) ) {
+		} elseif( $find(array( 'Applebot', 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome', 'SailfishBrowser' ), $key, $browser) ) {
 			$version = $result[BROWSER_VERSION][$key];
 		} elseif( $rv_result && $find('Trident') ) {
 			$browser = 'MSIE';

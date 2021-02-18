@@ -37,6 +37,7 @@ interface Browsers {
 	const OPERA               = 'Opera';
 	const PUFFIN              = 'Puffin';
 	const SAFARI              = 'Safari';
+	const SAILFISHBROWSER     = 'SailfishBrowser';
 	const SAMSUNGBROWSER      = 'SamsungBrowser';
 	const SILK                = 'Silk';
 	const TIZENBROWSER        = 'TizenBrowser';

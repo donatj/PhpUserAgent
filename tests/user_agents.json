@@ -914,6 +914,26 @@
 		"browser": "Browser",
 		"version": "1.69"
 	},
+	"Mozilla\/5.0 (Linux; U; Sailfish 3.0; Mobile; rv:38.0) Gecko\/38.0 Firefox\/38.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (Linux; U; Sailfish 3.0; Tablet; rv:38.0) Gecko\/38.0 Firefox\/38.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (Maemo; Linux; U; Jolla; Sailfish; Mobile; rv:31.0) Gecko\/31.0 Firefox\/31.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (Maemo; Linux; U; Jolla; Sailfish; Tablet; rv:31.0) Gecko\/31.0 Firefox\/31.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
+	},
 	"UCWEB\/2.0 (Symbian; U; S60 V5; id; NokiaN8-00) U2\/1.0.0 UCBrowser\/9.2.0.336 U2\/1.0.0 Mobile": {
 		"platform": "Symbian",
 		"browser": "UC Browser",
