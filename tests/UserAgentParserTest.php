@@ -47,6 +47,7 @@ class UserAgentParserTest extends \PHPUnit\Framework\TestCase {
 		try {
 			parse_user_agent();
 		} catch(\InvalidArgumentException $ex) {
+			$this->assertTrue(true); // quiet warning
 			return;
 		}
 

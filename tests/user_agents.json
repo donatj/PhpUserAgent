@@ -519,6 +519,21 @@
 		"browser": "Chrome",
 		"version": "18.0.1025.308"
 	},
+	"Mozilla\/5.0 (Linux; U; Android 8.1.0; en-gb; Redmi Note 5 Build\/OPM1.171019.011)\nAppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/61.0.3163.128 Mobile\nSafari\/537.36 XiaoMi\/MiuiBrowser\/10.1.2": {
+		"platform": "Android",
+		"browser": "MiuiBrowser",
+		"version": "10.1.2"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 10; bg-bg; Mi Note 10 Build\/QKQ1.190825.002) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/71.0.3578.141 Mobile Safari\/537.36 XiaoMi\/MiuiBrowser\/12.6.2-gn": {
+		"platform": "Android",
+		"browser": "MiuiBrowser",
+		"version": "12.6.2"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 10; ru-ru; Redmi Note 7 Build\/QKQ1.190910.002) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/71.0.3578.141 Mobile Safari\/537.36 XiaoMi\/MiuiBrowser\/12.6.6-gn": {
+		"platform": "Android",
+		"browser": "MiuiBrowser",
+		"version": "12.6.6"
+	},
 	"Mozilla\/5.0 (Linux; Android 7.1.2; Pacific Build\/N2G48H) AppleWebKit\/537.36 (KHTML, like Gecko) OculusBrowser\/5.5.10.137831012 SamsungBrowser\/4.0 Chrome\/66.0.3359.203 Mobile VR Safari\/537.36": {
 		"platform": "Android",
 		"browser": "OculusBrowser",
@@ -913,6 +928,26 @@
 		"platform": "PlayStation Vita",
 		"browser": "Browser",
 		"version": "1.69"
+	},
+	"Mozilla\/5.0 (Linux; U; Sailfish 3.0; Mobile; rv:38.0) Gecko\/38.0 Firefox\/38.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (Linux; U; Sailfish 3.0; Tablet; rv:38.0) Gecko\/38.0 Firefox\/38.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (Maemo; Linux; U; Jolla; Sailfish; Mobile; rv:31.0) Gecko\/31.0 Firefox\/31.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (Maemo; Linux; U; Jolla; Sailfish; Tablet; rv:31.0) Gecko\/31.0 Firefox\/31.0 SailfishBrowser\/1.0": {
+		"platform": "Sailfish",
+		"browser": "SailfishBrowser",
+		"version": "1.0"
 	},
 	"UCWEB\/2.0 (Symbian; U; S60 V5; id; NokiaN8-00) U2\/1.0.0 UCBrowser\/9.2.0.336 U2\/1.0.0 Mobile": {
 		"platform": "Symbian",
