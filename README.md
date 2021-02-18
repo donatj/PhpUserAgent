@@ -165,6 +165,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::KINDLE` |  Kindle |  
 | `Browsers::LYNX` |  Lynx |  
 | `Browsers::MIDORI` |  Midori |  
+| `Browsers::MIUIBROWSER` |  MiuiBrowser |  
 | `Browsers::MSIE` |  MSIE |  
 | `Browsers::MSNBOT_MEDIA` |  msnbot-media |  
 | `Browsers::NETFRONT` |  NetFront |  

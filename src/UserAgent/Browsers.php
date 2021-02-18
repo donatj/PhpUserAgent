@@ -29,6 +29,7 @@ interface Browsers {
 	const KINDLE              = 'Kindle';
 	const LYNX                = 'Lynx';
 	const MIDORI              = 'Midori';
+	const MIUIBROWSER         = 'MiuiBrowser';
 	const MSIE                = 'MSIE';
 	const MSNBOT_MEDIA        = 'msnbot-media';
 	const NETFRONT            = 'NetFront';
