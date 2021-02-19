@@ -6,7 +6,6 @@
 [![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/version)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![Total Downloads](https://poser.pugx.org/donatj/phpuseragentparser/downloads)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![License](https://poser.pugx.org/donatj/phpuseragentparser/license)](https://packagist.org/packages/donatj/phpuseragentparser)
-[![Build Status](https://travis-ci.org/donatj/phpUserAgent.svg?branch=master)](https://travis-ci.org/donatj/phpUserAgent)
 [![Build Status](https://github.com/donatj/phpUserAgent/workflows/CI/badge.svg?)](https://github.com/donatj/phpUserAgent/actions?query=workflow%3ACI)
 
 
