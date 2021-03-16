@@ -2,7 +2,7 @@
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-$jsonfile = __DIR__ . '/../Tests/user_agents.json';
+$jsonfile = __DIR__ . '/../Tests/user_agents.dist.json';
 
 $uas = json_decode(file_get_contents($jsonfile), true);
 
