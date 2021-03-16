@@ -94,7 +94,7 @@ REGEX
 %(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
 TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|Edg|CriOS|UCBrowser|Puffin|
 OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|
-Baiduspider|Applebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 Valve\ Steam\ Tenfoot|
 NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
 (?:\)?;?)
@@ -149,8 +149,8 @@ REGEX
 
 		$key = 0;
 		$val = '';
-		if( $findT(array( 'OPR' => 'Opera', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge', 'XiaoMi/MiuiBrowser' => 'MiuiBrowser' ), $key, $browser) ) {
-			$version = $result[BROWSER_VERSION][$key];
+		if( $findT(array( 'OPR' => 'Opera', 'Facebot' => 'iMessageBot', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge', 'XiaoMi/MiuiBrowser' => 'MiuiBrowser' ), $key, $browser) ) {
+			$version = is_numeric(substr($result[BROWSER_VERSION][$key], 0, 1)) ? $result[BROWSER_VERSION][$key] : null;
 		} elseif( $find('Playstation Vita', $key, $platform) ) {
 			$platform = 'PlayStation Vita';
 			$browser  = 'Browser';

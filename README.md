@@ -13,7 +13,7 @@
 
 A simple, streamlined PHP user-agent parser!
 
-Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+Licensed under the MIT license: https://www.opensource.org/licenses/mit-license.php
 
 ## Upgrading to `1.*`
 
@@ -161,6 +161,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::GOOGLEBOT_VIDEO` |  Googlebot-Video |  
 | `Browsers::HEADLESSCHROME` |  HeadlessChrome |  
 | `Browsers::IEMOBILE` |  IEMobile |  
+| `Browsers::IMESSAGEBOT` |  iMessageBot |  
 | `Browsers::KINDLE` |  Kindle |  
 | `Browsers::LYNX` |  Lynx |  
 | `Browsers::MIDORI` |  Midori |  
@@ -176,7 +177,9 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::SAILFISHBROWSER` |  SailfishBrowser |  
 | `Browsers::SAMSUNGBROWSER` |  SamsungBrowser |  
 | `Browsers::SILK` |  Silk |  
+| `Browsers::TELEGRAMBOT` |  TelegramBot |  
 | `Browsers::TIZENBROWSER` |  TizenBrowser |  
+| `Browsers::TWITTERBOT` |  Twitterbot |  
 | `Browsers::UC_BROWSER` |  UC Browser |  
 | `Browsers::VALVE_STEAM_TENFOOT` |  Valve Steam Tenfoot |  
 | `Browsers::VIVALDI` |  Vivaldi |  
@@ -185,4 +188,4 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::YANDEX` |  Yandex |  
 | `Browsers::YANDEXBOT` |  YandexBot |
 
-More information is available at [Donat Studios](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
+More information is available at [Donat Studios](https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).

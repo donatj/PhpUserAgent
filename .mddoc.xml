@@ -7,13 +7,12 @@
 			<badge-poser type="version"/>
 			<badge-poser type="downloads"/>
 			<badge-poser type="license"/>
-			<badge-travis name="donatj/phpUserAgent"/>
 			<badge-github-action name="donatj/phpUserAgent" workflow="CI"/>
 			<section title="What It Is">
 				<text><![CDATA[
 A simple, streamlined PHP user-agent parser!
 
-Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+Licensed under the MIT license: https://www.opensource.org/licenses/mit-license.php
 ]]></text>
 			</section>
 			<section title="Upgrading to `1.*`">
@@ -106,7 +105,7 @@ $ua->browserVersion();
 				<exec cmd="php .helpers/constants.php 'donatj\UserAgent\Browsers' 'Browser'"/>
 			</section>
 			<text><![CDATA[
-More information is available at [Donat Studios](http://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
+More information is available at [Donat Studios](https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
 ]]></text>
 		</section>
 	</docpage>

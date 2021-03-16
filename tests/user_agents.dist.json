@@ -224,6 +224,11 @@
 		"browser": "HeadlessChrome",
 		"version": "69.0.3452.0"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit\/601.2.4 (KHTML, like Gecko) Version\/9.0.1 Safari\/601.2.4 facebookexternalhit\/1.1 Facebot Twitterbot\/1.0": {
+		"platform": "Macintosh",
+		"browser": "iMessageBot",
+		"version": null
+	},
 	"Mozilla\/5.0 (X11; U; Linux i686; de-DE; rv:1.8.1.9) Gecko\/20071103 Midori\/0.0.10": {
 		"platform": "Linux",
 		"browser": "Midori",
@@ -1094,6 +1099,11 @@
 		"browser": "curl",
 		"version": "7.19.7"
 	},
+	"facebookexternalhit\/1.1": {
+		"platform": null,
+		"browser": "facebookexternalhit",
+		"version": "1.1"
+	},
 	"facebookexternalhit\/1.1 (+http:\/\/www.facebook.com\/externalhit_uatext.php)": {
 		"platform": null,
 		"browser": "facebookexternalhit",
@@ -1133,6 +1143,16 @@
 		"platform": null,
 		"browser": "msnbot-media",
 		"version": "1.1"
+	},
+	"TelegramBot (like TwitterBot)": {
+		"platform": null,
+		"browser": "TelegramBot",
+		"version": null
+	},
+	"Twitterbot\/1.0": {
+		"platform": null,
+		"browser": "Twitterbot",
+		"version": "1.0"
 	},
 	"WordPress\/3.7.1; http:\/\/wordpress.com": {
 		"platform": null,
