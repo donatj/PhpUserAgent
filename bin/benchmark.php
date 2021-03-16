@@ -4,7 +4,7 @@ require __DIR__ . '/../src/UserAgentParser.php';
 
 $time = microtime(true);
 
-$uas = json_decode(file_get_contents(__DIR__ . '/../tests/user_agents.json'), true);
+$uas = json_decode(file_get_contents(__DIR__ . '/../tests/user_agents.dist.json'), true);
 
 
 foreach( $uas as $ua => $junk ) {

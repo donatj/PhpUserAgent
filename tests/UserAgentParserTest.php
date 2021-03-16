@@ -12,7 +12,7 @@ class UserAgentParserTest extends \PHPUnit\Framework\TestCase {
 
 	public function userAgentDataProvider() {
 		$out = array();
-		$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.json'), true);
+		$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.dist.json'), true);
 		foreach( $uas as $string => $parts ) {
 			$out[] = array( $string, $parts );
 		}
