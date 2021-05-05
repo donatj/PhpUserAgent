@@ -97,8 +97,8 @@ OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|
 Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 Valve\ Steam\ Tenfoot|
 NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
-(?:\)?;?)
-(?:(?:[:/ ])(?P<version>[0-9A-Z.]+)|/(?:[A-Z]*))%ix
+\)?;?
+(?:[:/ ](?P<version>[0-9A-Z.]+)|/[A-Z]*)%ix
 REGEX
 			, $u_agent, $result);
 
