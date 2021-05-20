@@ -17,7 +17,8 @@
 	"require-dev": {
 		"camspiers/json-pretty": "~1.0",
 		"phpunit/phpunit": "~4.8|~9",
-		"donatj/drop": "*"
+		"donatj/drop": "*",
+		"donatj/mddoc": "^0.1.0"
 	},
 	"authors": [
 		{
