@@ -9,8 +9,8 @@ $uas = json_decode(
 	true
 );
 
-$platforms = array();
-$browsers  = array();
+$platforms = [];
+$browsers  = [];
 foreach( $uas as $key => $val ) {
 	$kex = strtoupper($val['browser']);
 	if( $kex !== '' ) {

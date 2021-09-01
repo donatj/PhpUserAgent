@@ -5,15 +5,15 @@ use donatj\UserAgent\UserAgentParser;
 class UserAgentParserObjectTest extends \PHPUnit\Framework\TestCase {
 
 	public function userAgentDataProvider() {
-		$out = array();
-		if( filesize(__DIR__ . '/user_agents.json') > 0 ) {
+		$out = [];
+		if( file_exists(__DIR__ . '/user_agents.json') && filesize(__DIR__ . '/user_agents.json') > 0 ) {
 			$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.json'), true);
 		} else {
 			$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.dist.json'), true);
 		}
 
 		foreach( $uas as $string => $parts ) {
-			$out[] = array( $string );
+			$out[] = [ $string ];
 		}
 
 		return $out;

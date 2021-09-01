@@ -20,7 +20,7 @@ uasort($uas, function ( $a, $b ) {
 		return -1;
 	}
 
-	$desktop = array( 'Windows', 'Linux', 'Macintosh', 'Chrome OS' );
+	$desktop = [ 'Windows', 'Linux', 'Macintosh', 'Chrome OS' ];
 
 	$ad = in_array($a['platform'], $desktop, true);
 	$bd = in_array($b['platform'], $desktop, true);
