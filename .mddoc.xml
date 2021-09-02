@@ -74,11 +74,11 @@ The classic procedural use is as simple as:
 ```php
 $ua_info = parse_user_agent();
 /*
-array(
+[
 	'platform' => '[Detected Platform]',
 	'browser'  => '[Detected Browser]',
 	'version'  => '[Detected Browser Version]',
-);
+]
 */
 ```
 ]]></text>

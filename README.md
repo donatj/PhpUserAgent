@@ -6,7 +6,7 @@
 [![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/version)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![Total Downloads](https://poser.pugx.org/donatj/phpuseragentparser/downloads)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![License](https://poser.pugx.org/donatj/phpuseragentparser/license)](https://packagist.org/packages/donatj/phpuseragentparser)
-[![Build Status](https://github.com/donatj/phpUserAgent/workflows/CI/badge.svg?)](https://github.com/donatj/phpUserAgent/actions?query=workflow%3ACI)
+[![CI](https://github.com/donatj/phpUserAgent/workflows/CI/badge.svg?)](https://github.com/donatj/phpUserAgent/actions?query=workflow%3ACI)
 
 
 ## What It Is
@@ -56,7 +56,7 @@ All that said, there is the start of a [branch to do it](https://github.com/dona
 
 ## Requirements
 
-- **php**: >=5.3.0
+- **php**: >=5.4.0
 
 ## Installing
 
@@ -75,11 +75,11 @@ The classic procedural use is as simple as:
 ```php
 $ua_info = parse_user_agent();
 /*
-array(
+[
 	'platform' => '[Detected Platform]',
 	'browser'  => '[Detected Browser]',
 	'version'  => '[Detected Browser Version]',
-);
+]
 */
 ```
 

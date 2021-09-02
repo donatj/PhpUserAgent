@@ -11,26 +11,26 @@ class UserAgentParserFunctionTest extends \PHPUnit\Framework\TestCase {
 	}
 
 	public function userAgentDataProvider() {
-		$out = array();
-		if( filesize(__DIR__ . '/user_agents.json') > 0 ) {
+		$out = [];
+		if( file_exists(__DIR__ . '/user_agents.json') && filesize(__DIR__ . '/user_agents.json') > 0 ) {
 			$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.json'), true);
 		} else {
 			$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.dist.json'), true);
 		}
 
 		foreach( $uas as $string => $parts ) {
-			$out[] = array( $string, $parts );
+			$out[] = [ $string, $parts ];
 		}
 
 		return $out;
 	}
 
 	public function test_parse_user_agent_empty() {
-		$expected = array(
+		$expected = [
 			'platform' => null,
 			'browser'  => null,
 			'version'  => null,
-		);
+		];
 
 		$result = parse_user_agent('');
 		$this->assertSame($result, $expected);
@@ -61,7 +61,7 @@ class UserAgentParserFunctionTest extends \PHPUnit\Framework\TestCase {
 
 	public function test_global_user_agent() {
 		$_SERVER['HTTP_USER_AGENT'] = 'Test/1.0';
-		$this->assertSame(array( 'platform' => null, 'browser' => 'Test', 'version' => '1.0' ), parse_user_agent());
+		$this->assertSame([ 'platform' => null, 'browser' => 'Test', 'version' => '1.0' ], parse_user_agent());
 	}
 
 }
