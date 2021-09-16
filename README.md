@@ -127,6 +127,7 @@ Predefined helper constants from `donatj\UserAgent\Platforms`
 | `Platforms::PLAYBOOK` |  PlayBook |  
 | `Platforms::PLAYSTATION_3` |  PlayStation 3 |  
 | `Platforms::PLAYSTATION_4` |  PlayStation 4 |  
+| `Platforms::PLAYSTATION_5` |  PlayStation 5 |  
 | `Platforms::PLAYSTATION_VITA` |  PlayStation Vita |  
 | `Platforms::SAILFISH` |  Sailfish |  
 | `Platforms::SYMBIAN` |  Symbian |  

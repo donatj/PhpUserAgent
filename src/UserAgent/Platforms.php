@@ -29,6 +29,7 @@ interface Platforms {
 	const PLAYBOOK         = 'PlayBook';
 	const PLAYSTATION_3    = 'PlayStation 3';
 	const PLAYSTATION_4    = 'PlayStation 4';
+	const PLAYSTATION_5    = 'PlayStation 5';
 	const PLAYSTATION_VITA = 'PlayStation Vita';
 	const SAILFISH         = 'Sailfish';
 	const SYMBIAN          = 'Symbian';
