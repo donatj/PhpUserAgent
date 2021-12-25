@@ -82,11 +82,11 @@ REGEX
 			}
 		}
 
-		if( $platform == 'linux-gnu' || $platform == 'X11' ) {
+		if( $platform === 'linux-gnu' || $platform === 'X11' ) {
 			$platform = 'Linux';
-		} elseif( $platform == 'CrOS' ) {
+		} elseif( $platform === 'CrOS' ) {
 			$platform = 'Chrome OS';
-		} elseif( $platform == 'Adr' ) {
+		} elseif( $platform === 'Adr' ) {
 			$platform = 'Android';
 		}
 
@@ -124,7 +124,7 @@ REGEX
 			$search = (array)$search;
 
 			foreach( $search as $val ) {
-				$xkey = array_search(strtolower($val), $lowerBrowser);
+				$xkey = array_search(strtolower($val), $lowerBrowser, true);
 				if( $xkey !== false ) {
 					$value = $val;
 					$key   = $xkey;
@@ -155,12 +155,12 @@ REGEX
 			$platform = 'PlayStation Vita';
 			$browser  = 'Browser';
 		} elseif( $find([ 'Kindle Fire', 'Silk' ], $key, $val) ) {
-			$browser  = $val == 'Silk' ? 'Silk' : 'Kindle';
+			$browser  = $val === 'Silk' ? 'Silk' : 'Kindle';
 			$platform = 'Kindle Fire';
 			if( !($version = $result[BROWSER_VERSION][$key]) || !is_numeric($version[0]) ) {
-				$version = $result[BROWSER_VERSION][array_search('Version', $result[BROWSER])];
+				$version = $result[BROWSER_VERSION][array_search('Version', $result[BROWSER], true)];
 			}
-		} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
+		} elseif( $find('NintendoBrowser', $key) || $platform === 'Nintendo 3DS' ) {
 			$browser = 'NintendoBrowser';
 			$version = $result[BROWSER_VERSION][$key];
 		} elseif( $find('Kindle', $key, $platform) ) {
@@ -187,13 +187,13 @@ REGEX
 		} elseif( $rv_result && $find('Trident') ) {
 			$browser = 'MSIE';
 			$version = $rv_result;
-		} elseif( $browser == 'AppleWebKit' ) {
-			if( $platform == 'Android' ) {
+		} elseif( $browser === 'AppleWebKit' ) {
+			if( $platform === 'Android' ) {
 				$browser = 'Android Browser';
 			} elseif( strpos($platform, 'BB') === 0 ) {
 				$browser  = 'BlackBerry Browser';
 				$platform = 'BlackBerry';
-			} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
+			} elseif( $platform === 'BlackBerry' || $platform === 'PlayBook' ) {
 				$browser = 'BlackBerry Browser';
 			} else {
 				$find('Safari', $key, $browser) || $find('TizenBrowser', $key, $browser);

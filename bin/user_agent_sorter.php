@@ -35,27 +35,27 @@ uasort($uas, function ( $a, $b ) {
 
 	if( $ad ) {
 		$result = strnatcasecmp($a['browser'], $b['browser']);
-		if( $result == 0 ) {
+		if( $result === 0 ) {
 
 			$result = strnatcasecmp($a['platform'], $b['platform']);
 
-			if( $result == 0 ) {
+			if( $result === 0 ) {
 				$result = compare_version($a['version'], $b['version']);
 			}
 		}
 	} else {
 		$result = strnatcasecmp($a['platform'], $b['platform']);
-		if( $result == 0 ) {
+		if( $result === 0 ) {
 
 			$result = strnatcasecmp($a['browser'], $b['browser']);
 
-			if( $result == 0 ) {
+			if( $result === 0 ) {
 				$result = compare_version($a['version'], $b['version']);
 			}
 		}
 	}
 
-	if( $result == 0 ) {
+	if( $result === 0 ) {
 		$result = strnatcasecmp($a['key'], $b['key']);
 	}
 
