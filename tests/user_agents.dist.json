@@ -99,6 +99,11 @@
 		"browser": "Chrome",
 		"version": "30.0.1599.17"
 	},
+	"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4664.110 Safari\/537.36": {
+		"platform": "Windows",
+		"browser": "Chrome",
+		"version": "100.0.4664.110"
+	},
 	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/79.0.3915.0 Safari\/537.36 Edg\/79.0.287.0": {
 		"platform": "Macintosh",
 		"browser": "Edge",
