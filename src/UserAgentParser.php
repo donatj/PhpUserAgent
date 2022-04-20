@@ -13,6 +13,8 @@
  * @link https://github.com/donatj/PhpUserAgent
  *
  * @license MIT
+ *
+ * @deprecated UPGRADE to 1.x ASAP - the continued 0.x versions of UserAgentParser are provided for a limited time.
  */
 function parse_user_agent( $u_agent = null ) {
 	if( $u_agent === null && isset($_SERVER['HTTP_USER_AGENT']) ) {
