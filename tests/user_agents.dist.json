@@ -544,6 +544,11 @@
 		"browser": "Yandex",
 		"version": "18.9.0.3363"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 12_3_1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 YaBrowser\/22.3.0 Yowser\/2.5 Safari\/537.36": {
+		"platform": "Macintosh",
+		"browser": "Yandex",
+		"version": "22.3.0"
+	},
 	"Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/52.0.2743.116 YaBrowser\/16.9.1.1131 Yowser\/2.5 Safari\/537.36": {
 		"platform": "Windows",
 		"browser": "Yandex",
@@ -593,6 +598,11 @@
 		"platform": "Windows",
 		"browser": "Yandex",
 		"version": "18.10.1.385"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 YaBrowser\/22.3.0 Yowser\/2.5 Safari\/537.36": {
+		"platform": "Windows",
+		"browser": "Yandex",
+		"version": "22.3.0"
 	},
 	"Mozilla\/5.0 (Linux; U; Android 2.2; en-us; SGH-T959 Build\/FROYO) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
 		"platform": "Android",
@@ -738,6 +748,11 @@
 		"platform": "Android",
 		"browser": "UC Browser",
 		"version": "13.0.8.1291"
+	},
+	"Mozilla\/5.0 (Linux; arm_64; Android 12; SM-G965F) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 YaBrowser\/21.3.4.59 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Yandex",
+		"version": "21.3.4.59"
 	},
 	"Mozilla\/5.0 (BlackBerry; U; BlackBerry 9780; en) AppleWebKit\/534.8+ (KHTML, like Gecko) Version\/6.0.0.723 Mobile Safari\/534.8+": {
 		"platform": "BlackBerry",
