@@ -494,15 +494,30 @@
 		"browser": "Valve Steam Tenfoot",
 		"version": "1451690000"
 	},
+	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Safari\/537.36 Vivaldi\/4.3": {
+		"platform": "Linux",
+		"browser": "Vivaldi",
+		"version": "4.3"
+	},
 	"Mozilla\/5.0 (Macintosh; U; Intel Mac OS X 10.6; en; rv:1.9.0.18) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/40.0.2214.89 Vivaldi\/1.0.83.38 Safari\/537.36": {
 		"platform": "Macintosh",
 		"browser": "Vivaldi",
 		"version": "1.0.83.38"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 12_3_1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Safari\/537.36 Vivaldi\/4.3": {
+		"platform": "Macintosh",
+		"browser": "Vivaldi",
+		"version": "4.3"
+	},
 	"Mozilla\/5.0 (Windows NT 6.3; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/40.0.2214.89 Vivaldi\/1.0.83.38 Safari\/537.36": {
 		"platform": "Windows",
 		"browser": "Vivaldi",
 		"version": "1.0.83.38"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Safari\/537.36 Vivaldi\/4.3": {
+		"platform": "Windows",
+		"browser": "Vivaldi",
+		"version": "4.3"
 	},
 	"Wget\/1.12 (linux-gnu)": {
 		"platform": "Linux",
