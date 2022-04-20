@@ -584,6 +584,11 @@
 		"browser": "Chrome",
 		"version": "18.0.1025.308"
 	},
+	"Mozilla\/5.0 (Windows Mobile 10; Android 10.0; Microsoft; Lumia 950XL) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Mobile Safari\/537.36 Edge\/40.15254.603": {
+		"platform": "Android",
+		"browser": "Edge",
+		"version": "40.15254.603"
+	},
 	"Mozilla\/5.0 (Linux; Android 10; ONEPLUS A6003) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Mobile Safari\/537.36 EdgA\/97.0.1072.69": {
 		"platform": "Android",
 		"browser": "Edge",
@@ -1203,6 +1208,11 @@
 		"platform": "Xbox One",
 		"browser": "Edge",
 		"version": "40.15063.0"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Safari\/537.36 Edge\/44.18363.8131": {
+		"platform": "Xbox One",
+		"browser": "Edge",
+		"version": "44.18363.8131"
 	},
 	"Mozilla\/5.0 (compatible; MSIE 10.0; Windows Phone OS 7.5; Trident\/5.0; IEMobile\/10.0; Xbox; Xbox One)": {
 		"platform": "Xbox One",
