@@ -22,7 +22,7 @@ foreach( $uas as $key => $val ) {
 		$browsers[$kex][$val['browser']]++;
 	}
 
-	$kex = strtoupper($val['platform']);
+	$kex = strtoupper((string)$val['platform']);
 	if( $kex !== '' ) {
 		$kex = preg_replace('/\W+/', '_', $kex);
 
