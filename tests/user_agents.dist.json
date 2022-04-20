@@ -114,6 +114,11 @@
 		"browser": "Edge",
 		"version": "79.0.287.0"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 12_3_1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Safari\/537.36 Edg\/99.0.1150.36": {
+		"platform": "Macintosh",
+		"browser": "Edge",
+		"version": "99.0.1150.36"
+	},
 	"Mozilla\/5.0 (Windows NT 6.4; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/36.0.1985.143 Safari\/537.36 Edge\/12.0": {
 		"platform": "Windows",
 		"browser": "Edge",
@@ -143,6 +148,11 @@
 		"platform": "Windows",
 		"browser": "Edge",
 		"version": "79.0.284.0"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Safari\/537.36 Edg\/99.0.1150.36": {
+		"platform": "Windows",
+		"browser": "Edge",
+		"version": "99.0.1150.36"
 	},
 	"Mozilla\/5.0 (X11; U; Linux i386; en-US; rv:1.7.5) Gecko\/20041109 Firefox\/1.0": {
 		"platform": "Linux",
@@ -573,6 +583,16 @@
 		"platform": "Android",
 		"browser": "Chrome",
 		"version": "18.0.1025.308"
+	},
+	"Mozilla\/5.0 (Linux; Android 10; ONEPLUS A6003) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Mobile Safari\/537.36 EdgA\/97.0.1072.69": {
+		"platform": "Android",
+		"browser": "Edge",
+		"version": "97.0.1072.69"
+	},
+	"Mozilla\/5.0 (Linux; Android 10; Pixel 3 XL) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Mobile Safari\/537.36 EdgA\/97.0.1072.69": {
+		"platform": "Android",
+		"browser": "Edge",
+		"version": "97.0.1072.69"
 	},
 	"Mozilla\/5.0 (Android 9; Mobile; rv:65.0) Gecko\/65.0 Firefox\/65.0": {
 		"platform": "Android",
