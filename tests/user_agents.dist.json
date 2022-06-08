@@ -624,6 +624,11 @@
 		"browser": "Chrome",
 		"version": "18.0.1025.308"
 	},
+	"Mozilla\/5.0 (Linux; Android 11; motorola edge 20 lite) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/102.0.5005.78 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Chrome",
+		"version": "102.0.5005.78"
+	},
 	"Mozilla\/5.0 (Windows Mobile 10; Android 10.0; Microsoft; Lumia 950XL) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Mobile Safari\/537.36 Edge\/40.15254.603": {
 		"platform": "Android",
 		"browser": "Edge",
