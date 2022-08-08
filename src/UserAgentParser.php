@@ -54,7 +54,8 @@ namespace donatj\UserAgent {
 		$browser  = null;
 		$version  = null;
 
-		$return = [ PLATFORM => &$platform, BROWSER => &$browser, BROWSER_VERSION => &$version ];
+		$return = [ PLATFORM => &
+				   , BROWSER => &$browser, BROWSER_VERSION => &$version ];
 
 		if( !$u_agent ) {
 			return $return;
@@ -190,7 +191,7 @@ REGEX
 		} elseif( $browser == 'AppleWebKit' ) {
 			if( $platform == 'Android' ) {
 				$browser = 'Android Browser';
-			} elseif( strpos($platform, 'BB') === 0 ) {
+			} elseif( $platform !== null && strpos($platform, 'BB') === 0 ) {
 				$browser  = 'BlackBerry Browser';
 				$platform = 'BlackBerry';
 			} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
