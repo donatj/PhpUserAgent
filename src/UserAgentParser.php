@@ -62,7 +62,8 @@ namespace donatj\UserAgent {
 
 		if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
 			preg_match_all(<<<'REGEX'
-/(?P<platform>BB\d+;|Android|Adr|Symbian|Sailfish|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
+/(?P<platform>BB\d+;|Android|Adr|Symbian|Sailfish|CrOS|Tizen|iPhone|iPad|iPod|Linux|(?:Open|Net|Free)BSD|Macintosh|
+Windows(?:\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(?:New\ )?Nintendo\ (?:WiiU?|3?DS|Switch)|Xbox(?:\ One)?)
 (?:\ [^;]*)?
 (?:;|$)/imx
 REGEX
@@ -88,6 +89,10 @@ REGEX
 			$platform = 'Chrome OS';
 		} elseif( $platform == 'Adr' ) {
 			$platform = 'Android';
+		} elseif( $platform === null ) {
+			if(preg_match_all('%(?P<platform>Android)[:/ ]%ix', $u_agent, $result)) {
+				$platform = $result[PLATFORM][0];
+			}
 		}
 
 		preg_match_all(<<<'REGEX'
@@ -96,14 +101,14 @@ TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midor
 OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|
 Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 Valve\ Steam\ Tenfoot|
-NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+NintendoBrowser|PLAYSTATION\ (?:\d|Vita)+)
 \)?;?
 (?:[:/ ](?P<version>[0-9A-Z.]+)|/[A-Z]*)%ix
 REGEX
 			, $u_agent, $result);
 
 		// If nothing matched, return null (to avoid undefined index errors)
-		if( !isset($result[BROWSER][0]) || !isset($result[BROWSER_VERSION][0]) ) {
+		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
 			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
 				return [ PLATFORM => $platform ?: null, BROWSER => $result[BROWSER], BROWSER_VERSION => empty($result[BROWSER_VERSION]) ? null : $result[BROWSER_VERSION] ];
 			}
@@ -190,7 +195,7 @@ REGEX
 		} elseif( $browser == 'AppleWebKit' ) {
 			if( $platform == 'Android' ) {
 				$browser = 'Android Browser';
-			} elseif( strpos($platform, 'BB') === 0 ) {
+			} elseif( strpos((string)$platform, 'BB') === 0 ) {
 				$browser  = 'BlackBerry Browser';
 				$platform = 'BlackBerry';
 			} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
