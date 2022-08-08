@@ -54,8 +54,7 @@ namespace donatj\UserAgent {
 		$browser  = null;
 		$version  = null;
 
-		$return = [ PLATFORM => &
-				   , BROWSER => &$browser, BROWSER_VERSION => &$version ];
+		$return = [ PLATFORM => &$platform, BROWSER => &$browser, BROWSER_VERSION => &$version ];
 
 		if( !$u_agent ) {
 			return $return;
