@@ -62,7 +62,8 @@ namespace donatj\UserAgent {
 
 		if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
 			preg_match_all(<<<'REGEX'
-/(?P<platform>BB\d+;|Android|Adr|Symbian|Sailfish|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
+/(?P<platform>BB\d+;|Android|Adr|Symbian|Sailfish|CrOS|Tizen|iPhone|iPad|iPod|Linux|(Open|Net|Free)BSD|Macintosh|
+Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(New\ )?Nintendo\ (WiiU?|3?DS|Switch)|Xbox(\ One)?)
 (?:\ [^;]*)?
 (?:;|$)/imx
 REGEX
@@ -104,7 +105,7 @@ TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midor
 OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|
 Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 Valve\ Steam\ Tenfoot|
-NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
+NintendoBrowser|PLAYSTATION\ (?:\d|Vita)+)
 \)?;?
 (?:[:/ ](?P<version>[0-9A-Z.]+)|/[A-Z]*)%ix
 REGEX
