@@ -1370,8 +1370,8 @@
 		"version": "3.0"
 	},
 	"Lenovo-A880/S100 Linux/3.4.5 Android/4.2 Release/08.07.2013 Browser/AppleWebKit 534.30 Profile/ Configuration;": {
-		"platform": null,
-		"browser": "AppleWebKit",
+		"platform": "Android",
+		"browser": "Android Browser",
 		"version": "534.30"
 	}
 }

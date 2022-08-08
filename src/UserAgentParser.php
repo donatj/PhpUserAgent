@@ -88,6 +88,14 @@ REGEX
 			$platform = 'Chrome OS';
 		} elseif( $platform == 'Adr' ) {
 			$platform = 'Android';
+		} elseif( $platform === null ) {
+			if(preg_match_all(<<<'REGEX'
+%(?P<platform>Android)
+(?:[:/ ](?P<version>[0-9A-Z.]+)|/[A-Z]*)%ix
+REGEX
+, $u_agent, $result)) {
+				$platform = $result[PLATFORM][0];
+			}
 		}
 
 		preg_match_all(<<<'REGEX'
