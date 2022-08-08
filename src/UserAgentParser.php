@@ -112,7 +112,7 @@ REGEX
 			, $u_agent, $result);
 
 		// If nothing matched, return null (to avoid undefined index errors)
-		if( !isset($result[BROWSER][0]) || !isset($result[BROWSER_VERSION][0]) ) {
+		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
 			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
 				return [ PLATFORM => $platform ?: null, BROWSER => $result[BROWSER], BROWSER_VERSION => empty($result[BROWSER_VERSION]) ? null : $result[BROWSER_VERSION] ];
 			}
