@@ -90,11 +90,7 @@ REGEX
 		} elseif( $platform == 'Adr' ) {
 			$platform = 'Android';
 		} elseif( $platform === null ) {
-			if(preg_match_all(<<<'REGEX'
-%(?P<platform>Android)
-(?:[:/ ](?P<version>[0-9A-Z.]+)|/[A-Z]*)%ix
-REGEX
-, $u_agent, $result)) {
+			if(preg_match_all('%(?P<platform>Android)[:/ ]%ix', $u_agent, $result)) {
 				$platform = $result[PLATFORM][0];
 			}
 		}
@@ -199,7 +195,7 @@ REGEX
 		} elseif( $browser == 'AppleWebKit' ) {
 			if( $platform == 'Android' ) {
 				$browser = 'Android Browser';
-			} elseif( $platform !== null && strpos($platform, 'BB') === 0 ) {
+			} elseif( strpos((string)$platform, 'BB') === 0 ) {
 				$browser  = 'BlackBerry Browser';
 				$platform = 'BlackBerry';
 			} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
