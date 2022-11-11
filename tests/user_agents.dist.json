@@ -84,6 +84,11 @@
 		"browser": "Chrome",
 		"version": "100.0.4896.88"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/107.0.0.0 Safari\/537.36": {
+		"platform": "Macintosh",
+		"browser": "Chrome",
+		"version": "107.0.0.0"
+	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit\/534.7 (KHTML, like Gecko) Chrome\/7.0.517.41 Safari\/534.7": {
 		"platform": "Windows",
 		"browser": "Chrome",
