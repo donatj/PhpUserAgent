@@ -87,11 +87,15 @@ $ua_info = parse_user_agent();
 The new object oriented wrapper form:
 
 ```php
+require_once 'vendor/autoload.php';
+use donatj\UserAgent\UserAgentParser;
+
+$agent = $_SERVER['HTTP_USER_AGENT'];
 $parser = new UserAgentParser();
 
-$ua = $parser->parse();
+$ua = $parser->parse($agent);
 // or
-$ua = $parser();
+$ua = $parser($agent);
 
 $ua->platform();
 $ua->browser();
