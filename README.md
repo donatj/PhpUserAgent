@@ -6,7 +6,7 @@
 [![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/version)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![Total Downloads](https://poser.pugx.org/donatj/phpuseragentparser/downloads)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![License](https://poser.pugx.org/donatj/phpuseragentparser/license)](https://packagist.org/packages/donatj/phpuseragentparser)
-[![CI](https://github.com/donatj/phpUserAgent/workflows/CI/badge.svg?)](https://github.com/donatj/phpUserAgent/actions?query=workflow%3ACI)
+[![ci.yml](https://github.com/donatj/phpUserAgent/actions/workflows/ci.yml/badge.svg?)](https://github.com/donatj/phpUserAgent/actions/workflows/ci.yml)
 
 
 ## What It Is
@@ -73,29 +73,39 @@ composer require 'donatj/phpuseragentparser'
 The classic procedural use is as simple as:
 
 ```php
-$ua_info = parse_user_agent();
-/*
-[
-	'platform' => '[Detected Platform]',
-	'browser'  => '[Detected Browser]',
-	'version'  => '[Detected Browser Version]',
-]
-*/
+<?php
+
+// v0 style global function - @deprecated
+$uaInfo = parse_user_agent();
+// or
+// modern namespaced function
+$uaInfo = donatj\UserAgent\parse_user_agent();
+
+echo $uaInfo[donatj\UserAgent\PLATFORM] . PHP_EOL;
+echo $uaInfo[donatj\UserAgent\BROWSER] . PHP_EOL;
+echo $uaInfo[donatj\UserAgent\BROWSER_VERSION] . PHP_EOL;
+
 ```
 
-
-The new object oriented wrapper form:
+The new object-oriented wrapper form:
 
 ```php
+<?php
+
+use donatj\UserAgent\UserAgentParser;
+
 $parser = new UserAgentParser();
 
+// object-oriented call
 $ua = $parser->parse();
 // or
+// command style invocation
 $ua = $parser();
 
-$ua->platform();
-$ua->browser();
-$ua->browserVersion();
+echo $ua->platform() . PHP_EOL;
+echo $ua->browser() . PHP_EOL;
+echo $ua->browserVersion() . PHP_EOL;
+
 ```
 
 ## Currently Detected Platforms

@@ -7,7 +7,7 @@
 			<badge-poser type="version"/>
 			<badge-poser type="downloads"/>
 			<badge-poser type="license"/>
-			<badge-github-action name="donatj/phpUserAgent" workflow="CI"/>
+			<badge-github-action name="donatj/phpUserAgent" workflow-file="ci.yml"/>
 			<section title="What It Is">
 				<text><![CDATA[
 A simple, streamlined PHP user-agent parser!
@@ -68,35 +68,11 @@ All that said, there is the start of a [branch to do it](https://github.com/dona
 				<composer-install/>
 			</section>
 			<section title="Usage">
-				<text><![CDATA[
-The classic procedural use is as simple as:
+				<text>The classic procedural use is as simple as:</text>
+				<source name="examples/procedural.php" lang="php" />
 
-```php
-$ua_info = parse_user_agent();
-/*
-[
-	'platform' => '[Detected Platform]',
-	'browser'  => '[Detected Browser]',
-	'version'  => '[Detected Browser Version]',
-]
-*/
-```
-]]></text>
-				<text><![CDATA[
-The new object oriented wrapper form:
-
-```php
-$parser = new UserAgentParser();
-
-$ua = $parser->parse();
-// or
-$ua = $parser();
-
-$ua->platform();
-$ua->browser();
-$ua->browserVersion();
-```
-]]></text>
+				<text>The new object-oriented wrapper form:</text>
+				<source name="examples/object-oriented.php" lang="php" />
 			</section>
 			<section title="Currently Detected Platforms">
 				<exec cmd="php .helpers/constants.php 'donatj\UserAgent\Platforms' 'Platform'"/>
