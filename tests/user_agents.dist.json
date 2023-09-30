@@ -689,6 +689,11 @@
 		"browser": "Edge",
 		"version": "97.0.1072.69"
 	},
+	"Mozilla\/5.0 (Android 5.0; Mobile; rv:41.0) Gecko\/41.0 Firefox\/41.0": {
+		"platform": "Android",
+		"browser": "Firefox",
+		"version": "41.0"
+	},
 	"Mozilla\/5.0 (Android 9; Mobile; rv:65.0) Gecko\/65.0 Firefox\/65.0": {
 		"platform": "Android",
 		"browser": "Firefox",
