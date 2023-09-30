@@ -12,7 +12,8 @@
 	"homepage": "https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT",
 	"license": "MIT",
 	"require": {
-		"php": ">=5.4.0"
+		"php": ">=5.4.0",
+		"ext-ctype": "*"
 	},
 	"require-dev": {
 		"camspiers/json-pretty": "~1.0",
