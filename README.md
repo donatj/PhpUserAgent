@@ -76,6 +76,9 @@ The classic procedural use is as simple as:
 ```php
 <?php
 
+// if you're using composer
+require __DIR__ . '/../vendor/autoload.php';
+
 // v0 style global function - @deprecated
 $uaInfo = parse_user_agent();
 // or
@@ -94,6 +97,9 @@ The new object-oriented wrapper form:
 <?php
 
 use donatj\UserAgent\UserAgentParser;
+
+// if you're using composer
+require __DIR__ . '/../vendor/autoload.php';
 
 $parser = new UserAgentParser();
 

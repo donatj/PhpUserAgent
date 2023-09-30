@@ -2,6 +2,9 @@
 
 use donatj\UserAgent\UserAgentParser;
 
+// if you're using composer
+require __DIR__ . '/../vendor/autoload.php';
+
 $parser = new UserAgentParser();
 
 // object-oriented call
