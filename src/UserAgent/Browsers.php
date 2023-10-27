@@ -42,6 +42,7 @@ interface Browsers {
 	const SAILFISHBROWSER     = 'SailfishBrowser';
 	const SAMSUNGBROWSER      = 'SamsungBrowser';
 	const SILK                = 'Silk';
+	const SLACKBOT            = 'Slackbot';
 	const TELEGRAMBOT         = 'TelegramBot';
 	const TIZENBROWSER        = 'TizenBrowser';
 	const TWITTERBOT          = 'Twitterbot';

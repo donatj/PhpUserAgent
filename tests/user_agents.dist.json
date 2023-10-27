@@ -1409,6 +1409,11 @@
 		"browser": "msnbot-media",
 		"version": "1.1"
 	},
+	"Slackbot 1.0 (+https:\/\/api.slack.com\/robots)": {
+		"platform": null,
+		"browser": "Slackbot",
+		"version": "1.0"
+	},
 	"TelegramBot (like TwitterBot)": {
 		"platform": null,
 		"browser": "TelegramBot",
