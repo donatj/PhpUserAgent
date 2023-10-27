@@ -1164,6 +1164,11 @@
 		"browser": "NetFront",
 		"version": "2.50"
 	},
+	"Mozilla\/5.0 (PlayStation 5 3.03\/SmartTV) AppleWebKit\/605.1.15 (KHTML, like Gecko)": {
+		"platform": "PlayStation 5",
+		"browser": "NetFront",
+		"version": "3.03"
+	},
 	"(PlayStation; PlayStation 5\/3.10) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/14.0 Safari\/605.1.15": {
 		"platform": "PlayStation 5",
 		"browser": "NetFront",
