@@ -239,6 +239,11 @@
 		"browser": "Firefox",
 		"version": "88.0"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko\/20100101 Firefox\/118.0": {
+		"platform": "Macintosh",
+		"browser": "Firefox",
+		"version": "118.0"
+	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.1.5) Gecko\/20091102 Firefox\/3.5.5 (.NET CLR 3.5.21022)": {
 		"platform": "Windows",
 		"browser": "Firefox",
@@ -273,6 +278,11 @@
 		"platform": "Windows",
 		"browser": "Firefox",
 		"version": "88.0"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko\/20100101 Firefox\/118.0": {
+		"platform": "Windows",
+		"browser": "Firefox",
+		"version": "118.0"
 	},
 	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) HeadlessChrome\/64.0.3282.119 Safari\/537.36": {
 		"platform": "Linux",
@@ -674,6 +684,11 @@
 		"browser": "Chrome",
 		"version": "102.0.5005.78"
 	},
+	"Mozilla\/5.0 (Linux; Android 10; K) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/118.0.0.0 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Chrome",
+		"version": "118.0.0.0"
+	},
 	"Mozilla\/5.0 (Windows Mobile 10; Android 10.0; Microsoft; Lumia 950XL) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Mobile Safari\/537.36 Edge\/40.15254.603": {
 		"platform": "Android",
 		"browser": "Edge",
@@ -964,6 +979,11 @@
 		"browser": "Safari",
 		"version": "14.0.3"
 	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/16.6 Mobile\/15E148 Safari\/604.1": {
+		"platform": "iPhone",
+		"browser": "Safari",
+		"version": "16.6"
+	},
 	"Mozilla\/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit\/420.1 (KHTML, like Gecko) Version\/3.0 Mobile\/3A101a Safari\/419.3": {
 		"platform": "iPod",
 		"browser": "Safari",
@@ -990,6 +1010,11 @@
 		"version": "3.0"
 	},
 	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/538.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
+		"platform": "Kindle",
+		"browser": "Kindle",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (X11; U; Linux armv7l like Android; en-us) AppleWebKit\/531.2+ (KHTML, like Gecko) Version\/5.0 Safari\/533.2+ Kindle\/3.0+": {
 		"platform": "Kindle",
 		"browser": "Kindle",
 		"version": "3.0"
