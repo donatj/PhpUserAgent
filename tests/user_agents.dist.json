@@ -164,6 +164,11 @@
 		"browser": "Edge",
 		"version": "99.0.1150.36"
 	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/118.0.0.0 Safari\/537.36 Edg\/118.0.2088.61": {
+		"platform": "Windows",
+		"browser": "Edge",
+		"version": "118.0.2088.61"
+	},
 	"Mozilla\/5.0 (X11; U; Linux i386; en-US; rv:1.7.5) Gecko\/20041109 Firefox\/1.0": {
 		"platform": "Linux",
 		"browser": "Firefox",
