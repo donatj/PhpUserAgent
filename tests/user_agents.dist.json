@@ -84,6 +84,11 @@
 		"browser": "Chrome",
 		"version": "100.0.4896.88"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/107.0.0.0 Safari\/537.36": {
+		"platform": "Macintosh",
+		"browser": "Chrome",
+		"version": "107.0.0.0"
+	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit\/534.7 (KHTML, like Gecko) Chrome\/7.0.517.41 Safari\/534.7": {
 		"platform": "Windows",
 		"browser": "Chrome",
@@ -119,6 +124,11 @@
 		"browser": "Edge",
 		"version": "99.0.1150.36"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/107.0.0.0 Safari\/537.36 Edg\/107.0.1418.42": {
+		"platform": "Macintosh",
+		"browser": "Edge",
+		"version": "107.0.1418.42"
+	},
 	"Mozilla\/5.0 (Windows NT 6.4; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/36.0.1985.143 Safari\/537.36 Edge\/12.0": {
 		"platform": "Windows",
 		"browser": "Edge",
@@ -153,6 +163,11 @@
 		"platform": "Windows",
 		"browser": "Edge",
 		"version": "99.0.1150.36"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/118.0.0.0 Safari\/537.36 Edg\/118.0.2088.61": {
+		"platform": "Windows",
+		"browser": "Edge",
+		"version": "118.0.2088.61"
 	},
 	"Mozilla\/5.0 (X11; U; Linux i386; en-US; rv:1.7.5) Gecko\/20041109 Firefox\/1.0": {
 		"platform": "Linux",
@@ -229,6 +244,11 @@
 		"browser": "Firefox",
 		"version": "88.0"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko\/20100101 Firefox\/118.0": {
+		"platform": "Macintosh",
+		"browser": "Firefox",
+		"version": "118.0"
+	},
 	"Mozilla\/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.1.5) Gecko\/20091102 Firefox\/3.5.5 (.NET CLR 3.5.21022)": {
 		"platform": "Windows",
 		"browser": "Firefox",
@@ -263,6 +283,11 @@
 		"platform": "Windows",
 		"browser": "Firefox",
 		"version": "88.0"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko\/20100101 Firefox\/118.0": {
+		"platform": "Windows",
+		"browser": "Firefox",
+		"version": "118.0"
 	},
 	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) HeadlessChrome\/64.0.3282.119 Safari\/537.36": {
 		"platform": "Linux",
@@ -454,6 +479,16 @@
 		"browser": "Opera",
 		"version": "85.0.4341.18"
 	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 OPR\/102.0.0.0": {
+		"platform": "Windows",
+		"browser": "Opera",
+		"version": "102.0.0.0"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36 OPR\/102.0.0.0 (Edition Yx GX)": {
+		"platform": "Windows",
+		"browser": "Opera",
+		"version": "102.0.0.0"
+	},
 	"Mozilla\/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; en) AppleWebKit\/531.22.7 (KHTML, like Gecko) Version\/4.0.5 Safari\/531.22.7": {
 		"platform": "Macintosh",
 		"browser": "Safari",
@@ -539,6 +574,11 @@
 		"browser": "Wget",
 		"version": "1.12"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit\/536.5 (KHTML, like Gecko) YaBrowser\/1.0.1084.5402 Chrome\/19.0.1084.5402 Safari\/536.5": {
+		"platform": "Macintosh",
+		"browser": "Yandex",
+		"version": "1.0.1084.5402"
+	},
 	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/68.0.3440.106 YaBrowser\/18.9.0.3363 Yowser\/2.5 Safari\/537.36": {
 		"platform": "Macintosh",
 		"browser": "Yandex",
@@ -614,6 +654,21 @@
 		"browser": "Android Browser",
 		"version": "4.0"
 	},
+	"Mozilla\/5.0 (Linux; U; Android 3.2.1; ru-ru; HTC Flyer P510e Build\/HTK75C) AppleWebKit\/534.13 (KHTML, like Gecko) Version\/4.0 Safari\/534.13": {
+		"platform": "Android",
+		"browser": "Android Browser",
+		"version": "4.0"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build\/ICL53F) AppleWebKit\/534.30 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/534.30": {
+		"platform": "Android",
+		"browser": "Android Browser",
+		"version": "4.0"
+	},
+	"Mozilla\/5.0 (Linux; U; Android 4.0.4; ru-by; HUAWEI U9508 Build\/HuaweiU9508) AppleWebKit\/534.30 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/534.30 ACHEETAHI\/2100050044": {
+		"platform": "Android",
+		"browser": "Android Browser",
+		"version": "4.0"
+	},
 	"Mozilla\/5.0 (Linux; U; Android Itfunz2.1_Eclipse_Terminator_II_Final; zh-cn; Milestone Build\/SHOLS_U2_02.36.0) AppleWebKit\/530.17 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/530.17": {
 		"platform": "Android",
 		"browser": "Android Browser",
@@ -629,10 +684,25 @@
 		"browser": "Chrome",
 		"version": "18.0.1025.308"
 	},
+	"Mozilla\/5.0 (Linux; Android 4.4.4; en-us; SAMSUNG GT-I9300I Build\/KTU84P) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/1.5 Chrome\/28.0.1500.94 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Chrome",
+		"version": "28.0.1500.94"
+	},
+	"Mozilla\/5.0 (Linux; Android 4.4.4; HUAWEI H891L Build\/HuaweiH891L) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/33.0.0.0 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Chrome",
+		"version": "33.0.0.0"
+	},
 	"Mozilla\/5.0 (Linux; Android 11; motorola edge 20 lite) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/102.0.5005.78 Mobile Safari\/537.36": {
 		"platform": "Android",
 		"browser": "Chrome",
 		"version": "102.0.5005.78"
+	},
+	"Mozilla\/5.0 (Linux; Android 10; K) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/118.0.0.0 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Chrome",
+		"version": "118.0.0.0"
 	},
 	"Mozilla\/5.0 (Windows Mobile 10; Android 10.0; Microsoft; Lumia 950XL) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 Mobile Safari\/537.36 Edge\/40.15254.603": {
 		"platform": "Android",
@@ -648,6 +718,11 @@
 		"platform": "Android",
 		"browser": "Edge",
 		"version": "97.0.1072.69"
+	},
+	"Mozilla\/5.0 (Android 5.0; Mobile; rv:41.0) Gecko\/41.0 Firefox\/41.0": {
+		"platform": "Android",
+		"browser": "Firefox",
+		"version": "41.0"
 	},
 	"Mozilla\/5.0 (Android 9; Mobile; rv:65.0) Gecko\/65.0 Firefox\/65.0": {
 		"platform": "Android",
@@ -763,6 +838,11 @@
 		"platform": "Android",
 		"browser": "Yandex",
 		"version": "21.3.4.59"
+	},
+	"Mozilla\/5.0 (Linux; arm_64; Android 11; M2101K7AG) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/102.0.5005.125 YaApp_Android\/22.70 YaSearchBrowser\/22.70 BroPP\/1.0 SA\/3 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Yandex",
+		"version": "22.70"
 	},
 	"Mozilla\/5.0 (BlackBerry; U; BlackBerry 9780; en) AppleWebKit\/534.8+ (KHTML, like Gecko) Version\/6.0.0.723 Mobile Safari\/534.8+": {
 		"platform": "BlackBerry",
@@ -914,6 +994,11 @@
 		"browser": "Safari",
 		"version": "14.0.3"
 	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/16.6 Mobile\/15E148 Safari\/604.1": {
+		"platform": "iPhone",
+		"browser": "Safari",
+		"version": "16.6"
+	},
 	"Mozilla\/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit\/420.1 (KHTML, like Gecko) Version\/3.0 Mobile\/3A101a Safari\/419.3": {
 		"platform": "iPod",
 		"browser": "Safari",
@@ -940,6 +1025,11 @@
 		"version": "3.0"
 	},
 	"Mozilla\/5.0 (Linux; U; en-US) AppleWebKit\/528.5+ (KHTML, like Gecko, Safari\/538.5+) Version\/4.0 Kindle\/3.0 (screen 600x800; rotate)": {
+		"platform": "Kindle",
+		"browser": "Kindle",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (X11; U; Linux armv7l like Android; en-us) AppleWebKit\/531.2+ (KHTML, like Gecko) Version\/5.0 Safari\/533.2+ Kindle\/3.0+": {
 		"platform": "Kindle",
 		"browser": "Kindle",
 		"version": "3.0"
@@ -1113,6 +1203,11 @@
 		"platform": "PlayStation 5",
 		"browser": "NetFront",
 		"version": "2.50"
+	},
+	"Mozilla\/5.0 (PlayStation 5 3.03\/SmartTV) AppleWebKit\/605.1.15 (KHTML, like Gecko)": {
+		"platform": "PlayStation 5",
+		"browser": "NetFront",
+		"version": "3.03"
 	},
 	"(PlayStation; PlayStation 5\/3.10) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/14.0 Safari\/605.1.15": {
 		"platform": "PlayStation 5",
@@ -1353,6 +1448,11 @@
 		"platform": null,
 		"browser": "msnbot-media",
 		"version": "1.1"
+	},
+	"Slackbot 1.0 (+https:\/\/api.slack.com\/robots)": {
+		"platform": null,
+		"browser": "Slackbot",
+		"version": "1.0"
 	},
 	"TelegramBot (like TwitterBot)": {
 		"platform": null,
