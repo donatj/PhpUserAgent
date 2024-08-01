@@ -56,7 +56,7 @@ All that said, there is the start of a [branch to do it](https://github.com/dona
 
 ## Requirements
 
-- **php**: >=5.4.0
+- **php**: >=7.2.0
 - **ext-ctype**: *
 
 ## Installing
