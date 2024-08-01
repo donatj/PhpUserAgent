@@ -16,3 +16,7 @@ generate:
 init:
 	php bin/init_user_agent.php > tests/user_agents.tmp.json && mv tests/user_agents.tmp.json tests/user_agents.dist.json
 	make generate
+
+.PHONY: phpstan
+phpstan:
+	php vendor/bin/phpstan analyse --memory-limit 2g
