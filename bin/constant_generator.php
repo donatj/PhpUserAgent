@@ -3,11 +3,18 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 $jsonfile = __DIR__ . '/../tests/user_agents.dist.json';
+$content = file_get_contents($jsonfile);
+if( $content === false ) {
+	echo "Failed to read file: $jsonfile\n";
+	die(1);
+}
 
 $uas = json_decode(
-	file_get_contents($jsonfile),
+	$content,
 	true
 );
+
+assert(is_array($uas));
 
 $platforms = [];
 $browsers  = [];
