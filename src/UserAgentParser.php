@@ -17,7 +17,7 @@ namespace {
 	 * This method is defined for backwards comparability with the old global method.
 	 *
 	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
-	 * @return string[] an array with 'browser', 'version' and 'platform' keys
+	 * @return array{platform:string|null,browser:string|null,version:string|null} array with 'browser', 'version' and 'platform' keys
 	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
 	 *
 	 * @deprecated This exists for backwards compatibility with 0.x and will likely be removed in 2.x
@@ -38,7 +38,7 @@ namespace donatj\UserAgent {
 	 * Parses a user agent string into its important parts
 	 *
 	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
-	 * @return string[] an array with 'browser', 'version' and 'platform' keys
+	 * @return array{platform:string|null,browser:string|null,version:string|null} an array with 'browser', 'version' and 'platform' keys
 	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
 	 */
 	function parse_user_agent( $u_agent = null ) {
