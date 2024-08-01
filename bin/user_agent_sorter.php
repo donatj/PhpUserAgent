@@ -10,7 +10,6 @@ if( $uas === null ) {
 	die(1);
 }
 
-$uas = json_decode($content, true);
 assert(is_array($uas));
 
 foreach( $uas as $key => &$val ) {
