@@ -62,7 +62,7 @@ foreach( $browsers as $browser ) {
 $browserBody = "{$header}namespace donatj\UserAgent;\n\ninterface Browsers {\n\n";
 $maxKey      = max(array_map('strlen', array_keys($browsers)));
 foreach( $browsers as $const => $val ) {
-	$browserBody .= sprintf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
+	$browserBody .= sprintf("\tpublic const %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
 }
 $browserBody .= "\n}\n\n";
 
@@ -76,7 +76,7 @@ foreach( $platforms as $platform ) {
 $platformBody = "{$header}namespace donatj\UserAgent;\n\ninterface Platforms {\n\n";
 $maxKey       = max(array_map('strlen', array_keys($platforms)));
 foreach( $platforms as $const => $val ) {
-	$platformBody .= sprintf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
+	$platformBody .= sprintf("\tpublic const %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
 }
 $platformBody .= "\n}\n\n";
 
