@@ -7,3 +7,4 @@ phpunit.xml
 tests/user_agents.json
 
 *.cache
+/.phpstan-cache

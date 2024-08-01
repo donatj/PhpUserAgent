@@ -1,0 +1,9 @@
+parameters:
+	level: 9
+	tmpDir: .phpstan-cache
+	paths:
+		- src
+		- bin
+		- examples
+		- .helpers
+	phpVersion: 70100
