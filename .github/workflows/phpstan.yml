@@ -1,0 +1,35 @@
+on:
+  pull_request:
+  push:
+      branches:
+        - master
+
+name: phpstan
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.1'
+
+      - name: Install dependencies with composer
+        run: composer install
+
+      - name: Cache phpstan cache
+        uses: actions/cache@v4
+        with:
+          path: .phpstan-cache
+          key: phpstan-cache-${{ github.run_id }} # see https://github.com/phpstan/phpstan/discussions/9301
+          restore-keys: |
+            phpstan-cache-
+
+      - name: PHPStan
+        run: make phpstan
