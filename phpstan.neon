@@ -6,4 +6,4 @@ parameters:
 		- bin
 		- examples
 		- .helpers
-	phpVersion: 70100
+	phpVersion: 70200
