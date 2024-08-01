@@ -19,7 +19,8 @@
 		"camspiers/json-pretty": "~1.0",
 		"phpunit/phpunit": "~4.8|~9",
 		"donatj/drop": "*",
-		"ext-json": "*"
+		"ext-json": "*",
+		"phpstan/phpstan": "^1.11"
 	},
 	"authors": [
 		{
