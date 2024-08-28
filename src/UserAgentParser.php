@@ -99,11 +99,12 @@ REGEX
 %(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
 TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|(?-i:Edge)|EdgA?|CriOS|UCBrowser|Puffin|
 OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|YaApp_Android|
-Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
+Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|ChatGPT-User|
 Valve\ Steam\ Tenfoot|
 NintendoBrowser|PLAYSTATION\ (?:\d|Vita)+)
 \)?;?
-(?:[:/ ](?P<version>[0-9A-Z.]+)|/[A-Z]*)%ix
+(?:[:/ ](?P<version>[0-9A-Z.]+)|/[A-Z]*)
+%ix
 REGEX
 			, $u_agent, $result);
 
@@ -168,7 +169,7 @@ REGEX
 		} elseif( $find('NintendoBrowser', $key) || $platform == 'Nintendo 3DS' ) {
 			$browser = 'NintendoBrowser';
 			$version = $result[BROWSER_VERSION][$key];
-		} elseif( $find('Kindle', $key, $platform) ) {
+		} elseif( $find(['Kindle'], $key, $platform) ) {
 			$browser = $result[BROWSER][$key];
 			$version = $result[BROWSER_VERSION][$key];
 		} elseif( $find('Opera', $key, $browser) ) {
@@ -187,7 +188,7 @@ REGEX
 					}
 				}
 			}
-		} elseif( $find([ 'Applebot', 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome', 'SailfishBrowser' ], $key, $browser) ) {
+		} elseif( $find([ 'Applebot', 'IEMobile', 'Edge', 'Midori', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome', 'SailfishBrowser', 'ChatGPT-User' ], $key, $browser) ) {
 			$version = $result[BROWSER_VERSION][$key];
 		} elseif( $rv_result && $find('Trident') ) {
 			$browser = 'MSIE';

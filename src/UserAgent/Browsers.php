@@ -15,6 +15,7 @@ interface Browsers {
 	const BROWSER             = 'Browser';
 	const BUNJALLOO           = 'Bunjalloo';
 	const CAMINO              = 'Camino';
+	const CHATGPT_USER        = 'ChatGPT-User';
 	const CHROME              = 'Chrome';
 	const CURL                = 'curl';
 	const EDGE                = 'Edge';
