@@ -31,6 +31,7 @@ interface Browsers {
 	const IMESSAGEBOT         = 'iMessageBot';
 	const KINDLE              = 'Kindle';
 	const LYNX                = 'Lynx';
+	const MASTODON            = 'Mastodon';
 	const MIDORI              = 'Midori';
 	const MIUIBROWSER         = 'MiuiBrowser';
 	const MSIE                = 'MSIE';
