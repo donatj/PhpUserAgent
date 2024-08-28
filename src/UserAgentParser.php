@@ -201,12 +201,13 @@ REGEX
 				$platform = 'BlackBerry';
 			} elseif( $platform == 'BlackBerry' || $platform == 'PlayBook' ) {
 				$browser = 'BlackBerry Browser';
-			} else {
-				$find('Safari', $key, $browser) || $find('TizenBrowser', $key, $browser);
+			} elseif( $find('Safari', $key, $browser) || $find('TizenBrowser', $key, $browser) ) {
+				$version = $result[BROWSER_VERSION][$key];
 			}
 
-			$find('Version', $key);
-			$version = $result[BROWSER_VERSION][$key];
+			if( $find('Version', $key) ) {
+				$version = $result[BROWSER_VERSION][$key];
+			}
 		} elseif( $pKey = preg_grep('/playstation \d/i', $result[BROWSER]) ) {
 			$pKey = reset($pKey);
 
