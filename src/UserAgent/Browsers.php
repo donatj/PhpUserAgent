@@ -25,6 +25,7 @@ interface Browsers {
 	const GOOGLEBOT           = 'Googlebot';
 	const GOOGLEBOT_IMAGE     = 'Googlebot-Image';
 	const GOOGLEBOT_VIDEO     = 'Googlebot-Video';
+	const GPTBOT              = 'GPTBot';
 	const HEADLESSCHROME      = 'HeadlessChrome';
 	const IEMOBILE            = 'IEMobile';
 	const IMESSAGEBOT         = 'iMessageBot';
@@ -36,6 +37,7 @@ interface Browsers {
 	const MSNBOT_MEDIA        = 'msnbot-media';
 	const NETFRONT            = 'NetFront';
 	const NINTENDOBROWSER     = 'NintendoBrowser';
+	const OAI_SEARCHBOT       = 'OAI-SearchBot';
 	const OCULUSBROWSER       = 'OculusBrowser';
 	const OPERA               = 'Opera';
 	const PUFFIN              = 'Puffin';
