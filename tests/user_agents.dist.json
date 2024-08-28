@@ -1399,6 +1399,11 @@
 		"browser": "bingbot",
 		"version": "2.0"
 	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko); compatible; ChatGPT-User\/1.0; +https:\/\/openai.com\/bot": {
+		"platform": null,
+		"browser": "ChatGPT-User",
+		"version": "1.0"
+	},
 	"curl\/7.19.7 (universal-apple-darwin10.0) libcurl\/7.19.7 OpenSSL\/0.9.8r zlib\/1.2.3": {
 		"platform": null,
 		"browser": "curl",
@@ -1439,6 +1444,11 @@
 		"browser": "Googlebot-Video",
 		"version": "1.0"
 	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko); compatible; GPTBot\/1.1; +https:\/\/openai.com\/gptbot": {
+		"platform": null,
+		"browser": "GPTBot",
+		"version": "1.1"
+	},
 	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
 		"platform": null,
 		"browser": "Lynx",
@@ -1448,6 +1458,11 @@
 		"platform": null,
 		"browser": "msnbot-media",
 		"version": "1.1"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot\/1.0; +https:\/\/openai.com\/searchbot": {
+		"platform": null,
+		"browser": "OAI-SearchBot",
+		"version": "1.0"
 	},
 	"Slackbot 1.0 (+https:\/\/api.slack.com\/robots)": {
 		"platform": null,
