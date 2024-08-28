@@ -6,7 +6,7 @@
 [![Latest Stable Version](https://poser.pugx.org/donatj/phpuseragentparser/version)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![Total Downloads](https://poser.pugx.org/donatj/phpuseragentparser/downloads)](https://packagist.org/packages/donatj/phpuseragentparser)
 [![License](https://poser.pugx.org/donatj/phpuseragentparser/license)](https://packagist.org/packages/donatj/phpuseragentparser)
-[![ci.yml](https://github.com/donatj/phpUserAgent/actions/workflows/ci.yml/badge.svg?)](https://github.com/donatj/phpUserAgent/actions/workflows/ci.yml)
+[![ci.yml](https://github.com/donatj/phpUserAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/donatj/phpUserAgent/actions/workflows/ci.yml)
 
 
 ## What It Is
@@ -168,6 +168,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::BROWSER` |  Browser |  
 | `Browsers::BUNJALLOO` |  Bunjalloo |  
 | `Browsers::CAMINO` |  Camino |  
+| `Browsers::CHATGPT_USER` |  ChatGPT-User |  
 | `Browsers::CHROME` |  Chrome |  
 | `Browsers::CURL` |  curl |  
 | `Browsers::EDGE` |  Edge |  
@@ -177,17 +178,20 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::GOOGLEBOT` |  Googlebot |  
 | `Browsers::GOOGLEBOT_IMAGE` |  Googlebot-Image |  
 | `Browsers::GOOGLEBOT_VIDEO` |  Googlebot-Video |  
+| `Browsers::GPTBOT` |  GPTBot |  
 | `Browsers::HEADLESSCHROME` |  HeadlessChrome |  
 | `Browsers::IEMOBILE` |  IEMobile |  
 | `Browsers::IMESSAGEBOT` |  iMessageBot |  
 | `Browsers::KINDLE` |  Kindle |  
 | `Browsers::LYNX` |  Lynx |  
+| `Browsers::MASTODON` |  Mastodon |  
 | `Browsers::MIDORI` |  Midori |  
 | `Browsers::MIUIBROWSER` |  MiuiBrowser |  
 | `Browsers::MSIE` |  MSIE |  
 | `Browsers::MSNBOT_MEDIA` |  msnbot-media |  
 | `Browsers::NETFRONT` |  NetFront |  
 | `Browsers::NINTENDOBROWSER` |  NintendoBrowser |  
+| `Browsers::OAI_SEARCHBOT` |  OAI-SearchBot |  
 | `Browsers::OCULUSBROWSER` |  OculusBrowser |  
 | `Browsers::OPERA` |  Opera |  
 | `Browsers::PUFFIN` |  Puffin |  
@@ -195,6 +199,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::SAILFISHBROWSER` |  SailfishBrowser |  
 | `Browsers::SAMSUNGBROWSER` |  SamsungBrowser |  
 | `Browsers::SILK` |  Silk |  
+| `Browsers::SLACKBOT` |  Slackbot |  
 | `Browsers::TELEGRAMBOT` |  TelegramBot |  
 | `Browsers::TIZENBROWSER` |  TizenBrowser |  
 | `Browsers::TWITTERBOT` |  Twitterbot |  
