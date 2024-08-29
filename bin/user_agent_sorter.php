@@ -4,7 +4,14 @@ require(__DIR__ . '/../vendor/autoload.php');
 
 $jsonfile = __DIR__ . '/../Tests/user_agents.dist.json';
 
-$uas = json_decode(file_get_contents($jsonfile), true);
+$content = file_get_contents($jsonfile);
+if( $content === false ) {
+	echo "Failed to read file: $jsonfile\n";
+	exit(1);
+}
+
+$uas = json_decode($content, true);
+assert(is_array($uas));
 
 foreach( $uas as $key => &$val ) {
 	$val['key'] = $key;
@@ -73,6 +80,11 @@ $json = $jsonPretty->prettify($uas) . "\n";
 echo $json;
 
 
+/**
+ * @param string $a
+ * @param string $b
+ * @return 0|1|-1
+ */
 function compare_version( $a, $b ) {
 	$cmp_a = explode('.', $a);
 	$cmp_b = explode('.', $b);
@@ -91,7 +103,7 @@ function compare_version( $a, $b ) {
 		}
 
 		if( $cmp = strcmp($aa, $bb) ) {
-			$value = $cmp / abs($cmp);
+			$value = intval($cmp / abs($cmp));
 			break;
 		}
 	}
