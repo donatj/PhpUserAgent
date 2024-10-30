@@ -207,6 +207,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::VALVE_STEAM_TENFOOT` |  Valve Steam Tenfoot |  
 | `Browsers::VIVALDI` |  Vivaldi |  
 | `Browsers::WGET` |  Wget |  
+| `Browsers::WHALE` |  Whale |  
 | `Browsers::WORDPRESS` |  WordPress |  
 | `Browsers::YANDEX` |  Yandex |  
 | `Browsers::YANDEXBOT` |  YandexBot |
