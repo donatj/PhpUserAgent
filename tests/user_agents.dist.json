@@ -574,6 +574,26 @@
 		"browser": "Wget",
 		"version": "1.12"
 	},
+	"Mozilla\/5.0 (X11; CrOS x86_64 2.22.17) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/108.0.0.0 Whale\/3.18.186.3 Safari\/537.36": {
+		"platform": "Chrome OS",
+		"browser": "Whale",
+		"version": "3.18.186.3"
+	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/120.0.0.0 Whale\/3.24.223.21 Safari\/537.36": {
+		"platform": "Macintosh",
+		"browser": "Whale",
+		"version": "3.24.223.21"
+	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/128.0.0.0 Whale\/3.28.266.11 Safari\/537.36": {
+		"platform": "Macintosh",
+		"browser": "Whale",
+		"version": "3.28.266.11"
+	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/128.0.0.0 Whale\/3.28.266.14 Safari\/537.36": {
+		"platform": "Windows",
+		"browser": "Whale",
+		"version": "3.28.266.14"
+	},
 	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit\/536.5 (KHTML, like Gecko) YaBrowser\/1.0.1084.5402 Chrome\/19.0.1084.5402 Safari\/536.5": {
 		"platform": "Macintosh",
 		"browser": "Yandex",
@@ -839,6 +859,16 @@
 		"browser": "UC Browser",
 		"version": "13.0.8.1291"
 	},
+	"Mozilla\/5.0 (Linux; Android 13; SM-F926N) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/102.0.5005.187 Whale\/2.7.8.2 Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Whale",
+		"version": "2.7.8.2"
+	},
+	"Mozilla\/5.0 (Linux; Android 10; K) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/120.0.0.0 Whale\/3.5.4.2 Mobile Safari\/537.36": {
+		"platform": "Android",
+		"browser": "Whale",
+		"version": "3.5.4.2"
+	},
 	"Mozilla\/5.0 (Linux; arm_64; Android 12; SM-G965F) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/100.0.4896.127 YaBrowser\/21.3.4.59 Mobile Safari\/537.36": {
 		"platform": "Android",
 		"browser": "Yandex",
@@ -938,6 +968,11 @@
 		"platform": "iPad",
 		"browser": "UC Browser",
 		"version": "2.4.0.367"
+	},
+	"Mozilla\/5.0 (iPad; CPU OS 16_5_1 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/16.0 Whale\/2.8.8.3883 Mobile\/15E148 Safari\/604.1": {
+		"platform": "iPad",
+		"browser": "Whale",
+		"version": "2.8.8.3883"
 	},
 	"Mozilla\/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit\/600.1.4\n(KHTML, like Gecko) Version\/8.0 Mobile\/12B410 Safari\/600.1.4 (Applebot\/0.1;\n+http:\/\/www.apple.com\/go\/applebot)": {
 		"platform": "iPhone",

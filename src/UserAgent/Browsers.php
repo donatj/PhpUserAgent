@@ -54,6 +54,7 @@ interface Browsers {
 	const VALVE_STEAM_TENFOOT = 'Valve Steam Tenfoot';
 	const VIVALDI             = 'Vivaldi';
 	const WGET                = 'Wget';
+	const WHALE               = 'Whale';
 	const WORDPRESS           = 'WordPress';
 	const YANDEX              = 'Yandex';
 	const YANDEXBOT           = 'YandexBot';
