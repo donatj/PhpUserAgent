@@ -13,6 +13,7 @@ interface Platforms {
 	const ANDROID          = 'Android';
 	const BLACKBERRY       = 'BlackBerry';
 	const FREEBSD          = 'FreeBSD';
+	const FUCHSIA          = 'Fuchsia';
 	const IPAD             = 'iPad';
 	const IPHONE           = 'iPhone';
 	const IPOD             = 'iPod';

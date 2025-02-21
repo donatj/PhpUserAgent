@@ -899,6 +899,16 @@
 		"browser": "Firefox",
 		"version": "43.0"
 	},
+	"Mozilla\/5.0 (X11; Fuchsia) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/97.0.4692.116 Safari\/537.36 CrKey\/1.56.500000": {
+		"platform": "Fuchsia",
+		"browser": "Chrome",
+		"version": "97.0.4692.116"
+	},
+	"Mozilla\/5.0 (Fuchsia) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/104.0.5112.130 Safari\/537.36 CrKey\/1.56.500000": {
+		"platform": "Fuchsia",
+		"browser": "Chrome",
+		"version": "104.0.5112.130"
+	},
 	"Mozilla\/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit\/534.46 (KHTML, like Gecko) CriOS\/29.0.1547.11 Mobile\/9B206 Safari\/7534.48.3": {
 		"platform": "iPad",
 		"browser": "Chrome",

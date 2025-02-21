@@ -62,14 +62,14 @@ namespace donatj\UserAgent {
 
 		if( preg_match('/\((.*?)\)/m', $u_agent, $parent_matches) ) {
 			preg_match_all(<<<'REGEX'
-/(?P<platform>BB\d+;|Android|Adr|Symbian|Sailfish|CrOS|Tizen|iPhone|iPad|iPod|Linux|(?:Open|Net|Free)BSD|Macintosh|
+/(?P<platform>BB\d+;|Android|Adr|Symbian|Sailfish|CrOS|Fuchsia|Tizen|iPhone|iPad|iPod|Linux|(?:Open|Net|Free)BSD|Macintosh|
 Windows(?:\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|X11|(?:New\ )?Nintendo\ (?:WiiU?|3?DS|Switch)|Xbox(?:\ One)?)
 (?:\ [^;]*)?
 (?:;|$)/imx
 REGEX
 				, $parent_matches[1], $result);
 
-			$priority = [ 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'X11', 'Sailfish' ];
+			$priority = [ 'Xbox One', 'Xbox', 'Windows Phone', 'Tizen', 'Android', 'FreeBSD', 'NetBSD', 'OpenBSD', 'CrOS', 'Fuchsia', 'X11', 'Sailfish' ];
 
 			$result[PLATFORM] = array_unique($result[PLATFORM]);
 			if( count($result[PLATFORM]) > 1 ) {
