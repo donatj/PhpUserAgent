@@ -128,6 +128,7 @@ Predefined helper constants from `donatj\UserAgent\Platforms`
 | `Platforms::ANDROID` |  Android |  
 | `Platforms::BLACKBERRY` |  BlackBerry |  
 | `Platforms::FREEBSD` |  FreeBSD |  
+| `Platforms::FUCHSIA` |  Fuchsia |  
 | `Platforms::IPAD` |  iPad |  
 | `Platforms::IPHONE` |  iPhone |  
 | `Platforms::IPOD` |  iPod |  
