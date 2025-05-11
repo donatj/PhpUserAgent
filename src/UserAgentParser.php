@@ -96,7 +96,7 @@ REGEX
 		}
 
 		preg_match_all(<<<'REGEX'
-%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
+%(?P<prev>.)?(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
 TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|(?-i:Edge)|EdgA?|CriOS|UCBrowser|Puffin|
 OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|YaApp_Android|Whale|
 Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|ChatGPT-User|GPTBot|OAI-SearchBot|
@@ -109,11 +109,35 @@ REGEX
 			, $u_agent, $result);
 
 		// If nothing matched, return null (to avoid undefined index errors)
+		$quickReturn = false;
 		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
-			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
-				return [ PLATFORM => $platform ?: null, BROWSER => $result[BROWSER], BROWSER_VERSION => empty($result[BROWSER_VERSION]) ? null : $result[BROWSER_VERSION] ];
+			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $g_result) ) {
+				return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => empty($g_result[BROWSER_VERSION]) ? null : $g_result[BROWSER_VERSION] ];
 			}
 
+			$quickReturn = true;
+		}
+
+		if(
+			(
+				empty($result[BROWSER][0])
+				|| ($result['prev'][0] !== '')
+			) // if we caught a browser, and it's the first part of the string, skip
+			&& preg_match(<<<'REGEX'
+%[(;]\s*(?P<browser>[^(/;]+)
+(?:[:/ ]v?(?P<version>[0-9A-Z.]+)[^;)\s]*)?
+;?(?:\s*robot;)?\s*\+https?:%x
+REGEX
+				, $u_agent, $bot_result)
+		) {
+			return [
+				PLATFORM        => $platform,
+				BROWSER         => trim($bot_result['browser']),
+				BROWSER_VERSION => empty($bot_result['version']) ? null : $bot_result['version'],
+			];
+		}
+
+		if( $quickReturn ) {
 			return $return;
 		}
 

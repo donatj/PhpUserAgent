@@ -9,6 +9,11 @@
 		"browser": "Applebot",
 		"version": "0.1"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/17.4 Safari\/605.1.15 (Applebot\/0.1; +http:\/\/www.apple.com\/go\/applebot)": {
+		"platform": "Macintosh",
+		"browser": "Applebot",
+		"version": "0.1"
+	},
 	"Mozilla\/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.11) Gecko\/20071128 Camino\/1.5.4": {
 		"platform": "Macintosh",
 		"browser": "Camino",
@@ -113,6 +118,11 @@
 		"platform": "Windows",
 		"browser": "Chrome",
 		"version": "100.0.4664.110"
+	},
+	"Mozilla\/5.0 (Windows NT 6.3;compatible; DVbot\/1.0; +http:\/\/www.doubleverify.com)": {
+		"platform": "Windows",
+		"browser": "DVbot",
+		"version": "1.0"
 	},
 	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/79.0.3915.0 Safari\/537.36 Edg\/79.0.287.0": {
 		"platform": "Macintosh",
@@ -289,6 +299,11 @@
 		"browser": "Firefox",
 		"version": "118.0"
 	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.11; rv:49.0) Gecko\/20100101 Firefox\/49.0 (FlipboardProxy\/1.2; +http:\/\/flipboard.com\/browserproxy)": {
+		"platform": "Macintosh",
+		"browser": "FlipboardProxy",
+		"version": "1.2"
+	},
 	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) HeadlessChrome\/64.0.3282.119 Safari\/537.36": {
 		"platform": "Linux",
 		"browser": "HeadlessChrome",
@@ -308,6 +323,11 @@
 		"platform": "Macintosh",
 		"browser": "iMessageBot",
 		"version": null
+	},
+	"Mozilla\/5.0 (Windows NT 6.3;compatible; Leikibot\/1.0; +http:\/\/www.leiki.com)": {
+		"platform": "Windows",
+		"browser": "Leikibot",
+		"version": "1.0"
 	},
 	"Mozilla\/5.0 (X11; U; Linux i686; de-DE; rv:1.8.1.9) Gecko\/20071103 Midori\/0.0.10": {
 		"platform": "Linux",
@@ -413,6 +433,11 @@
 		"platform": "Windows",
 		"browser": "MSIE",
 		"version": "11.0"
+	},
+	"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/131.0.0.0 Safari\/537.36; compatible; OAI-SearchBot\/1.0; +https:\/\/openai.com\/searchbot": {
+		"platform": "Macintosh",
+		"browser": "OAI-SearchBot",
+		"version": "1.0"
 	},
 	"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) OculusBrowser\/5.5.10.137831012 SamsungBrowser\/4.0 Chrome\/66.0.3359.203 Safari\/537.36": {
 		"platform": "Linux",
@@ -664,6 +689,11 @@
 		"browser": "Yandex",
 		"version": "22.3.0"
 	},
+	"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko; compatible; Yeti\/1.1; +https:\/\/naver.me\/spd) Chrome\/127.0.0.0 Safari\/537.36": {
+		"platform": "Windows",
+		"browser": "Yeti",
+		"version": "1.1"
+	},
 	"Mozilla\/5.0 (Linux; U; Android 2.2; en-us; SGH-T959 Build\/FROYO) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
 		"platform": "Android",
 		"browser": "Android Browser",
@@ -698,6 +728,11 @@
 		"platform": "Android",
 		"browser": "Android Browser",
 		"version": "534.30"
+	},
+	"Mozilla\/5.0 (Linux;u;Android 4.2.2;zh-cn;) AppleWebKit\/534.46 (KHTML,like Gecko) Version\/5.1 Mobile Safari\/10600.6.3 (compatible; Baiduspider\/2.0; +http:\/\/www.baidu.com\/search\/spider.html)": {
+		"platform": "Android",
+		"browser": "Baiduspider",
+		"version": "2.0"
 	},
 	"Mozilla\/5.0 (Linux; Android 4.2.2; de-at; SAMSUNG GT-I9195\/I9195XXUAMF6 Build\/JDQ39) AppleWebKit\/535.19 (KHTML, like Gecko) Version\/1.0 Chrome\/18.0.1025.308 Mobile Safari\/535.19": {
 		"platform": "Android",
@@ -764,7 +799,57 @@
 		"browser": "Firefox",
 		"version": "84.0"
 	},
+	"Mozilla\/5.0 (Linux; Android 7.0; SM-G930V Build\/NRD90M) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/59.0.3071.125 Mobile Safari\/537.36 (compatible; Google-Read-Aloud; +https:\/\/support.google.com\/webmasters\/answer\/1061943)": {
+		"platform": "Android",
+		"browser": "Google-Read-Aloud",
+		"version": null
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/41.0.2272.96 Mobile Safari\/537.36 (compatible; Google-Safety; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Google-Safety",
+		"version": null
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/135.0.7049.114 Mobile Safari\/537.36 (compatible; Google-Safety; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Google-Safety",
+		"version": null
+	},
 	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/90.0.4430.97 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/99.0.4844.84 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/117.0.0.0 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.6998.165 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/135.0.7049.95 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/135.0.7049.114 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.7103.59 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
+		"platform": "Android",
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
+	"Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.7103.92 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html)": {
 		"platform": "Android",
 		"browser": "Googlebot",
 		"version": "2.1"
@@ -798,6 +883,11 @@
 		"platform": "Android",
 		"browser": "Opera",
 		"version": "63.3.3216.58675"
+	},
+	"Mozilla\/5.0 (Linux; Android 7.0;) AppleWebKit\/537.36 (KHTML, like Gecko) Mobile Safari\/537.36 (compatible; PetalBot;+https:\/\/webmaster.petalsearch.com\/site\/petalbot)": {
+		"platform": "Android",
+		"browser": "PetalBot",
+		"version": null
 	},
 	"Mozilla\/5.0 (X11; U; Linux x86_64; en-gb) AppleWebKit\/534.35 (KHTML, like Gecko) Chrome\/11.0.696.65 Safari\/534.35 Puffin\/2.9174AP": {
 		"platform": "Android",
@@ -994,6 +1084,16 @@
 		"browser": "Applebot",
 		"version": "0.1"
 	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/17.4.1 Mobile\/15E148 Safari\/604.1 (Applebot\/0.1; +http:\/\/www.apple.com\/go\/applebot)": {
+		"platform": "iPhone",
+		"browser": "Applebot",
+		"version": "0.1"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit\/601.1.46 (KHTML, like Gecko) Version\/9.0 Mobile\/13B143 Safari\/601.1 (compatible; Baiduspider-render\/2.0; +http:\/\/www.baidu.com\/search\/spider.html)": {
+		"platform": "iPhone",
+		"browser": "Baiduspider-render",
+		"version": "2.0"
+	},
 	"Mozilla\/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit\/534.46.0 (KHTML, like Gecko) CriOS\/19.0.1084.60 Mobile\/9B206 Safari\/7534.48.3": {
 		"platform": "iPhone",
 		"browser": "Chrome",
@@ -1048,6 +1148,16 @@
 		"platform": "iPhone",
 		"browser": "Safari",
 		"version": "16.6"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit\/536.26 (KHTML, like Gecko)                 Version\/6.0 Mobile\/10A5376e Safari\/8536.25 (compatible; SMTBot\/1.0; +http:\/\/www.similartech.com\/smtbot)": {
+		"platform": "iPhone",
+		"browser": "SMTBot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/15.4 Mobile\/15E148 Safari\/604.1 (compatible; YandexMobileBot\/3.0; +http:\/\/yandex.com\/bots)": {
+		"platform": "iPhone",
+		"browser": "YandexMobileBot",
+		"version": "3.0"
 	},
 	"Mozilla\/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit\/420.1 (KHTML, like Gecko) Version\/3.0 Mobile\/3A101a Safari\/419.3": {
 		"platform": "iPod",
@@ -1434,30 +1544,140 @@
 		"browser": "MSIE",
 		"version": "10.0"
 	},
+	"Mozilla\/5.0 (compatible; AdkernelTopicCrawler\/1.0; +http:\/\/adkernel.com\/robot\/)": {
+		"platform": null,
+		"browser": "AdkernelTopicCrawler",
+		"version": "1.0"
+	},
 	"AdsBot-Google (+http:\/\/www.google.com\/adsbot.html)": {
 		"platform": null,
 		"browser": "AdsBot-Google",
 		"version": null
+	},
+	"Mozilla\/5.0 (compatible; AhrefsBot\/7.0; +http:\/\/ahrefs.com\/robot\/)": {
+		"platform": null,
+		"browser": "AhrefsBot",
+		"version": "7.0"
+	},
+	"Mozilla\/5.0 (compatible; AmazonAdBot\/1.0; +https:\/\/adbot.amazon.com)": {
+		"platform": null,
+		"browser": "AmazonAdBot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; Amazonbot\/0.1; +https:\/\/developer.amazon.com\/support\/amazonbot) Chrome\/119.0.6045.214 Safari\/537.36": {
+		"platform": null,
+		"browser": "Amazonbot",
+		"version": "0.1"
+	},
+	"Mozilla\/5.0 (compatible; archive.org_bot +http:\/\/archive.org\/details\/archive.org_bot) Zeno\/2a1713b warc\/v0.8.77": {
+		"platform": null,
+		"browser": "archive.org_bot",
+		"version": null
+	},
+	"Mozilla\/5.0 (compatible; AwarioBot\/1.0; +https:\/\/awario.com\/bots.html)": {
+		"platform": null,
+		"browser": "AwarioBot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; Baiduspider\/2.0; +http:\/\/www.baidu.com\/search\/spider.html": {
+		"platform": null,
+		"browser": "Baiduspider",
+		"version": "2.0"
 	},
 	"Mozilla\/5.0 (compatible; Baiduspider\/2.0; +http:\/\/www.baidu.com\/search\/spider.html)": {
 		"platform": null,
 		"browser": "Baiduspider",
 		"version": "2.0"
 	},
+	"Mozilla\/5.0 (compatible; Baiduspider-render\/2.0; +http:\/\/www.baidu.com\/search\/spider.html)": {
+		"platform": null,
+		"browser": "Baiduspider-render",
+		"version": "2.0"
+	},
+	"Mozilla\/5.0 (compatible; Barkrowler\/0.9; +https:\/\/babbar.tech\/crawler)": {
+		"platform": null,
+		"browser": "Barkrowler",
+		"version": "0.9"
+	},
 	"Mozilla\/5.0 (compatible; bingbot\/2.0; +http:\/\/www.bing.com\/bingbot.htm)": {
 		"platform": null,
 		"browser": "bingbot",
 		"version": "2.0"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; bingbot\/2.0; +http:\/\/www.bing.com\/bingbot.htm) Chrome\/100.0.4896.127 Safari\/537.36": {
+		"platform": null,
+		"browser": "bingbot",
+		"version": "2.0"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; bingbot\/2.0; +http:\/\/www.bing.com\/bingbot.htm) Chrome\/112.0.0.0 Safari\/537.36": {
+		"platform": null,
+		"browser": "bingbot",
+		"version": "2.0"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; bingbot\/2.0; +http:\/\/www.bing.com\/bingbot.htm) Chrome\/116.0.1938.76 Safari": {
+		"platform": null,
+		"browser": "bingbot",
+		"version": "2.0"
+	},
+	"Mozilla\/5.0 (compatible; BLEXBot\/1.0; +https:\/\/help.seranking.com\/en\/blex-crawler)": {
+		"platform": null,
+		"browser": "BLEXBot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; Bravebot\/1.0; +https:\/\/search.brave.com\/help\/brave-search-crawler) Chrome\/W.X.Y.Z Safari\/537.36": {
+		"platform": null,
+		"browser": "Bravebot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; CensysInspect\/1.1; +https:\/\/about.censys.io\/)": {
+		"platform": null,
+		"browser": "CensysInspect",
+		"version": "1.1"
 	},
 	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko); compatible; ChatGPT-User\/1.0; +https:\/\/openai.com\/bot": {
 		"platform": null,
 		"browser": "ChatGPT-User",
 		"version": "1.0"
 	},
+	"Mozilla\/5.0 (compatible; coccocbot-image\/1.0; +http:\/\/help.coccoc.com\/searchengine)": {
+		"platform": null,
+		"browser": "coccocbot-image",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; coccocbot-web\/1.0; +http:\/\/help.coccoc.com\/searchengine)": {
+		"platform": null,
+		"browser": "coccocbot-web",
+		"version": "1.0"
+	},
 	"curl\/7.19.7 (universal-apple-darwin10.0) libcurl\/7.19.7 OpenSSL\/0.9.8r zlib\/1.2.3": {
 		"platform": null,
 		"browser": "curl",
 		"version": "7.19.7"
+	},
+	"Mozilla\/5.0 (compatible; DataForSeoBot\/1.0; +https:\/\/dataforseo.com\/dataforseo-bot)": {
+		"platform": null,
+		"browser": "DataForSeoBot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; Discordbot\/2.0; +https:\/\/discordapp.com)": {
+		"platform": null,
+		"browser": "Discordbot",
+		"version": "2.0"
+	},
+	"Mozilla\/5.0 (compatible; Discordbot\/2.0; +https:\/\/discordapp.com),gzip(gfe)": {
+		"platform": null,
+		"browser": "Discordbot",
+		"version": "2.0"
+	},
+	"Mozilla\/5.0 (compatible; DotBot\/1.2; +https:\/\/opensiteexplorer.org\/dotbot; help@moz.com)": {
+		"platform": null,
+		"browser": "DotBot",
+		"version": "1.2"
+	},
+	"Mozilla\/5.0 (compatible; ev-crawler\/1.0; +https:\/\/headline.com\/legal\/crawler)": {
+		"platform": null,
+		"browser": "ev-crawler",
+		"version": "1.0"
 	},
 	"facebookexternalhit\/1.1": {
 		"platform": null,
@@ -1489,6 +1709,11 @@
 		"browser": "Googlebot",
 		"version": "2.1"
 	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; Googlebot\/2.1; +http:\/\/www.google.com\/bot.html) Chrome\/135.0.7049.114 Safari\/537.36": {
+		"platform": null,
+		"browser": "Googlebot",
+		"version": "2.1"
+	},
 	"Googlebot-Image\/1.0": {
 		"platform": null,
 		"browser": "Googlebot-Image",
@@ -1499,10 +1724,30 @@
 		"browser": "Googlebot-Video",
 		"version": "1.0"
 	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; GPTBot\/1.0; +https:\/\/openai.com\/gptbot)": {
+		"platform": null,
+		"browser": "GPTBot",
+		"version": "1.0"
+	},
 	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko); compatible; GPTBot\/1.1; +https:\/\/openai.com\/gptbot": {
 		"platform": null,
 		"browser": "GPTBot",
 		"version": "1.1"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; GPTBot\/1.2; +https:\/\/openai.com\/gptbot)": {
+		"platform": null,
+		"browser": "GPTBot",
+		"version": "1.2"
+	},
+	"Mozilla\/5.0 (compatible; Heexybot\/1.0; +https:\/\/heexy.org\/bot)": {
+		"platform": null,
+		"browser": "Heexybot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; HubSpot Crawler; HubSpot Domain check; +https:\/\/www.hubspot.com)": {
+		"platform": null,
+		"browser": "HubSpot Domain check",
+		"version": null
 	},
 	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
 		"platform": null,
@@ -1524,6 +1769,41 @@
 		"browser": "Mastodon",
 		"version": "4.3.8"
 	},
+	"Mozilla\/5.0 (compatible; Miniflux\/2.2.0; +https:\/\/miniflux.app)": {
+		"platform": null,
+		"browser": "Miniflux",
+		"version": "2.2.0"
+	},
+	"Mozilla\/5.0 (compatible; Miniflux\/2.2.6; +https:\/\/miniflux.app)": {
+		"platform": null,
+		"browser": "Miniflux",
+		"version": "2.2.6"
+	},
+	"Mozilla\/5.0 (compatible; Miniflux\/2.2.7; +https:\/\/miniflux.app)": {
+		"platform": null,
+		"browser": "Miniflux",
+		"version": "2.2.7"
+	},
+	"Mozilla\/5.0 (compatible; Miniflux\/2.2.8; +https:\/\/miniflux.app)": {
+		"platform": null,
+		"browser": "Miniflux",
+		"version": "2.2.8"
+	},
+	"Mozilla\/5.0 (compatible; Miniflux\/v2.2.8; +https:\/\/miniflux.app)": {
+		"platform": null,
+		"browser": "Miniflux",
+		"version": "2.2.8"
+	},
+	"Mozilla\/5.0 (compatible; ModatScanner\/1.0; +https:\/\/modat.io\/)": {
+		"platform": null,
+		"browser": "ModatScanner",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; MojeekBot\/0.11; +https:\/\/www.mojeek.com\/bot.html)": {
+		"platform": null,
+		"browser": "MojeekBot",
+		"version": "0.11"
+	},
 	"msnbot-media\/1.1 (+http:\/\/search.msn.com\/msnbot.htm)": {
 		"platform": null,
 		"browser": "msnbot-media",
@@ -1534,9 +1814,54 @@
 		"browser": "OAI-SearchBot",
 		"version": "1.0"
 	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; Perplexity-User\/1.0; +https:\/\/perplexity.ai\/perplexity-user)": {
+		"platform": null,
+		"browser": "Perplexity-User",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; PerplexityBot\/1.0; +https:\/\/perplexity.ai\/perplexitybot)": {
+		"platform": null,
+		"browser": "PerplexityBot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; Pinterestbot\/1.0; +http:\/\/www.pinterest.com\/bot.html)": {
+		"platform": null,
+		"browser": "Pinterestbot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; proximic; +https:\/\/www.comscore.com\/Web-Crawler)": {
+		"platform": null,
+		"browser": "proximic",
+		"version": null
+	},
+	"Mozilla\/5.0 (compatible; SemrushBot; +http:\/\/www.semrush.com\/bot.html)": {
+		"platform": null,
+		"browser": "SemrushBot",
+		"version": null
+	},
+	"Mozilla\/5.0 (compatible; SemrushBot-SI\/0.97; +http:\/\/www.semrush.com\/bot.html)": {
+		"platform": null,
+		"browser": "SemrushBot-SI",
+		"version": "0.97"
+	},
+	"Mozilla\/5.0 (compatible; SeznamBot\/4.0; +https:\/\/o-seznam.cz\/napoveda\/vyhledavani\/en\/seznambot-crawler\/)": {
+		"platform": null,
+		"browser": "SeznamBot",
+		"version": "4.0"
+	},
 	"Slackbot 1.0 (+https:\/\/api.slack.com\/robots)": {
 		"platform": null,
 		"browser": "Slackbot",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; SpiderLing; +https:\/\/nlp.fi.muni.cz\/projects\/biwec\/)": {
+		"platform": null,
+		"browser": "SpiderLing",
+		"version": null
+	},
+	"Mozilla\/5.0 (compatible; SurdotlyBot\/1.0; +http:\/\/sur.ly\/bot.html)": {
+		"platform": null,
+		"browser": "SurdotlyBot",
 		"version": "1.0"
 	},
 	"TelegramBot (like TwitterBot)": {
@@ -1549,14 +1874,54 @@
 		"browser": "Twitterbot",
 		"version": "1.0"
 	},
+	"Mozilla\/5.0 (compatible; WellKnownBot\/0.1; +https:\/\/well-known.dev\/about\/#bot)": {
+		"platform": null,
+		"browser": "WellKnownBot",
+		"version": "0.1"
+	},
 	"WordPress\/3.7.1; http:\/\/wordpress.com": {
 		"platform": null,
 		"browser": "WordPress",
 		"version": "3.7.1"
 	},
+	"Mozilla\/5.0 (compatible; wpbot\/1.3; +https:\/\/forms.gle\/ajBaxygz9jSR8p8G9)": {
+		"platform": null,
+		"browser": "wpbot",
+		"version": "1.3"
+	},
 	"Mozilla\/5.0 (compatible; YandexBot\/3.0; +http:\/\/yandex.com\/bots)": {
 		"platform": null,
 		"browser": "YandexBot",
 		"version": "3.0"
+	},
+	"Mozilla\/5.0 (compatible; YandexBot\/3.0; +http:\/\/yandex.com\/bots) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/108.0.0.0": {
+		"platform": null,
+		"browser": "YandexBot",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (compatible; YandexBot\/3.0; +http:\/\/yandex.com\/bots) YTranslate": {
+		"platform": null,
+		"browser": "YandexBot",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (compatible; YandexImages\/3.0; +http:\/\/yandex.com\/bots)": {
+		"platform": null,
+		"browser": "YandexImages",
+		"version": "3.0"
+	},
+	"Mozilla\/5.0 (compatible; YandexRCA\/1.0; +http:\/\/yandex.com\/bots)": {
+		"platform": null,
+		"browser": "YandexRCA",
+		"version": "1.0"
+	},
+	"Mozilla\/5.0 (compatible; YandexUserproxy; robot; +http:\/\/yandex.com\/bots)": {
+		"platform": null,
+		"browser": "YandexUserproxy",
+		"version": null
+	},
+	"Mozilla\/5.0 (compatible; Yeti\/1.1; +https:\/\/naver.me\/spd)": {
+		"platform": null,
+		"browser": "Yeti",
+		"version": "1.1"
 	}
 }
