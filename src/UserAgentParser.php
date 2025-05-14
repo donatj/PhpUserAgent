@@ -109,20 +109,16 @@ REGEX
 			, $u_agent, $result);
 
 		// If nothing matched, return null (to avoid undefined index errors)
-		$quickReturn = false;
-		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
-			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $g_result) ) {
-				return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => empty($g_result[BROWSER_VERSION]) ? null : $g_result[BROWSER_VERSION] ];
-			}
-
-			$quickReturn = true;
+		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0])
+			&& preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $g_result) ) {
+			return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => empty($g_result[BROWSER_VERSION]) ? null : $g_result[BROWSER_VERSION] ];
 		}
 
 		if(
 			(
 				empty($result[BROWSER][0])
 				|| ($result['prev'][0] !== '')
-			) // if we caught a browser, and it's the first part of the string, skip
+			)
 			&& preg_match(<<<'REGEX'
 %[(;]\s*(?P<browser>[^(/;]+)
 (?:[:/ ]v?(?P<version>[0-9A-Z.]+)[^;)\s]*)?
@@ -137,7 +133,7 @@ REGEX
 			];
 		}
 
-		if( $quickReturn ) {
+		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
 			return $return;
 		}
 
