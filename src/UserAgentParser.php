@@ -99,7 +99,7 @@ REGEX
 %(?P<prev>.)?(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
 TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|(?-i:Edge)|EdgA?|CriOS|UCBrowser|Puffin|
 OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|YaApp_Android|Whale|
-Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|ChatGPT-User|GPTBot|OAI-SearchBot|
+Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|
 Valve\ Steam\ Tenfoot|Mastodon|
 NintendoBrowser|PLAYSTATION\ (?:\d|Vita)+)
 \)?;?
