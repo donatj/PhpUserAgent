@@ -1519,6 +1519,11 @@
 		"browser": "Mastodon",
 		"version": "4.3.0"
 	},
+	"Mastodon\/4.3.8 (http.rb\/5.2.0; +https:\/\/jorijn.dev\/)": {
+		"platform": null,
+		"browser": "Mastodon",
+		"version": "4.3.8"
+	},
 	"msnbot-media\/1.1 (+http:\/\/search.msn.com\/msnbot.htm)": {
 		"platform": null,
 		"browser": "msnbot-media",
