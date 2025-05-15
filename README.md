@@ -163,6 +163,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::ADSBOT_GOOGLE` |  AdsBot-Google |  
 | `Browsers::ANDROID_BROWSER` |  Android Browser |  
 | `Browsers::APPLEBOT` |  Applebot |  
+| `Browsers::ARCHIVE_ORG_BOT` |  archive.org_bot |  
 | `Browsers::BAIDUSPIDER` |  Baiduspider |  
 | `Browsers::BINGBOT` |  bingbot |  
 | `Browsers::BLACKBERRY_BROWSER` |  BlackBerry Browser |  
@@ -172,6 +173,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::CHATGPT_USER` |  ChatGPT-User |  
 | `Browsers::CHROME` |  Chrome |  
 | `Browsers::CURL` |  curl |  
+| `Browsers::DISCORDBOT` |  Discordbot |  
 | `Browsers::EDGE` |  Edge |  
 | `Browsers::FACEBOOKEXTERNALHIT` |  facebookexternalhit |  
 | `Browsers::FEEDVALIDATOR` |  FeedValidator |  
@@ -179,6 +181,8 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::GOOGLEBOT` |  Googlebot |  
 | `Browsers::GOOGLEBOT_IMAGE` |  Googlebot-Image |  
 | `Browsers::GOOGLEBOT_VIDEO` |  Googlebot-Video |  
+| `Browsers::GOOGLE_READ_ALOUD` |  Google-Read-Aloud |  
+| `Browsers::GOOGLE_SAFETY` |  Google-Safety |  
 | `Browsers::GPTBOT` |  GPTBot |  
 | `Browsers::HEADLESSCHROME` |  HeadlessChrome |  
 | `Browsers::IEMOBILE` |  IEMobile |  
@@ -195,6 +199,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::OAI_SEARCHBOT` |  OAI-SearchBot |  
 | `Browsers::OCULUSBROWSER` |  OculusBrowser |  
 | `Browsers::OPERA` |  Opera |  
+| `Browsers::PINTERESTBOT` |  Pinterestbot |  
 | `Browsers::PUFFIN` |  Puffin |  
 | `Browsers::SAFARI` |  Safari |  
 | `Browsers::SAILFISHBROWSER` |  SailfishBrowser |  
@@ -207,10 +212,16 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::UC_BROWSER` |  UC Browser |  
 | `Browsers::VALVE_STEAM_TENFOOT` |  Valve Steam Tenfoot |  
 | `Browsers::VIVALDI` |  Vivaldi |  
+| `Browsers::WELLKNOWNBOT` |  WellKnownBot |  
 | `Browsers::WGET` |  Wget |  
 | `Browsers::WHALE` |  Whale |  
 | `Browsers::WORDPRESS` |  WordPress |  
+| `Browsers::WPBOT` |  wpbot |  
 | `Browsers::YANDEX` |  Yandex |  
-| `Browsers::YANDEXBOT` |  YandexBot |
+| `Browsers::YANDEXBOT` |  YandexBot |  
+| `Browsers::YANDEXIMAGES` |  YandexImages |  
+| `Browsers::YANDEXMOBILEBOT` |  YandexMobileBot |  
+| `Browsers::YANDEXRCA` |  YandexRCA |  
+| `Browsers::YANDEXUSERPROXY` |  YandexUserproxy |
 
 More information is available at [Donat Studios](https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).
