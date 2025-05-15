@@ -4,7 +4,7 @@ use donatj\UserAgent\UserAgentParser;
 
 class UserAgentParserObjectTest extends \PHPUnit\Framework\TestCase {
 
-	public function userAgentDataProvider() {
+	public function userAgentDataProvider() : array {
 		$out = [];
 		if( file_exists(__DIR__ . '/user_agents.json') && filesize(__DIR__ . '/user_agents.json') > 0 ) {
 			$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.json'), true);
@@ -22,7 +22,7 @@ class UserAgentParserObjectTest extends \PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider userAgentDataProvider
 	 */
-	public function test_parse( $string ) {
+	public function test_parse( $string ) : void {
 		$parser = new UserAgentParser;
 		$result = $parser->parse($string);
 
@@ -36,7 +36,7 @@ class UserAgentParserObjectTest extends \PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider userAgentDataProvider
 	 */
-	public function test_invoke( $string ) {
+	public function test_invoke( $string ) : void {
 		$parser = new UserAgentParser;
 		$result = $parser($string);
 
