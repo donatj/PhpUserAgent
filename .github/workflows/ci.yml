@@ -15,6 +15,9 @@ jobs:
 
     runs-on: ${{ matrix.operating-system }}
 
+    env:
+      LEGACY_PHPUNIT: ${{ contains(fromJson('["5.4","5.5","5.6","7.0","7.1"]'), matrix.php-versions) }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -25,20 +28,11 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           extensions: json
 
-      - name: Install dependencies with composer (legacy PHP)
-        if: ${{ matrix.php-versions == '5.4' || matrix.php-versions == '5.5' || matrix.php-versions == '5.6' }}
-        env:
-          # Intentionally disable Composer's security/audit install blocking for this legacy matrix.
-          # Upstream reference: https://getcomposer.org/doc/06-config.md#audit
-          COMPOSER_NO_SECURITY_BLOCKING: 1
-          # Keep the legacy companion flag as well for compatibility with Composer behavior across versions;
-          # see the same Composer audit/security-blocking documentation above.
-          COMPOSER_NO_BLOCKING: 1 # Unfortunately every 5.x compatible phpunit is "compromised"
-        run: composer install
-
       - name: Install dependencies with composer
-        if: ${{ matrix.php-versions != '5.4' && matrix.php-versions != '5.5' && matrix.php-versions != '5.6' }}
-        run: composer install
+        env: 
+          COMPOSER_NO_SECURITY_BLOCKING: ${{ env.LEGACY_PHPUNIT }}
+          COMPOSER_NO_BLOCKING: ${{ env.LEGACY_PHPUNIT }}
+        run: composer update --prefer-dist --no-interaction
 
       - name: Run tests
-        run: make test
+        run: vendor/bin/phpunit
