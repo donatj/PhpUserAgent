@@ -26,6 +26,8 @@ jobs:
           extensions: json
 
       - name: Install dependencies with composer
+        env:
+          COMPOSER_NO_BLOCKING: 1 # Unfortunately every 5.x compatible phpunit is "compromised"
         run: composer install
 
       - name: Run tests
