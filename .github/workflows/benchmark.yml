@@ -1,0 +1,128 @@
+name: Benchmark
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  benchmark:
+    name: Parser benchmark
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+
+      - name: Benchmark base parser
+        id: base
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git fetch origin "${BASE_REF}"
+          git show "origin/${BASE_REF}:src/UserAgentParser.php" > /tmp/UserAgentParser.base.php
+
+          seconds=$(php <<'PHP'
+          <?php
+          require '/tmp/UserAgentParser.base.php';
+
+          $uas = json_decode(file_get_contents('tests/user_agents.dist.json'), true);
+          $time = microtime(true);
+
+          foreach( array_keys($uas) as $ua ) {
+            for( $i = 0; $i < 1000; $i++ ) {
+              parse_user_agent($ua);
+            }
+          }
+
+          echo microtime(true) - $time;
+          PHP
+          )
+
+          echo "seconds=${seconds}" >> "$GITHUB_OUTPUT"
+
+      - name: Benchmark PR parser
+        id: head
+        run: |
+          seconds=$(php <<'PHP'
+          <?php
+          require 'src/UserAgentParser.php';
+
+          $uas = json_decode(file_get_contents('tests/user_agents.dist.json'), true);
+          $time = microtime(true);
+
+          foreach( array_keys($uas) as $ua ) {
+            for( $i = 0; $i < 1000; $i++ ) {
+              parse_user_agent($ua);
+            }
+          }
+
+          echo microtime(true) - $time;
+          PHP
+          )
+
+          echo "seconds=${seconds}" >> "$GITHUB_OUTPUT"
+
+      - name: Comment benchmark results
+        uses: actions/github-script@v8
+        env:
+          BASE_SECONDS: ${{ steps.base.outputs.seconds }}
+          HEAD_SECONDS: ${{ steps.head.outputs.seconds }}
+        with:
+          script: |
+            const base = Number(process.env.BASE_SECONDS)
+            const head = Number(process.env.HEAD_SECONDS)
+            const delta = head - base
+            const percent = base === 0 ? 0 : (delta / base) * 100
+
+            const fmt = (n) => n.toFixed(6)
+            const marker = '<!-- benchmark-results -->'
+            const body = `${marker}
+            ## Benchmark Results
+
+            | Metric | Value |
+            | --- | ---: |
+            | Before (base) | ${fmt(base)}s |
+            | After (PR) | ${fmt(head)}s |
+            | Delta | ${delta >= 0 ? '+' : ''}${fmt(delta)}s (${percent >= 0 ? '+' : ''}${percent.toFixed(2)}%) |
+            `
+
+            const { owner, repo } = context.repo
+            const issue_number = context.issue.number
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            })
+
+            const existing = comments.find((comment) =>
+              comment.user?.login === 'github-actions[bot]' &&
+              comment.body?.includes(marker)
+            )
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body,
+              })
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body,
+              })
+            }
