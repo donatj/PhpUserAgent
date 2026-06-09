@@ -31,44 +31,14 @@ jobs:
           git fetch origin "${BASE_REF}"
           git show "origin/${BASE_REF}:src/UserAgentParser.php" > /tmp/UserAgentParser.base.php
 
-          seconds=$(php <<'PHP'
-          <?php
-          require '/tmp/UserAgentParser.base.php';
-
-          $uas = json_decode(file_get_contents('tests/user_agents.dist.json'), true);
-          $time = microtime(true);
-
-          foreach( array_keys($uas) as $ua ) {
-            for( $i = 0; $i < 10000; $i++ ) {
-              parse_user_agent($ua);
-            }
-          }
-
-          echo microtime(true) - $time;
-          PHP
-          )
+          seconds=$(php bin/benchmark_ci.php /tmp/UserAgentParser.base.php 10000)
 
           echo "seconds=${seconds}" >> "$GITHUB_OUTPUT"
 
       - name: Benchmark PR parser
         id: head
         run: |
-          seconds=$(php <<'PHP'
-          <?php
-          require 'src/UserAgentParser.php';
-
-          $uas = json_decode(file_get_contents('tests/user_agents.dist.json'), true);
-          $time = microtime(true);
-
-          foreach( array_keys($uas) as $ua ) {
-            for( $i = 0; $i < 10000; $i++ ) {
-              parse_user_agent($ua);
-            }
-          }
-
-          echo microtime(true) - $time;
-          PHP
-          )
+          seconds=$(php bin/benchmark_ci.php src/UserAgentParser.php 10000)
 
           echo "seconds=${seconds}" >> "$GITHUB_OUTPUT"
 
