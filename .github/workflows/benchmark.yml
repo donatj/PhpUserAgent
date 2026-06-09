@@ -39,7 +39,7 @@ jobs:
           $time = microtime(true);
 
           foreach( array_keys($uas) as $ua ) {
-            for( $i = 0; $i < 1000; $i++ ) {
+            for( $i = 0; $i < 10000; $i++ ) {
               parse_user_agent($ua);
             }
           }
@@ -61,7 +61,7 @@ jobs:
           $time = microtime(true);
 
           foreach( array_keys($uas) as $ua ) {
-            for( $i = 0; $i < 1000; $i++ ) {
+            for( $i = 0; $i < 10000; $i++ ) {
               parse_user_agent($ua);
             }
           }
