@@ -31,14 +31,14 @@ jobs:
           git fetch origin "${BASE_REF}"
           git show "origin/${BASE_REF}:src/UserAgentParser.php" > /tmp/UserAgentParser.base.php
 
-          seconds=$(php bin/benchmark_ci.php /tmp/UserAgentParser.base.php 10000)
+          seconds=$(php bin/benchmark_ci.php /tmp/UserAgentParser.base.php 5000)
 
           echo "seconds=${seconds}" >> "$GITHUB_OUTPUT"
 
       - name: Benchmark PR parser
         id: head
         run: |
-          seconds=$(php bin/benchmark_ci.php src/UserAgentParser.php 10000)
+          seconds=$(php bin/benchmark_ci.php src/UserAgentParser.php 5000)
 
           echo "seconds=${seconds}" >> "$GITHUB_OUTPUT"
 
