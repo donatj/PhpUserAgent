@@ -43,7 +43,7 @@ jobs:
           echo "seconds=${seconds}" >> "$GITHUB_OUTPUT"
 
       - name: Comment benchmark results
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         env:
           BASE_SECONDS: ${{ steps.base.outputs.seconds }}
           HEAD_SECONDS: ${{ steps.head.outputs.seconds }}
