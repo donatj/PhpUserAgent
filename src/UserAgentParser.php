@@ -122,7 +122,7 @@ REGEX
 			&& preg_match(<<<'REGEX'
 %[(;]\s*(?P<browser>[^(/;]+)
 (?:[:/ ]v?(?P<version>[0-9A-Z.]+)[^;)\s]*)?
-;?(?:\s*robot;)?\s*\+https?:%x
+;?(?:\s*robot;)?\s*\+(?:https?:|[a-z0-9.-]+@[a-z0-9.-]+)%x
 REGEX
 				, $u_agent, $bot_result)
 		) {

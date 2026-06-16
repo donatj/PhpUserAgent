@@ -172,6 +172,7 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::CAMINO` |  Camino |  
 | `Browsers::CHATGPT_USER` |  ChatGPT-User |  
 | `Browsers::CHROME` |  Chrome |  
+| `Browsers::CLAUDEBOT` |  ClaudeBot |  
 | `Browsers::CURL` |  curl |  
 | `Browsers::DISCORDBOT` |  Discordbot |  
 | `Browsers::EDGE` |  Edge |  

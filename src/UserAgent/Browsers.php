@@ -18,6 +18,7 @@ interface Browsers {
 	const CAMINO               = 'Camino';
 	const CHATGPT_USER         = 'ChatGPT-User';
 	const CHROME               = 'Chrome';
+	const CLAUDEBOT            = 'ClaudeBot';
 	const CURL                 = 'curl';
 	const DISCORDBOT           = 'Discordbot';
 	const EDGE                 = 'Edge';
