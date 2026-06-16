@@ -9,7 +9,6 @@ interface Browsers {
 	const ADSBOT_GOOGLE       = 'AdsBot-Google';
 	const ANDROID_BROWSER     = 'Android Browser';
 	const APPLEBOT            = 'Applebot';
-	const ARCHIVE_ORG_BOT     = 'archive.org_bot';
 	const BAIDUSPIDER         = 'Baiduspider';
 	const BINGBOT             = 'bingbot';
 	const BLACKBERRY_BROWSER  = 'BlackBerry Browser';
@@ -18,9 +17,7 @@ interface Browsers {
 	const CAMINO              = 'Camino';
 	const CHATGPT_USER        = 'ChatGPT-User';
 	const CHROME              = 'Chrome';
-	const CLAUDEBOT           = 'ClaudeBot';
 	const CURL                = 'curl';
-	const DISCORDBOT          = 'Discordbot';
 	const EDGE                = 'Edge';
 	const FACEBOOKEXTERNALHIT = 'facebookexternalhit';
 	const FEEDVALIDATOR       = 'FeedValidator';
@@ -28,8 +25,6 @@ interface Browsers {
 	const GOOGLEBOT           = 'Googlebot';
 	const GOOGLEBOT_IMAGE     = 'Googlebot-Image';
 	const GOOGLEBOT_VIDEO     = 'Googlebot-Video';
-	const GOOGLE_READ_ALOUD   = 'Google-Read-Aloud';
-	const GOOGLE_SAFETY       = 'Google-Safety';
 	const GPTBOT              = 'GPTBot';
 	const HEADLESSCHROME      = 'HeadlessChrome';
 	const IEMOBILE            = 'IEMobile';
@@ -46,7 +41,6 @@ interface Browsers {
 	const OAI_SEARCHBOT       = 'OAI-SearchBot';
 	const OCULUSBROWSER       = 'OculusBrowser';
 	const OPERA               = 'Opera';
-	const PINTERESTBOT        = 'Pinterestbot';
 	const PUFFIN              = 'Puffin';
 	const SAFARI              = 'Safari';
 	const SAILFISHBROWSER     = 'SailfishBrowser';
@@ -59,17 +53,11 @@ interface Browsers {
 	const UC_BROWSER          = 'UC Browser';
 	const VALVE_STEAM_TENFOOT = 'Valve Steam Tenfoot';
 	const VIVALDI             = 'Vivaldi';
-	const WELLKNOWNBOT        = 'WellKnownBot';
 	const WGET                = 'Wget';
 	const WHALE               = 'Whale';
 	const WORDPRESS           = 'WordPress';
-	const WPBOT               = 'wpbot';
 	const YANDEX              = 'Yandex';
 	const YANDEXBOT           = 'YandexBot';
-	const YANDEXIMAGES        = 'YandexImages';
-	const YANDEXMOBILEBOT     = 'YandexMobileBot';
-	const YANDEXRCA           = 'YandexRCA';
-	const YANDEXUSERPROXY     = 'YandexUserproxy';
 
 }
 
