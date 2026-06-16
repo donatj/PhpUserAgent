@@ -115,7 +115,7 @@ echo $ua->browserVersion() . PHP_EOL;
 
 ```
 
-## Currently Detected Platforms
+## Currently Tested Platforms
 
 Predefined helper constants from `donatj\UserAgent\Platforms`  
   
@@ -154,7 +154,11 @@ Predefined helper constants from `donatj\UserAgent\Platforms`
 | `Platforms::XBOX` |  Xbox |  
 | `Platforms::XBOX_ONE` |  Xbox One |
 
-## Currently Detected Browsers
+## Currently Tested Browsers
+
+> [!NOTE]
+> There is overlap between browsers and bots. Before bots were given their own separate class, a number were added to the browser list.
+> They appear in both lists for backward compatibility. This is likely to be remedied should there be a future major release.
 
 Predefined helper constants from `donatj\UserAgent\Browsers`  
   
@@ -211,6 +215,86 @@ Predefined helper constants from `donatj\UserAgent\Browsers`
 | `Browsers::WHALE` |  Whale |  
 | `Browsers::WORDPRESS` |  WordPress |  
 | `Browsers::YANDEX` |  Yandex |  
-| `Browsers::YANDEXBOT` |  YandexBot |
+| `Browsers::YANDEXBOT` |  YandexBot |  
+| `Browsers::YETI` |  Yeti |
+
+## Tested Bots
+
+Predefined helper constants from `donatj\UserAgent\Bots`  
+  
+| Constant | Bots |  
+|----------|----------|  
+| `Bots::ADKERNELTOPICCRAWLER` |  AdkernelTopicCrawler |  
+| `Bots::ADSBOT_GOOGLE` |  AdsBot-Google |  
+| `Bots::AHREFSBOT` |  AhrefsBot |  
+| `Bots::AHREFSSITEAUDIT` |  AhrefsSiteAudit |  
+| `Bots::AMAZONADBOT` |  AmazonAdBot |  
+| `Bots::AMAZONBOT` |  Amazonbot |  
+| `Bots::APPLEBOT` |  Applebot |  
+| `Bots::ARCHIVE_ORG_BOT` |  archive.org_bot |  
+| `Bots::AWARIOBOT` |  AwarioBot |  
+| `Bots::BAIDUSPIDER` |  Baiduspider |  
+| `Bots::BAIDUSPIDER_RENDER` |  Baiduspider-render |  
+| `Bots::BARKROWLER` |  Barkrowler |  
+| `Bots::BINGBOT` |  bingbot |  
+| `Bots::BLEXBOT` |  BLEXBot |  
+| `Bots::BRAVEBOT` |  Bravebot |  
+| `Bots::CENSYSINSPECT` |  CensysInspect |  
+| `Bots::CHATGPT_USER` |  ChatGPT-User |  
+| `Bots::CLAUDEBOT` |  ClaudeBot |  
+| `Bots::COCCOCBOT_IMAGE` |  coccocbot-image |  
+| `Bots::COCCOCBOT_WEB` |  coccocbot-web |  
+| `Bots::CURL` |  curl |  
+| `Bots::DATAFORSEOBOT` |  DataForSeoBot |  
+| `Bots::DISCORDBOT` |  Discordbot |  
+| `Bots::DOTBOT` |  DotBot |  
+| `Bots::DVBOT` |  DVbot |  
+| `Bots::EV_CRAWLER` |  ev-crawler |  
+| `Bots::FACEBOOKEXTERNALHIT` |  facebookexternalhit |  
+| `Bots::FEEDBOT` |  feedbot |  
+| `Bots::FEEDVALIDATOR` |  FeedValidator |  
+| `Bots::GOOGLEBOT` |  Googlebot |  
+| `Bots::GOOGLEBOT_IMAGE` |  Googlebot-Image |  
+| `Bots::GOOGLEBOT_VIDEO` |  Googlebot-Video |  
+| `Bots::GOOGLE_READ_ALOUD` |  Google-Read-Aloud |  
+| `Bots::GOOGLE_SAFETY` |  Google-Safety |  
+| `Bots::GPTBOT` |  GPTBot |  
+| `Bots::HEEXYBOT` |  Heexybot |  
+| `Bots::HUBSPOT_DOMAIN_CHECK` |  HubSpot Domain check |  
+| `Bots::IBOUBOT` |  IbouBot |  
+| `Bots::IMESSAGEBOT` |  iMessageBot |  
+| `Bots::LEIKIBOT` |  Leikibot |  
+| `Bots::MASTODON` |  Mastodon |  
+| `Bots::MINIFLUX` |  Miniflux |  
+| `Bots::MODATSCANNER` |  ModatScanner |  
+| `Bots::MOJEEKBOT` |  MojeekBot |  
+| `Bots::MSNBOT_MEDIA` |  msnbot-media |  
+| `Bots::OAI_SEARCHBOT` |  OAI-SearchBot |  
+| `Bots::PERPLEXITYBOT` |  PerplexityBot |  
+| `Bots::PERPLEXITY_USER` |  Perplexity-User |  
+| `Bots::PETALBOT` |  PetalBot |  
+| `Bots::PINTERESTBOT` |  Pinterestbot |  
+| `Bots::PROXIMIC` |  proximic |  
+| `Bots::SCOURRSSBOT` |  ScourRSSBot |  
+| `Bots::SEMRUSHBOT` |  SemrushBot |  
+| `Bots::SEMRUSHBOT_SI` |  SemrushBot-SI |  
+| `Bots::SERANKINGBACKLINKSBOT` |  SERankingBacklinksBot |  
+| `Bots::SEZNAMBOT` |  SeznamBot |  
+| `Bots::SLACKBOT` |  Slackbot |  
+| `Bots::SMTBOT` |  SMTBot |  
+| `Bots::SPIDERLING` |  SpiderLing |  
+| `Bots::SURDOTLYBOT` |  SurdotlyBot |  
+| `Bots::TELEGRAMBOT` |  TelegramBot |  
+| `Bots::TWITTERBOT` |  Twitterbot |  
+| `Bots::WELLKNOWNBOT` |  WellKnownBot |  
+| `Bots::WGET` |  Wget |  
+| `Bots::WORDPRESS` |  WordPress |  
+| `Bots::WPBOT` |  wpbot |  
+| `Bots::YANDEXBOT` |  YandexBot |  
+| `Bots::YANDEXIMAGES` |  YandexImages |  
+| `Bots::YANDEXMOBILEBOT` |  YandexMobileBot |  
+| `Bots::YANDEXRCA` |  YandexRCA |  
+| `Bots::YANDEXUSERPROXY` |  YandexUserproxy |  
+| `Bots::YETI` |  Yeti |
 
 More information is available at [Donat Studios](https://donatstudios.com/PHP-Parser-HTTP_USER_AGENT).

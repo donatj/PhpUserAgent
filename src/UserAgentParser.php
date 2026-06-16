@@ -96,10 +96,10 @@ REGEX
 		}
 
 		preg_match_all(<<<'REGEX'
-%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
+%(?P<prev>.)?(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|IceCat|Safari|MSIE|Trident|AppleWebKit|
 TizenBrowser|(?:Headless)?Chrome|YaBrowser|Vivaldi|IEMobile|Opera|OPR|Silk|Midori|(?-i:Edge)|EdgA?|CriOS|UCBrowser|Puffin|
 OculusBrowser|SamsungBrowser|SailfishBrowser|XiaoMi/MiuiBrowser|YaApp_Android|Whale|
-Baiduspider|Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|ChatGPT-User|GPTBot|OAI-SearchBot|
+Applebot|Facebot|Googlebot|YandexBot|bingbot|Lynx|Version|
 Valve\ Steam\ Tenfoot|Mastodon|
 NintendoBrowser|PLAYSTATION\ (?:\d|Vita)+)
 \)?;?
@@ -108,12 +108,38 @@ NintendoBrowser|PLAYSTATION\ (?:\d|Vita)+)
 REGEX
 			, $u_agent, $result);
 
-		// If nothing matched, return null (to avoid undefined index errors)
+		// If nothing matched, check for simple bot patterns
 		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
-			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
-				return [ PLATFORM => $platform ?: null, BROWSER => $result[BROWSER], BROWSER_VERSION => empty($result[BROWSER_VERSION]) ? null : $result[BROWSER_VERSION] ];
+			// Try: bot/version with contact info "site.com botname/1.0 (+contact)"
+			if( preg_match('%(?P<browser>[A-Z0-9\-]+)[/ ](?P<version>[0-9A-Z.]+)\s*\(\+(?:https?:|[a-z0-9._-]+@[a-z0-9._-]+)%ix', $u_agent, $g_result) ) {
+				return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => $g_result[BROWSER_VERSION] ];
 			}
+			// Try: simple bot at start "BotName/version" (not Mozilla)
+			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $g_result) ) {
+				return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => empty($g_result[BROWSER_VERSION]) ? null : $g_result[BROWSER_VERSION] ];
+			}
+		}
 
+		if(
+			(
+				empty($result[BROWSER][0])
+				|| ($result['prev'][0] !== '')
+			)
+			&& preg_match(<<<'REGEX'
+%[(;]\s*(?P<browser>[^(/;]+)
+(?:[:/ ]v?(?P<version>[0-9A-Z.]+)[^;)\s]*)?
+;?(?:\s*robot;)?\s*\+(?:https?:|[a-z0-9._-]+@[a-z0-9._-]+)%ix
+REGEX
+				, $u_agent, $bot_result)
+		) {
+			return [
+				PLATFORM        => $platform,
+				BROWSER         => trim($bot_result['browser']),
+				BROWSER_VERSION => empty($bot_result['version']) ? null : $bot_result['version'],
+			];
+		}
+
+		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
 			return $return;
 		}
 

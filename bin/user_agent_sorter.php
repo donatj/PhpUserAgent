@@ -5,6 +5,10 @@ require(__DIR__ . '/../vendor/autoload.php');
 $jsonfile = __DIR__ . '/../Tests/user_agents.dist.json';
 
 $uas = json_decode(file_get_contents($jsonfile), true);
+if( $uas === null ) {
+	echo "Failed to decode JSON\n";
+	die(1);
+}
 
 foreach( $uas as $key => &$val ) {
 	$val['key'] = $key;
@@ -69,7 +73,7 @@ unset($val);
 
 $jsonPretty = new Camspiers\JsonPretty\JsonPretty;
 
-$json = $jsonPretty->prettify($uas) . "\n";
+$json = @$jsonPretty->prettify($uas) . "\n";
 echo $json;
 
 

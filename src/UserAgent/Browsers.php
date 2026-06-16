@@ -58,6 +58,7 @@ interface Browsers {
 	const WORDPRESS           = 'WordPress';
 	const YANDEX              = 'Yandex';
 	const YANDEXBOT           = 'YandexBot';
+	const YETI                = 'Yeti';
 
 }
 
