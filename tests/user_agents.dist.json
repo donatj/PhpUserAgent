@@ -1273,7 +1273,7 @@
 			"Bots"
 		]
 	},
-	" Mozilla\/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/26.2 Mobile\/15E148 Safari\/604.1 (compatible; YandexMobileBot\/3.0; +http:\/\/yandex.com\/bots)": {
+	"Mozilla\/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/26.2 Mobile\/15E148 Safari\/604.1 (compatible; YandexMobileBot\/3.0; +http:\/\/yandex.com\/bots)": {
 		"platform": "iPhone",
 		"browser": "YandexMobileBot",
 		"version": "3.0",
@@ -1723,7 +1723,7 @@
 			"Bots"
 		]
 	},
-	"Mozilla\/5.0 (compatible; Baiduspider\/2.0; +http:\/\/www.baidu.com\/search\/spider.html": {
+	"Mozilla\/5.0 (compatible; Baiduspider\/2.0; +http:\/\/www.baidu.com\/search\/spider.html)": {
 		"platform": null,
 		"browser": "Baiduspider",
 		"version": "2.0",
