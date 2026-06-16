@@ -1639,6 +1639,11 @@
 		"browser": "ChatGPT-User",
 		"version": "1.0"
 	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; ChatGPT-User\/1.0; +https:\/\/openai.com\/bot)": {
+		"platform": null,
+		"browser": "ChatGPT-User",
+		"version": "1.0"
+	},
 	"Mozilla\/5.0 (compatible; coccocbot-image\/1.0; +http:\/\/help.coccoc.com\/searchengine)": {
 		"platform": null,
 		"browser": "coccocbot-image",
