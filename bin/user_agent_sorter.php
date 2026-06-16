@@ -73,7 +73,7 @@ unset($val);
 
 $jsonPretty = new Camspiers\JsonPretty\JsonPretty;
 
-$json = $jsonPretty->prettify($uas) . "\n";
+$json = @$jsonPretty->prettify($uas) . "\n";
 echo $json;
 
 
