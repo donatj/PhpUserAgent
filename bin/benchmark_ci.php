@@ -15,7 +15,14 @@ if( $iterations < 1 ) {
 
 require $parserFile;
 
-$uas = json_decode(file_get_contents(__DIR__ . '/../tests/user_agents.dist.json'), true);
+$jsonfile = __DIR__ . '/../tests/user_agents.dist.json';
+$content = file_get_contents($jsonfile);
+if( $content === false ) {
+	echo "Failed to read file: $jsonfile\n";
+	exit(1);
+}
+
+$uas = json_decode($data, true);
 
 if( !is_array($uas) ) {
 	fwrite(STDERR, "Unable to load user agents fixture\n");
