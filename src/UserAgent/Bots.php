@@ -7,18 +7,22 @@ namespace donatj\UserAgent;
 interface Bots {
 
 	const ADKERNELTOPICCRAWLER  = 'AdkernelTopicCrawler';
+	const ADSBOT_GOOGLE         = 'AdsBot-Google';
 	const AHREFSBOT             = 'AhrefsBot';
 	const AHREFSSITEAUDIT       = 'AhrefsSiteAudit';
 	const AMAZONADBOT           = 'AmazonAdBot';
 	const AMAZONBOT             = 'Amazonbot';
+	const APPLEBOT              = 'Applebot';
 	const ARCHIVE_ORG_BOT       = 'archive.org_bot';
 	const AWARIOBOT             = 'AwarioBot';
 	const BAIDUSPIDER           = 'Baiduspider';
 	const BAIDUSPIDER_RENDER    = 'Baiduspider-render';
 	const BARKROWLER            = 'Barkrowler';
+	const BINGBOT               = 'bingbot';
 	const BLEXBOT               = 'BLEXBot';
 	const BRAVEBOT              = 'Bravebot';
 	const CENSYSINSPECT         = 'CensysInspect';
+	const CHATGPT_USER          = 'ChatGPT-User';
 	const CLAUDEBOT             = 'ClaudeBot';
 	const COCCOCBOT_IMAGE       = 'coccocbot-image';
 	const COCCOCBOT_WEB         = 'coccocbot-web';
@@ -28,12 +32,21 @@ interface Bots {
 	const DOTBOT                = 'DotBot';
 	const DVBOT                 = 'DVbot';
 	const EV_CRAWLER            = 'ev-crawler';
+	const FACEBOOKEXTERNALHIT   = 'facebookexternalhit';
 	const FEEDBOT               = 'feedbot';
+	const FEEDVALIDATOR         = 'FeedValidator';
+	const GOOGLEBOT             = 'Googlebot';
+	const GOOGLEBOT_IMAGE       = 'Googlebot-Image';
+	const GOOGLEBOT_VIDEO       = 'Googlebot-Video';
 	const GOOGLE_READ_ALOUD     = 'Google-Read-Aloud';
 	const GOOGLE_SAFETY         = 'Google-Safety';
+	const GPTBOT                = 'GPTBot';
 	const HEEXYBOT              = 'Heexybot';
+	const HUBSPOT_DOMAIN_CHECK  = 'HubSpot Domain check';
 	const IBOUBOT               = 'IbouBot';
+	const IMESSAGEBOT           = 'iMessageBot';
 	const LEIKIBOT              = 'Leikibot';
+	const MASTODON              = 'Mastodon';
 	const MINIFLUX              = 'Miniflux';
 	const MODATSCANNER          = 'ModatScanner';
 	const MOJEEKBOT             = 'MojeekBot';
@@ -53,12 +66,18 @@ interface Bots {
 	const SMTBOT                = 'SMTBot';
 	const SPIDERLING            = 'SpiderLing';
 	const SURDOTLYBOT           = 'SurdotlyBot';
+	const TELEGRAMBOT           = 'TelegramBot';
+	const TWITTERBOT            = 'Twitterbot';
 	const WELLKNOWNBOT          = 'WellKnownBot';
+	const WGET                  = 'Wget';
+	const WORDPRESS             = 'WordPress';
 	const WPBOT                 = 'wpbot';
+	const YANDEXBOT             = 'YandexBot';
 	const YANDEXIMAGES          = 'YandexImages';
 	const YANDEXMOBILEBOT       = 'YandexMobileBot';
 	const YANDEXRCA             = 'YandexRCA';
 	const YANDEXUSERPROXY       = 'YandexUserproxy';
+	const YETI                  = 'Yeti';
 
 }
 
