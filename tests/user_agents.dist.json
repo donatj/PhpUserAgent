@@ -694,6 +694,11 @@
 		"browser": "Yeti",
 		"version": "1.1"
 	},
+	"Mozilla\/5.0 (Linux; Android 13) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/108.0.5359.128 Mobile Safari\/537.36 (compatible; AhrefsSiteAudit\/6.1; +http:\/\/ahrefs.com\/robot\/site-audit)": {
+		"platform": "Android",
+		"browser": "AhrefsSiteAudit",
+		"version": "6.1"
+	},
 	"Mozilla\/5.0 (Linux; U; Android 2.2; en-us; SGH-T959 Build\/FROYO) AppleWebKit\/533.1 (KHTML, like Gecko) Version\/4.0 Mobile Safari\/533.1": {
 		"platform": "Android",
 		"browser": "Android Browser",
@@ -1159,6 +1164,11 @@
 		"browser": "YandexMobileBot",
 		"version": "3.0"
 	},
+	" Mozilla\/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/26.2 Mobile\/15E148 Safari\/604.1 (compatible; YandexMobileBot\/3.0; +http:\/\/yandex.com\/bots)": {
+		"platform": "iPhone",
+		"browser": "YandexMobileBot",
+		"version": "3.0"
+	},
 	"Mozilla\/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit\/420.1 (KHTML, like Gecko) Version\/3.0 Mobile\/3A101a Safari\/419.3": {
 		"platform": "iPod",
 		"browser": "Safari",
@@ -1619,6 +1629,11 @@
 		"browser": "bingbot",
 		"version": "2.0"
 	},
+	"Mozilla\/5.0 AppleWebKit\/537.36 (KHTML, like Gecko; compatible; bingbot\/2.0; +http:\/\/www.bing.com\/bingbot.htm) Chrome\/116.0.1938.76 Safari\/537.36": {
+		"platform": null,
+		"browser": "bingbot",
+		"version": "2.0"
+	},
 	"Mozilla\/5.0 (compatible; BLEXBot\/1.0; +https:\/\/help.seranking.com\/en\/blex-crawler)": {
 		"platform": null,
 		"browser": "BLEXBot",
@@ -1764,6 +1779,11 @@
 		"browser": "HubSpot Domain check",
 		"version": null
 	},
+	"Mozilla\/5.0 (compatible; IbouBot\/1.0; +bot@ibou.io; +https:\/\/ibou.io\/iboubot.html)": {
+		"platform": null,
+		"browser": "IbouBot",
+		"version": "1.0"
+	},
 	"Lynx\/2.8.6rel.4 libwww-FM\/2.14 SSL-MM\/1.4.1 OpenSSL\/0.9.7l Lynxlet\/0.7.0": {
 		"platform": null,
 		"browser": "Lynx",
@@ -1849,15 +1869,30 @@
 		"browser": "proximic",
 		"version": null
 	},
+	"ScourRSSBot\/1.0 (+https:\/\/scour.ing\/bot; 3 subscribers)": {
+		"platform": null,
+		"browser": "ScourRSSBot",
+		"version": "1.0"
+	},
 	"Mozilla\/5.0 (compatible; SemrushBot; +http:\/\/www.semrush.com\/bot.html)": {
 		"platform": null,
 		"browser": "SemrushBot",
 		"version": null
 	},
+	"Mozilla\/5.0 (compatible; SemrushBot\/7~bl; +http:\/\/www.semrush.com\/bot.html)": {
+		"platform": null,
+		"browser": "SemrushBot",
+		"version": "7"
+	},
 	"Mozilla\/5.0 (compatible; SemrushBot-SI\/0.97; +http:\/\/www.semrush.com\/bot.html)": {
 		"platform": null,
 		"browser": "SemrushBot-SI",
 		"version": "0.97"
+	},
+	"Mozilla\/5.0 (compatible; SERankingBacklinksBot\/1.0; +https:\/\/seranking.com\/backlinks-crawler)": {
+		"platform": null,
+		"browser": "SERankingBacklinksBot",
+		"version": "1.0"
 	},
 	"Mozilla\/5.0 (compatible; SeznamBot\/4.0; +https:\/\/o-seznam.cz\/napoveda\/vyhledavani\/en\/seznambot-crawler\/)": {
 		"platform": null,

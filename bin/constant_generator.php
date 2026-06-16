@@ -52,9 +52,11 @@ foreach( $browsers as $browser ) {
 	}
 }
 
+// todo: There's gotta be a better way
 $browserExclusions = [
 	'ADKERNELTOPICCRAWLER',
 	'AHREFSBOT',
+	'AHREFSSITEAUDIT',
 	'AMAZONADBOT',
 	'AMAZONBOT', 
 	'AWARIOBOT',
@@ -73,6 +75,7 @@ $browserExclusions = [
 	'FLIPBOARDPROXY',
 	'HEEXYBOT',
 	'HUBSPOT_DOMAIN_CHECK',
+	'IBOUBOT',
 	'LEIKIBOT',
 	'MINIFLUX',
 	'MODATSCANNER',
@@ -81,8 +84,10 @@ $browserExclusions = [
 	'PERPLEXITYBOT',
 	'PETALBOT',
 	'PROXIMIC',
+	'SCOURRSSBOT',
 	'SEMRUSHBOT',
 	'SEMRUSHBOT_SI',
+	'SERANKINGBACKLINKSBOT',
 	'SEZNAMBOT',
 	'SMTBOT',
 	'SPIDERLING',
@@ -90,12 +95,14 @@ $browserExclusions = [
 	'YETI',
 ];
 
+$browsers = array_filter($browsers, function($key) use ($browserExclusions) {
+	return !in_array($key, $browserExclusions, true);
+}, ARRAY_FILTER_USE_KEY);
+
 $browserBody = "{$header}namespace donatj\UserAgent;\n\ninterface Browsers {\n\n";
 $maxKey      = max(array_map('strlen', array_keys($browsers)));
+
 foreach( $browsers as $const => $val ) {
-	if( in_array($const, $browserExclusions, true) ) {
-		continue;
-	}
 	$browserBody .= sprintf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
 }
 $browserBody .= "\n}\n\n";
