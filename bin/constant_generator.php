@@ -9,17 +9,20 @@ $uas = json_decode(
 	true
 );
 
-$platforms = [];
-$browsers  = [];
-foreach( $uas as $key => $val ) {
-	$kex = strtoupper($val['browser']);
-	if( $kex !== '' ) {
-		$kex = preg_replace('/\W+/', '_', $kex);
-		if( !isset($browsers[$kex][$val['browser']]) ) {
-			$browsers[$kex][$val['browser']] = 0;
-		}
+$classData = [];
 
-		$browsers[$kex][$val['browser']]++;
+$platforms = [];
+
+foreach( $uas as $key => $val ) {
+
+	$classes = isset($val['class']) ? $val['class'] : [ 'Browsers' ];
+
+	$kex = strtoupper($val['browser']);
+	$kex = preg_replace('/\W+/', '_', $kex);
+	foreach( $classes as $class ) {
+		$classData[$class][$kex][$val['browser']] =
+			isset($classData[$class][$kex][$val['browser']]) ?
+				$classData[$class][$kex][$val['browser']] + 1 : 1;
 	}
 
 	$kex = strtoupper((string)$val['platform']);
@@ -32,9 +35,10 @@ foreach( $uas as $key => $val ) {
 
 		$platforms[$kex][$val['platform']]++;
 	}
+
+
 }
 
-ksort($browsers);
 $file   = basename(__FILE__);
 $header = <<<EOT
 <?php
@@ -44,68 +48,19 @@ $header = <<<EOT
 
 EOT;
 
+foreach( $classData as $className => $browsers ) {
+	ksort($browsers);
 
-foreach( $browsers as $browser ) {
-	if( count($browser) !== 1 ) {
-		echo "bad browser count\n";
-		die(2);
+	$browserBody = "{$header}namespace donatj\UserAgent;\n\ninterface {$className} {\n\n";
+	$maxKey      = max(array_map('strlen', array_keys($browsers)));
+
+	foreach( $browsers as $const => $val ) {
+		$browserBody .= sprintf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
 	}
+	$browserBody .= "\n}\n\n";
+
+	file_put_contents(__DIR__ . '/../src/UserAgent/'.$className.'.php', $browserBody);
 }
-
-// todo: There's gotta be a better way
-$browserExclusions = [
-	'ADKERNELTOPICCRAWLER',
-	'AHREFSBOT',
-	'AHREFSSITEAUDIT',
-	'AMAZONADBOT',
-	'AMAZONBOT', 
-	'AWARIOBOT',
-	'BAIDUSPIDER_RENDER',
-	'BARKROWLER',
-	'BLEXBOT',
-	'BRAVEBOT',
-	'CENSYSINSPECT',
-	'COCCOCBOT_IMAGE',
-	'COCCOCBOT_WEB',
-	'DATAFORSEOBOT',
-	'DOTBOT',
-	'DVBOT',
-	'EV_CRAWLER',
-	'FEEDBOT',
-	'FLIPBOARDPROXY',
-	'HEEXYBOT',
-	'HUBSPOT_DOMAIN_CHECK',
-	'IBOUBOT',
-	'LEIKIBOT',
-	'MINIFLUX',
-	'MODATSCANNER',
-	'MOJEEKBOT',
-	'PERPLEXITY_USER',
-	'PERPLEXITYBOT',
-	'PETALBOT',
-	'PROXIMIC',
-	'SCOURRSSBOT',
-	'SEMRUSHBOT',
-	'SEMRUSHBOT_SI',
-	'SERANKINGBACKLINKSBOT',
-	'SEZNAMBOT',
-	'SMTBOT',
-	'SPIDERLING',
-	'SURDOTLYBOT',
-	'YETI',
-];
-
-$browsers = array_filter($browsers, function($key) use ($browserExclusions) {
-	return !in_array($key, $browserExclusions, true);
-}, ARRAY_FILTER_USE_KEY);
-
-$browserBody = "{$header}namespace donatj\UserAgent;\n\ninterface Browsers {\n\n";
-$maxKey      = max(array_map('strlen', array_keys($browsers)));
-
-foreach( $browsers as $const => $val ) {
-	$browserBody .= sprintf("\tconst %-{$maxKey}s = %s;\n", $const, var_export(key($val), true));
-}
-$browserBody .= "\n}\n\n";
 
 foreach( $platforms as $platform ) {
 	if( count($platform) !== 1 ) {
@@ -121,5 +76,4 @@ foreach( $platforms as $const => $val ) {
 }
 $platformBody .= "\n}\n\n";
 
-file_put_contents(__DIR__ . '/../src/UserAgent/Browsers.php', $browserBody);
 file_put_contents(__DIR__ . '/../src/UserAgent/Platforms.php', $platformBody);

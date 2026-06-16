@@ -19,7 +19,11 @@ class UserAgentParserFunctionTest extends \PHPUnit\Framework\TestCase {
 		}
 
 		foreach( $uas as $string => $parts ) {
-			$out[] = [ $string, $parts ];
+			$out[] = [ $string, [
+				'platform' => $parts['platform'],
+				'browser'  => $parts['browser'],
+				'version'  => $parts['version'],
+			]];
 		}
 
 		return $out;
