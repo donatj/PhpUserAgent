@@ -108,10 +108,16 @@ NintendoBrowser|PLAYSTATION\ (?:\d|Vita)+)
 REGEX
 			, $u_agent, $result);
 
-		// If nothing matched, return null (to avoid undefined index errors)
-		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0])
-			&& preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $g_result) ) {
-			return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => empty($g_result[BROWSER_VERSION]) ? null : $g_result[BROWSER_VERSION] ];
+		// If nothing matched, check for simple bot patterns
+		if( !isset($result[BROWSER][0], $result[BROWSER_VERSION][0]) ) {
+			// Try: bot/version with contact info "site.com botname/1.0 (+contact)"
+			if( preg_match('%(?P<browser>[A-Z0-9\-]+)[/ ](?P<version>[0-9A-Z.]+)\s*\(\+(?:https?:|[a-z0-9._-]+@[a-z0-9._-]+)%ix', $u_agent, $g_result) ) {
+				return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => $g_result[BROWSER_VERSION] ];
+			}
+			// Try: simple bot at start "BotName/version" (not Mozilla)
+			if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)([/ :](?P<version>[0-9A-Z.]+))?%ix', $u_agent, $g_result) ) {
+				return [ PLATFORM => $platform, BROWSER => $g_result[BROWSER], BROWSER_VERSION => empty($g_result[BROWSER_VERSION]) ? null : $g_result[BROWSER_VERSION] ];
+			}
 		}
 
 		if(
@@ -122,7 +128,7 @@ REGEX
 			&& preg_match(<<<'REGEX'
 %[(;]\s*(?P<browser>[^(/;]+)
 (?:[:/ ]v?(?P<version>[0-9A-Z.]+)[^;)\s]*)?
-;?(?:\s*robot;)?\s*\+(?:https?:|[a-z0-9.-]+@[a-z0-9.-]+)%x
+;?(?:\s*robot;)?\s*\+(?:https?:|[a-z0-9._-]+@[a-z0-9._-]+)%ix
 REGEX
 				, $u_agent, $bot_result)
 		) {

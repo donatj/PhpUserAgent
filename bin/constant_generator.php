@@ -69,6 +69,7 @@ $browserExclusions = [
 	'DOTBOT',
 	'DVBOT',
 	'EV_CRAWLER',
+	'FEEDBOT',
 	'FLIPBOARDPROXY',
 	'HEEXYBOT',
 	'HUBSPOT_DOMAIN_CHECK',
@@ -86,7 +87,7 @@ $browserExclusions = [
 	'SMTBOT',
 	'SPIDERLING',
 	'SURDOTLYBOT',
-	'YETI'
+	'YETI',
 ];
 
 $browserBody = "{$header}namespace donatj\UserAgent;\n\ninterface Browsers {\n\n";
