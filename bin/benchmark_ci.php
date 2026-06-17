@@ -22,7 +22,7 @@ if( $content === false ) {
 	exit(1);
 }
 
-$uas = json_decode($data, true);
+$uas = json_decode($content, true);
 
 if( !is_array($uas) ) {
 	fwrite(STDERR, "Unable to load user agents fixture\n");
