@@ -10,6 +10,8 @@ if( $uas === null ) {
 	die(1);
 }
 
+assert(is_array($uas));
+
 foreach( $uas as $key => &$val ) {
 	$val['key'] = $key;
 }
@@ -77,6 +79,11 @@ $json = @$jsonPretty->prettify($uas) . "\n";
 echo $json;
 
 
+/**
+ * @param string $a
+ * @param string $b
+ * @return 0|1|-1
+ */
 function compare_version( $a, $b ) {
 	$cmp_a = explode('.', $a);
 	$cmp_b = explode('.', $b);
@@ -95,7 +102,7 @@ function compare_version( $a, $b ) {
 		}
 
 		if( $cmp = strcmp($aa, $bb) ) {
-			$value = $cmp / abs($cmp);
+			$value = intval($cmp / abs($cmp));
 			break;
 		}
 	}
