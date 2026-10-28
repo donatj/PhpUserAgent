@@ -152,7 +152,7 @@ REGEX
 
 		$lowerBrowser = array_map('strtolower', $result[BROWSER]);
 
-		$find = static function( $search, &$key = null, &$value = null ) use ( $lowerBrowser ) : bool {
+		$find = function( $search, &$key = null, &$value = null ) use ( $lowerBrowser ) {
 			$search = (array)$search;
 
 			foreach( $search as $val ) {
@@ -168,20 +168,12 @@ REGEX
 			return false;
 		};
 
-		$findT = static function( array $search, &$key = null, &$value = null ) use ( $find ) : bool {
-			$value2 = null;
-			if( $find(array_keys($search), $key, $value2) ) {
-				$value = $search[$value2];
-
-				return true;
-			}
-
-			return false;
-		};
+		$browserMap = [ 'OPR' => 'Opera', 'Facebot' => 'iMessageBot', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'YaApp_Android' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge', 'EdgA' => 'Edge', 'XiaoMi/MiuiBrowser' => 'MiuiBrowser' ];
 
 		$key = 0;
 		$val = '';
-		if( $findT([ 'OPR' => 'Opera', 'Facebot' => 'iMessageBot', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'YaApp_Android' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge', 'EdgA' => 'Edge', 'XiaoMi/MiuiBrowser' => 'MiuiBrowser' ], $key, $browser) ) {
+		if( $find(array_keys($browserMap), $key, $val) ) {
+			$browser = $browserMap[$val];
 			$version = is_numeric(substr($result[BROWSER_VERSION][$key], 0, 1)) ? $result[BROWSER_VERSION][$key] : null;
 		} elseif( $find('Playstation Vita', $key, $platform) ) {
 			$platform = 'PlayStation Vita';
