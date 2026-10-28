@@ -15,23 +15,20 @@ $platforms = [];
 
 foreach( $uas as $key => $val ) {
 
-	$classes = isset($val['class']) ? $val['class'] : [ 'Browsers' ];
+	$classes = $val['class'] ?? [ 'Browsers' ];
 
 	$kex = strtoupper($val['browser']);
 	$kex = preg_replace('/\W+/', '_', $kex);
 	foreach( $classes as $class ) {
-		$classData[$class][$kex][$val['browser']] =
-			isset($classData[$class][$kex][$val['browser']]) ?
-				$classData[$class][$kex][$val['browser']] + 1 : 1;
+		$classData[$class][$kex][$val['browser']] ??= 0;
+		$classData[$class][$kex][$val['browser']]++;
 	}
 
 	$kex = strtoupper((string)$val['platform']);
 	if( $kex !== '' ) {
 		$kex = preg_replace('/\W+/', '_', $kex);
 
-		if( !isset($platforms[$kex][$val['platform']]) ) {
-			$platforms[$kex][$val['platform']] = 0;
-		}
+		$platforms[$kex][$val['platform']] ??= 0;
 
 		$platforms[$kex][$val['platform']]++;
 	}

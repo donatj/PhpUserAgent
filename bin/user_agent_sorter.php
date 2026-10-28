@@ -15,7 +15,7 @@ foreach( $uas as $key => &$val ) {
 }
 unset($val);
 
-uasort($uas, function ( $a, $b ) {
+uasort($uas, static function ( $a, $b ) {
 
 	if( $a['platform'] === null && $b['platform'] !== null ) {
 		return 1;
@@ -86,8 +86,8 @@ function compare_version( $a, $b ) {
 	$value = 0;
 
 	for( $i = 0; $i < $max; $i++ ) {
-		$aa = strtolower(isset($cmp_a[$i]) ? $cmp_a[$i] : '0');
-		$bb = strtolower(isset($cmp_b[$i]) ? $cmp_b[$i] : '0');
+		$aa = strtolower($cmp_a[$i] ?? '0');
+		$bb = strtolower($cmp_b[$i] ?? '0');
 
 		if( is_numeric($aa) && is_numeric($bb) && $aa !== $bb ) {
 			$value = ($aa > $bb ? 1 : -1);
