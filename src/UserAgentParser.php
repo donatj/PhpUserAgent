@@ -17,7 +17,7 @@ namespace {
 	 * This method is defined for backwards comparability with the old global method.
 	 *
 	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
-	 * @return string[] an array with 'browser', 'version' and 'platform' keys
+	 * @return array{platform: string|null, browser: string|null, version: string|null} an array with 'browser', 'version' and 'platform' keys
 	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
 	 *
 	 * @deprecated This exists for backwards compatibility with 0.x and will likely be removed in 2.x
@@ -38,7 +38,7 @@ namespace donatj\UserAgent {
 	 * Parses a user agent string into its important parts
 	 *
 	 * @param string|null $u_agent User agent string to parse or null. Uses $_SERVER['HTTP_USER_AGENT'] on NULL
-	 * @return string[] an array with 'browser', 'version' and 'platform' keys
+	 * @return array{platform: string|null, browser: string|null, version: string|null} an array with 'browser', 'version' and 'platform' keys
 	 * @throws \InvalidArgumentException on not having a proper user agent to parse.
 	 */
 	function parse_user_agent( $u_agent = null ) {
@@ -152,6 +152,12 @@ REGEX
 
 		$lowerBrowser = array_map('strtolower', $result[BROWSER]);
 
+		/**
+		 * @param string|string[] $search
+		 * @param int|null $key
+		 * @param string|null $value
+		 * @return bool
+		 */
 		$find = function( $search, &$key = null, &$value = null ) use ( $lowerBrowser ) {
 			$search = (array)$search;
 
@@ -198,7 +204,7 @@ REGEX
 			if( strlen($version) > 3 ) {
 				$part = substr($version, -2);
 				if( ctype_upper($part) ) {
-					$version = substr($version, 0, -2);
+					$version = substr_replace($version, '', -2);
 
 					$flags = [ 'IP' => 'iPhone', 'IT' => 'iPad', 'AP' => 'Android', 'AT' => 'Android', 'WP' => 'Windows Phone', 'WT' => 'Windows' ];
 					$platform = $flags[$part] ?? $platform;
