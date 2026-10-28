@@ -15,12 +15,12 @@ class ClassConsistencyTest extends \PHPUnit\Framework\TestCase {
 		foreach( $uas as $ua ) {
 			if( isset($browsers[$ua['browser']]) ) {
 				$this->assertSame(
-					isset($ua['class']) ? $ua['class'] : false,
+					$ua['class'] ?? false,
 					$browsers[$ua['browser']],
 					"Browser '{$ua['browser']}' is not consistently classified"
 				);
 			} else {
-				$browsers[$ua['browser']] = isset($ua['class']) ? $ua['class'] : false;
+				$browsers[$ua['browser']] = $ua['class'] ?? false;
 			}
 		}
 	}
