@@ -1,11 +1,17 @@
-<phpunit bootstrap="tests/bootstrap.php">
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="tests/bootstrap.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
 	<testsuites>
 		<testsuite name="Application">
 			<directory>tests</directory>
 		</testsuite>
-    </testsuites>
+	</testsuites>
 
-    <logging>
-        <log type="coverage-clover" target="coverage.xml"/>
-    </logging>
+	<coverage>
+		<include>
+			<directory suffix=".php">src</directory>
+		</include>
+		<report>
+			<clover outputFile="coverage.xml"/>
+		</report>
+	</coverage>
 </phpunit>

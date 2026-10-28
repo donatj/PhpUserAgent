@@ -43,24 +43,10 @@ class UserAgentParserFunctionTest extends \PHPUnit\Framework\TestCase {
 		$this->assertSame($result, $expected);
 	}
 
-	/**
-	 * I'm no longer using expectedException/setExpectedException because the
-	 * semantics around expecting exceptions have changed so many times I can't
-	 * reliably do it across as wide of a PHP version history as I wish to
-	 * support
-	 *
-	 * @see https://thephp.cc/news/2016/02/questioning-phpunit-best-practices
-	 */
 	public function test_no_user_agent_exception() {
 		unset($_SERVER['HTTP_USER_AGENT']);
-		try {
-			parse_user_agent();
-		} catch(\InvalidArgumentException $ex) {
-			$this->assertTrue(true); // easy way to quiet warning
-			return;
-		}
-
-		$this->fail("Expected \InvalidArgumentException");
+		$this->expectException(\InvalidArgumentException::class);
+		parse_user_agent();
 	}
 
 	public function test_global_user_agent() {
