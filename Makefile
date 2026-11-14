@@ -1,6 +1,7 @@
 .PHONY: test
 test:
 	./vendor/bin/phpunit --coverage-text
+	./vendor/bin/phpstan analyse
 
 .PHONY: clean
 clean:
