@@ -49,6 +49,7 @@ All that said, there is the start of a [branch to do it](https://github.com/dona
 ### Undetectable Browsers
 
 - **Brave** - Brave is simply not differentiable from Chrome. This was a design decision on their part.
+- **Konqueror** - Recent versions use a default user agent that does not identify Konqueror. They cannot be reliably distinguished from other browsers using the same user agent.
 
 ### Undetectable Platforms
 
