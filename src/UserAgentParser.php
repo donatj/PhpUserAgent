@@ -168,20 +168,12 @@ REGEX
 			return false;
 		};
 
-		$findT = function( array $search, &$key = null, &$value = null ) use ( $find ) {
-			$value2 = null;
-			if( $find(array_keys($search), $key, $value2) ) {
-				$value = $search[$value2];
-
-				return true;
-			}
-
-			return false;
-		};
+		$browserMap = [ 'OPR' => 'Opera', 'Facebot' => 'iMessageBot', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'YaApp_Android' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge', 'EdgA' => 'Edge', 'XiaoMi/MiuiBrowser' => 'MiuiBrowser' ];
 
 		$key = 0;
 		$val = '';
-		if( $findT([ 'OPR' => 'Opera', 'Facebot' => 'iMessageBot', 'UCBrowser' => 'UC Browser', 'YaBrowser' => 'Yandex', 'YaApp_Android' => 'Yandex', 'Iceweasel' => 'Firefox', 'Icecat' => 'Firefox', 'CriOS' => 'Chrome', 'Edg' => 'Edge', 'EdgA' => 'Edge', 'XiaoMi/MiuiBrowser' => 'MiuiBrowser' ], $key, $browser) ) {
+		if( $find(array_keys($browserMap), $key, $val) ) {
+			$browser = $browserMap[$val];
 			$version = is_numeric(substr($result[BROWSER_VERSION][$key], 0, 1)) ? $result[BROWSER_VERSION][$key] : null;
 		} elseif( $find('Playstation Vita', $key, $platform) ) {
 			$platform = 'PlayStation Vita';
@@ -209,9 +201,7 @@ REGEX
 					$version = substr($version, 0, -2);
 
 					$flags = [ 'IP' => 'iPhone', 'IT' => 'iPad', 'AP' => 'Android', 'AT' => 'Android', 'WP' => 'Windows Phone', 'WT' => 'Windows' ];
-					if( isset($flags[$part]) ) {
-						$platform = $flags[$part];
-					}
+					$platform = $flags[$part] ?? $platform;
 				}
 			}
 		} elseif( $find([ 'Googlebot', 'Applebot', 'IEMobile', 'Edge', 'Midori', 'Whale', 'Vivaldi', 'OculusBrowser', 'SamsungBrowser', 'Valve Steam Tenfoot', 'Chrome', 'HeadlessChrome', 'SailfishBrowser' ], $key, $browser) ) {
@@ -230,7 +220,7 @@ REGEX
 			} elseif( $find('Safari', $key, $browser) || $find('TizenBrowser', $key, $browser) ) {
 				$version = $result[BROWSER_VERSION][$key];
 			} elseif( count($result[BROWSER]) ) {
-				$key     = count($result[BROWSER]) - 1;
+				$key     = array_key_last($result[BROWSER]);
 				$browser = $result[BROWSER][$key];
 				$version = $result[BROWSER_VERSION][$key];
 			}
