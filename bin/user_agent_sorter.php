@@ -15,7 +15,7 @@ foreach( $uas as $key => &$val ) {
 }
 unset($val);
 
-uasort($uas, static function ( $a, $b ) {
+uasort($uas, static function ( array $a, array $b ) : int {
 
 	if( $a['platform'] === null && $b['platform'] !== null ) {
 		return 1;
@@ -77,7 +77,7 @@ $json = @$jsonPretty->prettify($uas) . "\n";
 echo $json;
 
 
-function compare_version( $a, $b ) {
+function compare_version( string $a, string $b ) : int {
 	$cmp_a = explode('.', $a);
 	$cmp_b = explode('.', $b);
 
@@ -95,7 +95,7 @@ function compare_version( $a, $b ) {
 		}
 
 		if( $cmp = strcmp($aa, $bb) ) {
-			$value = $cmp / abs($cmp);
+			$value = $cmp <=> 0;
 			break;
 		}
 	}

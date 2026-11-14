@@ -3,7 +3,7 @@
 
 class ClassConsistencyTest extends \PHPUnit\Framework\TestCase {
 
-	public function testClassConsistency() {
+	public function testClassConsistency() : void {
 		$out = [];
 		if( file_exists(__DIR__ . '/user_agents.json') && filesize(__DIR__ . '/user_agents.json') > 0 ) {
 			$uas = json_decode(file_get_contents(__DIR__ . '/user_agents.json'), true);
