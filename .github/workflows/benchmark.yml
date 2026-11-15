@@ -81,6 +81,7 @@ jobs:
             })
 
             const marker = '<!-- benchmark-results -->'
+            const pullRequest = context.payload.pull_request
             const body = `${marker}
             ## Benchmark Results
 
@@ -89,6 +90,8 @@ jobs:
             | Metric | Before (base) | After (PR) | Delta |
             | --- | ---: | ---: | ---: |
             ${rows.join('\n')}
+
+            Run for ${pullRequest.head.sha.slice(0, 7)} vs ${pullRequest.base.sha.slice(0, 7)} ${pullRequest.base.ref}
             `
 
             await core.summary.addRaw(body).write()
