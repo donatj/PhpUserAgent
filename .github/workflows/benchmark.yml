@@ -31,17 +31,16 @@ jobs:
       - name: Measure base and PR
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          GITHUB_ACTIONS: 'false'
         run: |
           parser_backup=$(mktemp)
           cp src/UserAgentParser.php "$parser_backup"
           trap 'cp "$parser_backup" src/UserAgentParser.php; rm -f "$parser_backup"' EXIT
 
           git show "${BASE_SHA}:src/UserAgentParser.php" > src/UserAgentParser.php
-          vendor/bin/tally run --output=tmp/tally-base
+          env -u GITHUB_ACTIONS vendor/bin/tally run --output=tmp/tally-base
 
           cp "$parser_backup" src/UserAgentParser.php
-          vendor/bin/tally run --output=tmp/tally-head
+          env -u GITHUB_ACTIONS vendor/bin/tally run --output=tmp/tally-head
 
       - name: Comment benchmark results
         uses: actions/github-script@v9
