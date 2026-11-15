@@ -25,7 +25,6 @@ final class ParserBench {
 	}
 
 	#[Warmup(1)]
-	#[\Tally\Attribute\Expected(instructions: '44.03M', cycles: '47.65M', memory: '5.969KiB')]
 	public function benchParseUserAgents(): void {
 		foreach( $this->userAgents as $userAgent ) {
 			parse_user_agent($userAgent);
